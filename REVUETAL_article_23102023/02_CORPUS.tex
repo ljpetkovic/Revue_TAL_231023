@@ -1,0 +1,68 @@
+%Dans cette partie, nous présentons les corpus utilisés pour l'évaluation de l'impact de la correction automatique des OCR sur les outils de REN.
+
+\subsection{La Très Grande Bibliothèque (TGB)}
+ La TGB est une bibliothèque de 128 441 documents français en mode texte (ROC non corrigée), issus des collections Gallica de la BnF. Le corpus provient majoritairement de l’édition du XIX\ieme{}siècle et couvre différentes thématiques (littérature, histoire, droit, philosophie, etc.). Les imprimés de cette période sont libres de droits (contrairement à ceux du XX\ieme{}s.). La TGB compte 128 441 textes soit 44,16 Go écrits par 58 287 auteurs et disponibles au format XML-TEI. Les documents sont pour la grande majorité, 95 479 œuvres\footnote{Un nombre considérable de documents représentant des rééditions de textes plus anciens.}, datées du XIX\ieme{}s., 7 294 œuvres sont datées du XVIII\ieme{}s., 54 du XX\ieme{}s. et 24 du XVII\ieme{}s.
+%\begin{itemize}
+  %      \item XVII\ieme{} : 24
+   %     \item XVIII\ieme{} : 7294
+    %    \item XIX\ieme{} : 95479
+     %   \item XX\ieme{} : 54
+    %\end{itemize}
+
+Tous les documents sont liés à leur notice dans le catalogue général de la BnF et pointent vers leur instance Gallica. Les auteurs sont liés à leur notice de personne du catalogue général. Les textes sont issus d’un traitement de ROC brut sans corrections. Les services de la BnF nous ont précisés que plusieurs moteurs ROC ont été utilisés, Abby étant le principal depuis 2009 et celui utilisé en interne. Néanmoins certains prestataires utilisaient des solutions internes, ou un mix de ROC et certains marchés incluaient une phase de correction humaine post-ROC.
+%les réglages ont beaucoup d'impact pour un même outil
+Un score de confiance est fournie par les services de la BnF sans précision sur la métrique utilisée. Certains textes ont cependant un taux de confiance avancé de ROC de 100\%. Ainsi, 127 267 documents de la TGB (99\% du corpus) ont été indexés par les catalogueurs de la BnF, selon la classification Dewey, à partir de laquelle dix sous-corpus thématiques (inégalement représentés) ont été créés. %(Tableau \ref{tab:TGB})
+On compte 35 710 oeuvres pour la catégorie Littérature (Belles-lettres) et 1 861 pour la catégorie Langues romanes, Français. Nous avons extrait une dizaine d'oeuvre de ces deux catégories pour constituer notre corpus de PDF comportant des traits permettant d'illustrer les difficultés de l'application de la ROC à des textes anciens, par exemple la transcription de certaines décorations ou de caractères en capitales stylisées. Les informations générales et le nombre d'EN de lieux reconnues dans ces textes de référence par les deux outils \texttt{spaCy} et \texttt{stanza} sont présentées dans le tableau \ref{tab:TGBFra}. 
+
+%\begin{table}
+%\small
+ %   \centering
+  %\input{TAB/corpus-TGB}
+   % \caption{Répartition thématique du Corpus TGB. 
+   %\label{tab:TGB}}
+%\end{table}
+
+\begin{table}[h!]
+    \centering
+    \small
+    \input{TAB/corpus-TGBFra}
+    \caption{Statistiques sur le sous-corpus TGB. (spaCy\_lg : modèle large de \texttt{spaCy}. Les deux dernières colonnes indiquent le nombre des EN).}
+    \label{tab:TGBFra}
+\end{table}
+
+
+
+\subsection{European Literary Text Collection (ELTeC)}
+
+Entre 2017 et 2022 l'action COST \textit{Distant Reading for European Literary History} (CA16204) a constitué une collection de corpus de textes littéraires dans plusieurs langues européennes dont certains ont pour source le site web du projet Gutenberg, Gallica mais aussi la Bibliothèque électronique du Québec\footnote{\url{http://beq.ebooksgratuits.com/}} développée par Jean-Yves Dupuis entre 1998 et 2018. Le but de l'action est de rendre disponible des œuvres romanesques pour la conception, l'évaluation et l'utilisation d'outils et de méthodes d'analyse multilingues des textes littéraires. ELTeC compile des corpus de romans pour plus d'une vingtaine de langues européennes. Les collections française, anglaise et portugaise comprennent chacune une centaine de romans océrisés publiés entre le milieu du XIX\ieme{}siècle et le début du XX\ieme{}siècle. Les romans sont disponibles en plusieurs formats : le format texte brut (.txt), un encodage TEI et un encodage TEI enrichi par une annotation morphosyntaxique.
+Pour cette étude, nous avons travaillé avec des textes collectés dans les collections française (11), anglaise (9) et portugaise (4). Le corpus portugais est d'une taille restreinte du fait de difficultés à rassembler des textes de référence et des PDFs d'une qualité équivalente à ceux des corpus français et anglais. Les tableaux \ref{tab:ELTeCFra}, \ref{tab:ELTeCEng} et \ref{tab:ELTeCPor} présentent les informations générales sur les corpus conçus à partir des collections ELTeC. Ils comprennent le nombre d'EN de lieux reconnues dans chacun d'eux par les outils \texttt{spaCy} et \texttt{stanza}.
+
+%\begin{table}
+ %   \centering
+  %\input{TAB/corpus-ELTeC_nb_docs}
+   % \caption{Répartition par langue du Corpus ELTeC.\label{tab:ELTeC_nb_docs}}
+%\end{table} 
+
+\begin{table}[h!]
+    \small
+    \begin{subtable}[h]{1\textwidth}\resizebox{\textwidth}{!}{   
+    \input{TAB/corpus-ELTeCFra}}
+    \caption{Sous-corpus français.\label{tab:ELTeCFra}}
+    \end{subtable}
+
+   \begin{subtable}[h]{1\textwidth}
+    \small
+    \input{TAB/corpus-ELTeCEng}
+    \caption{Sous-corpus anglais.\label{tab:ELTeCEng}}
+    \end{subtable}
+    
+    \begin{subtable}[h]{1\textwidth}
+    \small
+    \input{TAB/corpus-ELTeCPor}
+    \caption{Sous-corpus portugais. \label{tab:ELTeCPor}}
+    \end{subtable}
+    \caption{Statistiques sur les sous-corpus ELTeC.
+    % Compte tenu du temps que prend une annotation manuelle, nous n'avons pas annoté tous les corpus et nous ne disposons pas d'une vérité terrain.
+    } 
+\end{table}
+

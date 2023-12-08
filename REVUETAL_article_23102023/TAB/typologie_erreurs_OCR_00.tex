@@ -1,0 +1,51 @@
+\begin{tabular}{|p{1.5cm}|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+
+%\multicolumn{5}{|c|}{Results for Named Entities Recognition} \\
+\hline
+
+
+\bf{\small{Impact scale}} &\bf{\small{Impact types}} & \bf {\small{contexte}} &  \bf{\texttt{spaCy\_lg}}&\bf{\texttt{stanza}}\\
+\hline
+minimal & Contamination orthographique & \textit{lhospice des Enfants, ru\textcolor{red}{c} de S\textcolor{red}{b}vr\textcolor{red}{c}s, et atuche au}& \textbf{\_} S\textcolor{red}{b}vr\textcolor{red}{c}s & \textbf{\_} S\textcolor{red}{b}vr\textcolor{red}{c}s\\
+ & &\textit{}&&\\
+ 
+ & & \textit{il en est tombe au sort cinq de Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle} & Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle. & Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle
+  \\
+ & &\textit{}&&\\
+ & & \textit{then on a visit at Kilmarno\textcolor{red}{e}k Abbey, near
+Edinburg\textcolor{red}{l}}'& Edinburg\textcolor{red}{l} & Edinburg\textcolor{red}{l} \\
+ & &\textit{}&&\\
+&&\textit{durant\textcolor{red}{a} todo o t\textcolor{red}{o}mpe
+em q\textcolor{red}{n}e ostivess\textcolor{red}{o} em Port\textcolor{red}{n}gal}& Port\textcolor{red}{n}gal & N/A\\ & & & &\\ & Terme tronqué si la première lettre est une majuscule&\textit{dans l'intérieur de l'Améri-} & Améri—& \textcolor{red}{()}\\
+&&\small{\textit{et le golfe de Cali-foruie.\_n}}&golfe de Cali-& golfe de Cali-\\
+\hline
+% moderate & -   & &&\\
+important & -  la segmentation est perturbée (espace intercaractères manquant) ?& \textit{afriver \textcolor{red}{a}Morlincourt' tot}& \textcolor{red}{()} & \textcolor{red}{()}\\
+ & & & &\\ 
+ & -  la segmentation est perturbée (lettres attachées) & \textit{Louis Quatorze might have bestowed on the ambassador
+of the United Provinces}'& \textcolor{red}{()} &theUnitedProvinces\\& & & &\\
+ & - cas particuliers &\textit{Aux \textcolor{red}{k}Etats-Unis}& Etats-Unis & \textcolor{red}{k}Etats-Unis\\
+&- point d'exclamation remplacé par une lettre &\textit{about Manchester\textcolor{red}{l} A
+pretty state}&Manchester\textcolor{red}{l}&Manchester\textcolor{red}{l}\\
+% &- point d'exclamation remplacé par une lettre &\textit{Louis Quatorze might have bestowed on the ambassador
+% of the United Provinces}& N/A &theUnitedProvinces\\
+
+
+
+
+
+
+\hline
+
+
+\end{tabular}
+
+%Kraken &\textit{[...] il en est tombe au sort cinq
+%de Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle.} & Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle & Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle \\
+
+
+
+
+   
+    
+   

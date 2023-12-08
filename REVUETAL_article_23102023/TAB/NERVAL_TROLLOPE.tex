@@ -1,0 +1,34 @@
+\footnotesize{
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+ & \multicolumn{3}{c|}{{\#Entités}} & \multicolumn{4}{c|}{\'Evaluation par \textsc{Nerval}}\\
+ \hline
+Version & Label angl.&OCR & Réf. &Intersection& Précision & Rappel & $F_1$ mesure\\
+
+ \hline
+Kraken  & LOC& 38 &41&14   & 0.368   & 0.341&0.354 \\
+Tess & & 56&41  &31 &0.554     &0.756 &0.639  \\
+\hline
+Kraken &GPE& 364 & 146 & 50& 0.137 &0.342 & 0.196 \\
+Tess && 233 &146  &128 & 0.549     & 0.877  &0.675  \\
+\hline
+\hline
+Kraken + Jspll&LOC & 37 & 41&15 & 0.405    &0.366 & 0385   %$\Downarrow$  
+\\
+Tess+ Jspll & &54  &41 &31     &0.574     &0.756  &0.653 %$\Downarrow$  
+\\
+\hline
+Kraken  + Jspll &GPE& 182&146 &61& 0.335& 0.418    & 0.372   %$\Downarrow$  
+\\
+Tess + Jspll   & & 219&146      &125     &0.571   &0.856 &0.685\\
+ \hline
+\hline
+Kraken + ELTeC & LOC&35&41  &15 &0.429    &0.366  & 0.395 \\%$\Uparrow$
+Tess + ELTeC&&52  &41  &30 & 0.577    &0.732  &0.645 \\
+\hline
+Kraken + ELTeC & GPE&136& 146 &48 &0.353    &0.329  &0.34  \\%$\Uparrow$
+
+Tess + ELTeC&&185  &146  &111 &0.6     &0.76  &0.671 \\
+
+\hline
+\end{tabular}}

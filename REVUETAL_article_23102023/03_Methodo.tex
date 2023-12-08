@@ -1,0 +1,50 @@
+%\subsubsection{Terminologie employée dans cet article }
+%En tant que chercheurs au croisement des TAL et des HN, n
+Nous jugeons pertinent d'expliciter dans cette partie certains termes du lexique que nous employons afin de rendre nos propos plus largement accessibles.
+
+\begin{description}
+   % \item [Jspll :]  -- modèle pré-entraîné de JamSpell pour une langue donnée, 
+  %  \item [ELTeC] modèle entraîné sur 40\% de la collection ELTeC pour une langue donnée. 
+    \item [Configuration:] Nous nommons configuration l'association de la version (ROC) et de la REN, par exemple les résultats de la configuration Kraken--\texttt{spaCy\_lg}.
+    \item [Contamination:] Nous adoptons le terme contamination proposé par \cite{hamdi:hal-03615997} pour qualifier les entités dont l'orthographe a été modifiée à cause de la transcription fautive de la ROC.
+    \item [Version:] Nous nommons version le texte obtenu par transcription de ROC.
+    \item [Référence:] Nous nommons référence la version orthographiquement correcte des textes.
+    \item [Vérité terrain:] Nous nommons vérité terrain le jeu de données de REN constitué pour l'évaluation. 
+\end{description}
+
+%\subsubsection{Description et constats à propos des versions des outils d'OCR et de NER}
+
+Afin de produire différentes transcriptions de ROC, nous avons utilisé deux systèmes de ROC disponibles gratuitement : Kraken, qui est un outil pour lequel il existe différents modèles neuronaux de ROC (pour la segmentation et la transcription) dont un modèle pour le français du XVII\ieme{}siècle \cite{gabay:hal-02577236} ainsi qu'un modèle HTR\footnote{Abbr. angl. \textit{Handwritten Text Recognition} ou la reconnaissance d'écriture manuscrite, basée sur l'extraction du texte à partir des blocs textuels (lignes), contrairement à la méthode de ROC qui traite les caractères individuelles \cite{gabayscicos}.} pour le français, Gallicorpora \cite{pinche_2022_7410529}, et Tesseract \cite{smith2007overview}, un outil qui peut également être paramétré pour des tâches particulières, mais qui présente toujours de bonnes performances dans sa configuration par défaut \cite{clausner2020efficient}.
+Trois modèles de langue neuronaux pour la ROC ont été utilisé dans le cadre des expériences : (i) le modèle de base de Kraken qui permet d'opérer la segmentation et la transcription d'un PDF, (ii) le modèle par défaut de Tesseract\footnote{Le modèle par défaut de Tesseract est l'anglais. Nous précisons la langue Tess. eng, Tess. fr et Tess. pt pour être en accord avec la \#RègledeBender \cite{bender-friedman-2018-data}.} et (iii) son modèle entraîné sur du français ou du portugais contemporain\footnote{\url{https://doc.ubuntu-fr.org/tesseract-ocr}}.
+% Pour chaque roman, nous aurons donc le texte de référence (voir les Tableaux  \ref{tab:TGBFra}, \ref{tab:ELTeCFra}, \ref{tab:ELTeCEng} et \ref{tab:ELTeCPor} pour les détails) et trois versions de ROC différentes (i) Kraken, (ii) Tesseract par défaut (Tess. en) et (iii) la version transcrite avec les modèles de Tesseract pour chacune des langues des corpus (français (Tess fr) et portugais (Tess pt)). 
+
+Concernant la correction automatique des textes issus des transcriptions ROC, nous avons utilisé JamSpell, un outil développé en Python qui exploite le modèle de langue trigramme statistique\footnote{Pour plus de détails sur ce modèle cf. \url{https://habr.com/en/articles/346618/}.} (grain mot) et dont une partie des fonctionnalités est mise à disposition gratuitement sur le web.
+% \footnote{Malgré de nombreuses tentatives d'installation sur nos machines en local, nous avons dû nous résoudre à le faire tourner dans un environnement Google Colab.}
+De plus, si les modèles de langues pour le français et l'anglais sont accessibles gratuitement (utilisés dans le cadre de cette étude), le modèle portugais est disponible uniquement dans la version payante de JamSpell (cette option n'a pas été testée).
+Nous avons entrainé un modèle de langue pour Jamspell pour chacune des trois langue analysées dans notre étude. Nous avons sélectionné 40\% de chacun des corpus mis à disposition par ELTeC\footnote{soit 4 millions de tokens pour chaque modèle}, nous en avons exclus les textes utilisés pour notre étude.
+
+Nous avons utilisé la version 3.5.1 de \texttt{spaCy} et les modèles de langue français\footnote{\url{https://spacy.io/models/fr}, fr\_core\_news\_lg}, portugais\footnote{\url{https://spacy.io/models/pt}, pt\_core\_news\_lg} et anglais\footnote{\url{https://spacy.io/models/en}, en\_core\_web\_lg} (\textit{large}) mis à disposition sur le web, ainsi que \texttt{stanza}\footnote{\url{https://stanfordnlp.github.io/stanza/ner_models.html}}. 
+Concernant  \texttt{spaCy} nous avons favorisé l'usage du modèle ``large''  \texttt{spaCy\_lg} plutôt que ``small'' car la différence principale entre les deux modèles pour les trois langues tient à l'ajout de la vectorisation et des plongements de mots (angl. \textit{embeddings}) dans l'entraînement du modèle \textit{large}\footnote{Modèle anglais : Explosion Vectors (OSCAR 2109 + Wikipedia + OpenSubtitles + WMT News Crawl) (Explosion). Modèles français et portugais :
+Explosion fastText Vectors (CBOW, OSCAR Common Crawl + Wikipedia) (Explosion).}.
+\texttt{Stanza} propose un modèle de langue pour la REN en français\footnote{Modèle entraîné sur les données de WikiNER.} et en anglais\footnote{Modèle entraîné sur les données de \textsc{CoNLL03}} mais ne le propose pour le portugais. Pour cette langue, nous avons donc évalué les configurations comprenant \texttt{spaCy\_lg} uniquement.
+Enfin, il est intéressant de constater que \texttt{spaCy} et \texttt{stanza} utilisent des jeux d'étiquettes différents pour l'annotation des lieux: le français et le portugais utilisent l'étiquette \texttt{LOC} et l'anglais utilise les étiquettes \texttt{LOC} et \texttt{GPE} ou \og{}entité géopolitique\fg{}. 
+
+Nous avons donc procédé aux évaluations des différentes configurations présentée dans le tableau \ref{tab:config}.
+
+\begin{table}[h!]
+    \centering
+   \input{TAB/configurations}
+    \caption{Ensemble des configurations que nous évaluons dans cette étude. \texttt{spaCy\_lg}: sp ; \texttt{stanza} : st.}
+    \label{tab:config}
+\end{table}
+ % \item [Jspll :]  -- modèle pré-entraîné de JamSpell pour une langue donnée, 
+  %  \item [ELTeC] modèle entraîné sur 40\% de la collection ELTeC pour une langue donnée. 
+
+
+% différence d'étiquetage \texttt{GPE} vs. \texttt{LOC.} pour le spaCy anglais
+
+% Kraken\footnote{\url{https://github.com/mittagessen/kraken}} et Tesseract \cite{smith2007overview}\footnote{\url{https://github.com/tesseract-ocr/tesseract}}, et à ces transcriptions OCR corrigées avec l’outil \texttt{JamSpell}\footnote{\url{https://github.com/bakwc/JamSpell}}.
+% Stanza
+% versions d'OCR
+% Nerval
+
