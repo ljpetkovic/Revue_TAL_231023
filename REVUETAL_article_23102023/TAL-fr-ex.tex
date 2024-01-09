@@ -48,11 +48,11 @@
 }
 
 \resume{
-L’extraction d'informations de textes issus de la reconnaissance optique de caractères (ROC) interroge quant à la possibilité de fouiller et d'exploiter ces données souvent bruitées. Les chercheur·se·s ont pour contrainte d'appliquer des outils de reconnaissance d'entités nommées (REN) entraînés sur des textes propres. Un des remèdes consiste à corriger les erreurs de ROC automatiquement. Notre contribution s’attachera à déterminer si la correction de ROC permet d’améliorer significativement les résultats de la tâche de REN.}
+L’extraction d'informations de textes issus de la reconnaissance optique de caractères (ROC) interroge quant à la possibilité de fouiller et d'exploiter ces données souvent bruitées. Les chercheur·se·s ont pour contrainte d'appliquer des outils de reconnaissance d'entités nommées (REN) entraînés sur des textes propres. Un des remèdes consiste à corriger les erreurs de ROC automatiquement. Notre contribution s’attachera à déterminer si la correction de ROC permet d’améliorer significativement les résultats de la tâche de REN sur des corpus de langue française, anglaise et portugaise.}
 
 \abstract{Multilingual analysis of the impact of automatic OCR correction on spatial named entity recognition in literary corpora}{The extraction of information from texts resulting from optical character recognition (OCR) questions the possibility of mining and exploiting these often noisy data. Researchers have to apply named entity recognition (NER) tools trained on clean text. One remedy is to automatically correct OCR errors. 
 % If for English language such tools seem easily exploitable, what about those applied on French but also Portuguese, a much lower-resource languages?
-Our contribution will focus on determining whether OCR correction results in significant improvements in the NER task.}
+Our contribution will focus on determining whether OCR correction results in significant improvements in the NER task on franch, english and portuguese corpora.}
 
 \motscles{
 Reconnaissance optique de caractères$_1$,
@@ -110,7 +110,7 @@ Automatic OCR Correction$_3$.
 \section{Corpus d'évaluation de l'impact de la correction automatique sur la REN}
 % Multiples corpus pour une évaluation fine de la REN dans des conditions de variation de la langue (différentes langues et sur des données de différentes époques)
 \label{sec:data}
-Pour chaque corpus français, anglais et portugais, nous avons à notre disposition le texte de référence de chaque roman, soit de la Très Grande Bibliothèque, soit du projet ELTeC (voir les tableaux  \ref{tab:TGBFra}, \ref{tab:ELTeCFra}, \ref{tab:ELTeCEng} et \ref{tab:ELTeCPor} pour les détails) et trois versions de ROC différentes (i) Kraken\footnote{\url{https://kraken.re/2.0.0/index.html}} \cite{kiessling2019escriptorium}, (ii) Tesseract\footnote{ \url{https://doc.ubuntu-fr.org/tesseract-ocr}} par défaut (Tess. en) et (iii) la version transcrite avec les modèles de Tesseract pour chacune des langues des corpus (français (Tess fr) et portugais (Tess pt)). 
+Pour chaque corpus ELTeC français, anglais et portugais, nous avons à notre disposition le texte de référence, généralement de très bonne qualité, de chaque roman (voir les tableaux \ref{tab:ELTeCFra}, \ref{tab:ELTeCEng} et \ref{tab:ELTeCPor}. Concernant les texte de la Très Grande Bibliothèque (tableau \ref{tab:TGBFra}), les textes de références dont nous disposons sont très fautifs. \textbf{Pour chaque texte nous disposons donc de trois versions de ROC différentes (i) Kraken\footnote{\url{https://kraken.re/2.0.0/index.html}} \cite{kiessling2019escriptorium}, (ii) Tesseract\footnote{ \url{https://doc.ubuntu-fr.org/tesseract-ocr}} par défaut (Tess. en) et (iii) la version transcrite avec les modèles de Tesseract pour chacune des langues des corpus (français (Tess fr) et portugais (Tess pt)). --- Il faut revoir notre choix à ce sujet}
 \input{02_CORPUS}
 
 \section{Méthodologie et terminologie pour nos expériences}
