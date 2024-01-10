@@ -1,18 +1,13 @@
+\subsection{Évaluation de l'impact des contaminations de ROC sur la REN} 
 
+\subsubsection{Typologie des contaminations et problèmes d'alignement}
 
-\subsection{Évaluation stricte des contaminations de ROC}
-
-Nous évaluons de façon extrinsèque des outils de REN \texttt{spaCy} et \texttt{stanza} telle que décrite par (Strien et al. 2020). Nous comparons les résultats obtenus sur les sous-corpus ELTeC français, anglais et portugais et la TGB, et, leurs transcriptions de ROC\footnote{Dépôt github avec nos données : \url{anonymous}}.
-Les résultats de REN avec \texttt{spaCy} et \texttt{stanza} nous incitent à penser, comme le souligne \cite{DBLP:conf/gis/Koudoro-Parfait21}, que les fautes d'orthographes provoquées par la ROC ne sont pas systématiquement un frein à la bonne extraction des toponymes et des noms de lieux, comme en témoigne le tableau \ref{tab:typo_erreurs_ocr} . Il semble que ce fait soit vérifiable pour les trois langues sur lesquelles nos expériences ont porté. Par ailleurs, certaines entités même très contaminées sont identifiées, comme p.\ ex.\  \textit{``ancehester''} (pour \og{}Manchester\fg{}).
-
-Le tableau \ref{tab:ELTeC_bon_mauvais} répertorie le nombre des types des EN reconnues par \texttt{spaCy} selon la qualité des versions ROC. La qualité des ROC a été évalué en utilisant les mesures de distance de Jaccard, Dice, Bray-Curtis et Cosinus à l'image de ce que propose \cite{DBLP:conf/gis/Koudoro-Parfait21}, mais aussi le Caractère Error Rate (CER) et Word Error Rate (WER).
-Les tableaux \ref{tab:ELTeC_bon_mauvais} et \ref{tab:FP_VP} illustrent le fait que sur les versions ROC les systèmes de REN récupèrent plus d'EN. Dans cette quantité d'EN, surnuméraire par rapport à la référence, figurent en fait des entités contaminées qui sont des hapax et qui comptent chacune pour un type différent d'EN, comme l'illustre le tableau \ref{tab:EN_contamines_Variantes}. Ainsi, lors de l'évaluation stricte des tokens la machine n'est pas en mesure de comprendre que l'EN de réf. \textit{Ormeaux} correspond à l'EN contaminée \textit{Ormaeuux}, ce dernier terme reste un Faux Positif (FP) et un hapax ce qui vient gonfler le nombre des FP. De fait, les résultats de REN sur la ROC bruitée comportent généralement plus d'entités (hapax) que sur une version plus conforme à l'orthographe et aux règles grammaticales, et, dans cette masse nous remarquons que la majorité des EN présentes dans les résultats obtenus sur le textes de référence sont effectivement présentes dans les résultats obtenus sur les versions ROC, comme dans le tableau \ref{tab:EN_contamines_Variantes}. Enfin, le tableau \ref{tab:FP_VP}, qui recense une annotation manuelle des Vrais Positifs (VP) et des FP des EN par type récupérés par \texttt{spaCy\_lg} et \texttt{stanza} sur la référence et les versions Kraken et Tesseract français, illustre bien le fait qu'il n'y a pas de véritable déperdition des VP.
-\textbf{Nous avons par ailleurs constaté qu'il existe deux types de silence dans la REN dans nos expériences : (i) Les EN qui ont été transcrites et non repérées par l'outil de REN et (ii) celles qui n'ont pas été transcrites dès l'origine. Le cas de Reynolds mets en exergue cette observation (tableau %\ref{tab:ELTeC_bon_mauvais})
- on a constaté que seuls 111 types d'EN ont été récupérés dans la configuration Kraken-\texttt{spaCy\_lg}. En effet, plus de 90\% des pages du PDF n'ont pas été OCRisées très probablement à cause du flou très visible sur les pages concernées. D'autres PDF ont connu le même sort dans de moindre proportions. De ce fait, une partie des entités manquantes dans les différentes configurations étudiées peuvent être dues non pas à la REN à proprement parler, mais à des transcriptions incomplètes. Nous n'avons pas mesuré l'impact de cette non transcription car il nous est apparu qu'elle était en faible proportion sur tout le corpus et le texte Reynolds était le seul cas très problématique. }
-
-
-\subsubsection{Typologie des contaminations de ROC}
 \label{subsec:typologie-OCR}
+
+Dans un premier temps, nous proposons une évaluation des outils de REN \texttt{spaCy} et \texttt{stanza}, dans laquelle nous comparons les résultats obtenus sur les sous-corpus ELTeC français, anglais et portugais et la TGB, et, leurs transcriptions de ROC\footnote{Dépôt github avec nos données : \url{anonymous}} sans nous appuyer sur un gold standard.
+
+Nous observons que les fautes d'orthographes provoquées par la ROC ne sont pas systématiquement un frein à la bonne extraction des noms de lieux, comme en témoigne le tableau \ref{tab:typo_erreurs_ocr}. En revanche, la concaténation des tokens d'une EN semble être une contamination plus préjudiciable à sa bonne détection. Par ailleurs, l'étude de \cite{DBLP:conf/gis/Koudoro-Parfait21} laisse entendre que (i) le contexte contaminer autour d'une EN pourrait-être un facteur de non détection et (ii) un contexte parfaitement propre ne serait pas la garantie que l'EN soit reconnue par le système. Il semble que ces faits soient vérifiables pour les trois langues sur lesquelles nos expériences ont porté. Par ailleurs, certaines entités même très contaminées sont identifiées, comme p.\ ex.\  \textit{``ancehester''} (pour \og{}Manchester\fg{}). 
+
 \begin{table}[h!]
 \small
     \centering
@@ -21,21 +16,19 @@ Les tableaux \ref{tab:ELTeC_bon_mauvais} et \ref{tab:FP_VP} illustrent le fait q
     \label{tab:typo_erreurs_ocr}
 \end{table}
 
+%%%________ Plus d'EN sur texte bruité
+
+Le tableau \ref{tab:ELTeC_bon_mauvais} qui répertorie le nombre des types des EN reconnues par \texttt{spaCy} selon la qualité des versions de ROC illustre le fait que sur les versions de ROC les systèmes de REN récupèrent plus d'EN. La qualité des versions ROC a été évaluée en appliquant le \textit{Character Error Rate} (CER) et le \textit{Word Error Rate} (WER) sur les textes de référence et les version de ROC.
+Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapport à la référence, figurent des Faux positifs (FP) (du bruit) mais aussi des formes contaminées des entités, qui sont des hapax, et qui comptent chacune pour un type différent d'EN en plus du type initial de l'EN. Le tableau \ref{tab:FP_VP} qui recense une annotation manuelle des Vrais Positifs (VP) et des FP des EN par type d'EN récupérées par \texttt{spaCy\_lg} et \texttt{stanza} sur l'ensemble des EN de référence et celui des versions pour Kraken et Tesseract français, illustre ces phénomènes. On retrouve bien (i) plus de FP et (ii) plus de VP qui sont des hapax sur les transcriptions OCR que sur la référence. Il y a donc plus de types différents d'entités sur la sortie de la ROC que sur la sortie de la Réf., car comme l'illustre le tableau \ref{tab:EN_contamines_Variantes} les variantes d'une entités peuvent être nombreuses. 
+
+%%%______________ Plus d'EN mais est-ce que c'est du bruit ?
 \begin{table}[h!]
     \centering
     \small
     \input{TAB/corpus_bon_moyen_mauvais_OCR}
-    \caption{Nombre d'EN identifiées par \texttt{spaCy\_lg} dans les sous-corpus ELTeC  en fonction de différentes qualités de ROC déterminée par le CER calculé sur le modèle Tess. adapté à la langue du sous-corpus: bonne (fond gris foncé), moyenne (fond gris clair), mauvaise (fond blanc). 
+    \caption{Nombre d'EN identifiées par \texttt{spaCy\_lg} dans les sous-corpus ELTeC  en fonction de différentes qualités de ROC déterminée par le CER calculé sur le modèle Tess. adapté à la langue du sous-corpus. 
     }
     \label{tab:ELTeC_bon_mauvais}
-\end{table}
-
-\begin{table}[h!]
-\small
-    \centering
-    \input{TAB/EN_contamines_Variantes}
-    \caption{REN des formes contaminées de l'EN ``Ferme des Ormeaux'', {\normalfont La petite Jeanne}, Carraud.}
-    \label{tab:EN_contamines_Variantes}
 \end{table}
 
 \begin{table}[h!]
@@ -45,7 +38,104 @@ Les tableaux \ref{tab:ELTeC_bon_mauvais} et \ref{tab:FP_VP} illustrent le fait q
     \caption{Annotation manuelle des VP et FP sur les types d'EN reconnus par \texttt{spaCy} et \texttt{stanza} pour  Daudet. Compte tenu du temps que prend une annotation manuelle, nous n'avons pas annoté tous les sous-corpus et nous ne disposons pas d'un gold standard global.}
     \label{tab:FP_VP}
 \end{table}
-En regard des différentes sorties de REN obtenues avec \texttt{spaCy} et \texttt{stanza}, nous proposons une typologie des contaminations de ROC, en élargissant la classification standard des vrais/faux positifs/négatifs. Les définitions correspondant à chaque catégorie (indiquées dans la matrice de confusion, tableau \ref{tab:Matrice_erreur_OCR_V2}) sont les suivantes :
+
+
+
+\begin{table}[h!]
+\small
+    \centering
+    \input{TAB/EN_contamines_Variantes}
+    \caption{REN des formes contaminées de l'EN ``Ferme des Ormeaux'', {\normalfont La petite Jeanne}, Carraud.}
+    \label{tab:EN_contamines_Variantes}
+\end{table}
+
+
+Lors du calcul de l'intersection entre les ensembles des EN de référence et des EN issues de ROC, nous rencontrons des problèmes d'alignement. L'alignement stricte de l'EN de réf. \textit{Ormeaux} avec l'EN contaminée \textit{Ormaeuux} par la machine n'est pas possible et ce dernier est compté comme FP et ajouté à la liste des hapax, ce qui vient gonfler artificiellement le nombre des FP dans l'ensemble des EN de la ROC. Il s'agit en fait de Faux FP. Enfin, dans l'ensemble des EN reconnues sur les versions de ROC nous remarquons que la majorité des EN présentent dans les résultats obtenus sur la ROC sont effectivement présentes dans les résultats obtenus sur les versions de référence, comme le présente le tableau \ref{tab:FP_VP}, il n'y a donc pas de véritable déperdition des VP. Enfin, il peut arriver plus rarement que des entités ne soient pas détectées sur la version de réf. mais le soient sur la version de ROC. Il ne s'agit pas véritablement de FP, mais d'une erreur du système même en contexte non bruité.
+
+
+
+En regard des différentes observations que nous venons d'apporter et parce que nous souhaitons rendre compte de la complexité de ces cas réels, nous proposons d'établir une typologie pour l'évaluation des contaminations de ROC sur la REN, élargissant la classification standard des vrais/faux positifs/négatifs. Si les FP sont qualifiés de bruit et les FN de silence, nous avons repéré qu'il existe différents types de bruit et de silence. %Cette typologie permet d'établir quels sont les vrais bruits autrement dit les Vrai FP et les vrais silences (Vrai VN). 
+
+
+\begin{itemize}
+
+
+	\item \textbf{Cas attendus}
+	
+	
+	\begin{description}
+
+		\item[Vrais positifs (VP)]: EN correctement détectées dans les deux versions.
+		\item[Vrais négatifs (VN)]: Aucune EN n'est détectée par le système dans aucune version du texte, car il n'y en a pas.
+		\item[Faux positif (FP)]: EN détectées  à tort dans la version de ROC (bruit de la REN)
+		\item[Faux négatif(FN)]: EN détectées dans le texte de référence mais non détecté à tort dans la version de ROC. (silence de la REN)
+	\end{description}
+	
+		
+	\item \textbf{Bruit et silence total de la REN}
+	
+	
+	\begin{description}
+	
+		\item[Faux vrais positifs (FVP)]: EN incorrectement détectées dans les deux versions.
+	
+	 	\item[Faux vrais négatifs (FVN)] : EN manquantes à tort dans les deux versions du texte.
+	 \end{description}
+	 
+	 \item \textbf{Faux Bruit et faux silence de la REN}
+	
+	\begin{description}
+	
+		\item[Faux faux positifs (FFP)]: EN détectées à raison dans les versions de ROC mais non détectées dans le texte de référence (silence dans la référence ou EN contaminées détectées dans la version de ROC).
+		
+ 		\item[Faux faux négatifs (FFN)]: EN  détectées à tort dans le texte de référence mais pas dans les versions de ROC.
+
+	\end{description}
+
+\end{itemize}
+
+%\begin{description}
+%
+%  \item[Vrais vrais positifs VP (VVP)]: EN correctement détectées dans les deux versions.
+%  
+%  %\item[Vrais vrais négatifs VN (VVN)]: Aucune EN n'est détectée par le système dans aucune version du texte, car il n'y en a pas.
+%
+%  \item[Vrais faux positifs FP (VFP)]: VRAI BRUIT EN détectées  à tort dans la version de ROC
+%
+%  \item[Vrais faux négatifs FN (VFN)]:  SILENCE EN détectées dans le texte de référence mais non détecté à tort dans la version de ROC.
+
+%__________________________
+
+
+%  \item[Faux vrais positifs (FVP)]:  BRUIT EN incorrectement détectées dans les deux versions.
+
+%  \item[Faux vrais négatifs (FVN)] :  Silence total EN manquantes à tort dans les deux versions du texte.
+%  
+
+%  
+%  \item[Faux faux négatifs (FFN)]: FAUX SILENCE EN  détectées à tort dans le texte de référence mais pas dans les versions de ROC.
+%  
+
+%    \item[Faux faux positifs (FFP)]: FAUX BRUIT EN détectées à raison dans les versions de ROC mais non détectées dans le texte de référence (silence dans la référence ou EN contaminées détectées dans la version de ROC).
+%
+%    
+%\end{description}
+
+Il existe un dernier cas des EN qui n'ont pas été transcrites par l'outil de ROC mais qui sont dans la Réf. Cette dernière catégorie est problématique car il ne s'agit pas véritable d'un FN de l'outil de REN, mais d'un FN de l'outil de ROC. 
+
+Le cas de la version Kraken de Reynolds mets en exergue cette observation. Nous avons constaté que seuls 111 types d'EN ont été récupérés dans la configuration Kraken-\texttt{spaCy\_lg}, et pour cause plus de 90\% des pages du PDF n'ont pas été OCRisées très probablement à cause du flou très visible sur les pages concernées. D'autres PDF ont connu le même sort dans de très moindre proportions. De ce fait, une partie des entités manquantes dans les différentes configurations étudiées peuvent être dues non pas à la REN à proprement parler, mais à des transcriptions incomplètes. Nous n'avons pas mesuré l'impact de cette non transcription car il nous est apparu qu'elle était en faible proportion sur tout le corpus et le texte Reynolds était le seul cas très problématique. 
+
+
+\begin{table}[h!]
+    \centering
+    \input{TAB/typologie_erreurs_OCR_exemple.tex}
+
+    \caption{Exemples pour la typologie d'évaluation de l'impact des erreurs de ROC sur la REN }
+    \label{tab:}
+\end{table}
+
+%%%% Matrice mise de côté pour le moment
+%En regard des différentes sorties de REN obtenues avec \texttt{spaCy} et \texttt{stanza}, nous proposons une typologie des contaminations de ROC, en élargissant la classification standard des vrais/faux positifs/négatifs. Les définitions correspondant à chaque catégorie (indiquées dans la matrice de confusion, tableau \ref{tab:Matrice_erreur_OCR_V2}) sont les suivantes :
 %\begin{table}[H]
  %   \centering
   %  \input{TAB/type_erreurs_OCR_V1}
@@ -53,29 +143,15 @@ En regard des différentes sorties de REN obtenues avec \texttt{spaCy} et \textt
     %\label{tab:my_label}
 %\end{table}
 
-\begin{description}
-  \item[Vrais vrais positifs (VVP)]: EN correctement détectées dans les deux versions.
-  \item[Faux vrais positifs (FVP)]:  EN incorrectement détectées dans les deux versions.
-  %\item[Vrais vrais négatifs (VVN)]: Aucune EN n'est détectée par le système dans aucune version du texte, car il n'y en a pas.
-  \item[Faux vrais négatifs (FVN)] :  EN manquantes à tort dans les deux versions du texte.
-  \item[Vrais faux négatifs (VFN)]:  EN détectées dans le texte de référence mais non détecté à tort dans la version de ROC.
-  \item[Faux faux négatifs (FFN)]: EN  détectées à tort dans le texte de référence mais pas dans les versions de ROC.
-  
 
-  \item[Vrais faux positifs (VFP)]: EN détectées  à tort dans la version de ROC et non détectées dans la référence
 
-    \item[Faux faux positifs (FFP)]: EN détectées à raison dans les versions de ROC mais non détectées dans le texte de référence (silence dans la référence ou EN contaminées détectées dans la version de ROC).
-
-    
-\end{description}
-
-\begin{table}[h!]
-    \centering
-    \input{TAB/Matrice_erreur_OCR_V2}
-
-    \caption{Matrice de confusion pour l'évaluation de la REN sur des sorties ROC bruitées. IN = correctement détecté ; \sout{IN} = incorrectement détecté ; OUT = correctement ignoré ; \sout{OUT} = oublié ; case noire = cas impossible}
-    \label{tab:Matrice_erreur_OCR_V2}
-\end{table}
+%\begin{table}[h!]
+%    \centering
+%    \input{TAB/Matrice_erreur_OCR_V2}
+%
+%    \caption{Matrice de confusion pour l'évaluation de la REN sur des sorties ROC bruitées. IN = correctement détecté ; \sout{IN} = incorrectement détecté ; OUT = correctement ignoré ; \sout{OUT} = oublié ; case noire = cas impossible}
+%    \label{tab:Matrice_erreur_OCR_V2}
+%\end{table}
 
 %\begin{table}[]
  %   \centering
@@ -85,10 +161,47 @@ En regard des différentes sorties de REN obtenues avec \texttt{spaCy} et \textt
     %\label{tab:Matrice_erreur_OCR_V1}
 %\end{table}
 
+\subsubsection{\'Evaluation semi-supervisée des contaminations de ROC sur un corpus annoté}
 
+Afin d'évaluer de manière plus supervisée l'influence du bruit ROC sur la REN nous avons annoté un échantillon du sous-corpus ELTeC français.
+ Nous avons choisi de nous limiter aux quatre catégories présentes dans Spacy (Lieux, Personnes, Organisations et Divers).
+  Nous avons tout d'abord annoté un échantillon de 3~000 tokens d'une œuvre  puis réalisé une adjudication pour régler les désaccords. 
+  Nous avons ensuite annoté 5 000 tokens de 3 versions (Référence, Tesseract et Kraken) de deux œuvres (Daudet et Maupassant)
 
+L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était de $0.877$, significativement plus élevé sur la version de référence ($0.905$) que sur les versions ROC. Nous avons pu observer que les désaccords étaient plsu nombreux sur l'annotation des versions océrisées du fait des problèmes de tokenisation.
 
-\subsection{Analyse manuelle des corrections sur des entités contaminées par la ROC}
+Grâce à un système de vote majoritaire, nous avons fusionné les annotations pour obtenir un \textit{gold standard} sur chaque version de chaque œuvre.
+ Nous avons évalué \texttt{spaCy\_lg} sur cet échantillon, les résultats sont présentés dans le tableau \ref{tab:eval-supervise}.
+ En commençant par l'évaluation dite ``GLOBALE'' (tous les types d'entités) nous pouvons remarquer d'une part que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken. Mais aussi, et ce qui est plus étonnant, que pour ce qui est de l'évaluation souple (où une partie de l'entité suffit à considérer la réponse bonne), que ces résultats sont même meilleurs que ceux obtenus sur la version de référence.
+  D'autre part, nous remarquons que là aussi la faiblesse apparente des résultats de REN obtenus sur des versions OCR est principalement due à des problèmes d'alignement entre les tokens contaminés et les tokens de référence. 
+\begin{table}[h!]
+\scriptsize{\begin{tabular}{l|ccc|ccc}
+ %Versions
+ &		&	GLOBAL	&		&		&	LIEUX	&		\\
+\hline
+ \hline
+\textbf{Souple}	&	Rappel		&Précision	&	F-Mes.	&	Rappel&		Précision		&F-Mes.	\\
+ \hline
+Kraken	&	49.57	&	73.72 	&	59.28	&	48.84	&	52.50	&	50.60	\\
+													
+Tesseract	&	51.53	&	77.63	&	61.94	&	56.41	&	57.89	&	57.14	\\
+													
+Référence	&	49.78	&	77.55	&	60.64	&	53.49	&	53.49	&	53.49	\\
+\hline
+\hline
+\textbf{Stricte}	&	Rappel		&Précision	&	F-Mes.	&	Rappel&		Précision		&F-Mes.	 \\
+\hline
+Kraken	&	18.26	&	58.82	&	27.87	&	43.24	&	45.71	&	44.44	\\
+Tesseract	&	21.00	&	68.66	&	32.16	&	43.33	&	44.83	&	44.07	\\
+Référence	&	21.62	&	69.57	&	32.98	&	41.18	&	45.16	&	43.08	\\
+\hline
+\hline
+\end{tabular}}
+\caption{Evaluation de \texttt{spaCy\_lg} sur un échantillon annoté de 10~000 tokens dans trois versions textuelles différentes\label{tab:eval-supervise} en configuration souple et en configuration stricte (GLOBAL: tous les types d'entités), LIEUX: seulement les lieux)}
+ \end{table}
+
+\subsection{Analyse de l'impact des corrections de ROC sur la REN}
+\subsubsection{Analyse manuelle des corrections }
 Pour ce qui est de l'impact de deux correcteurs de ROC (JamSpell\footnote{Abbr.\ Jspll.} pré-entraîné sur une langue spécifique et JamSpell-ELTeC  sur les EN uniques (types) et évalué sur un jeu de test), nous observons dans le tableau \ref{tab:ELTeC} que le nombre d'EN augmente lors de la correction avec JamSpell-ELTeC pour le sous-corpus français océrisé avec Tesseract. 
 % En revanche, cette tendance paraît moins systématique pour les mêmes corpus océrisés avec Tesseract, où un plus grand nombre d'EN a été récupéré uniquement à partir du corpus anglais.
 Enfin, dans le cas du sous-corpus ELTeC portugais, comme nous l'avons souligné dans la section \ref{sec:Meth} nous avons extrait uniquement les EN corrigées avec notre modèle JamSpell-ELTeC et on note que la quantités d'EN reconnues et moidre que celle trouvé sur la sortie brute de ROC.
@@ -127,7 +240,7 @@ De façon similaire, nous observons dans le tableau \ref{tab:erreurs_corr_ELTeCE
     %\label{tab:erreurs_corr_ELTeCPor}
 %\end{table}
 
-\subsection{Typologie des contaminations de corrections de ROC}
+\subsubsection{Typologie des contaminations de corrections de ROC}
 Nous nous appuyons également sur une typologie des corrections automatiques de ROC, résumée dans le tableau \ref{tab:res-analyses}, qui permet de distinguer les différents cas de figure où les corrections en question ont soit amélioré les sorties de ROC (MOBC), soit les ont incorrectement modifiées (MOMC, MOI, BOIC). Quelques exemples sont visibles dans le tableau \ref{tab:typologie_erreurs-corr_ELTeCEng}, 
 % et \ref{tab:typologie_erreurs_corr_ELTeCFra}
 parmi lesquels se distinguent les sur-corrections ``Conspire'' 
@@ -173,12 +286,12 @@ dans ELTeC anglais), ainsi que ``Martincourt'' (au lieu de ``Morlincourt'' dans 
 % \end{table}
 
 
-\subsection{Analyses semi-supervisées des contaminations de ROC et de leurs corrections}
+\subsubsection{Analyses stricte des contaminations de ROC et de leurs corrections : Intersections}
+\label{intersections}
 
 Notre démarche évaluative est fondée sur l'intérêt de la correction automatique qui vise à diminuer le nombre de FP, ainsi qu'à augmenter l'intersection entre les EN de ROC et de référence (le dernier point étant élaboré dans la sous-sous-section \ref{intersections}). 
 
-\subsubsection{Intersections}
-\label{intersections}
+
 Les graphiques des intersections sur les figures \ref{fig:intersection_globale-kraken}-\ref{fig:intersection-globale-tess} représentent le rapport entre les EN issues des textes de référence et celles provenant des versions de ROC (Kraken ou Tesseract) non corrigées, corrigées avec le modèle pré-entrainé de JamSpell et le modèle entrainé sur chacun des sous-corpus ELTeC dans les langues correspondantes\footnote{cf. tableau \ref{tab:config}.}. Les textes de référence ont été annotés automatiquement avec \texttt{spaCy\_lg} et \texttt{stanza} et nous nous en servons comme vérité terrain. Les versions ROC ont aussi été annoté avec ces deux moteurs de REN. Nous avons calculé les intersections pour chacun des sous-corpus (ELTeC français, anglais et portugais, et TGB) de manière globale. Pour ce faire nous avons fait correspondre les entités de chacun des textes de référence avec celles de leurs versions ROC. Ainsi, dans le cas du sous-corpus ELTeC français l'EN ``Paris'' repérée dans le texte de référence pour Daudet, n'est pas la même que l'EN ``Paris'' récupérée dans le texte de référence de Noailles. Il en va de même pour les différentes autres configurations (se référer au tableau \ref{tab:config}).
 Les cercles ``EN Réf'' comprennent les EN issues des textes de référence -- autrement dit les VVP. Les cercles ``EN nom ROC'' comportent les EN considérées comme des VFP, néanmoins ces ensembles comprennent aussi des EN contaminées -- autrement dit des FFP avec problème de liage (p.\ ex.\ ``Dconshire'' pour ``Devonshire''). Ces différents cas sont décrit en détail dans la sous-section \ref{subsec:typologie-OCR} et la matrice de confusion (tableau \ref{tab:Matrice_erreur_OCR_V2}). L'intersection des deux cercles figure les VVP de l'ensemble des EN récupérées sur la version de ROC.
 La figure \ref{fig:ELTeCFRA_Tess. fr_spacy-lg-concat_intersection} montre que le plus grand nombre d'EN en commun a été récupéré par \texttt{spaCy\_lg} quand le texte a été océrisé avec Tesseract en utilisant le modèle adapté à la langue du sous-corpus. Il est notable que la correction automatique avec le modèle pré-entrainé de JamSpell ou le modèle entrainé sur une partie du sous-corpus ELTeC adapté à la langue du sous-corpus ne sont pas un gain pour l'intersection. 
@@ -365,41 +478,4 @@ Les premières observations des résultats semblent confirmer que la correction 
  \end{table}
 
 
-\subsection{\'Evaluation des contaminations de ROC sur un corpus annoté}
 
-Afin d'évaluer de manière plus supervisée l'influence du bruit ROC sur la REN nous avons annoté un échantillon du sous-corpus ELTeC français.
- Nous avons choisi de nous limiter aux quatre catégories présentes dans Spacy (Lieux, Personnes, Organisations et Divers).
-  Nous avons tout d'abord annoté un échantillon de 3~000 tokens d'une œuvre  puis réalisé une adjudication pour régler les désaccords. 
-  Nous avons ensuite annoté 5 000 tokens de 3 versions (Référence, Tesseract et Kraken) de deux œuvres (Daudet et Maupassant)
-
-L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était de $0.877$, significativement plus élevé sur la version de référence ($0.905$) que sur les versions ROC. Nous avons pu observer que les désaccords étaient plsu nombreux sur l'annotation des versions océrisées du fait des problèmes de tokenisation.
-
-Grâce à un système de vote majoritaire, nous avons fusionné les annotations pour obtenir un \textit{gold standard} sur chaque version de chaque œuvre.
- Nous avons évalué \texttt{spaCy\_lg} sur cet échantillon, les résultats sont présentés dans le tableau \ref{tab:eval-supervise}.
- En commençant par l'évaluation dite ``GLOBALE'' (tous les types d'entités) nous pouvons remarquer d'une part que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken. Mais aussi, et ce qui est plus étonnant, que pour ce qui est de l'évaluation souple (où une partie de l'entité suffit à considérer la réponse bonne), que ces résultats sont même meilleurs que ceux obtenus sur la version de référence.
-  D'autre part, nous remarquons que la faiblesse apparente des résultats de REN obtenus sur des versions OCR est principalement due à des problèmes d'alignement entre les tokens contaminés et les tokens de référence. 
-\begin{table}[h!]
-\begin{tabular}{l|ccc|ccc}
- %Versions
- &		&	GLOBAL	&		&		&	LIEUX	&		\\
-\hline
- \hline
-\textbf{Souple}	&	Rappel		&Précision	&	F-Mes.	&	Rappel&		Précision		&F-Mes.	\\
- \hline
-Kraken	&	49.57	&	73.72 	&	59.28	&	48.84	&	52.50	&	50.60	\\
-													
-Tesseract	&	51.53	&	77.63	&	61.94	&	56.41	&	57.89	&	57.14	\\
-													
-Référence	&	49.78	&	77.55	&	60.64	&	53.49	&	53.49	&	53.49	\\
-\hline
-\hline
-\textbf{Stricte}	&	Rappel		&Précision	&	F-Mes.	&	Rappel&		Précision		&F-Mes.	 \\
-\hline
-Kraken	&	18.26	&	58.82	&	27.87	&	43.24	&	45.71	&	44.44	\\
-Tesseract	&	21.00	&	68.66	&	32.16	&	43.33	&	44.83	&	44.07	\\
-Référence	&	21.62	&	69.57	&	32.98	&	41.18	&	45.16	&	43.08	\\
-\hline
-\hline
-\end{tabular}
-\caption{Evaluation de \texttt{spaCy\_lg} sur un échantillon annoté de 10~000 tokens dans trois versions textuelles différentes\label{tab:eval-supervise} en configuration souple et en configuration stricte (GLOBAL: tous les types d'entités), LIEUX: seulement les lieux)}
- \end{table}
