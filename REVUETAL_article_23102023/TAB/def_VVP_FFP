@@ -1,0 +1,26 @@
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+NER in Ref. & NER in OCR & Verdict 1 & Details &  Verdict 2 \\
+\hline
+Yes      & Yes & TP    & True Named Entity & True TP \\ 
+\hline
+Yes      & Yes & TP    & NER Error in Ref. and OCR & False TP  \\ 
+\hline
+\hline
+No        & No       & TN    & No entity in any version   & True TN\\ 
+\hline
+No        & No       & TN    & Missing entity in both versions &  False TN \\ 
+\hline
+\hline
+Yes     & No         & FN    & Missing entity in OCR & True FN \\ 
+\hline
+Yes     & No         & FN    &  Entity error in ref. & False FN \\ 
+\hline
+\hline
+No       & Yes        & FP     &  Entity error in OCR & True FP \\
+\hline
+No       & Yes        & FP     &  Missing entity in Ref. & False FP (TP) \\
+\hline
+No       & Yes        & FP     &  Entity linking issue & False FP (TP ?)\\
+\hline
+\end{tabular}

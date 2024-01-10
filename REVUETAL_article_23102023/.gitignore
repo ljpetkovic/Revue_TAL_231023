@@ -27,3 +27,4 @@
 *.tmp
 *.aux
 *.pdf
+*.synctex.gz
