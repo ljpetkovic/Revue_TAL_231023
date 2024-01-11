@@ -1,0 +1,2996 @@
+%% This BibTeX bibliography file was created using BibDesk.
+%% http://bibdesk.sourceforge.net/
+
+
+%% Created for Yves Lepage at 2012-10-08 16:00:22 +0900 
+
+
+%% Saved with string encoding Unicode (UTF-8) 
+
+
+
+% Des problèmes dans la complétion des champs à revoir
+
+%__________________Bibliographe Caroline____________________________________
+
+@INPROCEEDINGS{8791217,
+  author={Hamdi, Ahmed and Jean-Caurant, Axel and Sidere, Nicolas and Coustaty, Mickaël and Doucet, Antoine},
+  booktitle={2019 ACM/IEEE Joint Conference on Digital Libraries (JCDL)}, 
+  title={An Analysis of the Performance of Named Entity Recognition over OCRed Documents}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={333-334},
+  doi={10.1109/JCDL.2019.00057}}
+  
+@inproceedings{Traub-2015,
+  TITLE = {{Impact analysis of OCR quality on research tasks in digital archives}},
+  AUTHOR = {Traub, M.C. and Van Ossenbruggen, J.and Hardman L.},
+  URL = { https://www.researchgate.net/publication/280520892_Impact_Analysis_of_OCR_Quality_on_Research_Tasks_in_Digital_Archives},
+  BOOKTITLE = {{Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics}},
+  YEAR = {2015},
+  pages = {pp. 252-263.},
+  DOI = {10.1007/978-3-319-24592-8\_19},
+  PDF = {https://core.ac.uk/reader/189941790},
+  
+}
+
+
+@inproceedings{jean:hal-01479299,
+  TITLE = {{Un mod{\`e}le probabiliste pour la detection de l'incertitude dans le langage naturel}},
+  AUTHOR = {Jean, Pierre-Antoine and Harispe, S{\'e}bastien and Ranwez, Sylvie and Bellot, Patrice and Montmain, Jacky},
+  URL = {https://hal-amu.archives-ouvertes.fr/hal-01479299},
+  JOURNAL = {{Document Num{\'e}rique}},
+  PUBLISHER = {{Lavoisier}},
+  VOLUME = {19-2016},
+  NUMBER = {2-3},
+  PAGES = {9-29},
+  YEAR = {2016},
+  MONTH = Dec,
+  PDF = {https://hal-amu.archives-ouvertes.fr/hal-01479299/file/un-modele-probabiliste.pdf},
+  HAL_ID = {hal-01479299},
+  HAL_VERSION = {v1},
+}
+
+
+@INPROCEEDINGS{konvens:60_rodriquez12w,
+  author = {Kepa Joseba Rodriquez and Mike Bryant and Tobias Blanke and Magdalena Luszczynska},
+  title = {Comparison of named entity recognition tools for raw {OCR} text},
+  booktitle = {Proceedings of KONVENS 2012},
+  pages = {410--414},
+  year = {2012},
+  editor = {Jeremy Jancsary},
+  publisher = {\"{O}GAI},
+  month = {September},
+  url = {http://www.oegai.at/konvens2012/proceedings/60_rodriquez12w/},
+  note = {LThist 2012 workshop}
+}
+
+
+@inproceedings{chiron:hal-03025508,
+  TITLE = {{Impact of OCR errors on the use of digital libraries Towards a better access to information}},
+  AUTHOR = {Chiron, Guillaume and Doucet, Antoine and Coustaty, Micka{\"e}l and Visani, Muriel and Moreux, Jean-Philippe},
+  URL = {https://hal.archives-ouvertes.fr/hal-03025508},
+  BOOKTITLE = {{2017 ACM IEEE Joint Conference on Digital Libraries (JCDL)}},
+  ADDRESS = {Toronto, Canada},
+  PUBLISHER = {{IEEE}},
+  SERIES = {2017 ACM/IEEE Joint Conference on Digital Libraries (JCDL)},
+  YEAR = {2017},
+  MONTH = Jun,
+  DOI = {10.1109/JCDL.2017.7991582},
+  KEYWORDS = {Digital libraries ; OCR errors ; indexation bias ; search logs}
+}
+@inproceedings{linharespontes,
+  TITLE = {{Impact of OCR Quality on Named Entity Linking}},
+  AUTHOR = {Linhares Pontes, Elvys and Hamdi, Ahmed and Sid{\`e}re, Nicolas and Doucet, Antoine},
+  URL = {https://hal.archives-ouvertes.fr/hal-02557116},
+  BOOKTITLE = {{International Conference on Asia-Pacific Digital Libraries 2019}},
+  ADDRESS = {Kuala Lumpur, Malaysia},
+  YEAR = {2019},
+  MONTH = Nov,
+  DOI = {10.1007/978-3-030-34058-2\_11},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02557116/file/paper_31.pdf}
+}
+
+@inproceedings{Nguyen-2020,
+    title = "Impact Analysis of Document Digitization on Event Extraction",
+    author = {Nguyen, Nhu Khoa  and Boros, Emanuela and Lejeune, Ga{\"e}l and Doucet, Antoine},
+    booktitle = "Proceedings of the 4th Workshop on Natural Language for Artificial Intelligence (NL4AI),  19th International Conference of the Italian Association for Artificial Intelligence",
+    year = "2020",
+    address = "Roma, Italy",
+    publisher = "-",
+    pages = "to appear",
+    url = "https://hal.archives-ouvertes.fr/hal-03026148/document",
+}
+
+@inproceedings{hamdi:hal-03026931,
+  TITLE = {{Assessing and Minimizing the Impact of OCR Quality on Named Entity Recognition}},
+  AUTHOR = {Hamdi, Ahmed and Jean-Caurant, Axel and Sid{\`e}re, Nicolas and Coustaty, Micka{\"e}l and Doucet, Antoine},
+  URL = {https://hal.archives-ouvertes.fr/hal-03026931},
+  BOOKTITLE = {{24\textsuperscript{th} International Conference on Theory and Practice of Digital Libraries 2020, Lyon, France}},
+  PAGES = {87-101},
+  YEAR = {2020},
+  MONTH = Aug,
+  DOI = {10.1007/978-3-030-54956-5\_7},
+  KEYWORDS = {Digitized documents ; Indexing ; OCR ; Named entity recognition},
+  PDF = {https://hal.archives-ouvertes.fr/hal-03026931/file/TPDL_2020_paper_45.pdf},
+  HAL_ID = {hal-03026931},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{huynh:hal-03034484,
+  TITLE = {{When to Use OCR Post-correction for Named Entity Recognition?}},
+  AUTHOR = {Huynh, Vinh-Nam and Hamdi, Ahmed and Doucet, Antoine},
+  URL = {https://hal.archives-ouvertes.fr/hal-03034484},
+  BOOKTITLE = {{22nd International Conference on Asia-Pacific Digital Libraries, ICADL 2020}},
+  PAGES = {33-42},
+  YEAR = {2020},
+  MONTH = Nov,
+  DOI = {10.1007/978-3-030-64452-9\_3},
+  KEYWORDS = {named entity recognition ; optical character recognition ; character degradation ; spelling correction}
+}
+
+
+@inproceedings{boros-etal-2020-alleviating,
+    title = "Alleviating Digitization Errors in Named Entity Recognition for Historical Documents",
+    author = "Boros, Emanuela  and
+      Hamdi, Ahmed  and
+      Linhares Pontes, Elvys  and
+      Cabrera-Diego, Luis Adri{\'a}n  and
+      Moreno, Jose G.  and
+      Sidere, Nicolas  and
+      Doucet, Antoine",
+    booktitle = "Proceedings of the 24th Conference on Computational Natural Language Learning",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.conll-1.35",
+    doi = "10.18653/v1/2020.conll-1.35",
+    pages = "431--441",
+    abstract = "This paper tackles the task of named entity recognition (NER) applied to digitized historical texts obtained from processing digital images of newspapers using optical character recognition (OCR) techniques. We argue that the main challenge for this task is that the OCR process leads to misspellings and linguistic errors in the output text. Moreover, historical variations can be present in aged documents, which can impact the performance of the NER process. We conduct a comparative evaluation on two historical datasets in German and French against previous state-of-the-art models, and we propose a model based on a hierarchical stack of Transformers to approach the NER task for historical data. Our findings show that the proposed model clearly improves the results on both historical datasets, and does not degrade the results for modern datasets.",
+}
+
+@inproceedings{vanStrien-2020,
+  TITLE = {{Assessing the Impact of OCR Quality on Downstream NLP Tasks.}},
+  AUTHOR = {van Strien, D. and Beelen, K. and Ardanuy, M. and Hosseini, K. and McGillivray, B. and Colavizza, G.},
+  URL = {https://hal.archives-ouvertes.fr/hal-02571633},
+  BOOKTITLE = {In Proceedings of the 12th International Conference on Agents and Artificial Intelligence - Volume 1: ARTIDIGH},
+  YEAR = {2020},
+  MONTH = February,
+  url = "https://www.researchgate.net/publication/339848517_Assessing_the_Impact_of_OCR_Quality_on_Downstream_NLP_Tasks" ,
+  doi = "10.5220/0009169004840496",
+  pages = "484 -- 496",
+  isbn = "978-989-758-395-7",
+}
+
+
+@inproceedings{stanislawek-2019,
+    title = "Named Entity Recognition - Is There a Glass Ceiling?",
+    author = "Stanislawek, Tomasz  and
+      Wr{\'o}blewska, Anna  and
+      W{\'o}jcicka, Alicja  and
+      Ziembicki, Daniel  and
+      Biecek, Przemyslaw",
+    booktitle = "Proceedings of the 23rd Conference on Computational Natural Language Learning (CoNLL)",
+    month = nov,
+    year = "2019",
+    url = "https://www.aclweb.org/anthology/K19-1058",
+    doi = "10.18653/v1/K19-1058",
+    pages = "624--633",
+    abstract = "Recent developments in Named Entity Recognition (NER) have resulted in better and better models. However, is there a glass ceiling? Do we know which types of errors are still hard or even impossible to correct? In this paper, we present a detailed analysis of the types of errors in state-of-the-art machine learning (ML) methods. Our study illustrates weak and strong points of the Stanford, CMU, FLAIR, ELMO and BERT models, as well as their shared limitations. We also introduce new techniques for improving annotation, training process, and for checking model quality and stability.",
+}
+
+@inproceedings{Baledent-2020,
+  TITLE = {{Dating Ancient texts: an Approach for Noisy French Documents}},
+  AUTHOR = {Baledent, Ana{\"e}lle and Hiebel, Nicolas and Lejeune, Ga{\"e}l},
+  URL = {https://hal.archives-ouvertes.fr/hal-02571633},
+  BOOKTITLE = {Language Technologies for Historical and Ancient Langues (LT4HLA) @LREC2020},
+  YEAR = {2020},
+  MONTH = May,
+  KEYWORDS = {Old documents ; Text Mining ; Document Dating ; Corpus ; Digital Humanities ; Textual Document Dating},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02571633/file/main.pdf},
+  HAL_ID = {hal-02571633},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{Ehrmann-2020,
+title = {{Extended Overview of CLEF HIPE 2020: Named Entity Processing on Historical Newspapers}},
+booktitle = {{Working Notes of CLEF 2020 - Conference and Labs of the Evaluation Forum}},
+publisher = {CEUR-WS},
+author = {Ehrmann, Maud and Romanello, Matteo and Flückiger, Alex and Clematide, Simon},
+year = {2020},
+editor = {Cappellato, Linda and Eickhoff, Carsten and Ferro, Nicola and Névéol, Aurélie}
+}
+
+@inproceedings{heiden:halshs-00549779,
+TITLE = {{TXM : Une plateforme logicielle open-source pour la textom{\'e}trie - conception et d{\'e}veloppement}},
+AUTHOR = {Heiden, Serge and Magu{\'e}, Jean-Philippe and Pincemin, B{\'e}n{\'e}dicte},
+URL = {https://halshs.archives-ouvertes.fr/halshs-00549779},
+BOOKTITLE = {{10th International Conference on the Statistical Analysis of Textual Data - JADT 2010}},
+ADDRESS = {Rome, Italy},
+EDITOR = {Sergio Bolasco and Isabella Chiari and Luca Giuliano},
+PUBLISHER = {{Edizioni Universitarie di Lettere Economia Diritto}},
+VOLUME = {2},
+NUMBER = {3},
+PAGES = {1021-1032},
+YEAR = {2010},
+MONTH = Jun,
+KEYWORDS = {textometry ; full text search engine ; statistical analysis ; natural language processing ; grails framework ; textom{\'e}trie ; open-source ; framework grails ; traitement automatique de la langue ; tal ; eclipse rcp ; analyse statistique ; moteur de recherche plein texte ; xml-tei},
+PDF = {https://halshs.archives-ouvertes.fr/halshs-00549779/file/Heiden_al_jadt2010.pdf},
+HAL_ID = {halshs-00549779},
+HAL_VERSION = {v1},
+  }
+  
+@inproceedings{miller-etal-2000-named,
+    title = "Named Entity Extraction from Noisy Input: Speech and {OCR}",
+    author = "Miller, David  and
+      Boisen, Sean  and
+      Schwartz, Richard  and
+      Stone, Rebecca  and
+      Weischedel, Ralph",
+    booktitle = "Sixth Applied Natural Language Processing Conference",
+    month = apr,
+    year = "2000",
+    address = "Seattle, Washington, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/A00-1044",
+    doi = "10.3115/974147.974191",
+    pages = "316--324",
+}
+
+@inproceedings{odebrecht_ELTeC_2021,
+  maintitle = {European Literary Text Collection ({ELTeC})},
+  editor = {Odebrecht, Carolin and Burnard, Lou and Schöch, Christof},
+  version = {v1.1.0},
+  year = {2021},
+  month = {4},
+  publisher = {COST Action Distant Reading for European Literary History},
+  url = {https://github.com/COST-ELTeC/ELTeC},
+  doi = {10.5281/zenodo.4662444},
+  }
+  
+  @software{spacy,
+  author = {Honnibal, Matthew and Montani, Ines and Van Landeghem, Sofie and Boyd, Adriane},
+  title = {{spaCy: Industrial-strength Natural Language Processing in Python}},
+  year = 2020,
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.1212303},
+  url = {https://doi.org/10.5281/zenodo.1212303}
+}
+
+@inproceedings{buscaldi:hal-02784738,
+  TITLE = {{Calcul de similarit{\'e} entre phrases : quelles mesures et quels descripteurs ?}},
+  AUTHOR = {Buscaldi, Davide and Felhi, Ghazi and Ghoul, Dhaou and Le Roux, Josepth and Lejeune, Ga{\"e}l and Zhang, Xudong},
+  URL = {https://hal.archives-ouvertes.fr/hal-02784738},
+  BOOKTITLE = {Traitement Automatique des Langues Naturelles (TALN, 27e {\'e}dition), Atelier D{\'E}fi Fouille de Textes}},
+  ADDRESS = {Nancy, France},
+  EDITOR = {Cardon, R{\'e}mi and Grabar, Natalia and Grouin, Cyril and Hamon, Thierry},
+  PUBLISHER = {{ATALA}},
+  PAGES = {14-25},
+  YEAR = {2020},
+  KEYWORDS = {similarit{\'e} ; distance de Bray-Curtis. ; distance euclidienne ; n-grammes de caract{\`e}res},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02784738v3/file/210.pdf},
+  HAL_ID = {hal-02784738},
+  HAL_VERSION = {v3},
+}
+
+@inproceedings{gupta2015automatic,
+  title={Automatic assessment of OCR quality in historical documents},
+  author={Gupta, Anshul and Gutierrez-Osuna, Ricardo and Christy, Matthew and Capitanu, Boris and Auvil, Loretta and Grumbach, Liz and Furuta, Richard and Mandell, Laura},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={29},
+  number={1},
+  year={2015}
+}
+
+@inproceedings{ehrmann2020overview,
+  title={Overview of CLEF HIPE 2020: Named entity recognition and linking on historical newspapers},
+  author={Ehrmann, Maud and Romanello, Matteo and Fl{\"u}ckiger, Alex and Clematide, Simon},
+  booktitle={International Conference of the Cross-Language Evaluation Forum for European Languages},
+  pages={288--310},
+  year={2020},
+  organization={Springer}
+}
+
+@inproceedings{suarez2020sinner,
+  title={SinNer@ Clef-Hipe2020: Sinful adaptation of SotA models for Named Entity Recognition in French and German},
+  author={Su{\'a}rez, Pedro Javier Ortiz and Dupont, Yoann and Lejeune, Ga{\"e}l and Tian, Tian},
+  booktitle={CLEF 2020 Working Notes. Working Notes of CLEF 2020-Conference and Labs of the Evaluation Forum},
+  year={2020}
+}
+
+@article{kettunen2020ground,
+  title={Ground truth OCR sample data of Finnish historical newspapers and journals in data improvement validation of a re-OCRing process},
+  author={Kettunen, Kimmo and Koistinen, Mika and Kervinen, Jukka},
+  journal={Liber Quarterly},
+  volume={30},
+  number={1},
+  year={2020}
+}
+
+@article{powalski2020unicase,
+  title={UniCase--Rethinking Casing in Language Models},
+  author={Powalski, Rafal and Stanislawek, Tomasz},
+  journal={arXiv preprint arXiv:2010.11936},
+  year={2020}
+}
+
+@inproceedings{niu2020controlling,
+  title={Controlling neural machine translation formality with synthetic supervision},
+  author={Niu, Xing and Carpuat, Marine},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={05},
+  pages={8568--8575},
+  year={2020}
+}
+
+
+
+@inproceedings{kiessling2019escriptorium,
+  title={eScriptorium: An open source platform for historical document analysis},
+  author={Kiessling, Benjamin and Tissot, Robin and Stokes, Peter and Ezra, Daniel St{\"o}kl Ben},
+  booktitle={2019 International Conference on Document Analysis and Recognition Workshops (ICDARW)},
+  volume={2},
+  pages={19--19},
+  year={2019},
+  organization={IEEE}
+}
+
+
+@unpublished{gabay:hal-02577236,
+  TITLE = {{OCR17: Ground Truth and Models for 17th c. French Prints (and hopefully more)}},
+  AUTHOR = {Gabay, Simon and Cl{\'e}rice, Thibault and Reul, Christian},
+  URL = {https://hal.archives-ouvertes.fr/hal-02577236},
+  NOTE = {working paper or preprint},
+  YEAR = {2020},
+  MONTH = May,
+  KEYWORDS = {OCR ; 17th c French ; Training data ; Corpus building ; Data paper ; OCR ; XVII{\`e}me si{\`e}cle ; Donnees ; Construction de corpus},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02577236/file/OCR17__JDMDH_.pdf},
+  HAL_ID = {hal-02577236},
+  HAL_VERSION = {v1},
+}
+
+@article{weichselbaumer2020new,
+  title={New Approaches to OCR for Early Printed Books},
+  author={Weichselbaumer, Nikolaus and Seuret, Mathias and Limbach, Saskia and Dong, Rui and Burghardt, Manuel and Christlein, Vincent},
+  journal={DigItalia},
+  volume={2},
+  pages={74--87},
+  year={2020}
+}
+
+@inproceedings{smith2007overview,
+  title={An overview of the Tesseract OCR engine},
+  author={Smith, Ray},
+  booktitle={Ninth international conference on document analysis and recognition (ICDAR 2007)},
+  volume={2},
+  pages={629--633},
+  year={2007},
+  organization={IEEE}
+}
+
+
+@article{clausner2020efficient,
+  title={Efficient and effective OCR engine training},
+  author={Clausner, Christian and Antonacopoulos, Apostolos and Pletschacher, Stefan},
+  journal={International Journal on Document Analysis and Recognition (IJDAR)},
+  volume={23},
+  number={1},
+  pages={73--88},
+  year={2020},
+  publisher={Springer}
+}
+
+
+@inproceedings{qi2020stanza,
+ author = {Qi, Peng and Zhang, Yuhao and Zhang, Yuhui and Bolton, Jason and Manning, Christopher D.},
+ booktitle = {Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics: System Demonstrations},
+ title = {Stanza: A {Python} Natural Language Processing Toolkit for Many Human Languages},
+ url = {https://nlp.stanford.edu/pubs/qi2020stanza.pdf},
+ year = {2020}
+}
+
+
+@article{CICLING-2018-Lejeune,
+	title = "A New Proposal for Evaluating Web Page Cleaning Tools",
+	author = "Ga{\"e}l Lejeune and Lichao Zhu",
+	journal = {Computacion y Sistemas},
+	volume = {22},
+	number = {4},
+	url = {https://hal.archives-ouvertes.fr/hal-02467732},
+	year = "2018",
+        pages = {1249-1258}
+}
+
+@article{DBLP:journals/corr/KettunenMRKL16,
+  author    = {Kimmo Kettunen and
+               Eetu M{\"{a}}kel{\"{a}} and
+               Teemu Ruokolainen and
+               Juha Kuokkala and
+               Laura L{\"{o}}fberg},
+  title     = {Old Content and Modern Tools - Searching Named Entities in a Finnish
+               OCRed Historical Newspaper Collection 1771-1910},
+  journal   = {CoRR},
+  volume    = {abs/1611.02839},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1611.02839},
+  eprinttype = {arXiv},
+  eprint    = {1611.02839},
+  timestamp = {Mon, 13 Aug 2018 16:49:07 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/KettunenMRKL16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{DBLP:conf/konvens/EhrmannCRK16,
+  author    = {Maud Ehrmann and
+               Giovanni Colavizza and
+               Yannick Rochat and
+               Fr{\'{e}}d{\'{e}}ric Kaplan},
+  editor    = {Stefanie Dipper and
+               Friedrich Neubarth and
+               Heike Zinsmeister},
+  title     = {Diachronic Evaluation of {NER} Systems on Old Newspapers},
+  booktitle = {Proceedings of the 13th Conference on Natural Language Processing,
+               {KONVENS} 2016, Bochum, Germany, September 19-21, 2016},
+  series    = {Bochumer Linguistische Arbeitsberichte},
+  volume    = {16},
+  year      = {2016},
+  url       = {https://www.linguistics.rub.de/konvens16/pub/13\_konvensproc.pdf},
+  timestamp = {Thu, 12 Mar 2020 11:30:43 +0100},
+  biburl    = {https://dblp.org/rec/conf/konvens/EhrmannCRK16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/ijdar/Lopresti09,
+  author    = {Daniel P. Lopresti},
+  title     = {Optical character recognition errors and their effects on natural
+               language processing},
+  journal   = {Int. J. Document Anal. Recognit.},
+  volume    = {12},
+  number    = {3},
+  pages     = {141--151},
+  year      = {2009},
+  url       = {https://doi.org/10.1007/s10032-009-0094-8},
+  doi       = {10.1007/s10032-009-0094-8},
+  timestamp = {Thu, 13 Aug 2020 12:42:16 +0200},
+  biburl    = {https://dblp.org/rec/journals/ijdar/Lopresti09.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{DBLP:conf/konvens/AlexGKT12,
+  author    = {Beatrice Alex and
+               Claire Grover and
+               Ewan Klein and
+               Richard Tobin},
+  editor    = {Jeremy Jancsary},
+  title     = {Digitised historical text: Does it have to be mediOCRe?},
+  booktitle = {11th Conference on Natural Language Processing, {KONVENS} 2012, Empirical
+               Methods in Natural Language Processing, Vienna, Austria, September
+               19-21, 2012},
+  series    = {Scientific series of the {\"{O}}GAI},
+  volume    = {5},
+  pages     = {401--409},
+  publisher = {{\"{O}}GAI, Wien, {\"{O}}sterreich},
+  year      = {2012},
+  url       = {http://www.oegai.at/konvens2012/proceedings/59\_alex12w/},
+  timestamp = {Sat, 29 Nov 2014 17:59:24 +0100},
+  biburl    = {https://dblp.org/rec/conf/konvens/AlexGKT12.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{DBLP:conf/gis/Koudoro-Parfait21,
+  author    = {Caroline Koudoro{-}Parfait and
+               Ga{\"{e}}l Lejeune and
+               Glenn Roe},
+  editor    = {Ludovic Moncla and
+               Carmen Brando and
+               Katherine McDonough},
+  title     = {Spatial Named Entity Recognition in Literary Texts: What is the Influence
+               of {OCR} Noise?},
+  booktitle = {GeoHumanities@SIGSPATIAL 2021: Proceedings of the 5th {ACM} {SIGSPATIAL}
+               International Workshop on Geospatial Humanities, Beijing, China, November
+               2 - 5, 2021},
+  pages     = {13--21},
+  publisher = {{ACM}},
+  year      = {2021},
+  url       = {https://doi.org/10.1145/3486187.3490206},
+  doi       = {10.1145/3486187.3490206},
+  timestamp = {Thu, 25 Nov 2021 15:19:26 +0100},
+  biburl    = {https://dblp.org/rec/conf/gis/Koudoro-Parfait21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{hamdi:hal-03615997,
+  TITLE = {{In-Depth Analysis of the Impact of OCR Errors on Named Entity Recognition and Linking}},
+  AUTHOR = {Hamdi, Ahmed and Linhares Pontes, Elvys and Sid{\`e}re, Nicolas and Coustaty, Micka{\"e}l and Doucet, Antoine},
+  URL = {https://hal.archives-ouvertes.fr/hal-03615997},
+  JOURNAL = {{Natural Language Engineering}},
+  PUBLISHER = {{Cambridge University Press (CUP)}},
+  YEAR = {2022},
+  MONTH = Mar,
+  DOI = {10.1017/S1351324922000110},
+  PDF = {https://hal.archives-ouvertes.fr/hal-03615997/file/JNLE_In_Depth_Analysis_of_the_Impact_of_OCR_Errors_on_NER_NEL.pdf},
+  HAL_ID = {hal-03615997},
+  HAL_VERSION = {v1},
+}
+
+@article{DBLP:journals/corr/EshelCRMYL17,
+  author    = {Yotam Eshel and
+               Noam Cohen and
+               Kira Radinsky and
+               Shaul Markovitch and
+               Ikuya Yamada and
+               Omer Levy},
+  title     = {Named Entity Disambiguation for Noisy Text},
+  journal   = {CoRR},
+  volume    = {abs/1706.09147},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1706.09147},
+  eprinttype = {arXiv},
+  eprint    = {1706.09147},
+  timestamp = {Mon, 13 Aug 2018 16:47:14 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/EshelCRMYL17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{koudoroparfait:hal-03701476,
+  TITLE = {{Reconnaissance d'entités nommées sur des sorties OCR bruitées : des pistes pour la désambiguïsation morphologique automatique}},
+  AUTHOR = {Koudoro-Parfait, Caroline and Lejeune, Gaël and Buth, Richy},
+  URL = {https://hal.archives-ouvertes.fr/hal-03701476},
+  BOOKTITLE = {{Traitement Automatique des Langues Naturelles}},
+  ADDRESS = {Avignon, France},
+  EDITOR = {Est{\`e}ve, Yannick and Jim{\'e}nez, Tania and Parcollet, Titouan and Zanon Boito, Marcely},
+  PUBLISHER = {{ATALA}},
+  PAGES = {45-55},
+  YEAR = {2022},
+  KEYWORDS = {Reconnaissance d'entités nommées ; Reconnaissance optique de caractères ; .},
+  PDF = {https://hal.archives-ouvertes.fr/hal-03701476/file/7039.pdf},
+  HAL_ID = {hal-03701476},
+  HAL_VERSION = {v1},
+}
+%%================================================================
+%% Conserver ces lignes STRING en d\'ebut de fichier de bibliographie
+%%================================================================
+@STRING{TALN = {Traitement automatique des langues naturelles}}
+@STRING{TALNPAREN = " (" # TALN # ")"}
+@STRING{ACTESDE = "Actes de "} 
+
+%%================================================================
+%% Introduire vos entr\'ees bibliographiques ici
+%%================================================================
+%@article{honnibal2017spacy,
+%	
+%  title={spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing},
+%  author={Honnibal, Matthew and Montani, Ines},
+%  journal={To appear},
+%  volume={7},
+%  number={1},
+%  pages={411--420},
+%  year={2017}
+%}
+
+%@article{ines_montani_2023_10009823,
+%  author       = { Montani, Ines and
+%                   Honnibal, Matthew and
+%                  Boyd, Adriane  and
+%                   Van Landeghem , Sofie and
+%                  Henning, Peters},
+%  title        = {explosion/spaCy: v3.7.2: Fixes for APIs and 
+%                   requirements},
+%  month        = oct,
+%  year         = 2023,
+%  publisher    = {Zenodo},
+%  version      = {v3.7.2},
+%  doi          = {10.5281/zenodo.10009823},
+%  url          = {https://doi.org/10.5281/zenodo.10009823}
+%}
+
+@article{ines_montani_2023_7715077,
+  author       = {Montani, Ines and
+                    
+                  O'Leary McCann, Paul  and
+                  geovedi, Jim  and
+                  O'Regan, Jim  and
+                  Samsonov, Maxim  and
+                  Orosz, György  and
+                  de Kok, Daniël  and
+                  Blättermann, Marcus and
+                  Altinok, Duygu and
+                  Kristiansen, Søren Lind and
+                  Kannan, Madeesh and
+                  Mitsch, Raphael and
+                  Bournhonesque, Raphaël and
+                  Edward and
+                  Miranda, Lj and
+                  Baumgartner, Peter and
+                  Hudson, Richard and
+                  Explosion Bot and
+                  Roman and
+                  Fiedler, Leander  and
+                  Daniels, Ryn and
+                  Phatthiyaphaibun, Wannaphong and
+                  Howard, Grégory  and
+                  Tamura, Yohei },
+  title        = {{explosion/spaCy: v3.5.1: spancat for multi-class 
+                   labeling, fixes for textcat+transformers and more}},
+  month        = mar,
+  year         = 2023,
+  publisher    = {Zenodo},
+  version      = {v3.5.1},
+  doi          = {10.5281/zenodo.7715077},
+  url          = {https://doi.org/10.5281/zenodo.7715077}
+}
+
+@article{https://doi.org/10.48550/arxiv.cmp-lg/9505040,
+  doi = {10.48550/ARXIV.CMP-LG/9505040},
+  
+  url = {https://arxiv.org/abs/cmp-lg/9505040},
+  
+  author = {Ramshaw, Lance A. and Marcus, Mitchell P.},
+  
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Text Chunking using Transformation-Based Learning},
+  
+  publisher = {arXiv},
+  
+  year = {1995},
+  
+  copyright = {Assumed arXiv.org perpetual, non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+
+@inproceedings{moncla2020,
+author = {Vigier, Denis and Moncla, Ludovic and Brenon, Alice and McDonough, Katherine and Joliveau, Thierry},
+year = {2020},
+month = {07},
+pages = {},
+title = {Classification des entités nommées dans l'Encyclopédie ou dictionnaire raisonné des sciences des arts et des métiers par une société de gens de lettres (1751-1772)}
+}
+
+@inproceedings{Hyyr2001ExplainingAE,
+  title={Explaining and Extending the Bit-parallel Approximate String Matching Algorithm of Myers},
+  author={Heikki Hyyr{\"o}},
+  year={2001}
+}
+
+@inproceedings{DBLP:journals/corr/abs-1301-3781,
+  author    = {Tom{\'{a}}s Mikolov and
+               Kai Chen and
+               Greg Corrado and
+               Jeffrey Dean},
+  editor    = {Yoshua Bengio and
+               Yann LeCun},
+  title     = {Efficient Estimation of Word Representations in Vector Space},
+  booktitle = {1st International Conference on Learning Representations, {ICLR} 2013,
+               Scottsdale, Arizona, USA, May 2-4, 2013, Workshop Track Proceedings},
+  year      = {2013},
+  url       = {http://arxiv.org/abs/1301.3781},
+  timestamp = {Mon, 28 Dec 2020 11:31:01 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1301-3781.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/corr/YamadaS0T16,
+  author    = {Ikuya Yamada and
+               Hiroyuki Shindo and
+               Hideaki Takeda and
+               Yoshiyasu Takefuji},
+  title     = {Joint Learning of the Embedding of Words and Entities for Named Entity
+               Disambiguation},
+  journal   = {CoRR},
+  volume    = {abs/1601.01343},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1601.01343},
+  eprinttype = {arXiv},
+  eprint    = {1601.01343},
+  timestamp = {Mon, 13 Aug 2018 16:46:20 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/YamadaS0T16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{le-titov-2018-improving,
+    title = "Improving Entity Linking by Modeling Latent Relations between Mentions",
+    author = "Le, Phong  and
+      Titov, Ivan",
+    booktitle = "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2018",
+    address = "Melbourne, Australia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P18-1148",
+    doi = "10.18653/v1/P18-1148",
+    pages = "1595--1604",
+    abstract = "Entity linking involves aligning textual mentions of named entities to their corresponding entries in a knowledge base. Entity linking systems often exploit relations between textual mentions in a document (e.g., coreference) to decide if the linking decisions are compatible. Unlike previous approaches, which relied on supervised systems or heuristics to predict these relations, we treat relations as latent variables in our neural entity-linking model. We induce the relations without any supervision while optimizing the entity-linking system in an end-to-end fashion. Our multi-relational model achieves the best reported scores on the standard benchmark (AIDA-CoNLL) and substantially outperforms its relation-agnostic version. Its training also converges much faster, suggesting that the injected structural bias helps to explain regularities in the training data.",
+}
+
+@inproceedings{Sun2015ModelingMC,
+  title={Modeling Mention, Context and Entity with Neural Networks for Entity Disambiguation},
+  author={Yaming Sun and Lei Lin and Duyu Tang and Nan Yang and Zhenzhou Ji and Xiaolong Wang},
+  booktitle={IJCAI},
+  year={2015}
+}
+@article{brando:hal-01396037,
+  TITLE = {{REDEN: Named Entity Linking in Digital Literary Editions Using Linked Data Sets}},
+  AUTHOR = {Brando, Carmen and Frontini, Francesca and Ganascia, Jean-Gabriel},
+  URL = {https://hal.sorbonne-universite.fr/hal-01396037},
+  JOURNAL = {{Complex Systems Informatics and Modeling Quarterly}},
+  NUMBER = {7},
+  PAGES = {60 - 80},
+  YEAR = {2016},
+  MONTH = Jul,
+  DOI = {10.7250/csimq.2016-7.04},
+  KEYWORDS = {digital humanities ; Named Entity Linking ; graph centrality ; linked data ; data fusion},
+  PDF = {https://hal.sorbonne-universite.fr/hal-01396037/file/1401-4407-1-PB.pdf},
+  HAL_ID = {hal-01396037},
+  HAL_VERSION = {v1},
+}
+
+@misc{https://doi.org/10.48550/arxiv.2109.11406,
+  doi = {10.48550/ARXIV.2109.11406},
+  
+  url = {https://arxiv.org/abs/2109.11406},
+  
+  author = {Ehrmann, Maud and Hamdi, Ahmed and Pontes, Elvys Linhares and Romanello, Matteo and Doucet, Antoine},
+  
+  keywords = {Computation and Language (cs.CL), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences, A.1; I.2.7},
+  
+  title = {Named Entity Recognition and Classification on Historical Documents: A Survey},
+  
+  publisher = {arXiv},
+  
+  year = {2021},
+  
+  copyright = {Creative Commons Attribution Share Alike 4.0 International}
+}
+
+
+@inproceedings{DBLP:conf/cikm/GuoB14,
+  author    = {Zhaochen Guo and
+               Denilson Barbosa},
+  editor    = {Jianzhong Li and
+               Xiaoyang Sean Wang and
+               Minos N. Garofalakis and
+               Ian Soboroff and
+               Torsten Suel and
+               Min Wang},
+  title     = {Robust Entity Linking via Random Walks},
+  booktitle = {Proceedings of the 23rd {ACM} International Conference on Conference
+               on Information and Knowledge Management, {CIKM} 2014, Shanghai, China,
+               November 3-7, 2014},
+  pages     = {499--508},
+  publisher = {{ACM}},
+  year      = {2014},
+  url       = {https://doi.org/10.1145/2661829.2661887},
+  doi       = {10.1145/2661829.2661887},
+  timestamp = {Tue, 06 Nov 2018 16:57:36 +0100},
+  biburl    = {https://dblp.org/rec/conf/cikm/GuoB14.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@ARTICLE{6823700,
+  author={Shen, Wei and Wang, Jianyong and Han, Jiawei},
+  journal={IEEE Transactions on Knowledge and Data Engineering}, 
+  title={Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions}, 
+  year={2015},
+  volume={27},
+  number={2},
+  pages={443-460},
+  doi={10.1109/TKDE.2014.2327028}}
+
+@inproceedings{Dahir,
+author = {Dahir, Sarah and Khalifi, Hamid and El Qadi, Abderrahim},
+year = {2019},
+month = {03},
+pages = {1-6},
+title = {Query Expansion Using DBpedia and WordNet},
+isbn = {978-1-4503-6089-0},
+journal = {ArabWIC 2019: Proceedings of the ArabWIC 6th Annual International Conference Research Track},
+doi = {10.1145/3333165.3333184}
+}
+
+@inproceedings{Azad,
+author = {Azad, Hiteshwar and Deepak, Akshay},
+title = {A New Approach for Query Expansion using Wikipedia and WordNet},
+year = {2019},
+month = {01}
+}
+
+@inproceedings{suchanek,
+author = {Suchanek, Fabian and Kasneci, Gjergji and Weikum, Gerhard},
+year = {2007},
+month = {01},
+pages = {697-706},
+title = {YAGO: a core of semantic knowledge},
+journal = {16th International World Wide Web Conference, WWW2007},
+doi = {10.1145/1242572.1242667}
+}
+
+@inproceedings{cuxac:hal-02307577,
+  TITLE = {{Des bases de donn{\'e}es massives au Web de donn{\'e}es :  d{\'e}sambigu{\"i}sation et alignement d'entit{\'e}s g{\'e}ographiques dans les textes scientifiques}},
+  AUTHOR = {Cuxac, Pascal and Collignon, Alain and Gregorio, St{\'e}phanie and Parmentier, Fran{\c c}ois},
+  URL = {https://hal.archives-ouvertes.fr/hal-02307577},
+  BOOKTITLE = {{12{\`e}me Colloque international d'ISKO-France : Donn{\'e}es et m{\'e}gadonn{\'e}es ouvertes en SHS : de nouveaux enjeux pour l'{\'e}tat et l'organisation des connaissances ?}},
+  ADDRESS = {Montpellier, France},
+  YEAR = {2019},
+  MONTH = Oct,
+  KEYWORDS = {Web of Data ; Linked Open Data ; Automatic alignment ; Disambiguation ; Geographic entities ; Web de donn{\'e}es ; Donn{\'e}es ouvertes li{\'e}es ; Alignement automatique ; D{\'e}sambigu{\"i}sation ; Entit{\'e}s g{\'e}ographiques},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02307577/file/Cuxac_Collignon_Gregorio_Parmentier_isko2019.pdf},
+  HAL_ID = {hal-02307577},
+  HAL_VERSION = {v1},
+}
+
+@phdthesis{ehrmann:tel-01639190,
+  TITLE = {{Les Entit{\'e}es Nomm{\'e}es, de la linguistique au TAL : Statut th{\'e}orique et m{\'e}thodes de d{\'e}sambigu{\"i}sation}},
+  AUTHOR = {Ehrmann, Maud},
+  URL = {https://hal.archives-ouvertes.fr/tel-01639190},
+  SCHOOL = {{Paris Diderot University}},
+  YEAR = {2008},
+  MONTH = Jun,
+  KEYWORDS = {information extraction ;  named entity ;  named entity definition ;  named entity disambiguation ;  proper names ; extraction d'information ;  entit{\'e}s nomm{\'e}es ;  d{\'e}finition des entit{\'e}s nomm{\'e}es ;  d{\'e}sambiguation d'entit{\'e}s nomm{\'e}es ;  noms propres},
+  TYPE = {Theses},
+  PDF = {https://hal.archives-ouvertes.fr/tel-01639190/file/2008-065.pdf},
+  HAL_ID = {tel-01639190},
+  HAL_VERSION = {v1},
+}
+
+@article{DBLP:journals/corr/abs-1901-10197,
+  author    = {Hiteshwar Kumar Azad and
+               Akshay Deepak},
+  title     = {A New Approach for Query Expansion using Wikipedia and WordNet},
+  journal   = {CoRR},
+  volume    = {abs/1901.10197},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1901.10197},
+  eprinttype = {arXiv},
+  eprint    = {1901.10197},
+  timestamp = {Sat, 02 Feb 2019 16:56:00 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1901-10197.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{1111-0015-2013-45934,
+year="2013",
+issn={1111-0015},
+journal={Revue de l'Information Scientifique et Technique},
+volume={21},
+number={1},
+title={Une approche de désambiguïsation morpho-lexicale évaluée sur l’analyseur morphologique Alkhalil},
+url={https://www.asjp.cerist.dz/en/article/45934},
+publisher= {www.asjp.cerist.dz},
+keywords={TALA, analyseur morphologique ALKHALIL, méthode de désambigüisation, diacritisation, méthode multicritère d’aide à la décision (AMD), segmentation, exploration contextuelle, étiquetage, Réseaux de transition augmenté(ATN).},
+author={ Bousmaha, K.Z and Charef-Abdoun, S. and Hadrich Belguith, L. and Rahmouni, M.K },
+pages={26-40},
+language={Fr}}
+
+@INPROCEEDINGS{4586363,  author={Nguyen, Hien T. and Cao, Tru H.},  booktitle={2008 IEEE International Conference on Research, Innovation and Vision for the Future in Computing and Communication Technologies},   title={Named entity disambiguation on an ontology enriched by Wikipedia},   year={2008},  volume={},  number={},  pages={247-254},  doi={10.1109/RIVF.2008.4586363}}
+
+@inproceedings{Milne2008LearningTL,
+  title={Learning to link with wikipedia},
+  author={David N. Milne and Ian H. Witten},
+  booktitle={CIKM '08},
+  year={2008}
+}
+
+@inproceedings{cucerzan-2007-large,
+    title = "Large-Scale Named Entity Disambiguation Based on {W}ikipedia Data",
+    author = "Cucerzan, Silviu",
+    booktitle = "Proceedings of the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning ({EMNLP}-{C}o{NLL})",
+    month = jun,
+    year = "2007",
+    address = "Prague, Czech Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/D07-1074",
+    pages = "708--716",
+}
+
+@inproceedings{bunescu-pasca-2006-using,
+    title = "Using Encyclopedic Knowledge for Named entity Disambiguation",
+    author = {Bunescu, Razvan  and
+      Pa{\c{s}}ca, Marius},
+    booktitle = "11th Conference of the {E}uropean Chapter of the Association for Computational Linguistics",
+    month = apr,
+    year = "2006",
+    address = "Trento, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/E06-1002",
+    pages = "9--16",
+}
+
+
+
+@article{moro-etal-2014-entity,
+    title = "Entity Linking meets Word Sense Disambiguation: a Unified Approach",
+    author = "Moro, Andrea  and
+      Raganato, Alessandro  and
+      Navigli, Roberto",
+    journal = "Transactions of the Association for Computational Linguistics",
+    volume = "2",
+    year = "2014",
+    address = "Cambridge, MA",
+    publisher = "MIT Press",
+    url = "https://aclanthology.org/Q14-1019",
+    doi = "10.1162/tacl_a_00179",
+    pages = "231--244",
+    abstract = "Entity Linking (EL) and Word Sense Disambiguation (WSD) both address the lexical ambiguity of language. But while the two tasks are pretty similar, they differ in a fundamental respect: in EL the textual mention can be linked to a named entity which may or may not contain the exact mention, while in WSD there is a perfect match between the word form (better, its lemma) and a suitable word sense. In this paper we present Babelfy, a unified graph-based approach to EL and WSD based on a loose identification of candidate meanings coupled with a densest subgraph heuristic which selects high-coherence semantic interpretations. Our experiments show state-of-the-art performances on both tasks on 6 different datasets, including a multilingual setting. Babelfy is online at http://babelfy.org",
+}
+
+@inproceedings{hoffart-etal-2011-robust,
+    title = "Robust Disambiguation of Named Entities in Text",
+    author = {Hoffart, Johannes  and
+      Yosef, Mohamed Amir  and
+      Bordino, Ilaria  and
+      F{\"u}rstenau, Hagen  and
+      Pinkal, Manfred  and
+      Spaniol, Marc  and
+      Taneva, Bilyana  and
+      Thater, Stefan  and
+      Weikum, Gerhard},
+    booktitle = "Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing",
+    month = jul,
+    year = "2011",
+    address = "Edinburgh, Scotland, UK.",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/D11-1072",
+    pages = "782--792",
+}
+
+
+ %Biblio Article 1
+ 
+ % Des problèmes dans la complétion des champs à revoir
+@INPROCEEDINGS{8791217,
+  author={Hamdi, Ahmed and Jean-Caurant, Axel and Sidere, Nicolas and Coustaty, Mickaël and Doucet, Antoine},
+  booktitle={2019 ACM/IEEE Joint Conference on Digital Libraries (JCDL)}, 
+  title={An Analysis of the Performance of Named Entity Recognition over OCRed Documents}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={333-334},
+  doi={10.1109/JCDL.2019.00057}}
+  
+@inproceedings{Traub-2015,
+  TITLE = {{Impact analysis of OCR quality on research tasks in digital archives}},
+  AUTHOR = {Traub, M.C. and Van Ossenbruggen, J.and Hardman L.},
+  URL = { https://www.researchgate.net/publication/280520892_Impact_Analysis_of_OCR_Quality_on_Research_Tasks_in_Digital_Archives},
+  BOOKTITLE = {{Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics}},
+  YEAR = {2015},
+  pages = {pp. 252-263.},
+  DOI = {10.1007/978-3-319-24592-8\_19},
+  PDF = {https://core.ac.uk/reader/189941790},
+  
+}
+
+
+@inproceedings{jean:hal-01479299,
+  TITLE = {{Un mod{\`e}le probabiliste pour la detection de l'incertitude dans le langage naturel}},
+  AUTHOR = {Jean, Pierre-Antoine and Harispe, S{\'e}bastien and Ranwez, Sylvie and Bellot, Patrice and Montmain, Jacky},
+  URL = {https://hal-amu.archives-ouvertes.fr/hal-01479299},
+  JOURNAL = {{Document Num{\'e}rique}},
+  PUBLISHER = {{Lavoisier}},
+  VOLUME = {19-2016},
+  NUMBER = {2-3},
+  PAGES = {9-29},
+  YEAR = {2016},
+  MONTH = Dec,
+  PDF = {https://hal-amu.archives-ouvertes.fr/hal-01479299/file/un-modele-probabiliste.pdf},
+  HAL_ID = {hal-01479299},
+  HAL_VERSION = {v1},
+}
+
+
+@INPROCEEDINGS{konvens:60_rodriquez12w,
+  author = {Kepa Joseba Rodriquez and Mike Bryant and Tobias Blanke and Magdalena Luszczynska},
+  title = {Comparison of named entity recognition tools for raw {OCR} text},
+  booktitle = {Proceedings of KONVENS 2012},
+  pages = {410--414},
+  year = {2012},
+  editor = {Jeremy Jancsary},
+  publisher = {\"{O}GAI},
+  month = {September},
+  url = {http://www.oegai.at/konvens2012/proceedings/60_rodriquez12w/},
+  note = {LThist 2012 workshop}
+}
+
+@inproceedings{dupont-tellier:2014:TALN,
+  author    = {Dupont, Yoann and Tellier, Isabelle},
+  title     = {Un reconnaisseur d’entités nommées du Français},
+  booktitle = {Actes de la 21e conférence sur le Traitement Automatique des Langues Naturelles},
+  month     = {July},
+  year      = {2014},
+  address   = {Marseille, France},
+  publisher = {Association pour le Traitement Automatique des Langues},
+  pages     = {40--41},
+  url       = {http://www.atala.org/taln_archives/TALN/TALN-2014/taln-2014-demo-014},
+}
+
+
+
+@inproceedings{Ehrmann-2020,
+title = {{Extended Overview of CLEF HIPE 2020: Named Entity Processing on Historical Newspapers}},
+booktitle = {{Working Notes of CLEF 2020 - Conference and Labs of the Evaluation Forum}},
+publisher = {CEUR-WS},
+author = {Ehrmann, Maud and Romanello, Matteo and Flückiger, Alex and Clematide, Simon},
+year = {2020},
+editor = {Cappellato, Linda and Eickhoff, Carsten and Ferro, Nicola and Névéol, Aurélie}
+}
+
+@inproceedings{heiden:halshs-00549779,
+TITLE = {{TXM : Une plateforme logicielle open-source pour la textom{\'e}trie - conception et d{\'e}veloppement}},
+AUTHOR = {Heiden, Serge and Magu{\'e}, Jean-Philippe and Pincemin, B{\'e}n{\'e}dicte},
+URL = {https://halshs.archives-ouvertes.fr/halshs-00549779},
+BOOKTITLE = {{10th International Conference on the Statistical Analysis of Textual Data - JADT 2010}},
+ADDRESS = {Rome, Italy},
+EDITOR = {Sergio Bolasco and Isabella Chiari and Luca Giuliano},
+PUBLISHER = {{Edizioni Universitarie di Lettere Economia Diritto}},
+VOLUME = {2},
+NUMBER = {3},
+PAGES = {1021-1032},
+YEAR = {2010},
+MONTH = Jun,
+KEYWORDS = {textometry ; full text search engine ; statistical analysis ; natural language processing ; grails framework ; textom{\'e}trie ; open-source ; framework grails ; traitement automatique de la langue ; tal ; eclipse rcp ; analyse statistique ; moteur de recherche plein texte ; xml-tei},
+PDF = {https://halshs.archives-ouvertes.fr/halshs-00549779/file/Heiden_al_jadt2010.pdf},
+HAL_ID = {halshs-00549779},
+HAL_VERSION = {v1},
+  }
+  
+@inproceedings{miller-etal-2000-named,
+    title = "Named Entity Extraction from Noisy Input: Speech and {OCR}",
+    author = "Miller, David  and
+      Boisen, Sean  and
+      Schwartz, Richard  and
+      Stone, Rebecca  and
+      Weischedel, Ralph",
+    booktitle = "Sixth Applied Natural Language Processing Conference",
+    month = apr,
+    year = "2000",
+    address = "Seattle, Washington, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/A00-1044",
+    doi = "10.3115/974147.974191",
+    pages = "316--324",
+}
+
+@inproceedings{odebrecht_ELTeC_2021,
+  maintitle = {European Literary Text Collection ({ELTeC})},
+  editor = {Odebrecht, Carolin and Burnard, Lou and Schöch, Christof},
+  version = {v1.1.0},
+  year = {2021},
+  month = {4},
+  publisher = {COST Action Distant Reading for European Literary History},
+  url = {https://github.com/COST-ELTeC/ELTeC},
+  doi = {10.5281/zenodo.4662444},
+  }
+  
+  @software{spacy,
+  author = {Honnibal, Matthew and Montani, Ines and Van Landeghem, Sofie and Boyd, Adriane},
+  title = {{spaCy: Industrial-strength Natural Language Processing in Python}},
+  year = 2020,
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.1212303},
+  url = {https://doi.org/10.5281/zenodo.1212303}
+}
+
+@inproceedings{buscaldi:hal-02784738,
+  TITLE = {{Calcul de similarit{\'e} entre phrases : quelles mesures et quels descripteurs ?}},
+  AUTHOR = {Buscaldi, Davide and Felhi, Ghazi and Ghoul, Dhaou and Le Roux, Josepth and Lejeune, Ga{\"e}l and Zhang, Xudong},
+  URL = {https://hal.archives-ouvertes.fr/hal-02784738},
+  BOOKTITLE = {{6e conf{\'e}rence conjointe Journ{\'e}es d'{\'E}tudes sur la Parole (JEP, 33e {\'e}dition), Traitement Automatique des Langues Naturelles (TALN, 27e {\'e}dition), Rencontre des {\'E}tudiants Chercheurs en Informatique pour le Traitement Automatique des Langues (R{\'E}CITAL, 22e {\'e}dition). Atelier D{\'E}fi Fouille de Textes}},
+  ADDRESS = {Nancy, France},
+  EDITOR = {Cardon, R{\'e}mi and Grabar, Natalia and Grouin, Cyril and Hamon, Thierry},
+  PUBLISHER = {{ATALA}},
+  PAGES = {14-25},
+  YEAR = {2020},
+  KEYWORDS = {similarit{\'e} ; distance de Bray-Curtis. ; distance euclidienne ; n-grammes de caract{\`e}res},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02784738v3/file/210.pdf},
+  HAL_ID = {hal-02784738},
+  HAL_VERSION = {v3},
+}
+
+@inproceedings{gupta2015automatic,
+  title={Automatic assessment of OCR quality in historical documents},
+  author={Gupta, Anshul and Gutierrez-Osuna, Ricardo and Christy, Matthew and Capitanu, Boris and Auvil, Loretta and Grumbach, Liz and Furuta, Richard and Mandell, Laura},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={29},
+  number={1},
+  year={2015}
+}
+
+@inproceedings{ehrmann2020overview,
+  title={Overview of CLEF HIPE 2020: Named entity recognition and linking on historical newspapers},
+  author={Ehrmann, Maud and Romanello, Matteo and Fl{\"u}ckiger, Alex and Clematide, Simon},
+  booktitle={International Conference of the Cross-Language Evaluation Forum for European Languages},
+  pages={288--310},
+  year={2020},
+  organization={Springer}
+}
+
+@inproceedings{suarez2020sinner,
+  title={SinNer@ Clef-Hipe2020: Sinful adaptation of SotA models for Named Entity Recognition in French and German},
+  author={Su{\'a}rez, Pedro Javier Ortiz and Dupont, Yoann and Lejeune, Ga{\"e}l and Tian, Tian},
+  booktitle={CLEF 2020 Working Notes. Working Notes of CLEF 2020-Conference and Labs of the Evaluation Forum},
+  year={2020}
+}
+
+@article{kettunen2020ground,
+  title={Ground truth OCR sample data of Finnish historical newspapers and journals in data improvement validation of a re-OCRing process},
+  author={Kettunen, Kimmo and Koistinen, Mika and Kervinen, Jukka},
+  journal={Liber Quarterly},
+  volume={30},
+  number={1},
+  year={2020}
+}
+
+@article{powalski2020unicase,
+  title={UniCase--Rethinking Casing in Language Models},
+  author={Powalski, Rafal and Stanislawek, Tomasz},
+  journal={arXiv preprint arXiv:2010.11936},
+  year={2020}
+}
+
+@inproceedings{niu2020controlling,
+  title={Controlling neural machine translation formality with synthetic supervision},
+  author={Niu, Xing and Carpuat, Marine},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={05},
+  pages={8568--8575},
+  year={2020}
+}
+
+
+@article{CICLING-2018-Lejeune,
+	title = "A New Proposal for Evaluating Web Page Cleaning Tools",
+	author = "Ga{\"e}l Lejeune and Lichao Zhu",
+	journal = {Computacion y Sistemas},
+	volume = {22},
+	number = {4},
+	url = {https://hal.archives-ouvertes.fr/hal-02467732},
+	year = "2018",
+        pages = {1249-1258}
+}
+
+@article{DBLP:journals/corr/KettunenMRKL16,
+  author    = {Kimmo Kettunen and
+               Eetu M{\"{a}}kel{\"{a}} and
+               Teemu Ruokolainen and
+               Juha Kuokkala and
+               Laura L{\"{o}}fberg},
+  title     = {Old Content and Modern Tools - Searching Named Entities in a Finnish
+               OCRed Historical Newspaper Collection 1771-1910},
+  journal   = {CoRR},
+  volume    = {abs/1611.02839},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1611.02839},
+  eprinttype = {arXiv},
+  eprint    = {1611.02839},
+  timestamp = {Mon, 13 Aug 2018 16:49:07 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/KettunenMRKL16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{DBLP:conf/konvens/EhrmannCRK16,
+  author    = {Maud Ehrmann and
+               Giovanni Colavizza and
+               Yannick Rochat and
+               Fr{\'{e}}d{\'{e}}ric Kaplan},
+  editor    = {Stefanie Dipper and
+               Friedrich Neubarth and
+               Heike Zinsmeister},
+  title     = {Diachronic Evaluation of {NER} Systems on Old Newspapers},
+  booktitle = {Proceedings of the 13th Conference on Natural Language Processing,
+               {KONVENS} 2016, Bochum, Germany, September 19-21, 2016},
+  series    = {Bochumer Linguistische Arbeitsberichte},
+  volume    = {16},
+  year      = {2016},
+  url       = {https://www.linguistics.rub.de/konvens16/pub/13\_konvensproc.pdf},
+  timestamp = {Thu, 12 Mar 2020 11:30:43 +0100},
+  biburl    = {https://dblp.org/rec/conf/konvens/EhrmannCRK16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+%% exemples d'entr\'ees de TALN (simplifi\'ee gr\^ace \`a une r\'ef\'erence crois\'ee)
+@InProceedings{Bernhard07,
+  author =       {Bernhard, Delphine},
+  title =        {Apprentissage non supervis\'e de familles morphologiques par classification ascendante hi\'erarchique},
+  pages =        {367--376}, 
+  crossref =     {TALN2007},
+  hal_id = "hal-00800342"
+}
+
+@InProceedings{LanglaisPatry07,
+  author =       {Langlais, Philippe and Patry, Alexandre},
+  title =        {Enrichissement d'un lexique bilingue par analogie},
+  pages =        {101--110},
+  crossref =     {TALN2007}
+}
+
+@InProceedings{SeretanWehrli07,
+  author =       {Seretan, Violeta and Wehrli, Eric},
+  title =        {Collocation translation based on sentence alignment and parsing},
+  pages =        {401--410},
+  crossref =     {TALN2007}
+}
+
+@conference{LaigneletRioult09,
+  author =       {Laignelet, Marion and Rioult, Fran\{c}ois},
+  title =        {Rep{\'e}rer automatiquement les segments obsolescents {\`a} l{\textquoteright}aide d{\textquoteright}indices s{\'e}mantiques et discursifs},
+  id_hal = {hal-01012442},
+  crossref =     {TALN2009}
+}
+
+@inproceedings{pereira-warren:1983,
+    title = "PARSING AS DEDUCTION",
+    author = "Pereira, Fernando C. N.  and Warren, David H. D.",
+    booktitle = "21st Annual Meeting of the Association for Computational Linguistics",
+    month = jun,
+    year = "1983",
+    address = "Cambridge, Massachusetts, USA",
+    publisher = "Association for Computational Linguistics",
+    doi = "10.3115/981311.981338",
+    pages = "137--144",
+}
+
+
+@inproceedings{tellier:2008,
+  TITLE = {{How to Split Recursive Automata}},
+  AUTHOR = {Tellier, Isabelle},
+  URL = {https://hal.inria.fr/inria-00341770},
+  BOOKTITLE = {{Grammatical Inference: Algorithms and Applications. 9th International Colloquium, ICGI 2008 Saint-Malo, France, September 22-24, 2008 Proceedings}},
+  Publisher = {Springer},
+  EDITOR = {Alexander Clark and Fran{\c c}ois Coste and Laurent Miclet},
+  SERIES = {LNAI},
+  VOLUME = 5278,
+  PAGES = {200-212},
+  YEAR = 2008,
+  KEYWORDS = {grammatical inference ; categorial grammars ; recursive automata},
+  PDF = {https://hal.inria.fr/inria-00341770/file/icgi08-tellier.pdf},
+  HAL_ID = {inria-00341770},
+  doi = {10.1007/978-3-540-88009-7_16},
+  HAL_VERSION = {v1},
+}
+
+@Article{chomsky-schutzenberger:1963,
+  author = 	 {Chomsky, Noam and Sch\"utzenberger, Marcel-Paul},
+  title = 	 {The Algebraic Theory of Context-Free Languages},
+  journal = 	 {Studies in Logic and the Foundations of Mathematics},
+  year = 	 1963,
+  volume = 	 35,
+  pages = 	 {118-161},
+  doi = {10.1016/S0049-237X(08)72023-8}
+}
+
+@Book{hinzen-machery-wrning:2012,
+  editor = 	 {Wolfram Hinzen and Edouard Machery and Markus Werning},
+  title = 	 {The Oxford Handbook of Compositionality},
+  publisher = 	 {Oxford},
+  year = 	 2012,
+  doi = 	 {10.1093/oxfordhb/9780199541072.001.0001}}
+
+@PhdThesis{pollard:1984,
+  author = 	 {Carl Pollard},
+  title = 	 {Generalized Phrase Structure Grammars, Head Grammars, and Natural Language},
+  school = 	 {Stanford University, CA},
+  year = 	 {1984},
+}
+
+
+@InCollection{joshi:19885,
+  author = 	 {Aravind K. Joshi},
+  title = 	 {Tree-adjoining grammars: How much context
+                  sensitivity is required to provide reasonable
+                  structural descriptions?},
+  booktitle = 	 {Natural Language Parsing: Psychological, Computational, and Theoretical Perspectives},
+  publisher = {Cambridge University Press},
+  series={Studies in Natural Language Processing},
+  chapter = 6,
+  doi = {10.1017/CBO9780511597855.007},
+  year = 	 1985,
+  editor = 	 {David R. Dowty and Lauri Karttunen and Arnold M. Zwicky},
+  pages = 	 {206--250}}
+
+%%================================================================
+%% Conserver ces lignes qui serviront \`a des r\'ef\'erences crois\'ees
+%% en fin de fichier de bibliographie
+%%================================================================
+@Proceedings{TALN97,
+  title = 	 ACTESDE # {TALN 1997} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 1997} # TALNPAREN,
+  year = 	 1997,
+  editor =	 {Damien Genthial},
+  address =	 {Grenoble},
+  month =	 JUN
+}
+
+@Proceedings{TALN98,
+  title = 	 ACTESDE # {TALN 1998} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 1998} # TALNPAREN,
+  year = 	 1998,
+  editor =	 {Pierre Zweigenbaum},
+  address =	 {Paris},
+  organization = {ATALA},
+  month =	 JUN
+}
+
+@Proceedings{TALN99,
+  title = 	 ACTESDE # {TALN 1999} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 1999} # TALNPAREN,
+  year = 	 1999,
+  editor =	 {Pascal Amsili},
+  address =	 {Carg\`ese},
+  organization = {ATALA},
+  month =	 JUL
+}
+
+@Proceedings{TALN2000,
+  title = 	 ACTESDE # {TALN 2000} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2000} # TALNPAREN,
+  year = 	 2000,
+  editor =	 {Eric Wehrli and Martin Rajman},
+  address =	 {Lausanne},
+  organization = {ATALA},
+  publisher =	 {EPFL},
+  month =	 OCT
+}
+
+@Proceedings{TALN2001,
+  title = 	 ACTESDE # {TALN 2001} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2001} # TALNPAREN,
+  year = 	 2001,
+  editor =	 {Denis Maurel},
+  address =	 {Tours},
+  organization = {ATALA},
+  publisher =	 {Universit\'e de Tours},
+  month =	 JUL
+}
+
+@Proceedings{TALN2002,
+  title = 	 ACTESDE # {TALN 2002} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2002} # TALNPAREN,
+  year = 	 2002,
+  editor =	 {Jean-Marie Pierrel},
+  address =	 {Nancy},
+  organization = {ATALA},
+  publisher =	 {ATILF},
+  month =	 JUN
+}
+
+@Proceedings{TALN2003,
+  title = 	 ACTESDE # {TALN 2003} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2003} # TALNPAREN,
+  year = 	 2003,
+  editor =	 {B\'eatrice Daille},
+  address =	 {Batz-sur-mer},
+  organization = {ATALA},
+  publisher =	 {IRIN},
+  month =	 JUN
+}
+
+@Proceedings{TALN2004,
+  title = 	 ACTESDE # {TALN 2004} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2004} # TALNPAREN,
+  year = 	 2004,
+  editor =	 {Philippe Blache},
+  address =	 {F\`es, Maroc},
+  organization = {ATALA},
+  publisher =	 {LPL},
+  month =	 APR
+}
+
+@Proceedings{TALN2005,
+  title = 	 ACTESDE # {TALN 2005} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2005} # TALNPAREN,
+  year = 	 2005,
+  editor =	 {Mich\`ele Jardino},
+  address =	 {Dourdan},
+  organization = {ATALA},
+  publisher =	 {LIMSI},
+  month =	 JUN
+}
+
+@Proceedings{TALN2007,
+  title = 	 ACTESDE # {TALN 2007} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2007} # TALNPAREN,
+  year = 	 {2007},
+  editor =	 {Benamara, Farah and Hatout, Nabil and Muller, Philippe and Ozdowska, Sylwia},
+  address =	 {Toulouse},
+  organization = {ATALA},
+  publisher =	 {IRIT},
+  month =	 JUN
+}
+
+@Proceedings{TALN2009,
+  title = 	 ACTESDE # {TALN 2009} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2009} # TALNPAREN,
+  year = 	 {2009},
+  address =	 {Senlis},
+  editor =       {Adeline Nazarenko and Thierry Poibeau},
+  organization = {ATALA},
+  publisher =	 {LIPN},
+  month =	 JUN
+}
+
+@Proceedings{TALN2014,
+  title = 	 ACTESDE # {TALN 2014} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2014} # TALNPAREN,
+  year = 	 {2014},
+  editor =	 {Brigitte Bigi},
+  address =	 {Marseille},
+  organization = {ATALA},
+  publisher = {LPL},
+  month = JUL
+}
+
+@Proceedings{TALN2015,
+  title = 	 ACTESDE # {TALN 2015} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2015} # TALNPAREN,
+  year = 	 {2015},
+  editor =	 {Dias, Ga\"el},
+  address =	 {Caen},
+  organization = {ATALA},
+  publisher = {HULTECH},
+  month = JUN
+}
+
+@inproceedings{koudoro2022reconnaissance,
+  title={Reconnaissance d’entit{\'e}s nomm{\'e}es sur des sorties OCR bruit{\'e}es: des pistes pour la d{\'e}sambigu{\"\i}sation morphologique automatique (Resolution of entity linking issues on noisy OCR output: automatic disambiguation tracks)},
+  author={Koudoro-Parfait, Caroline and Lejeune, Ga{\"e}l and Buth, Richy},
+  booktitle={Actes de la 29e Conf{\'e}rence sur le Traitement Automatique des Langues Naturelles. Atelier TAL et Humanit{\'e}s Num{\'e}riques (TAL-HN)},
+  pages={45--55},
+  year={2022}
+}
+
+%---------CLUSTER
+@inproceedings{lin-1998-automatic,
+    title = "Automatic Retrieval and Clustering of Similar Words",
+    author = "Lin, Dekang",
+    booktitle = "{COLING} 1998 Volume 2: The 17th International Conference on Computational Linguistics",
+    year = "1998",
+    url = "https://aclanthology.org/C98-2122",
+}
+
+@inproceedings{green-etal-2012-entity,
+    title = "Entity Clustering Across Languages",
+    author = "Green, Spence  and
+      Andrews, Nicholas  and
+      Gormley, Matthew R.  and
+      Dredze, Mark  and
+      Manning, Christopher D.",
+    booktitle = "Proceedings of the 2012 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2012",
+    address = "Montr{\'e}al, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/N12-1007",
+    pages = "60--69",
+}
+
+@article{BrendanJ,
+author = {Brendan J. Frey  and Delbert Dueck },
+title = {Clustering by Passing Messages Between Data Points},
+journal = {Science},
+volume = {315},
+number = {5814},
+pages = {972-976},
+year = {2007},
+doi = {10.1126/science.1136800},
+URL = {https://www.science.org/doi/abs/10.1126/science.1136800},
+eprint = {https://www.science.org/doi/pdf/10.1126/science.1136800},
+abstract = {Clustering data by identifying a subset of representative examples is important for processing sensory signals and detecting patterns in data. Such “exemplars” can be found by randomly choosing an initial subset of data points and then iteratively refining it, but this works well only if that initial choice is close to a good solution. We devised a method called “affinity propagation,” which takes as input measures of similarity between pairs of data points. Real-valued messages are exchanged between data points until a high-quality set of exemplars and corresponding clusters gradually emerges. We used affinity propagation to cluster images of faces, detect genes in microarray data, identify representative sentences in this manuscript, and identify cities that are efficiently accessed by airline travel. Affinity propagation found clusters with much lower error than other methods, and it did so in less than one-hundredth the amount of time.}}
+
+@phdthesis{olteanu:tel-00908831,
+  TITLE = {{On clustering in multiple criteria decision aid : theory and applications}},
+  AUTHOR = {Olteanu, Alexandru Liviu},
+  URL = {https://tel.archives-ouvertes.fr/tel-00908831},
+  HAL_LOCAL_REFERENCE = {13789},
+  SCHOOL = {{T{\'e}l{\'e}com Bretagne, Universit{\'e} de Bretagne Occidentale}},
+  YEAR = {2013},
+  MONTH = Jun,
+  KEYWORDS = {multiple criteria decision aid ; unsupervised classification ; meta-heuristics ; large datasets ; Aide multicrit{\`e}re {\`a} la d{\'e}cision ; Classification non supervis{\'e}e ; Clustering ; Meta-heuristiques ; Donn{\'e}es volumineuses},
+  TYPE = {Theses},
+  PDF = {https://tel.archives-ouvertes.fr/tel-00908831/file/2013telb0276_Olteanu_Alexandru-Liviu.pdf},
+  HAL_ID = {tel-00908831},
+  HAL_VERSION = {v1},
+}
+
+@misc{Loustau2013,
+  doi = {10.48550/ARXIV.1305.0630},
+  
+  url = {https://arxiv.org/abs/1305.0630},
+  
+  author = {Loustau, Sébastien},
+  
+  keywords = {Statistics Theory (math.ST), Machine Learning (stat.ML), FOS: Mathematics, FOS: Mathematics, FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Anisotropic oracle inequalities in noisy quantization},
+  
+  publisher = {arXiv},
+  
+  year = {2013},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+@unpublished{brunet:hal-00851484,
+  TITLE = {{The algorithm of noisy k-means}},
+  AUTHOR = {Brunet, Camille and Loustau, S{\'e}bastien},
+  URL = {https://hal.archives-ouvertes.fr/hal-00851484},
+  NOTE = {working paper or preprint},
+  YEAR = {2013},
+  MONTH = Aug,
+  KEYWORDS = {Clustering ; Deconvolution ; Lloyd algorithm ; Fast Fourier Transform ; Noisy k-means},
+  PDF = {https://hal.archives-ouvertes.fr/hal-00851484/file/noisykmeans.pdf},
+  HAL_ID = {hal-00851484},
+  HAL_VERSION = {v1},
+}
+
+@article{maurel:hal-00682805,
+  TITLE = {{Cascades de transducteurs autour de la reconnaissance des entit{\'e}s nomm{\'e}es}},
+  AUTHOR = {Maurel, Denis and Friburger, Nathalie and Antoine, Jean-Yves and Eshkol, Iris and Nouvel, Damien},
+  URL = {https://hal.archives-ouvertes.fr/hal-00682805},
+  JOURNAL = {{Revue TAL}},
+  PUBLISHER = {{ATALA (Association pour le Traitement Automatique des Langues)}},
+  VOLUME = {52},
+  NUMBER = {1},
+  PAGES = {69-96},
+  YEAR = {2011},
+  KEYWORDS = {Ester 2 ; cascades de transducteurs ; entit{\'e}s nomm{\'e}es ; Unitex},
+  PDF = {https://hal.archives-ouvertes.fr/hal-00682805/file/tal-52-1-Maurel.pdf},
+  HAL_ID = {hal-00682805},
+  HAL_VERSION = {v1},
+}
+
+%_____________________________________Bibliographe Caroline____________________________________
+
+%_____________________________________Bibliographe Ljudmila____________________________________
+@article{azmi,
+author = {Azmi, Aqil and Almutery, Manal and Aboalsamh, Hatim},
+year = {2019},
+month = {05},
+pages = {1-1},
+title = {Real-Word Errors in Arabic Texts: A Better Algorithm for Detection and Correction},
+volume = {PP},
+journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+doi = {10.1109/TASLP.2019.2918404}
+}
+
+@article{damerau,
+author = {Damerau, Fred J.},
+title = {A Technique for Computer Detection and Correction of Spelling Errors},
+year = {1964},
+issue_date = {March 1964},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {7},
+number = {3},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/363958.363994},
+doi = {10.1145/363958.363994},
+journal = {Commun. ACM},
+month = {mar},
+pages = {171–176},
+numpages = {6}
+}
+
+@InProceedings{huynh,
+author="Huynh, Vinh-Nam
+and Hamdi, Ahmed
+and Doucet, Antoine",
+editor="Ishita, Emi
+and Pang, Natalie Lee San
+and Zhou, Lihong",
+title="When to Use OCR Post-correction for Named Entity Recognition?",
+booktitle="Digital Libraries at Times of Massive Societal Transition",
+year="2020",
+publisher="Springer International Publishing",
+address="Cham",
+pages="33--42",
+isbn="978-3-030-64452-9"
+}
+
+@book{oger,
+author = {Oger, Stanislas and Rouvier, Mickael and Camelin, Nathalie and Kesler, Rémy and Lefevre, F. and Torres-Moreno, Juan-Manuel},
+publisher={Lavoisier},
+year = {2012},
+month = {01},
+pages = {},
+booktitle={Expérimentations et évaluations en fouille de textes},
+title = {Système du LIA pour la campagne DEFT2010}
+}
+
+@inproceedings{wisniewski,
+    title = "Recueil et analyse d{'}un corpus {\'e}cologique de corrections orthographiques extrait des r{\'e}visions de Wikip{\'e}dia",
+    author = "Wisniewski, Guillaume  and
+      Max, Aur{\'e}lien  and
+      Yvon, Fran{\c{c}}ois",
+    booktitle = "Actes de la 17e conf{\'e}rence sur le Traitement Automatique des Langues Naturelles. Articles longs",
+    month = jul,
+    year = "2010",
+    address = "Montr{\'e}al, Canada",
+    publisher = "ATALA",
+    url = "https://aclanthology.org/2010.jeptalnrecital-long.13",
+    pages = "121--130",
+    abstract = "Dans cet article, nous introduisons une m{\'e}thode {\`a} base de r{\`e}gles permettant d{'}extraire automatiquement de l{'}historique des {\'e}ditions de l{'}encyclop{\'e}die collaborative Wikip{\'e}dia des corrections orthographiques. Cette m{\'e}thode nous a permis de construire un corpus d{'}erreurs compos{\'e} de 72 483 erreurs lexicales (non-word errors) et 74 100 erreurs grammaticales (real-word errors). Il n{'}existe pas, {\`a} notre connaissance, de plus gros corpus d{'}erreurs {\'e}cologiques librement disponible. En outre, les techniques mises en oeuvre peuvent {\^e}tre facilement transpos{\'e}es {\`a} de nombreuses autres langues. La collecte de ce corpus ouvre de nouvelles perspectives pour l{'}{\'e}tude des erreurs fr{\'e}quentes ainsi que l{'}apprentissage et l{'}{\'e}valuation des correcteurs orthographiques automatiques. Plusieurs exp{\'e}riences illustrant son int{\'e}r{\^e}t sont propos{\'e}es.",
+    language = "French",
+}
+
+ @proceedings{Petkovic2022,
+   TITLE = {Impact de la correction automatique de l’OCR/HTR sur la tâche de reconnaissance d’entités nommées dans un corpus bruité.},
+   AUTHOR = {Petkovic, Ljudmila},
+    booktitle = {{Actes de la journ{\'e}e d'{\'e}tude sur la robustesse des systemes de TAL}},
+    EDITOR= {Corro, Caio and Lejeune, Ga{\"e}l},
+    URL = {https://hal.science/hal-03853541},
+    YEAR = {2022},
+    MONTH = Nov,
+    HAL_ID = {hal-03853541},
+    HAL_VERSION = {v1}
+ }
+
+@article{petkovic2022impact,
+  title={Impact de la correction automatique de l’OCR/HTR sur la t{\^a}che de reconnaissance d’entit{\'e}s nomm{\'e}es dans un corpus bruit{\'e}},
+  author={Petkovic, Ljudmila},
+  journal={Actes de la journ{\'e}e d’{\'e}tude sur la robustesse des systemes de TAL},
+  volume={1},
+  pages={22},
+  year={2022}
+}
+
+
+@article{DBLP:journals/corr/abs-1203-5255,
+  author    = {Youssef Bassil and
+               Mohammad Alwani},
+  title     = {Post-Editing Error Correction Algorithm for Speech Recognition using
+               Bing Spelling Suggestion},
+  journal   = {CoRR},
+  volume    = {abs/1203.5255},
+  year      = {2012},
+  url       = {http://arxiv.org/abs/1203.5255},
+  eprinttype = {arXiv},
+  eprint    = {1203.5255},
+  timestamp = {Mon, 13 Aug 2018 16:47:12 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1203-5255.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/csur/NguyenJCD21,
+  author    = {Thi Tuyet Hai Nguyen and
+               Adam Jatowt and
+               Micka{\"{e}}l Coustaty and
+               Antoine Doucet},
+  title     = {Survey of Post-OCR Processing Approaches},
+  journal   = {{ACM} Comput. Surv.},
+  volume    = {54},
+  number    = {6},
+  pages     = {124:1--124:37},
+  year      = {2022},
+  url       = {https://doi.org/10.1145/3453476},
+  doi       = {10.1145/3453476},
+  timestamp = {Wed, 23 Nov 2022 00:00:00 +0100},
+  biburl    = {https://dblp.org/rec/journals/csur/NguyenJCD21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@phdthesis{dumasmilneedwards:tel-01562039,
+  TITLE = {{Conception de formes de relecture dans les cha{\^i}nes {\'e}ditoriales num{\'e}riques}},
+  AUTHOR = {Dumas Milne Edwards, Leonard},
+  URL = {https://theses.hal.science/tel-01562039},
+  NUMBER = {2016COMP2254},
+  SCHOOL = {{Universit{\'e} de Technologie de Compi{\`e}gne}},
+  YEAR = {2016},
+  MONTH = Jan,
+  KEYWORDS = {XML Publishing Chain ; Fragmented document ; Proofreading ; Differential ; Interactivity ; Repurposing ; Polymorphism ; Web publishing ; Electronic publishing ; Cha{\^i}nes {\'e}ditoriales XML ; Ecriture num{\'e}rique ; Relecture ; Document fragment{\'e} ; R{\'e}{\'e}ditorialisation ; Diff{\'e}rentiel ; Interactivit{\'e} ; Polymorphisme},
+  TYPE = {Theses},
+  PDF = {https://theses.hal.science/tel-01562039/file/These_UTC_Leonard_Dumas_Milne_Edwards.pdf},
+  HAL_ID = {tel-01562039},
+  HAL_VERSION = {v1},
+}
+
+@article{nguyen2021,
+author = {Nguyen, Thi Tuyet Hai and Jatowt, Adam and Coustaty, Mickael and Doucet, Antoine},
+title = {Survey of Post-OCR Processing Approaches},
+year = {2021},
+issue_date = {July 2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {54},
+number = {6},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3453476},
+doi = {10.1145/3453476},
+journal = {ACM Comput. Surv.},
+month = {jul},
+articleno = {124},
+numpages = {37}
+}
+
+@inproceedings{DBLP:conf/taln/SagotG14,
+  author    = {Beno{\^{\i}}t Sagot and
+               Kata G{\'{a}}bor},
+  title     = {Named Entity Recognition and Correction in OCRized Corpora (D{\'{e}}tection
+               et correction automatique d'entit{\'{e}}s nomm{\'{e}}es
+               dans des corpus OCRis{\'{e}}s) [in French]},
+  booktitle = {Traitement Automatique des Langues Naturelles, {TALN} 2014, Marseille,
+               France, 1-4 Juillet 2014, articles courts},
+  pages     = {437--442},
+  publisher = {The Association for Computer Linguistics},
+  year      = {2014},
+  url       = {https://aclanthology.org/F14-2009/},
+  timestamp = {Fri, 06 Aug 2021 00:41:24 +0200},
+  biburl    = {https://dblp.org/rec/conf/taln/SagotG14.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/corr/abs-2302-10204,
+  author    = {Solenn Tual and
+               Nathalie Abadie and
+               Joseph Chazalon and
+               Bertrand Dum{\'{e}}nieu and
+               Edwin Carlinet},
+  title     = {A Benchmark of Nested Named Entity Recognition Approaches in Historical
+               Structured Documents},
+  journal   = {CoRR},
+  volume    = {abs/2302.10204},
+  year      = {2023},
+  url       = {https://doi.org/10.48550/arXiv.2302.10204},
+  doi       = {10.48550/arXiv.2302.10204},
+  eprinttype = {arXiv},
+  eprint    = {2302.10204},
+  timestamp = {Thu, 23 Feb 2023 16:02:44 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2302-10204.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{amara2004approche,
+  title={Une approche d'identification des fontes arabes},
+  author={Amara, Najoua Essoukri Ben and Gazzah, Sami},
+  booktitle={Conf{\'e}rence Internationale Francophone sur l'Ecrit et le Document (CIFED 04)},
+  year={2004}
+}
+
+%_____________________BNF
+
+%%================================================================
+%% Conserver ces lignes STRING en d\'ebut de fichier de bibliographie
+%%================================================================
+@STRING{TALN = {Traitement automatique des langues naturelles}}
+@STRING{TALNPAREN = " (" # TALN # ")"}
+@STRING{ACTESDE = "Actes de "} 
+
+%%================================================================
+%% Introduire vos entr\'ees bibliographiques ici
+%%================================================================
+
+
+@article{https://doi.org/10.48550/arxiv.cmp-lg/9505040,
+  doi = {10.48550/ARXIV.CMP-LG/9505040},
+  
+  url = {https://arxiv.org/abs/cmp-lg/9505040},
+  
+  author = {Ramshaw, Lance A. and Marcus, Mitchell P.},
+  
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Text Chunking using Transformation-Based Learning},
+  
+  publisher = {arXiv},
+  
+  year = {1995},
+  
+  copyright = {Assumed arXiv.org perpetual, non-exclusive license to distribute this article for submissions made before January 2004}
+}
+
+
+@inproceedings{moncla2020,
+author = {Vigier, Denis and Moncla, Ludovic and Brenon, Alice and McDonough, Katherine and Joliveau, Thierry},
+year = {2020},
+month = {07},
+pages = {},
+title = {Classification des entités nommées dans l'Encyclopédie ou dictionnaire raisonné des sciences des arts et des métiers par une société de gens de lettres (1751-1772)}
+}
+
+@inproceedings{Hyyr2001ExplainingAE,
+  title={Explaining and Extending the Bit-parallel Approximate String Matching Algorithm of Myers},
+  author={Heikki Hyyr{\"o}},
+  year={2001}
+}
+
+@inproceedings{DBLP:journals/corr/abs-1301-3781,
+  author    = {Tom{\'{a}}s Mikolov and
+               Kai Chen and
+               Greg Corrado and
+               Jeffrey Dean},
+  editor    = {Yoshua Bengio and
+               Yann LeCun},
+  title     = {Efficient Estimation of Word Representations in Vector Space},
+  booktitle = {1st International Conference on Learning Representations, {ICLR} 2013,
+               Scottsdale, Arizona, USA, May 2-4, 2013, Workshop Track Proceedings},
+  year      = {2013},
+  url       = {http://arxiv.org/abs/1301.3781},
+  timestamp = {Mon, 28 Dec 2020 11:31:01 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1301-3781.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/corr/YamadaS0T16,
+  author    = {Ikuya Yamada and
+               Hiroyuki Shindo and
+               Hideaki Takeda and
+               Yoshiyasu Takefuji},
+  title     = {Joint Learning of the Embedding of Words and Entities for Named Entity
+               Disambiguation},
+  journal   = {CoRR},
+  volume    = {abs/1601.01343},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1601.01343},
+  eprinttype = {arXiv},
+  eprint    = {1601.01343},
+  timestamp = {Mon, 13 Aug 2018 16:46:20 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/YamadaS0T16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{le-titov-2018-improving,
+    title = "Improving Entity Linking by Modeling Latent Relations between Mentions",
+    author = "Le, Phong  and
+      Titov, Ivan",
+    booktitle = "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2018",
+    address = "Melbourne, Australia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P18-1148",
+    doi = "10.18653/v1/P18-1148",
+    pages = "1595--1604",
+    abstract = "Entity linking involves aligning textual mentions of named entities to their corresponding entries in a knowledge base. Entity linking systems often exploit relations between textual mentions in a document (e.g., coreference) to decide if the linking decisions are compatible. Unlike previous approaches, which relied on supervised systems or heuristics to predict these relations, we treat relations as latent variables in our neural entity-linking model. We induce the relations without any supervision while optimizing the entity-linking system in an end-to-end fashion. Our multi-relational model achieves the best reported scores on the standard benchmark (AIDA-CoNLL) and substantially outperforms its relation-agnostic version. Its training also converges much faster, suggesting that the injected structural bias helps to explain regularities in the training data.",
+}
+
+@inproceedings{Sun2015ModelingMC,
+  title={Modeling Mention, Context and Entity with Neural Networks for Entity Disambiguation},
+  author={Yaming Sun and Lei Lin and Duyu Tang and Nan Yang and Zhenzhou Ji and Xiaolong Wang},
+  booktitle={IJCAI},
+  year={2015}
+}
+@article{brando:hal-01396037,
+  TITLE = {{REDEN: Named Entity Linking in Digital Literary Editions Using Linked Data Sets}},
+  AUTHOR = {Brando, Carmen and Frontini, Francesca and Ganascia, Jean-Gabriel},
+  URL = {https://hal.sorbonne-universite.fr/hal-01396037},
+  JOURNAL = {{Complex Systems Informatics and Modeling Quarterly}},
+  NUMBER = {7},
+  PAGES = {60 - 80},
+  YEAR = {2016},
+  MONTH = Jul,
+  DOI = {10.7250/csimq.2016-7.04},
+  KEYWORDS = {digital humanities ; Named Entity Linking ; graph centrality ; linked data ; data fusion},
+  PDF = {https://hal.sorbonne-universite.fr/hal-01396037/file/1401-4407-1-PB.pdf},
+  HAL_ID = {hal-01396037},
+  HAL_VERSION = {v1},
+}
+
+@misc{https://doi.org/10.48550/arxiv.2109.11406,
+  doi = {10.48550/ARXIV.2109.11406},
+  
+  url = {https://arxiv.org/abs/2109.11406},
+  
+  author = {Ehrmann, Maud and Hamdi, Ahmed and Pontes, Elvys Linhares and Romanello, Matteo and Doucet, Antoine},
+  
+  keywords = {Computation and Language (cs.CL), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences, A.1; I.2.7},
+  
+  title = {Named Entity Recognition and Classification on Historical Documents: A Survey},
+  
+  publisher = {arXiv},
+  
+  year = {2021},
+  
+  copyright = {Creative Commons Attribution Share Alike 4.0 International}
+}
+
+
+@inproceedings{DBLP:conf/cikm/GuoB14,
+  author    = {Zhaochen Guo and
+               Denilson Barbosa},
+  editor    = {Jianzhong Li and
+               Xiaoyang Sean Wang and
+               Minos N. Garofalakis and
+               Ian Soboroff and
+               Torsten Suel and
+               Min Wang},
+  title     = {Robust Entity Linking via Random Walks},
+  booktitle = {Proceedings of the 23rd {ACM} International Conference on Conference
+               on Information and Knowledge Management, {CIKM} 2014, Shanghai, China,
+               November 3-7, 2014},
+  pages     = {499--508},
+  publisher = {{ACM}},
+  year      = {2014},
+  url       = {https://doi.org/10.1145/2661829.2661887},
+  doi       = {10.1145/2661829.2661887},
+  timestamp = {Tue, 06 Nov 2018 16:57:36 +0100},
+  biburl    = {https://dblp.org/rec/conf/cikm/GuoB14.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@ARTICLE{6823700,
+  author={Shen, Wei and Wang, Jianyong and Han, Jiawei},
+  journal={IEEE Transactions on Knowledge and Data Engineering}, 
+  title={Entity Linking with a Knowledge Base: Issues, Techniques, and Solutions}, 
+  year={2015},
+  volume={27},
+  number={2},
+  pages={443-460},
+  doi={10.1109/TKDE.2014.2327028}}
+
+@inproceedings{Dahir,
+author = {Dahir, Sarah and Khalifi, Hamid and El Qadi, Abderrahim},
+year = {2019},
+month = {03},
+pages = {1-6},
+title = {Query Expansion Using DBpedia and WordNet},
+isbn = {978-1-4503-6089-0},
+journal = {ArabWIC 2019: Proceedings of the ArabWIC 6th Annual International Conference Research Track},
+doi = {10.1145/3333165.3333184}
+}
+
+@inproceedings{Azad,
+author = {Azad, Hiteshwar and Deepak, Akshay},
+title = {A New Approach for Query Expansion using Wikipedia and WordNet},
+year = {2019},
+month = {01}
+}
+
+@inproceedings{suchanek,
+author = {Suchanek, Fabian and Kasneci, Gjergji and Weikum, Gerhard},
+year = {2007},
+month = {01},
+pages = {697-706},
+title = {YAGO: a core of semantic knowledge},
+journal = {16th International World Wide Web Conference, WWW2007},
+doi = {10.1145/1242572.1242667}
+}
+
+@inproceedings{cuxac:hal-02307577,
+  TITLE = {{Des bases de donn{\'e}es massives au Web de donn{\'e}es :  d{\'e}sambigu{\"i}sation et alignement d'entit{\'e}s g{\'e}ographiques dans les textes scientifiques}},
+  AUTHOR = {Cuxac, Pascal and Collignon, Alain and Gregorio, St{\'e}phanie and Parmentier, Fran{\c c}ois},
+  URL = {https://hal.archives-ouvertes.fr/hal-02307577},
+  BOOKTITLE = {{12{\`e}me Colloque international d'ISKO-France : Donn{\'e}es et m{\'e}gadonn{\'e}es ouvertes en SHS : de nouveaux enjeux pour l'{\'e}tat et l'organisation des connaissances ?}},
+  ADDRESS = {Montpellier, France},
+  YEAR = {2019},
+  MONTH = Oct,
+  KEYWORDS = {Web of Data ; Linked Open Data ; Automatic alignment ; Disambiguation ; Geographic entities ; Web de donn{\'e}es ; Donn{\'e}es ouvertes li{\'e}es ; Alignement automatique ; D{\'e}sambigu{\"i}sation ; Entit{\'e}s g{\'e}ographiques},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02307577/file/Cuxac_Collignon_Gregorio_Parmentier_isko2019.pdf},
+  HAL_ID = {hal-02307577},
+  HAL_VERSION = {v1},
+}
+
+@phdthesis{ehrmann:tel-01639190,
+  TITLE = {{Les Entit{\'e}es Nomm{\'e}es, de la linguistique au TAL : Statut th{\'e}orique et m{\'e}thodes de d{\'e}sambigu{\"i}sation}},
+  AUTHOR = {Ehrmann, Maud},
+  URL = {https://hal.archives-ouvertes.fr/tel-01639190},
+  SCHOOL = {{Paris Diderot University}},
+  YEAR = {2008},
+  MONTH = Jun,
+  KEYWORDS = {information extraction ;  named entity ;  named entity definition ;  named entity disambiguation ;  proper names ; extraction d'information ;  entit{\'e}s nomm{\'e}es ;  d{\'e}finition des entit{\'e}s nomm{\'e}es ;  d{\'e}sambiguation d'entit{\'e}s nomm{\'e}es ;  noms propres},
+  TYPE = {Theses},
+  PDF = {https://hal.archives-ouvertes.fr/tel-01639190/file/2008-065.pdf},
+  HAL_ID = {tel-01639190},
+  HAL_VERSION = {v1},
+}
+
+@article{DBLP:journals/corr/abs-1901-10197,
+  author    = {Hiteshwar Kumar Azad and
+               Akshay Deepak},
+  title     = {A New Approach for Query Expansion using Wikipedia and WordNet},
+  journal   = {CoRR},
+  volume    = {abs/1901.10197},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1901.10197},
+  eprinttype = {arXiv},
+  eprint    = {1901.10197},
+  timestamp = {Sat, 02 Feb 2019 16:56:00 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1901-10197.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{1111-0015-2013-45934,
+year="2013",
+issn={1111-0015},
+journal={Revue de l'Information Scientifique et Technique},
+volume={21},
+number={1},
+title={Une approche de désambiguïsation morpho-lexicale évaluée sur l’analyseur morphologique Alkhalil},
+url={https://www.asjp.cerist.dz/en/article/45934},
+publisher= {www.asjp.cerist.dz},
+keywords={TALA, analyseur morphologique ALKHALIL, méthode de désambigüisation, diacritisation, méthode multicritère d’aide à la décision (AMD), segmentation, exploration contextuelle, étiquetage, Réseaux de transition augmenté(ATN).},
+author={ Bousmaha, K.Z and Charef-Abdoun, S. and Hadrich Belguith, L. and Rahmouni, M.K },
+pages={26-40},
+language={Fr}}
+
+@INPROCEEDINGS{4586363,  author={Nguyen, Hien T. and Cao, Tru H.},  booktitle={2008 IEEE International Conference on Research, Innovation and Vision for the Future in Computing and Communication Technologies},   title={Named entity disambiguation on an ontology enriched by Wikipedia},   year={2008},  volume={},  number={},  pages={247-254},  doi={10.1109/RIVF.2008.4586363}}
+
+@inproceedings{Milne2008LearningTL,
+  title={Learning to link with wikipedia},
+  author={David N. Milne and Ian H. Witten},
+  booktitle={CIKM '08},
+  year={2008}
+}
+
+@inproceedings{cucerzan-2007-large,
+    title = "Large-Scale Named Entity Disambiguation Based on {W}ikipedia Data",
+    author = "Cucerzan, Silviu",
+    booktitle = "Proceedings of the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning ({EMNLP}-{C}o{NLL})",
+    month = jun,
+    year = "2007",
+    address = "Prague, Czech Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/D07-1074",
+    pages = "708--716",
+}
+
+@inproceedings{bunescu-pasca-2006-using,
+    title = "Using Encyclopedic Knowledge for Named entity Disambiguation",
+    author = {Bunescu, Razvan  and
+      Pa{\c{s}}ca, Marius},
+    booktitle = "11th Conference of the {E}uropean Chapter of the Association for Computational Linguistics",
+    month = apr,
+    year = "2006",
+    address = "Trento, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/E06-1002",
+    pages = "9--16",
+}
+
+@misc{https://doi.org/10.48550/arxiv.1706.09147,
+  doi = {10.48550/ARXIV.1706.09147},
+  
+  url = {https://arxiv.org/abs/1706.09147},
+  
+  author = {Eshel, Yotam and Cohen, Noam and Radinsky, Kira and Markovitch, Shaul and Yamada, Ikuya and Levy, Omer},
+  
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Named Entity Disambiguation for Noisy Text},
+  
+  publisher = {arXiv},
+  
+  year = {2017},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+@article{moro-etal-2014-entity,
+    title = "Entity Linking meets Word Sense Disambiguation: a Unified Approach",
+    author = "Moro, Andrea  and
+      Raganato, Alessandro  and
+      Navigli, Roberto",
+    journal = "Transactions of the Association for Computational Linguistics",
+    volume = "2",
+    year = "2014",
+    address = "Cambridge, MA",
+    publisher = "MIT Press",
+    url = "https://aclanthology.org/Q14-1019",
+    doi = "10.1162/tacl_a_00179",
+    pages = "231--244",
+    abstract = "Entity Linking (EL) and Word Sense Disambiguation (WSD) both address the lexical ambiguity of language. But while the two tasks are pretty similar, they differ in a fundamental respect: in EL the textual mention can be linked to a named entity which may or may not contain the exact mention, while in WSD there is a perfect match between the word form (better, its lemma) and a suitable word sense. In this paper we present Babelfy, a unified graph-based approach to EL and WSD based on a loose identification of candidate meanings coupled with a densest subgraph heuristic which selects high-coherence semantic interpretations. Our experiments show state-of-the-art performances on both tasks on 6 different datasets, including a multilingual setting. Babelfy is online at http://babelfy.org",
+}
+
+@inproceedings{hoffart-etal-2011-robust,
+    title = "Robust Disambiguation of Named Entities in Text",
+    author = {Hoffart, Johannes  and
+      Yosef, Mohamed Amir  and
+      Bordino, Ilaria  and
+      F{\"u}rstenau, Hagen  and
+      Pinkal, Manfred  and
+      Spaniol, Marc  and
+      Taneva, Bilyana  and
+      Thater, Stefan  and
+      Weikum, Gerhard},
+    booktitle = "Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing",
+    month = jul,
+    year = "2011",
+    address = "Edinburgh, Scotland, UK.",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/D11-1072",
+    pages = "782--792",
+}
+
+ %Biblio Article 1
+ 
+ % Des problèmes dans la complétion des champs à revoir
+@INPROCEEDINGS{8791217,
+  author={Hamdi, Ahmed and Jean-Caurant, Axel and Sidere, Nicolas and Coustaty, Mickaël and Doucet, Antoine},
+  booktitle={2019 ACM/IEEE Joint Conference on Digital Libraries (JCDL)}, 
+  title={An Analysis of the Performance of Named Entity Recognition over OCRed Documents}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={333-334},
+  doi={10.1109/JCDL.2019.00057}}
+  
+@inproceedings{Traub-2015,
+  TITLE = {{Impact analysis of OCR quality on research tasks in digital archives}},
+  AUTHOR = {Traub, M.C. and Van Ossenbruggen, J.and Hardman L.},
+  URL = { https://www.researchgate.net/publication/280520892_Impact_Analysis_of_OCR_Quality_on_Research_Tasks_in_Digital_Archives},
+  BOOKTITLE = {{Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics}},
+  YEAR = {2015},
+  pages = {pp. 252-263.},
+  DOI = {10.1007/978-3-319-24592-8\_19},
+  PDF = {https://core.ac.uk/reader/189941790},
+  
+}
+
+
+@inproceedings{jean:hal-01479299,
+  TITLE = {{Un mod{\`e}le probabiliste pour la detection de l'incertitude dans le langage naturel}},
+  AUTHOR = {Jean, Pierre-Antoine and Harispe, S{\'e}bastien and Ranwez, Sylvie and Bellot, Patrice and Montmain, Jacky},
+  URL = {https://hal-amu.archives-ouvertes.fr/hal-01479299},
+  JOURNAL = {{Document Num{\'e}rique}},
+  PUBLISHER = {{Lavoisier}},
+  VOLUME = {19-2016},
+  NUMBER = {2-3},
+  PAGES = {9-29},
+  YEAR = {2016},
+  MONTH = Dec,
+  PDF = {https://hal-amu.archives-ouvertes.fr/hal-01479299/file/un-modele-probabiliste.pdf},
+  HAL_ID = {hal-01479299},
+  HAL_VERSION = {v1},
+}
+
+
+@INPROCEEDINGS{konvens:60_rodriquez12w,
+  author = {Kepa Joseba Rodriquez and Mike Bryant and Tobias Blanke and Magdalena Luszczynska},
+  title = {Comparison of named entity recognition tools for raw {OCR} text},
+  booktitle = {Proceedings of KONVENS 2012},
+  pages = {410--414},
+  year = {2012},
+  editor = {Jeremy Jancsary},
+  publisher = {\"{O}GAI},
+  month = {September},
+  url = {http://www.oegai.at/konvens2012/proceedings/60_rodriquez12w/},
+  note = {LThist 2012 workshop}
+}
+
+
+@inproceedings{linharespontes:hal-02557116,
+  TITLE = {{Impact of OCR Quality on Named Entity Linking}},
+  AUTHOR = {Linhares Pontes, Elvys and Hamdi, Ahmed and Sid{\`e}re, Nicolas and Doucet, Antoine},
+  URL = {https://hal.archives-ouvertes.fr/hal-02557116},
+  BOOKTITLE = {{International Conference on Asia-Pacific Digital Libraries 2019}},
+  ADDRESS = {Kuala Lumpur, Malaysia},
+  YEAR = {2019},
+  MONTH = Nov,
+  DOI = {10.1007/978-3-030-34058-2\_11},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02557116/file/paper_31.pdf},
+  HAL_ID = {hal-02557116},
+  HAL_VERSION = {v1},
+}
+
+
+@inproceedings{boros-etal-2020-alleviating,
+    title = "Alleviating Digitization Errors in Named Entity Recognition for Historical Documents",
+    author = "Boros, Emanuela  and
+      Hamdi, Ahmed  and
+      Linhares Pontes, Elvys  and
+      Cabrera-Diego, Luis Adri{\'a}n  and
+      Moreno, Jose G.  and
+      Sidere, Nicolas  and
+      Doucet, Antoine",
+    booktitle = "Proceedings of the 24th Conference on Computational Natural Language Learning",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.conll-1.35",
+    doi = "10.18653/v1/2020.conll-1.35",
+    pages = "431--441",
+    abstract = "This paper tackles the task of named entity recognition (NER) applied to digitized historical texts obtained from processing digital images of newspapers using optical character recognition (OCR) techniques. We argue that the main challenge for this task is that the OCR process leads to misspellings and linguistic errors in the output text. Moreover, historical variations can be present in aged documents, which can impact the performance of the NER process. We conduct a comparative evaluation on two historical datasets in German and French against previous state-of-the-art models, and we propose a model based on a hierarchical stack of Transformers to approach the NER task for historical data. Our findings show that the proposed model clearly improves the results on both historical datasets, and does not degrade the results for modern datasets.",
+}
+
+
+@inproceedings{Baledent-2020,
+  TITLE = {{Dating Ancient texts: an Approach for Noisy French Documents}},
+  AUTHOR = {Baledent, Ana{\"e}lle and Hiebel, Nicolas and Lejeune, Ga{\"e}l},
+  URL = {https://hal.archives-ouvertes.fr/hal-02571633},
+  BOOKTITLE = {Language Technologies for Historical and Ancient Langues (LT4HLA) @LREC2020},
+  YEAR = {2020},
+  MONTH = May,
+  KEYWORDS = {Old documents ; Text Mining ; Document Dating ; Corpus ; Digital Humanities ; Textual Document Dating},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02571633/file/main.pdf},
+  HAL_ID = {hal-02571633},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{Ehrmann-2020,
+title = {{Extended Overview of CLEF HIPE 2020: Named Entity Processing on Historical Newspapers}},
+booktitle = {{Working Notes of CLEF 2020 - Conference and Labs of the Evaluation Forum}},
+publisher = {CEUR-WS},
+author = {Ehrmann, Maud and Romanello, Matteo and Flückiger, Alex and Clematide, Simon},
+year = {2020},
+editor = {Cappellato, Linda and Eickhoff, Carsten and Ferro, Nicola and Névéol, Aurélie}
+}
+
+@inproceedings{heiden:halshs-00549779,
+TITLE = {{TXM : Une plateforme logicielle open-source pour la textom{\'e}trie - conception et d{\'e}veloppement}},
+AUTHOR = {Heiden, Serge and Magu{\'e}, Jean-Philippe and Pincemin, B{\'e}n{\'e}dicte},
+URL = {https://halshs.archives-ouvertes.fr/halshs-00549779},
+BOOKTITLE = {{10th International Conference on the Statistical Analysis of Textual Data - JADT 2010}},
+ADDRESS = {Rome, Italy},
+EDITOR = {Sergio Bolasco and Isabella Chiari and Luca Giuliano},
+PUBLISHER = {{Edizioni Universitarie di Lettere Economia Diritto}},
+VOLUME = {2},
+NUMBER = {3},
+PAGES = {1021-1032},
+YEAR = {2010},
+MONTH = Jun,
+KEYWORDS = {textometry ; full text search engine ; statistical analysis ; natural language processing ; grails framework ; textom{\'e}trie ; open-source ; framework grails ; traitement automatique de la langue ; tal ; eclipse rcp ; analyse statistique ; moteur de recherche plein texte ; xml-tei},
+PDF = {https://halshs.archives-ouvertes.fr/halshs-00549779/file/Heiden_al_jadt2010.pdf},
+HAL_ID = {halshs-00549779},
+HAL_VERSION = {v1},
+  }
+  
+@inproceedings{miller-etal-2000-named,
+    title = "Named Entity Extraction from Noisy Input: Speech and {OCR}",
+    author = "Miller, David  and
+      Boisen, Sean  and
+      Schwartz, Richard  and
+      Stone, Rebecca  and
+      Weischedel, Ralph",
+    booktitle = "Sixth Applied Natural Language Processing Conference",
+    month = apr,
+    year = "2000",
+    address = "Seattle, Washington, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/A00-1044",
+    doi = "10.3115/974147.974191",
+    pages = "316--324",
+}
+
+@inproceedings{odebrecht_ELTeC_2021,
+  maintitle = {European Literary Text Collection ({ELTeC})},
+  editor = {Odebrecht, Carolin and Burnard, Lou and Schöch, Christof},
+  version = {v1.1.0},
+  year = {2021},
+  month = {4},
+  publisher = {COST Action Distant Reading for European Literary History},
+  url = {https://github.com/COST-ELTeC/ELTeC},
+  doi = {10.5281/zenodo.4662444},
+  }
+  
+  @software{spacy,
+  author = {Honnibal, Matthew and Montani, Ines and Van Landeghem, Sofie and Boyd, Adriane},
+  title = {{spaCy: Industrial-strength Natural Language Processing in Python}},
+  year = 2020,
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.1212303},
+  url = {https://doi.org/10.5281/zenodo.1212303}
+}
+
+@inproceedings{buscaldi:hal-02784738,
+  TITLE = {{Calcul de similarit{\'e} entre phrases : quelles mesures et quels descripteurs ?}},
+  AUTHOR = {Buscaldi, Davide and Felhi, Ghazi and Ghoul, Dhaou and Le Roux, Josepth and Lejeune, Ga{\"e}l and Zhang, Xudong},
+  URL = {https://hal.archives-ouvertes.fr/hal-02784738},
+  BOOKTITLE = {{6e conf{\'e}rence conjointe Journ{\'e}es d'{\'E}tudes sur la Parole (JEP, 33e {\'e}dition), Traitement Automatique des Langues Naturelles (TALN, 27e {\'e}dition), Rencontre des {\'E}tudiants Chercheurs en Informatique pour le Traitement Automatique des Langues (R{\'E}CITAL, 22e {\'e}dition). Atelier D{\'E}fi Fouille de Textes}},
+  ADDRESS = {Nancy, France},
+  EDITOR = {Cardon, R{\'e}mi and Grabar, Natalia and Grouin, Cyril and Hamon, Thierry},
+  PUBLISHER = {{ATALA}},
+  PAGES = {14-25},
+  YEAR = {2020},
+  KEYWORDS = {similarit{\'e} ; distance de Bray-Curtis. ; distance euclidienne ; n-grammes de caract{\`e}res},
+  PDF = {https://hal.archives-ouvertes.fr/hal-02784738v3/file/210.pdf},
+  HAL_ID = {hal-02784738},
+  HAL_VERSION = {v3},
+}
+
+@inproceedings{gupta2015automatic,
+  title={Automatic assessment of OCR quality in historical documents},
+  author={Gupta, Anshul and Gutierrez-Osuna, Ricardo and Christy, Matthew and Capitanu, Boris and Auvil, Loretta and Grumbach, Liz and Furuta, Richard and Mandell, Laura},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={29},
+  number={1},
+  year={2015}
+}
+
+@inproceedings{ehrmann2020overview,
+  title={Overview of CLEF HIPE 2020: Named entity recognition and linking on historical newspapers},
+  author={Ehrmann, Maud and Romanello, Matteo and Fl{\"u}ckiger, Alex and Clematide, Simon},
+  booktitle={International Conference of the Cross-Language Evaluation Forum for European Languages},
+  pages={288--310},
+  year={2020},
+  organization={Springer}
+}
+
+@inproceedings{suarez2020sinner,
+  title={SinNer@ Clef-Hipe2020: Sinful adaptation of SotA models for Named Entity Recognition in French and German},
+  author={Su{\'a}rez, Pedro Javier Ortiz and Dupont, Yoann and Lejeune, Ga{\"e}l and Tian, Tian},
+  booktitle={CLEF 2020 Working Notes. Working Notes of CLEF 2020-Conference and Labs of the Evaluation Forum},
+  year={2020}
+}
+
+@article{kettunen2020ground,
+  title={Ground truth OCR sample data of Finnish historical newspapers and journals in data improvement validation of a re-OCRing process},
+  author={Kettunen, Kimmo and Koistinen, Mika and Kervinen, Jukka},
+  journal={Liber Quarterly},
+  volume={30},
+  number={1},
+  year={2020}
+}
+
+@article{powalski2020unicase,
+  title={UniCase--Rethinking Casing in Language Models},
+  author={Powalski, Rafal and Stanislawek, Tomasz},
+  journal={arXiv preprint arXiv:2010.11936},
+  year={2020}
+}
+
+@inproceedings{niu2020controlling,
+  title={Controlling neural machine translation formality with synthetic supervision},
+  author={Niu, Xing and Carpuat, Marine},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={05},
+  pages={8568--8575},
+  year={2020}
+}
+
+
+
+
+
+@dataset{simon_gabay_2020_3826894,
+  author       = {Simon Gabay},
+  title        = {OCR17: GT for 17th French prints},
+  month        = may,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {1.0},
+  doi          = {10.5281/zenodo.3826894},
+  url          = {https://doi.org/10.5281/zenodo.3826894}
+}
+
+@article{weichselbaumer2020new,
+  title={New Approaches to OCR for Early Printed Books},
+  author={Weichselbaumer, Nikolaus and Seuret, Mathias and Limbach, Saskia and Dong, Rui and Burghardt, Manuel and Christlein, Vincent},
+  journal={DigItalia},
+  volume={2},
+  pages={74--87},
+  year={2020}
+}
+
+@article{CICLING-2018-Lejeune,
+	title = "A New Proposal for Evaluating Web Page Cleaning Tools",
+	author = "Ga{\"e}l Lejeune and Lichao Zhu",
+	journal = {Computacion y Sistemas},
+	volume = {22},
+	number = {4},
+	url = {https://hal.archives-ouvertes.fr/hal-02467732},
+	year = "2018",
+        pages = {1249-1258}
+}
+
+@article{DBLP:journals/corr/KettunenMRKL16,
+  author    = {Kimmo Kettunen and
+               Eetu M{\"{a}}kel{\"{a}} and
+               Teemu Ruokolainen and
+               Juha Kuokkala and
+               Laura L{\"{o}}fberg},
+  title     = {Old Content and Modern Tools - Searching Named Entities in a Finnish
+               OCRed Historical Newspaper Collection 1771-1910},
+  journal   = {CoRR},
+  volume    = {abs/1611.02839},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1611.02839},
+  eprinttype = {arXiv},
+  eprint    = {1611.02839},
+  timestamp = {Mon, 13 Aug 2018 16:49:07 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/KettunenMRKL16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{DBLP:conf/konvens/EhrmannCRK16,
+  author    = {Maud Ehrmann and
+               Giovanni Colavizza and
+               Yannick Rochat and
+               Fr{\'{e}}d{\'{e}}ric Kaplan},
+  editor    = {Stefanie Dipper and
+               Friedrich Neubarth and
+               Heike Zinsmeister},
+  title     = {Diachronic Evaluation of {NER} Systems on Old Newspapers},
+  booktitle = {Proceedings of the 13th Conference on Natural Language Processing,
+               {KONVENS} 2016, Bochum, Germany, September 19-21, 2016},
+  series    = {Bochumer Linguistische Arbeitsberichte},
+  volume    = {16},
+  year      = {2016},
+  url       = {https://www.linguistics.rub.de/konvens16/pub/13\_konvensproc.pdf},
+  timestamp = {Thu, 12 Mar 2020 11:30:43 +0100},
+  biburl    = {https://dblp.org/rec/conf/konvens/EhrmannCRK16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/ijdar/Lopresti09,
+  author    = {Daniel P. Lopresti},
+  title     = {Optical character recognition errors and their effects on natural
+               language processing},
+  journal   = {Int. J. Document Anal. Recognit.},
+  volume    = {12},
+  number    = {3},
+  pages     = {141--151},
+  year      = {2009},
+  url       = {https://doi.org/10.1007/s10032-009-0094-8},
+  doi       = {10.1007/s10032-009-0094-8},
+  timestamp = {Thu, 13 Aug 2020 12:42:16 +0200},
+  biburl    = {https://dblp.org/rec/journals/ijdar/Lopresti09.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+%% exemples d'entr\'ees de TALN (simplifi\'ee gr\^ace \`a une r\'ef\'erence crois\'ee)
+@InProceedings{Bernhard07,
+  author =       {Bernhard, Delphine},
+  title =        {Apprentissage non supervis\'e de familles morphologiques par classification ascendante hi\'erarchique},
+  pages =        {367--376}, 
+  crossref =     {TALN2007},
+  hal_id = "hal-00800342"
+}
+
+@InProceedings{LanglaisPatry07,
+  author =       {Langlais, Philippe and Patry, Alexandre},
+  title =        {Enrichissement d'un lexique bilingue par analogie},
+  pages =        {101--110},
+  crossref =     {TALN2007}
+}
+
+@InProceedings{SeretanWehrli07,
+  author =       {Seretan, Violeta and Wehrli, Eric},
+  title =        {Collocation translation based on sentence alignment and parsing},
+  pages =        {401--410},
+  crossref =     {TALN2007}
+}
+
+@conference{LaigneletRioult09,
+  author =       {Laignelet, Marion and Rioult, Fran\{c}ois},
+  title =        {Rep{\'e}rer automatiquement les segments obsolescents {\`a} l{\textquoteright}aide d{\textquoteright}indices s{\'e}mantiques et discursifs},
+  id_hal = {hal-01012442},
+  crossref =     {TALN2009}
+}
+
+@inproceedings{pereira-warren:1983,
+    title = "PARSING AS DEDUCTION",
+    author = "Pereira, Fernando C. N.  and Warren, David H. D.",
+    booktitle = "21st Annual Meeting of the Association for Computational Linguistics",
+    month = jun,
+    year = "1983",
+    address = "Cambridge, Massachusetts, USA",
+    publisher = "Association for Computational Linguistics",
+    doi = "10.3115/981311.981338",
+    pages = "137--144",
+}
+
+
+@inproceedings{tellier:2008,
+  TITLE = {{How to Split Recursive Automata}},
+  AUTHOR = {Tellier, Isabelle},
+  URL = {https://hal.inria.fr/inria-00341770},
+  BOOKTITLE = {{Grammatical Inference: Algorithms and Applications. 9th International Colloquium, ICGI 2008 Saint-Malo, France, September 22-24, 2008 Proceedings}},
+  Publisher = {Springer},
+  EDITOR = {Alexander Clark and Fran{\c c}ois Coste and Laurent Miclet},
+  SERIES = {LNAI},
+  VOLUME = 5278,
+  PAGES = {200-212},
+  YEAR = 2008,
+  KEYWORDS = {grammatical inference ; categorial grammars ; recursive automata},
+  PDF = {https://hal.inria.fr/inria-00341770/file/icgi08-tellier.pdf},
+  HAL_ID = {inria-00341770},
+  doi = {10.1007/978-3-540-88009-7_16},
+  HAL_VERSION = {v1},
+}
+
+@Article{chomsky-schutzenberger:1963,
+  author = 	 {Chomsky, Noam and Sch\"utzenberger, Marcel-Paul},
+  title = 	 {The Algebraic Theory of Context-Free Languages},
+  journal = 	 {Studies in Logic and the Foundations of Mathematics},
+  year = 	 1963,
+  volume = 	 35,
+  pages = 	 {118-161},
+  doi = {10.1016/S0049-237X(08)72023-8}
+}
+
+@Book{hinzen-machery-wrning:2012,
+  editor = 	 {Wolfram Hinzen and Edouard Machery and Markus Werning},
+  title = 	 {The Oxford Handbook of Compositionality},
+  publisher = 	 {Oxford},
+  year = 	 2012,
+  doi = 	 {10.1093/oxfordhb/9780199541072.001.0001}}
+
+@PhdThesis{pollard:1984,
+  author = 	 {Carl Pollard},
+  title = 	 {Generalized Phrase Structure Grammars, Head Grammars, and Natural Language},
+  school = 	 {Stanford University, CA},
+  year = 	 {1984},
+}
+
+
+@InCollection{joshi:19885,
+  author = 	 {Aravind K. Joshi},
+  title = 	 {Tree-adjoining grammars: How much context
+                  sensitivity is required to provide reasonable
+                  structural descriptions?},
+  booktitle = 	 {Natural Language Parsing: Psychological, Computational, and Theoretical Perspectives},
+  publisher = {Cambridge University Press},
+  series={Studies in Natural Language Processing},
+  chapter = 6,
+  doi = {10.1017/CBO9780511597855.007},
+  year = 	 1985,
+  editor = 	 {David R. Dowty and Lauri Karttunen and Arnold M. Zwicky},
+  pages = 	 {206--250}}
+
+%%================================================================
+%% Conserver ces lignes qui serviront \`a des r\'ef\'erences crois\'ees
+%% en fin de fichier de bibliographie
+%%================================================================
+@Proceedings{TALN97,
+  title = 	 ACTESDE # {TALN 1997} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 1997} # TALNPAREN,
+  year = 	 1997,
+  editor =	 {Damien Genthial},
+  address =	 {Grenoble},
+  month =	 JUN
+}
+
+@Proceedings{TALN98,
+  title = 	 ACTESDE # {TALN 1998} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 1998} # TALNPAREN,
+  year = 	 1998,
+  editor =	 {Pierre Zweigenbaum},
+  address =	 {Paris},
+  organization = {ATALA},
+  month =	 JUN
+}
+
+@Proceedings{TALN99,
+  title = 	 ACTESDE # {TALN 1999} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 1999} # TALNPAREN,
+  year = 	 1999,
+  editor =	 {Pascal Amsili},
+  address =	 {Carg\`ese},
+  organization = {ATALA},
+  month =	 JUL
+}
+
+@Proceedings{TALN2000,
+  title = 	 ACTESDE # {TALN 2000} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2000} # TALNPAREN,
+  year = 	 2000,
+  editor =	 {Eric Wehrli and Martin Rajman},
+  address =	 {Lausanne},
+  organization = {ATALA},
+  publisher =	 {EPFL},
+  month =	 OCT
+}
+
+@Proceedings{TALN2001,
+  title = 	 ACTESDE # {TALN 2001} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2001} # TALNPAREN,
+  year = 	 2001,
+  editor =	 {Denis Maurel},
+  address =	 {Tours},
+  organization = {ATALA},
+  publisher =	 {Universit\'e de Tours},
+  month =	 JUL
+}
+
+@Proceedings{TALN2002,
+  title = 	 ACTESDE # {TALN 2002} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2002} # TALNPAREN,
+  year = 	 2002,
+  editor =	 {Jean-Marie Pierrel},
+  address =	 {Nancy},
+  organization = {ATALA},
+  publisher =	 {ATILF},
+  month =	 JUN
+}
+
+@Proceedings{TALN2003,
+  title = 	 ACTESDE # {TALN 2003} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2003} # TALNPAREN,
+  year = 	 2003,
+  editor =	 {B\'eatrice Daille},
+  address =	 {Batz-sur-mer},
+  organization = {ATALA},
+  publisher =	 {IRIN},
+  month =	 JUN
+}
+
+@Proceedings{TALN2004,
+  title = 	 ACTESDE # {TALN 2004} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2004} # TALNPAREN,
+  year = 	 2004,
+  editor =	 {Philippe Blache},
+  address =	 {F\`es, Maroc},
+  organization = {ATALA},
+  publisher =	 {LPL},
+  month =	 APR
+}
+
+@Proceedings{TALN2005,
+  title = 	 ACTESDE # {TALN 2005} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2005} # TALNPAREN,
+  year = 	 2005,
+  editor =	 {Mich\`ele Jardino},
+  address =	 {Dourdan},
+  organization = {ATALA},
+  publisher =	 {LIMSI},
+  month =	 JUN
+}
+
+@Proceedings{TALN2007,
+  title = 	 ACTESDE # {TALN 2007} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2007} # TALNPAREN,
+  year = 	 {2007},
+  editor =	 {Benamara, Farah and Hatout, Nabil and Muller, Philippe and Ozdowska, Sylwia},
+  address =	 {Toulouse},
+  organization = {ATALA},
+  publisher =	 {IRIT},
+  month =	 JUN
+}
+
+@Proceedings{TALN2009,
+  title = 	 ACTESDE # {TALN 2009} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2009} # TALNPAREN,
+  year = 	 {2009},
+  address =	 {Senlis},
+  editor =       {Adeline Nazarenko and Thierry Poibeau},
+  organization = {ATALA},
+  publisher =	 {LIPN},
+  month =	 JUN
+}
+
+@Proceedings{TALN2014,
+  title = 	 ACTESDE # {TALN 2014} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2014} # TALNPAREN,
+  year = 	 {2014},
+  editor =	 {Brigitte Bigi},
+  address =	 {Marseille},
+  organization = {ATALA},
+  publisher = {LPL},
+  month = JUL
+}
+
+@Proceedings{TALN2015,
+  title = 	 ACTESDE # {TALN 2015} # TALNPAREN,
+  booktitle = 	 ACTESDE # {TALN 2015} # TALNPAREN,
+  year = 	 {2015},
+  editor =	 {Dias, Ga\"el},
+  address =	 {Caen},
+  organization = {ATALA},
+  publisher = {HULTECH},
+  month = JUN
+}
+
+@article{1017363ar,
+  title="La littérature et l’espace",
+  author="Ziethen, Antje",
+  journal="Arborescences",
+  
+  number="3",
+  
+  year="2013",
+  publisher="Département d'études françaises, Université de Toronto",
+  doi="https://doi.org/10.7202/1017363ar"
+}
+
+@article{petkovic:hal-04063970,
+  TITLE = {{Impact de la correction automatique de l'OCR/HTR sur la reconnaissance d'entit{\'e}s nomm{\'e}es dans un corpus bruit{\'e}}},
+  AUTHOR = {Petkovic, Ljudmila and Alrahabi, Motasem and Roe, Glenn},
+  URL = {https://hal.science/hal-04063970},
+  JOURNAL = {{JIS - Journal of Information Sciences}},
+  PUBLISHER = {{ESI - Ecole des Sciences de l'Information, Rabbat}},
+  VOLUME = {21},
+  NUMBER = {2},
+  PAGES = {42-57},
+  YEAR = {2022},
+  MONTH = Dec,
+  DOI = {10.34874/IMIST.PRSM/jis-v21i2.36599},
+  KEYWORDS = {Automatic Spelling Correction ; OCR ; Digitized Archival Documents ; Named Entity Recognition ; Natural Language Processing ; correction d'orthographe automatique ; OCR ; documents d'archives num{\'e}ris{\'e}es ; reconnaissance d'entit{\'e}s nomm{\'e}es ; traitement automatique des langues},
+  PDF = {https://hal.science/hal-04063970/file/36599-105777-1-PB.pdf},
+  HAL_ID = {hal-04063970},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{mayracordova:hal-03701464,
+  TITLE = {{Toolbox : une cha{\^i}ne de traitement de corpus pour les humanit{\'e}s num{\'e}riques}},
+  AUTHOR = {Mayra Cordova, Johanna and Dupont, Yoann and Petkovic, Ljudmila and Gawley, James and Alrahabi, Motasem and Roe, Glenn},
+  URL = {https://hal.archives-ouvertes.fr/hal-03701464},
+  BOOKTITLE = {{Traitement Automatique des Langues Naturelles}},
+  ADDRESS = {Avignon, France},
+  EDITOR = {Est{\`e}ve, Yannick and Jim{\'e}nez, Tania and Parcollet, Titouan and Zanon Boito, Marcely},
+  PUBLISHER = {{ATALA}},
+  PAGES = {11-13},
+  YEAR = {2022},
+  KEYWORDS = {Humanit{\'e}s num{\'e}riques ; TEI ; OCR ; reconnaissance des entit{\'e}s nomm{\'e}es.},
+  PDF = {https://hal.archives-ouvertes.fr/hal-03701464/file/3565.pdf},
+  HAL_ID = {hal-03701464},
+  HAL_VERSION = {v1},
+}
+
+@article{Posthumus-2017,
+  title="Chapitre 7. Écocritique : vers une nouvelle analyse du réel, du vivant et du non-humain dans le texte littéraire",
+  author="Posthumus, Stéphanie ",  
+  year="2017",
+  BOOKTITLE ="Humanités environnementales : Enquêtes et contre-enquêtes.",
+  editor="Blanc, Guillaume, et al.",
+  publisher="Paris : Éditions de la Sorbonne. ",
+  doi="http://books.openedition.org/psorbonne/84380"
+}
+
+@inproceedings{koudoroparfait:2022,
+  TITLE = {{Reconnaissance d'entit{\'e}s nomm{\'e}es sur des sorties OCR bruit{\'e}es : des pistes pour la d{\'e}sambigu{\"i}sation morphologique automatique}},
+  AUTHOR = {Koudoro-Parfait, Caroline and Lejeune, Ga{\"e}l and Buth, Richy},
+  URL = {https://hal.science/hal-03701476},
+  BOOKTITLE = {{Traitement Automatique des Langues Naturelles}},
+  ADDRESS = {Avignon, France},
+  EDITOR = {Est{\`e}ve, Yannick and Jim{\'e}nez, Tania and Parcollet, Titouan and Zanon Boito, Marcely},
+  PUBLISHER = {{ATALA}},
+  PAGES = {45-55},
+  YEAR = {2022},
+  KEYWORDS = {Reconnaissance d'entit{\'e}s nomm{\'e}es ; Reconnaissance optique de caract{\`e}res ; .},
+  PDF = {https://hal.science/hal-03701476/file/7039.pdf},
+  HAL_ID = {hal-03701476},
+  HAL_VERSION = {v1},
+}
+
+@article{lejeune:hal-01294127,
+  TITLE = {{Multilingual Event Extraction for Epidemic Detection}},
+  AUTHOR = {Lejeune, Ga{\"e}l and Brixtel, Romain and Doucet, Antoine and Lucas, Nadine},
+  URL = {https://hal.science/hal-01294127},
+  JOURNAL = {{Artificial Intelligence in Medicine}},
+  PUBLISHER = {{Elsevier}},
+  VOLUME = {65},
+  NUMBER = {2},
+  PAGES = {131--143},
+  YEAR = {2015},
+  MONTH = Oct,
+  DOI = {10.1016/j.artmed.2015.06.005},
+  KEYWORDS = {Early event detection ; Epidemic surveillance ; Multilingual information access ; Poorly endowed languages ; Tele-epidemiology},
+  HAL_ID = {hal-01294127},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{rahimi-etal-2019-massively,
+    title = "Massively Multilingual Transfer for {NER}",
+    author = "Rahimi, Afshin  and
+      Li, Yuan  and
+      Cohn, Trevor",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P19-1015",
+    doi = "10.18653/v1/P19-1015",
+    pages = "151--164",
+    abstract = "In cross-lingual transfer, NLP models over one or more source languages are applied to a low-resource target language. While most prior work has used a single source model or a few carefully selected models, here we consider a {``}massive{''} setting with many such models. This setting raises the problem of poor transfer, particularly from distant languages. We propose two techniques for modulating the transfer, suitable for zero-shot or few-shot learning, respectively. Evaluating on named entity recognition, we show that our techniques are much more effective than strong baselines, including standard ensembling, and our unsupervised method rivals oracle selection of the single best individual model.",
+}
+
+@inproceedings{jia-etal-2019-cross,
+    title = "Cross-Domain {NER} using Cross-Domain Language Modeling",
+    author = "Jia, Chen  and
+      Liang, Xiaobo  and
+      Zhang, Yue",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P19-1236",
+    doi = "10.18653/v1/P19-1236",
+    pages = "2464--2474",
+    abstract = "Due to limitation of labeled resources, cross-domain named entity recognition (NER) has been a challenging task. Most existing work considers a supervised setting, making use of labeled data for both the source and target domains. A disadvantage of such methods is that they cannot train for domains without NER data. To address this issue, we consider using cross-domain LM as a bridge cross-domains for NER domain adaptation, performing cross-domain and cross-task knowledge transfer by designing a novel parameter generation network. Results show that our method can effectively extract domain differences from cross-domain LM contrast, allowing unsupervised domain adaptation while also giving state-of-the-art results among supervised domain adaptation methods.",
+}
+
+@inproceedings{kew-etal-2019-geotagging,
+    title = "Geotagging a Diachronic Corpus of Alpine Texts: Comparing Distinct Approaches to Toponym Recognition",
+    author = "Kew, Tannon  and
+      Shaitarova, Anastassia  and
+      Meraner, Isabel  and
+      Goldzycher, Janis  and
+      Clematide, Simon  and
+      Volk, Martin",
+    booktitle = "Proceedings of the Workshop on Language Technology for Digital Historical Archives",
+    month = sep,
+    year = "2019",
+    address = "Varna, Bulgaria",
+    publisher = "INCOMA Ltd.",
+    url = "https://aclanthology.org/W19-9003",
+    doi = "10.26615/978-954-452-059-5_003",
+    pages = "11--18",
+    abstract = "Geotagging historic and cultural texts provides valuable access to heritage data, enabling location-based searching and new geographically related discoveries. In this paper, we describe two distinct approaches to geotagging a variety of fine-grained toponyms in a diachronic corpus of alpine texts. By applying a traditional gazetteer-based approach, aided by a few simple heuristics, we attain strong high-precision annotations. Using the output of this earlier system, we adopt a state-of-the-art neural approach in order to facilitate the detection of new toponyms on the basis of context. Additionally, we present the results of preliminary experiments on integrating a small amount of crowdsourced annotations to improve overall performance of toponym recognition in our heritage corpus.",
+}
+
+@inproceedings{koudoro-parfait2023,
+    title = "Mapping spatial named entities from noisy OCR output: Epiméthée from OCR to map.",
+    author = "Koudoro-Parfait, Caroline and Alrahabi, Motasem and Dupont, Yoann and Lejeune, Gaël and Roe, Glenn",
+    booktitle = "Proceedings of DH2023 Collaboration as Opportuniy",
+    month = jul,
+    year = "2023",
+    address = "Gratz, Austria",
+    publisher = "ADHO",
+ 
+   
+}
+
+@misc{kenneth1994plateau,
+  title={Le plateau de l’albatros. Introduction {\`a} la g{\'e}opo{\'e}tique},
+  author={White, Kenneth },
+  year={1994},
+  publisher={Paris, Grasset}
+}
+
+@unpublished{alrahabi:hal-03156278,
+  TITLE = {{Guide d'annotation manuelle d'entit{\'e}s nomm{\'e}es dans des corpus litt{\'e}raires}},
+  AUTHOR = {Alrahabi, Motasem and Brando, Carmen and Frontini, Francesca and Provenier, Arthur and Jalabert, Romain and Bordry, Margarite and Koskas, Camille and Gawley, James},
+  URL = {https://hal.science/hal-03156278},
+  NOTE = {working paper or preprint},
+  YEAR = {2021},
+  MONTH = Mar,
+  PDF = {https://hal.science/hal-03156278/file/Guide\%20Named\%20Entities.pdf},
+  HAL_ID = {hal-03156278},
+  HAL_VERSION = {v1},
+}
+
+@article{bakhtine1978esthetique,
+  title={Esth{\'e}tique et th{\'e}orie du roman, Gallimard, Paris.(1984)},
+  author={Bakhtine, Mikhal},
+  journal={Esth{\'e}tique de la cr{\'e}ation verbale, Gallimard, Paris},
+  year={1978}
+}
+
+@book{alma991003718459705596,
+year = {DL 2000},
+author = {Moretti,Franco},
+address = {Paris},
+booktitle = {Atlas du roman européen, 1800-1900},
+isbn = {2-02-038117-6},
+keywords = {Villes -- Dans la littérature},
+language = {fre},
+publisher = {Éd. du Seuil},
+series = {<<La >>couleur des idées},
+title = {Atlas du roman européen, 1800-1900  / Franco Moretti ; traduit de l'italien par Jérôme Nicolas},
+}
+
+@inproceedings{koudoroparfait-sourcesig,
+  TITLE = {{Reconnaissance des Entités Nommées spatiales sur un corpus littéraire bruité : des entités à la carte.}},
+  AUTHOR = {Koudoro-Parfait, Caroline and Lejeune, Gaël},
+  BOOKTITLE = {In Proceedings of the Séminaire des sources aux Systèmes d’Information Géographique},
+  YEAR = {2024},
+  MONTH = sep,
+}
+@inproceedings{pinche_2022_7410529,
+  title={Gallic(orpor)a: Extraction, annotation et diffusion de l’information textuelle et visuelle en diachronie longue},
+  author={Sagot, Beno{\^\i}t and Romary, Laurent and Bawden, Rachel and Su{\'a}rez, Pedro Javier Ortiz and Christensen, Kelly and Gabay, Simon and Pinche, Ariane and Camps, Jean-Baptiste},
+  booktitle={DataLab de la BnF: Restitution des travaux 2022},
+  year={2022}
+}
+@software{wrong_ref,
+  author       = {Pinche and
+                  Gabay},
+  title        = {Gallicorpora+},
+  month        = dec,
+  year         = 2022,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.7410529},
+  url          = {https://doi.org/10.5281/zenodo.7410529}
+}
+
+@article{10.1093/fs/knab041,
+    author = {Burrows, Simon and Roe, Glenn},
+    title = "{Digitizing Enlightenment: Digital Humanities and the Transformation of Eighteenth-Century Studies. Edited by Simon Burrows and Glenn Roe}",
+    journal = {French Studies},
+    volume = {75},
+    number = {3},
+    pages = {404-404},
+    year = {2021},
+    month = {03},
+    abstract = "{In the past year, most of us have experienced ‘digital fatigue’: 2020 did its best to take the shine off Gallica, Google Books, and the other digital tools we have recently come to rely on. It is no small feat, then, that this excellent compendium of digital humanities projects, edited by Simon Burrows and Glenn Roe and with contributions from over twenty scholars, manages to remind digitally jaded readers of the exciting possibilities that digital methods offer the humanities. A lucid introduction from Burrows and Roe highlights that neither the work presented in this book, nor the book itself, were ‘born digital’; rather, they are the product of conferences, international teamwork, and student–academic collaborations. Burrows, Roe, and their contributors thus reframe a field with a reputation for being driven by grant money and technological gimmicks as one powered by people. The first section of this book charts the pioneering projects that have changed the landscape of eighteenth-century studies since the 1980s, by producing digital resources that have become (or are fast becoming) part of the scholarly toolkit. These include the first digital edition of the Encyclopédie, produced by the American and French Research on the Treasury of the French Language (ARTFL) team; Electronic Enlightenment’s repository of over 77,000 letters; and Early Modern Letters Online (EMLO), a digital union catalogue of early modern correspondence. Scholars of French will find much of interest here, with contributions from Robert Morrissey and Glenn Roe, Nicholas Cronk, Dan Edelstein, Howard Hotson, Jeffrey S. Ravel, Angus Martin and Richard Frautschi, Simon Burrows, and Alicia C. Montoya. The volume’s second section explores the innovative approaches often developed by the next generation of digital humanities researchers. These include an open-source tool designed to visualize networks based on humanities datasets; the use of topic modelling to understand how the subjects of letters to the editors of pre-Revolutionary affiches change over time; the ongoing production of a digital directory of early modern French geographical places, which can be geospatially mapped; the creation of a database of illegal books circulating in eighteenth-century Paris; the use of network analysis to understand the changing nature of French salons; and the creation of algorithms to identify text reuse (and thus intellectual influence) in a corpus of over 200,000 texts. For those interested in adopting digital methodologies, this book offers both a ‘tasting menu’ of cutting-edge methodologies, and an honest account of what has been tried, in which failures, setbacks, and ethical dilemmas are openly discussed. Some chapters require more specialist knowledge than others, or at least more tolerance for technical terminology and acronyms. Others adopt a somewhat defensive tone, as if to persuade sceptics of the value of digital methods. However, to the extent that this volume offers a ‘state of the art’ (p. 4), this defensiveness has its place, reflecting the still not quite legitimate status of the digital within the humanities. This key work of reference, and of inspiration for future research, should certainly change that.}",
+    issn = {0016-1128},
+    doi = {10.1093/fs/knab041},
+    url = {https://doi.org/10.1093/fs/knab041},
+    eprint = {https://academic.oup.com/fs/article-pdf/75/3/404/41362058/knab041.pdf},
+}
+
+@article{alrahabi2021,
+author = {Alrahabi, Motasem and Brando, Carmen and AlKhalil, Muhamed and Dichy, Joseph},
+year = {2021},
+month = {05},
+pages = {},
+title = {Paris dans les récits de voyage d’écrivains arabes : repérage, analyse sémantique et cartographie de toponymes. (Paris in the Travel Writings of Arab Authors: Recognition, Semantic Analysis and Mapping of Toponyms)},
+volume = {3},
+journal = {Humanités numériques},
+doi = {10.4000/revuehn.1079}
+}
+
+@inproceedings{DBLP:conf/taln/DucelFLL22,
+  author       = {Fanny Ducel and
+                  Kar{\"{e}}n Fort and
+                  Ga{\"{e}}l Lejeune and
+                  Yves Lepage},
+  editor       = {Yannick Est{\`{e}}ve and
+                  Tania Jim{\'{e}}nez and
+                  Titouan Parcollet and
+                  Marcely Zanon Boito},
+  title        = {Langues par d{\'{e}}faut? Analyse contrastive et diachronique
+                  des langues non cit{\'{e}}es dans les articles de {TALN} et d'ACL
+                  (Contrastive and diachronic study of unmentioned (by default ?) languages
+                  in {TALN} and {ACL} We study the application of the {\#}BenderRule
+                  in natural language processing articles, taking into account a contrastive
+                  and a diachronic dimensions, by examining the proceedings of two {NLP}
+                  conferences, {TALN} and ACL, over time)},
+  booktitle    = {Actes de la 29e Conf{\'{e}}rence sur le Traitement Automatique
+                  des Langues Naturelles. Volume 1 : conf{\'{e}}rence principale,
+                  {TALN-RECITAL} 2022, Avignon, France, June 27 - July 1, 2022},
+  pages        = {144--153},
+  publisher    = {{ATALA}},
+  year         = {2022},
+  url          = {https://aclanthology.org/2022.jeptalnrecital-taln.14},
+  timestamp    = {Mon, 01 Aug 2022 12:40:03 +0200},
+  biburl       = {https://dblp.org/rec/conf/taln/DucelFLL22.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+@article{bender-friedman-2018-data,
+    title = "Data Statements for Natural Language Processing: Toward Mitigating System Bias and Enabling Better Science",
+    author = "Bender, Emily M.  and
+      Friedman, Batya",
+    journal = "Transactions of the Association for Computational Linguistics",
+    volume = "6",
+    year = "2018",
+    address = "Cambridge, MA",
+    publisher = "MIT Press",
+    url = "https://aclanthology.org/Q18-1041",
+    doi = "10.1162/tacl_a_00041",
+    pages = "587--604"
+}
+
+@inproceedings{buscaldi2020calcul,
+  title={Calcul de similarit{\'e} entre phrases: quelles mesures et quels descripteurs?(Sentence Similarity: a study on similarity metrics with words and character strings)},
+  author={Buscaldi, Davide and Felhi, Ghazi and Ghoul, Dhaou and Le Roux, Joseph and Lejeune, Ga{\"e}l and Zhang, Xudong},
+  booktitle={Actes de la 6e conf{\'e}rence conjointe Journ{\'e}es d'{\'E}tudes sur la Parole (JEP, 33e {\'e}dition), Traitement Automatique des Langues Naturelles (TALN, 27e {\'e}dition), Rencontre des {\'E}tudiants Chercheurs en Informatique pour le Traitement Automatique des Langues (R{\'E}CITAL, 22e {\'e}dition). Atelier D{\'E}fi Fouille de Textes},
+  pages={14--25},
+  year={2020}
+}
+%tong and evans 1997 sur la correction
+
+
+@inproceedings{gabayscicos,
+    author = {Gabay, Simon and SciCoS},
+    title = {FoNDUE (FOrmes Numerisees et Detection
+Unifiee des Ecritures). An Handwritting Text Recognition infrastructure for
+Geneva},
+    booktitle = {Diapositives, université de Genève},
+    year = {2022}
+}
+
+
+
+@book{fleiss2013statistical,
+  title={Statistical Methods for Rates and Proportions},
+  author={Fleiss, Joseph L. and Levin, Bruce and Paik, Myunghee Cho},
+  year={2013},
+  publisher={John Wiley \& Sons}
+}
+
+@inproceedings{bhavani,
+    author = {Bhavani, Durga},
+    title = {Understanding Named Entity Recognition Pre-trained Models},
+    booktitle = {V Soft Consulting [site web]},
+    year = {s.d.}
+}
+
+@inproceedings{evershed2014correcting,
+  title={Correcting noisy OCR: Context beats confusion},
+  author={Evershed, John and Fitch, Kent},
+  booktitle={Proceedings of the First International Conference on Digital Access to Textual Cultural Heritage},
+  pages={45--51},
+  year={2014}
+}
