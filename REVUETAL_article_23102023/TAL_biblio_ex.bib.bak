@@ -2994,3 +2994,63 @@ Geneva},
   pages={45--51},
   year={2014}
 }
+
+@data{kiessling,
+author = {Kiessling, Benjamin},
+publisher = {DataverseNL},
+title = {{Kraken - a Universal Text Recognizer for the Humanities}},
+year = {2019},
+version = {V2},
+doi = {10.34894/Z9G2EX},
+url = {https://doi.org/10.34894/Z9G2EX}
+}
+
+@inproceedings{kiessling2019kraken,
+  title={Kraken-an universal text recognizer for the humanities},
+  author={Kiessling, Benjamin},
+  booktitle={ADHO, {\'E}d., Actes de Digital Humanities Conference},
+  year={2019}
+}
+
+@InProceedings{ronneberger2015,
+author="Ronneberger, Olaf
+and Fischer, Philipp
+and Brox, Thomas",
+editor="Navab, Nassir
+and Hornegger, Joachim
+and Wells, William M.
+and Frangi, Alejandro F.",
+title="U-Net: Convolutional Networks for Biomedical Image Segmentation",
+booktitle="Medical Image Computing and Computer-Assisted Intervention -- MICCAI 2015",
+year="2015",
+publisher="Springer International Publishing",
+pages="234--241",
+}
+
+@INPROCEEDINGS{he2016,
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, 
+  title={Deep Residual Learning for Image Recognition}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={770-778},
+  doi={10.1109/CVPR.2016.90}}
+  
+@inproceedings{graves2006connectionist,
+  title={Connectionist temporal classification: labelling unsegmented sequence data with recurrent neural networks},
+  author={Graves, Alex and Fern{\'a}ndez, Santiago and Gomez, Faustino and Schmidhuber, J{\"u}rgen},
+  booktitle={Proceedings of the 23rd international conference on Machine learning},
+  pages={369--376},
+  year={2006}
+}
+
+@inproceedings{reul2017case,
+  title={Case Study of a highly automated Layout Analysis and OCR of an incunabulum: 'Der Heiligen Leben'(1488)},
+  author={Reul, Christian and Dittrich, Marco and Gruner, Martin},
+  booktitle={Proceedings of the 2nd international conference on digital access to textual cultural heritage},
+  pages={155--160},
+  year={2017}
+}
+
+

@@ -3,6 +3,7 @@
 \usepackage[labelfont=bf,textfont=it,labelsep=period,justification=raggedright,singlelinecheck=false]{caption}
 % Ne pas modifier la ligne ci-dessus
 \usepackage{url}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black]{hyperref} % pour rendre les liens URL cliquables
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -48,7 +49,7 @@
 }
 
 \resume{
-L’extraction d'informations de textes issus de la reconnaissance optique de caractères (ROC) interroge quant à la possibilité de fouiller et d'exploiter ces données souvent bruitées. Les chercheur·se·s ont pour contrainte d'appliquer des outils de reconnaissance d'entités nommées (REN) entraînés sur des textes propres. Un des remèdes consiste à corriger les erreurs de ROC automatiquement. Notre contribution s’attachera à déterminer si la correction de ROC permet d’améliorer significativement les résultats de la tâche de REN sur des corpus de langue française, anglaise et portugaise.}
+L’extraction d'informations de textes issus de la reconnaissance optique de caractères (ROC) interroge quant à la possibilité de fouiller et d'exploiter ces données souvent bruitées. Les chercheur?euses ont pour contrainte d'appliquer des outils de reconnaissance d'entités nommées (REN) entraînés sur des textes propres. Un des remèdes consiste à corriger les erreurs de ROC automatiquement. Notre contribution s’attachera à déterminer si la correction de ROC permet d’améliorer significativement les résultats de la tâche de REN sur des corpus de langue française, anglaise et portugaise.}
 
 \abstract{Multilingual analysis of the impact of automatic OCR correction on spatial named entity recognition in literary corpora}{The extraction of information from texts resulting from optical character recognition (OCR) questions the possibility of mining and exploiting these often noisy data. Researchers have to apply named entity recognition (NER) tools trained on clean text. One remedy is to automatically correct OCR errors. 
 % If for English language such tools seem easily exploitable, what about those applied on French but also Portuguese, a much lower-resource languages?
