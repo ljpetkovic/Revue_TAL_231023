@@ -1,9 +1,9 @@
-La présente section concerne les méthodes d'évaluation de l'impact des contaminations de ROC sur la REN, ainsi que de l'impact des corrections de ROC sur la REN. Nous nous concentrons en particulier sur les évaluations (i) manuelle, (ii) \og{}souple\fg{} à l'aide des distances de similarité et (iii) \og{}stricte\fg{} à l'aide des intersections.
+La présente section concerne les méthodes d'évaluation de l'impact des contaminations de ROC sur la REN (\ref{subsec:OCR-IMPACT-NER}), ainsi que de l'impact des corrections de ROC sur la REN(\ref{subsec:COR-OCR-IMPACT-NER}). Nous nous concentrons en particulier sur les évaluations (i) manuelle, (ii) \og{}stricte\fg{} à l'aide des intersections et (iii) \og{}souple\fg{} à l'aide des distances de similarité.
 \subsection{Évaluation de l'impact des contaminations de ROC sur la REN} 
-
+\label{subsec:OCR-IMPACT-NER}
 \subsubsection{Typologie des contaminations et problèmes d'alignement}
 
-\label{subsec:typologie-OCR}
+
 
 Dans un premier temps, nous proposons une évaluation des outils de REN \texttt{spaCy} et \texttt{stanza}, dans laquelle nous comparons les résultats obtenus sur les sous-corpus ELTeC français, anglais et portugais et la TGB, et, leurs transcriptions de ROC\footnote{Dépôt github avec nos données : \url{anonymous}} sans nous appuyer sur un \textit{gold standard}.
 
@@ -66,30 +66,30 @@ En regard des différentes observations que nous venons d'apporter et parce que 
 	
 	\begin{description}
 
-		\item[Vrais positifs (VP)]: EN correctement détectées dans les deux versions.
-		\item[Vrais négatifs (VN)]: Aucune EN n'est détectée par le système dans aucune version du texte, car il n'y en a pas.
-		\item[Faux positif (FP)]: EN détectées  à tort dans la version de ROC (bruit de la REN).
-		\item[Faux négatif (FN)]: EN détectées dans le texte de référence mais non détectées à tort dans la version de ROC (silence de la REN).
+		\item[Vrais positifs (VP)]: EN détectées dans les deux versions.
+		\item[Vrais négatifs (VN)]: Aucune EN à reconnaître dans les deux versions.
+		\item[Faux positif (FP)]: EN détectées à tort dans la version de ROC (bruit de la REN).
+		\item[Faux négatif (FN)]: EN manquantes dans la version de ROC (silence de la REN).
 	\end{description}
 	
 		
-	\item[] \textsc{Bruit et silence total de la REN}
+	\item[] \textsc{Sous évaluation du bruit et du silence de la REN}
 	
 	
 	\begin{description}
 	
-		\item[Faux vrais positifs (FVP)]: EN incorrectement détectées dans les deux versions.
+		\item[Faux vrais positifs (FVP)]: EN détectées à tort dans les deux versions.
 	
-	 	\item[Faux vrais négatifs (FVN)] : EN non détectées à tort dans les deux versions du texte.
+	 	\item[Faux vrais négatifs (FVN)] : EN manquantes dans les deux versions.
 	 \end{description}
 	 
-	 \item[] \textsc{Faux bruit et faux silence de la REN}
+	 \item[] \textsc{sur évaluation du bruit et du silence de la REN}
 	
 	\begin{description}
 	
-		\item[Faux faux positifs (FFP)]: EN correctement détectées dans les versions de ROC mais non détectées dans le texte de référence (silence dans la référence ou EN contaminées détectées dans la version de ROC).
+		\item[Faux faux positifs (FFP)]: EN détectées dans les versions de ROC mais pas dans le texte de référence (EN manquantes dans la référence$^{(i)}$ ou EN contaminées détectées dans la version de ROC$^{(ii)}$).
 		
- 		\item[Faux faux négatifs (FFN)]: EN  incorrectement détectées dans le texte de référence mais pas dans les versions de ROC.
+ 		\item[Faux faux négatifs (FFN)]: EN  détectées à tort dans le texte de référence.
 
 	\end{description}
 
@@ -202,6 +202,7 @@ Référence	&	21.62	&	69.57	&	32.98	&	41.18	&	45.16	&	43.08	\\
  \end{table}
 
 \subsection{Analyse de l'impact des corrections de ROC sur la REN}
+\label{subsec:COR-OCR-IMPACT-NER}
 \subsubsection{Analyse manuelle des corrections }
 Pour ce qui est de l'impact de deux correcteurs de ROC (JamSpell\footnote{Abbr.\ Jspll.} pré-entraîné sur une langue spécifique et JamSpell-ELTeC  sur les EN uniques (types) et évalué sur un jeu de test), nous observons dans le tableau \ref{tab:ELTeC} que le nombre d'EN augmente lors de la correction avec JamSpell-ELTeC pour le sous-corpus français océrisé avec Tesseract. 
 % En revanche, cette tendance paraît moins systématique pour les mêmes corpus océrisés avec Tesseract, où un plus grand nombre d'EN a été récupéré uniquement à partir du corpus anglais.
