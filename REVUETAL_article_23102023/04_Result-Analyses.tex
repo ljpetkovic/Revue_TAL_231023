@@ -60,8 +60,9 @@ Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapp
   \end{minipage}
   \begin{minipage}{7cm}
   \begin{subfigure}{1\textwidth}
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_stanza-concat_intersection.png}
-  \caption{Kraken -- \texttt{stanza}}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_stanza-concat_intersection.png} %%%% ancienne figure 07/02/2024
+  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png}
+  \caption{Tess. fr. -- \texttt{spaCy\_lg}}
  % \label{fig:ELTeCFRA_Kraken_stanza-concat_intersection}
   \end{subfigure}
     \end{minipage}
@@ -79,25 +80,28 @@ Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapp
 %  \label{fig:ELTeCFRA_Kraken -- jspl-ELTeCFR_stanza-concat_intersection}
 %  \end{subfigure}
 %    \end{minipage}
-\caption{Intersections pour la configuration Kraken-\texttt{spaCy\_lg} corrigées avec JamSpell (modèle ELTeC), pour le sous-corpus ELTeC français.}
-\label{fig:intersection_globale-kraken}
+\caption{Intersections pour les configurations Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg}, pour le sous-corpus ELTeC français.}
+%\label{fig:intersection_globale-kraken}
+\label{fig:intersection_globale-kraken-tess}
 \end{figure}
 
-\begin{figure}[h!]
-    \begin{minipage}{7cm}
-  \begin{subfigure}{1\textwidth}
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png} 
-  \caption{Tess. fr. --\texttt{spaCy\_lg}}
-  \label{fig:ELTeCFRA_Tess. fr_spacy-lg-concat_intersection}
-  \end{subfigure}
-  \end{minipage}
-  \begin{minipage}{7cm}
-  \begin{subfigure}{1\textwidth}
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_stanza-concat_intersection.png}
-  \caption{Tess. fr. -- \texttt{stanza}}
- % \label{fig:ELTeCFRA_Tess. fr_stanza-concat_intersection}
-  \end{subfigure}
-    \end{minipage}
+%%%%%%%%%%%% ancienne sous-figure 07/02/2024
+%\begin{figure}[h!]
+%    \begin{minipage}{7cm}
+%  \begin{subfigure}{1\textwidth}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png} 
+%  \caption{Tess. fr. --\texttt{spaCy\_lg}}
+%  \label{fig:ELTeCFRA_Tess. fr_spacy-lg-concat_intersection}
+%  \end{subfigure}
+%  \end{minipage}
+%  \begin{minipage}{7cm}
+%  \begin{subfigure}{1\textwidth}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_stanza-concat_intersection.png}
+%  \caption{Tess. fr. -- \texttt{stanza}}
+% % \label{fig:ELTeCFRA_Tess. fr_stanza-concat_intersection}
+%  \end{subfigure}
+%    \end{minipage}
+
 %\begin{minipage}{7cm}
 %  \begin{subfigure}{1\textwidth}
 %  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-ELTeCfr_spacy-lg-concat_intersection.png} 
@@ -126,10 +130,9 @@ Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapp
 %  \label{fig:ELTeCFRA_Tess. fr -- jspl-fr_stanza-concat_intersection}
 %  \end{subfigure}
 %    \end{minipage}
-\caption{Intersections pour la configuration Tess-\texttt{spaCy\_lg} corrigées avec le modèle pré-entrainer de JamSpell et le modèle ELTeC, pour le sous-corpus ELTeC français.}
-\label{fig:intersection-globale-tess}
-\end{figure}
-
+%\caption{Intersections pour la configuration Tess-\texttt{spaCy\_lg} corrigées avec le modèle pré-entrainer de JamSpell et le modèle ELTeC, pour le sous-corpus ELTeC français.}
+%\label{fig:intersection-globale-tess}
+%\end{figure}
 
 Lors du calcul de l'intersection entre les ensembles des EN de référence et des EN issues de ROC, nous rencontrons des problèmes d'alignement. L'alignement strict de l'EN de réf. \textit{Ormeaux} avec l'EN contaminée \textit{Ormaeuux} par la machine n'est pas possible et ce dernier est compté comme FP et ajouté à la liste des hapax, ce qui vient gonfler artificiellement le nombre des FP dans l'ensemble des EN de la ROC. Il s'agit en fait de Faux FP. Enfin, dans l'ensemble des EN reconnues sur les versions de ROC nous remarquons que la majorité des EN présentes dans les résultats obtenus sur la ROC sont effectivement présentes dans les résultats obtenus sur les versions de référence, comme le présente le tableau \ref{tab:FP_VP}. Il n'y a donc pas de véritable déperdition des VP. Enfin, il peut arriver plus rarement que des entités ne soient pas détectées sur la version de Réf. mais le soient sur la version de ROC. Il ne s'agit pas véritablement de FP, mais d'une erreur du système même en contexte non bruité.
 
