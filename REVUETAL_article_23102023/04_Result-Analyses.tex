@@ -382,20 +382,23 @@ Les cercles ``EN Réf'' comprennent les EN issues des textes de référence -- a
 La figure \ref{fig:ELTeCFRA_Tess. fr_spacy-lg-concat_intersection} montre que le plus grand nombre d'EN en commun a été récupéré par \texttt{spaCy\_lg} quand le texte a été océrisé avec Tesseract en utilisant le modèle adapté à la langue du sous-corpus. Il est notable que la correction automatique avec le modèle pré-entrainé de JamSpell ou le modèle entrainé sur une partie du sous-corpus ELTeC adapté à la langue du sous-corpus ne sont pas un gain pour l'intersection. 
 %%% INTERSECTIONS GLOBALES
 \begin{figure}[h!]
-%    \begin{minipage}{7cm}
-%  \begin{subfigure}{1\textwidth}
-%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_spacy-lg-concat_intersection.png} 
-%  \caption{Kraken --\texttt{spaCy-lg}}
-%  \label{fig:ELTeCFRA_Kraken_spacy-lg-concat_intersection}
-%  \end{subfigure}
-%  \end{minipage}
-%  \begin{minipage}{7cm}
-%  \begin{subfigure}{1\textwidth}
-%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_stanza-concat_intersection.png}
-%  \caption{Kraken -- \texttt{stanza}}
-% % \label{fig:ELTeCFRA_Kraken_stanza-concat_intersection}
-%  \end{subfigure}
-%    \end{minipage}
+    \begin{minipage}{7cm}
+  \begin{subfigure}{1\textwidth}
+  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_spacy-lg-concat_intersection.png} 
+  \caption{Kraken --\texttt{spaCy-lg}}
+  \label{fig:ELTeCFRA_Kraken_spacy-lg-concat_intersection}
+  \end{subfigure}
+  \end{minipage}
+  \begin{minipage}{7cm}
+  \begin{subfigure}{1\textwidth}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_stanza-concat_intersection.png} % ancienne figure
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_stanza-concat_intersection.png} % ancienne figure
+  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png} 
+  \caption{Tess. fr. -- \texttt{spaCy\_lg}}
+ % \label{fig:ELTeCFRA_Kraken_stanza-concat_intersection} & ancienne label
+ \label{fig:ELTeCFRA_Tess -- spacy-lg-concat_intersection}
+  \end{subfigure}
+    \end{minipage}
 \begin{minipage}{7cm}
   \begin{subfigure}{1\textwidth}
   \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection.png} 
@@ -405,12 +408,14 @@ La figure \ref{fig:ELTeCFRA_Tess. fr_spacy-lg-concat_intersection} montre que le
   \end{minipage}
   \begin{minipage}{7cm}
   \begin{subfigure}{1\textwidth}
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken -- jspl-ELTeCfr_stanza-concat_intersection.png}
-  \caption{Kraken corrigé ELTeC-fr -- \texttt{stanza}}
-  \label{fig:ELTeCFRA_Kraken -- jspl-ELTeCFR_stanza-concat_intersection}
+  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-ELTeCfr_spacy-lg-concat_intersection.png} % nouvelle figure ici avec Tess. fr. corrigé avec spaCy_lg
+  \caption{Tess. fr. corrigé -- \texttt{spaCy\_lg}}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken -- jspl-ELTeCfr_stanza-concat_intersection.png}
+%  \caption{Kraken corrigé ELTeC-fr -- \texttt{stanza}}
+  \label{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection}
   \end{subfigure}
     \end{minipage}
-\caption{Intersections pour la configuration Kraken-\texttt{spaCy\_lg} corrigées avec JamSpell (modèle ELTeC), pour le sous-corpus ELTeC français.}
+\caption{Intersections pour les configurations (\ref{fig:ELTeCFRA_Kraken_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- spacy-lg-concat_intersection}) Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg} non corrigées, et (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection}) les configurations équivalentes corrigées avec JamSpell (modèle ELTeC), pour le sous-corpus ELTeC français.}
 \label{fig:intersection_globale-kraken}
 \end{figure}
 
@@ -418,52 +423,54 @@ Ce fait peut être lu à l'aune %- CKP : ne pas corriger cette expression : à l
 % LP : Oui, désolée, c'est moi qui ai fait une bêtise, je m'en suis rendue compte plus tard !!
 des observations présentée dans le tableau \ref{tab:typologie_erreurs-corr_ELTeCEng} rapportant la typologie des erreurs de corrections. Autrement dit la correction automatique ne transforme pas toutes les EN contaminées par la ROC en EN corrigées strictement associables avec les EN du groupe de référence. Ainsi les BOIC (``Morlincourt'' qui devient ``Martincourt'') s'accumulant avec les EN contaminée MOI (``Morlincourtl'' qui reste ``Morlincourtl'') les résultats des intersections sont moins bons. Il semble qu'en moyenne pour les sous-corpus ELTeC français, anglais et portugais et celui de la TGB la correction automatique avec le modèle entraîné sur une partie de chaque sous-corpus ELTeC fasse perdre 5\% des EN dans l'intersection avec Kraken et 10\% avec Tesseract, concernant les modèles pré-entrainés on perd 3\% avec Kraken et 9\% avec Tesseract. Cette expérience est l'occasion des démontrer les limites d'une évaluation stricte de la REN sur des textes bruités et leurs versions corrigées. Il est notable que les contaminations de ROC d'une part et de la correction automatique d'autre part ne sont pas un frein à la REN, mais le sont bien pour l'évaluation de la qualité de la REN sur des données bruitées.
 
-\begin{figure}[h!]
-%    \begin{minipage}{7cm}
-%  \begin{subfigure}{1\textwidth}
-%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png} 
-%  \caption{Tess. fr. --\texttt{spaCy\_lg}}
-%  \label{fig:ELTeCFRA_Tess. fr_spacy-lg-concat_intersection}
-%  \end{subfigure}
-%  \end{minipage}
+%%%%%%%%%%%%%%%% Ancienne figure avec les intersections pour la config Tess-spaCy_lg corrigées avec le modèle pré-entraîné de JamSpell et le modèle ELTeC, pour le sous-corpus ELTeC fr %%%%%%%%%%%%%%%%%%
+
+%\begin{figure}[h!]
+%%    \begin{minipage}{7cm}
+%%  \begin{subfigure}{1\textwidth}
+%%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png} 
+%%  \caption{Tess. fr. --\texttt{spaCy\_lg}}
+%%  \label{fig:ELTeCFRA_Tess. fr_spacy-lg-concat_intersection}
+%%  \end{subfigure}
+%%  \end{minipage}
+%%  \begin{minipage}{7cm}
+%%  \begin{subfigure}{1\textwidth}
+%%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_stanza-concat_intersection.png}
+%%  \caption{Tess. fr. -- \texttt{stanza}}
+%% % \label{fig:ELTeCFRA_Tess. fr_stanza-concat_intersection}
+%%  \end{subfigure}
+%%    \end{minipage}
+%%\begin{minipage}{7cm}
+%%  \begin{subfigure}{1\textwidth}
+%%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-ELTeCfr_spacy-lg-concat_intersection.png} 
+%%  \caption{Tess. fr. corrigé -- \texttt{spaCy\_lg}}
+%%  \label{fig:ELTeCFRA_Tess. fr -- jspl-ELTeCfr_spacy-lg-concat_intersection}
+%%  \end{subfigure}
+%%  \end{minipage}
 %  \begin{minipage}{7cm}
 %  \begin{subfigure}{1\textwidth}
-%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_stanza-concat_intersection.png}
-%  \caption{Tess. fr. -- \texttt{stanza}}
-% % \label{fig:ELTeCFRA_Tess. fr_stanza-concat_intersection}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-ELTeCfr_stanza-concat_intersection.png}
+%  \caption{Tess. fr. corrigé -- \texttt{stanza}}
+%  \label{fig:ELTeCFRA_Tess. fr -- jspl-ELTeCfr_stanza-concat_intersection}
 %  \end{subfigure}
 %    \end{minipage}
 %\begin{minipage}{7cm}
 %  \begin{subfigure}{1\textwidth}
-%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-ELTeCfr_spacy-lg-concat_intersection.png} 
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection.png} 
 %  \caption{Tess. fr. corrigé -- \texttt{spaCy\_lg}}
-%  \label{fig:ELTeCFRA_Tess. fr -- jspl-ELTeCfr_spacy-lg-concat_intersection}
+%  \label{fig:ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection}
 %  \end{subfigure}
 %  \end{minipage}
-  \begin{minipage}{7cm}
-  \begin{subfigure}{1\textwidth}
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-ELTeCfr_stanza-concat_intersection.png}
-  \caption{Tess. fr. corrigé -- \texttt{stanza}}
-  \label{fig:ELTeCFRA_Tess. fr -- jspl-ELTeCfr_stanza-concat_intersection}
-  \end{subfigure}
-    \end{minipage}
-\begin{minipage}{7cm}
-  \begin{subfigure}{1\textwidth}
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection.png} 
-  \caption{Tess. fr. corrigé -- \texttt{spaCy\_lg}}
-  \label{fig:ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection}
-  \end{subfigure}
-  \end{minipage}
-  \begin{minipage}{7cm}
-  \begin{subfigure}{1\textwidth}
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-fr_stanza-concat_intersection.png}
-  \caption{Tess. fr. corrigé -- \texttt{stanza}}
-  \label{fig:ELTeCFRA_Tess. fr -- jspl-fr_stanza-concat_intersection}
-  \end{subfigure}
-    \end{minipage}
-\caption{Intersections pour la configuration Tess-\texttt{spaCy\_lg} corrigées avec le modèle pré-entrainer de JamSpell et le modèle ELTeC, pour le sous-corpus ELTeC français.}
-\label{fig:intersection-globale-tess}
-\end{figure}
+%  \begin{minipage}{7cm}
+%  \begin{subfigure}{1\textwidth}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr -- jspl-fr_stanza-concat_intersection.png}
+%  \caption{Tess. fr. corrigé -- \texttt{stanza}}
+%  \label{fig:ELTeCFRA_Tess. fr -- jspl-fr_stanza-concat_intersection}
+%  \end{subfigure}
+%    \end{minipage}
+%\caption{Intersections pour la configuration Tess-\texttt{spaCy\_lg} corrigées avec le modèle pré-entrainer de JamSpell et le modèle ELTeC, pour le sous-corpus ELTeC français.}
+%\label{fig:intersection-globale-tess}
+%\end{figure}
 
 \subsection{Mesures de distance textuelle}
 \label{sec:distances_creux}
