@@ -1,27 +1,61 @@
-\scriptsize{\begin{tabular}{|p{3.2cm}|p{4cm}|p{1.5cm}|p{1.3cm}|}
+%%%%%%%%%%% Ancien tableau avec stanza, 07/02/2024 %%%%%%%%%%%%%%%
+%
+%\scriptsize{\begin{tabular}{|p{3.2cm}|p{4cm}|p{1.5cm}|p{1.3cm}|}
+%
+%%\multicolumn{5}{|c|}{Results for Named Entities Recognition} \\
+%\hline
+%
+%
+%\bf{Impact types} & \bf {contexte} &  \bf{\texttt{spaCy\_lg}}&\bf{\texttt{stanza}}\\
+%\hline
+% Contamination orthographique interne à l'entité& 
+%\textit{il en est tombe au sort cinq de Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle} & Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle. & Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle \\
+%
+%&\textit{durant\textcolor{red}{a} todo o t\textcolor{red}{o}mpe
+%em q\textcolor{red}{n}e ostivess\textcolor{red}{o} em Port\textcolor{red}{n}gal}& Port\textcolor{red}{n}gal & N/A\\ 
+%&&  & \\
+%\rowcolor{lightgray}ajout d'un caractère minuscule au début de l'entité &\textit{Aux \textcolor{red}{k}Etats-Unis}& \textcolor{red}{()} & \textcolor{red}{k}Etats-Unis\\
+%&&  & \\
+%ponctuation substituée par un caractère collé à l'entité &\textit{about Manchester\textcolor{red}{l} A
+%pretty state}&Manchester\textcolor{red}{l}&Manchester\textcolor{red}{l}\\
+%&&  & \\
+%\rowcolor{lightgray}Entité tronquée &\textit{dans l'intérieur de l'Améri-} & Améri—& \textcolor{red}{()}\\
+%\rowcolor{lightgray}&\textit{et le golfe de Cali-foruie.\_n}&golfe de Cali-& golfe de Cali-\\
+%&&  & \\
+%mots concaténés & \textit{[...] \textcolor{red}{larue} Saint-Honoré;}& \textbf{\_} Saint-Honoré &  \textcolor{red}{()} \\
+%&\textit{afriver \textcolor{red}{a}Morlincourt' tot}& \textcolor{red}{()} & \textcolor{red}{()}\\
+%
+%
+%
+%% &- point d'exclamation remplacé par une lettre &\textit{Louis Quatorze might have bestowed on the ambassador
+%% of the United Provinces}& N/A &theUnitedProvinces\\
+%\hline
+%\end{tabular}}
+%%%%%%%%%%%%% Nouveau tableau sans stanza, 07/02/2024 %%%%%%%%%%%%%
+
+\scriptsize{\begin{tabular}{|p{3.2cm}|p{4cm}|p{1.5cm}|}
 
 %\multicolumn{5}{|c|}{Results for Named Entities Recognition} \\
 \hline
 
 
-\bf{Impact types} & \bf {contexte} &  \bf{\texttt{spaCy\_lg}}&\bf{\texttt{stanza}}\\
+\bf{Impact types} & \bf {contexte} &  \bf{\texttt{spaCy\_lg}}\\
 \hline
  Contamination orthographique interne à l'entité& 
-\textit{il en est tombe au sort cinq de Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle} & Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle. & Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle \\
-
+\textit{il en est tombe au sort cinq de Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle} & Sain\textcolor{red}{l}-Brun\textcolor{red}{c}lle. \\
 &\textit{durant\textcolor{red}{a} todo o t\textcolor{red}{o}mpe
-em q\textcolor{red}{n}e ostivess\textcolor{red}{o} em Port\textcolor{red}{n}gal}& Port\textcolor{red}{n}gal & N/A\\ 
-&&  & \\
-\rowcolor{lightgray}ajout d'un caractère minuscule au début de l'entité &\textit{Aux \textcolor{red}{k}Etats-Unis}& \textcolor{red}{()} & \textcolor{red}{k}Etats-Unis\\
-&&  & \\
+em q\textcolor{red}{n}e ostivess\textcolor{red}{o} em Port\textcolor{red}{n}gal}& Port\textcolor{red}{n}gal\\ 
+& & \\
+\rowcolor{lightgray}ajout d'un caractère minuscule au début de l'entité &\textit{Aux \textcolor{red}{k}Etats-Unis}& \textcolor{red}{()}\\
+& & \\
 ponctuation substituée par un caractère collé à l'entité &\textit{about Manchester\textcolor{red}{l} A
-pretty state}&Manchester\textcolor{red}{l}&Manchester\textcolor{red}{l}\\
-&&  & \\
-\rowcolor{lightgray}Entité tronquée &\textit{dans l'intérieur de l'Améri-} & Améri—& \textcolor{red}{()}\\
-\rowcolor{lightgray}&\textit{et le golfe de Cali-foruie.\_n}&golfe de Cali-& golfe de Cali-\\
-&&  & \\
-mots concaténés & \textit{[...] \textcolor{red}{larue} Saint-Honoré;}& \textbf{\_} Saint-Honoré &  \textcolor{red}{()} \\
-&\textit{afriver \textcolor{red}{a}Morlincourt' tot}& \textcolor{red}{()} & \textcolor{red}{()}\\
+pretty state}&Manchester\textcolor{red}{l}\\
+& & \\
+\rowcolor{lightgray}Entité tronquée &\textit{dans l'intérieur de l'Améri-} & Améri—\\
+\rowcolor{lightgray}&\textit{et le golfe de Cali-foruie.\_n}&golfe de Cali-\\
+& & \\
+mots concaténés & \textit{[...] \textcolor{red}{larue} Saint-Honoré;}& \textbf{\_} Saint-Honoré \\
+&\textit{afriver \textcolor{red}{a}Morlincourt' tot}& \textcolor{red}{()}\\
 
 
 
@@ -29,3 +63,5 @@ mots concaténés & \textit{[...] \textcolor{red}{larue} Saint-Honoré;}& \textb
 % of the United Provinces}& N/A &theUnitedProvinces\\
 \hline
 \end{tabular}}
+
+
