@@ -1,5 +1,5 @@
 %Dans cette partie, nous présentons les corpus utilisés pour l'évaluation de l'impact de la correction automatique des OCR sur les outils de REN.
-Pour chaque corpus ELTeC français, anglais et portugais (cf. tableaux \ref{tab:ELTeCFra}, \ref{tab:ELTeCEng} et \ref{tab:ELTeCPor}), ainsi que pour les textes de la Très Grande Bibliothèque (TGB) (tableau \ref{tab:TGBFra}) nous disposons des textes que nous nommons "référence". Les textes extraits des collections ELTeC sont généralement de très bonne qualité. Concernant, les textes de la TGB la qualité est plus hétérogène. Pour chaque texte nous possédons deux versions de ROC différentes : (i) Kraken\footnote{\url{https://kraken.re/2.0.0/index.html}} \cite{kiessling2019escriptorium}, (ii) la version transcrite de Tesseract pour chacune des langues des corpus (anglais (Tess. en), français (Tess fr) et portugais (Tess pt)).
+Pour chaque corpus ELTeC français, anglais et portugais (cf. tableaux \ref{tab:ELTeCFra}, \ref{tab:ELTeCEng} et \ref{tab:ELTeCPor}), ainsi que pour les textes de la Très Grande Bibliothèque (TGB) (tableau \ref{tab:TGBFra}) nous disposons des textes que nous nommons \og{}référence\fg{} (version orthographiquement correcte des textes). Les textes extraits des collections ELTeC sont généralement de très bonne qualité. Concernant, les textes de la TGB la qualité est plus hétérogène. Pour chaque texte nous possédons deux versions \textbf{(transcriptions)} de ROC différentes : (i) Kraken\footnote{\url{https://kraken.re/2.0.0/index.html}} \cite{kiessling2019escriptorium}, (ii) la version transcrite de Tesseract pour chacune des langues des corpus (anglais (Tess. en), français (Tess fr) et portugais (Tess pt)).
 
 \subsection{La Très Grande Bibliothèque (TGB)}
 La TGB est une bibliothèque de documents français qui met a disposition des oeuvres, issues des collections Gallica, transcrites par ROC. Le corpus compte 128 441 textes au format XML-TEI et 58 287 auteurs, et couvre différentes thématiques (littérature, histoire, philosophie, etc.). La TGB est constituée de 95 479 œuvres, datées du XIX\ieme{}s., 7 294 du XVIII\ieme{}s., 54 du XX\ieme{}s. et 24 du XVII\ieme{}s.\footnote{Un nombre considérable de documents représentant des rééditions de textes plus anciens.} 
@@ -27,11 +27,11 @@ D'après une gestionnaire du service SINDBAD\footnote{\url{https://www.bnf.fr/fr
    %\label{tab:TGB}}
 %\end{table}
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \small
     \input{TAB/corpus-TGBFra}
-    \caption{Statistiques sur le sous-corpus TGB. (spaCy\_lg : modèle large de \texttt{spaCy}. Les deux dernières colonnes indiquent le nombre des EN).}
+    \caption{Statistiques sur le sous-corpus TGB. (\texttt{spaCy\_lg} : modèle large de \texttt{spaCy}. Les deux dernières colonnes indiquent le nombre des EN).}
     \label{tab:TGBFra}
 \end{table}
 
