@@ -1,6 +1,6 @@
 \section{Analyse de l'impact des corrections de ROC sur la REN}
 \label{subsec:COR-OCR-IMPACT-NER}
-\subsection{Analyse manuelle des corrections }
+\subsection{Typologie des contaminations de corrections de ROC issues de l'analyse manuelle}
 Pour ce qui est de l'impact de deux correcteurs de ROC (JamSpell\footnote{Abbr.\ Jspll.} pré-entraîné sur une langue spécifique et JamSpell-ELTeC  sur les EN uniques (types) et évalué sur un jeu de test), nous observons dans le tableau \ref{tab:ELTeC} que le nombre d'EN augmente lors de la correction avec JamSpell-ELTeC pour le sous-corpus français océrisé avec Tesseract. 
 % En revanche, cette tendance paraît moins systématique pour les mêmes corpus océrisés avec Tesseract, où un plus grand nombre d'EN a été récupéré uniquement à partir du corpus anglais.
 Enfin, dans le cas du sous-corpus ELTeC portugais, comme nous l'avons souligné dans la section \ref{sec:Meth} nous avons extrait uniquement les EN corrigées avec notre modèle JamSpell-ELTeC et on note que la quantités d'EN reconnues et moindre que celle trouvé sur la sortie brute de ROC.
@@ -39,7 +39,7 @@ De façon similaire, nous observons dans le tableau \ref{tab:erreurs_corr_ELTeCE
     %\label{tab:erreurs_corr_ELTeCPor}
 %\end{table}
 
-\subsection{Typologie des contaminations de corrections de ROC}
+
 Nous nous appuyons également sur une typologie des corrections automatiques de ROC, résumée dans le tableau \ref{tab:res-analyses}, qui permet de distinguer les différents cas de figure où les corrections en question ont soit amélioré les sorties de ROC (MOBC), soit les ont incorrectement modifiées (MOMC, MOI, BOIC). Quelques exemples sont visibles dans le tableau \ref{tab:typologie_erreurs-corr_ELTeCEng}, 
 % et \ref{tab:typologie_erreurs_corr_ELTeCFra}
 parmi lesquels se distinguent les sur-corrections ``Conspire'' 
