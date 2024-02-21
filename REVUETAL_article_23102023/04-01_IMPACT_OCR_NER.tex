@@ -1,38 +1,26 @@
-
+%(où, sous le terme, \og{}configuration\fg{} on désigne l’association de la version de ROC et
+%de la REN, p. ex. les résultats de la configuration Kraken-\texttt{spaCy\_lg})
 \section{Évaluation de l'impact des contaminations de ROC sur la REN} 
 \label{subsec:OCR-IMPACT-NER}
 \subsection{Outils de ROC et REN utilisés dans le cadre de cette étude}
-\textbf{Afin de produire différentes transcriptions de ROC, nous avons utilisé deux systèmes de ROC disponibles gratuitement : Kraken \cite{kiessling2019kraken} et Tesseract \cite{smith2007overview}. Kraken est un outil pour lequel il existe différents modèles neuronaux artificiels de ROC,
-dont un modèle pour le français du XVII\ieme{}siècle \cite{gabay:hal-02577236}\footnote{\url{https://github.com/Heresta/OCR17plus/tree/main/Model}} ainsi qu'un modèle HTR\footnote{Abbr. angl. \textit{Handwritten Text Recognition} ou la reconnaissance d'écriture manuscrite, basée sur l'extraction du texte à partir des blocs textuels (lignes), contrairement à la méthode de ROC qui traite les caractères individuelles \cite{gabayscicos}.} pour le français, Gallicorpora \cite{pinche_2022_7410529}. En revanche, Tesseract, avec ces nombreux modèles\footnote{Celui utilisé dans le cadre de notre travail est le modèle LSTM \texttt{tessdata\_best}, entraîné sur des données Google. Tesseract propose une analyse de la mise en page intégrée à travers la segmentation des cadres (angl. \textit{box segmentation}), ce qui rend cependant le traitement des mises en page complexes plus difficile \cite{reul2017case}.}, est un outil qui peut également être paramétré pour des tâches particulières, mais qui présente toujours de bonnes performances dans sa configuration par défaut (où, sous le terme, \og{}configuration\fg{} on désigne l’association de la version de ROC et
-de la REN, p. ex. les résultats de la configuration Kraken-\texttt{spaCy\_lg}) \cite{clausner2020efficient}. Trois modèles de langue neuronaux pour la ROC ont été utilisés dans le cadre des expériences : (i) le modèle de base de Kraken qui permet d'opérer la segmentation\footnote{Le modèle de segmentation est constitué d'un réseau d'étiquetage en graines (angl. \textit{seed-labeling network}), qui est un \textit{U-net} (\og{}réseau entièrement convolutionnel\fg{}) modifié \cite{ronneberger2015} sur la base d'un réseau neuronal résiduel (ResNet) à 34 couches \cite{he2016}, pré-entraîné sur ImageNet.} et la transcription\footnote{Le modèle de transcription fonctionne comme un classificateur de séquences sans segmentation qui utilise un réseau neuronal artificiel pour mapper une image d'une ligne de texte (séquence d'entrée), en une séquence de caractères (séquence de sortie). Le réseau de neurones convolutif et récurrent a été entraîné avec la fonction de perte CTC (angl. \textit{Connexionist Temporal Classification} \cite{graves2006connectionist}).} d'un PDF, (ii) le modèle par défaut de Tesseract\footnote{Le modèle par défaut de Tesseract est l'anglais. Nous précisons la langue Tess. eng, Tess. fr et Tess. suivant les bonnes pratiques de \#RègledeBender \cite{bender-friedman-2018-data}.} et (iii) son modèle entraîné sur du français ou du portugais contemporain\footnote{\url{https://doc.ubuntu-fr.org/tesseract-ocr}}.}
+\textbf{Afin de produire différentes transcriptions de ROC, nous avons utilisé deux systèmes disponibles gratuitement : Kraken \cite{kiessling2019kraken} et Tesseract \cite{smith2007overview}. Kraken est un outil pour lequel il existe différents modèles neuronaux,
+dont un modèle pour le français du XVII\ieme{}siècle \cite{gabay:hal-02577236}\footnote{\url{https://github.com/Heresta/OCR17plus/tree/main/Model}} 
+%ainsi qu'un modèle HTR\footnote{Abbr. angl. \textit{Handwritten Text Recognition} ou la reconnaissance d'écriture manuscrite, basée sur l'extraction du texte à partir des blocs textuels (lignes), contrairement à la méthode de ROC qui traite les caractères individuelles \cite{gabayscicos}.}
+ainsi que le modèle Gallicorpora \cite{pinche_2022_7410529}. Concernant Tesseract nous avons utilisé le modèle LSTM \texttt{tessdata\_best}, entraîné sur des données Google. Tesseract propose une analyse de la mise en page intégrée à travers la segmentation des cadres (angl. \textit{box segmentation}), ce qui rend le traitement des mises en page complexes plus difficile \cite{reul2017case}.}. C'est un outil qui présente toujours de bonnes performances dans sa configuration par défaut \cite{clausner2020efficient}, qui est semble-t-il en fait un modèle entrainé pour l'anglais. Quatre modèles de langue neuronaux pour la ROC ont été utilisés dans le cadre des expériences : le modèle de base de Kraken qui permet d'opérer la segmentation\footnote{Le modèle de segmentation est constitué d'un réseau d'étiquetage en graines (angl. \textit{seed-labeling network}), qui est un \textit{U-net} (\og{}réseau entièrement convolutionnel\fg{}) modifié \cite{ronneberger2015} sur la base d'un réseau neuronal résiduel (ResNet) à 34 couches \cite{he2016}, pré-entraîné sur ImageNet.} et la transcription\footnote{Le modèle de transcription fonctionne comme un classificateur de séquences sans segmentation qui utilise un réseau neuronal artificiel pour mapper une image d'une ligne de texte (séquence d'entrée), en une séquence de caractères (séquence de sortie). Le réseau de neurones convolutif et récurrent a été entraîné avec la fonction de perte CTC (angl. \textit{Connexionist Temporal Classification} \cite{graves2006connectionist}).} d'un PDF, et
+%\footnote{Le modèle par défaut de Tesseract est l'anglais. Nous précisons la langue Tess. eng, Tess. fr et Tess. suivant les bonnes pratiques de \#RègledeBender \cite{bender-friedman-2018-data}.} et (iii) 
+les trois modèles Tesseract pour l'anglais, le français et le portugais contemporain\footnote{\url{https://doc.ubuntu-fr.org/tesseract-ocr}}.
 
 \textbf{Pour effectuer la tâche de REN nous avons utilisé les chaînes de traitements de la boîte à outils pour le TAL  \texttt{spaCy}\footnote{version 3.5.1}.
 % \texttt{spaCy}\footnote{version 3.5.1} et \texttt{stanza}\footnote{1.5.0}. 
 Le système \texttt{spaCy} contient une stratégie d'intégration de mots utilisant des fonctionnalités de sous-mots et les plongements ``Bloom'' (angl. \textit{Bloom embeddings})\footnote{Il s'agit de la structure de données probabiliste qui permet de réduire la dimension des vecteurs (\textit{cf.} \url{https://explosion.ai/blog/bloom-embeddings}).}, ainsi qu'un réseau neuronal convolutif avec des connexions résiduelles, ce qui peut expliquer sa robustesse lors de l'extraction des EN contaminées. \texttt{spaCy} propose des modèles de langue du type \textit{large} pour le français\footnote{\url{https://spacy.io/models/fr}, \texttt{fr\_core\_news\_lg}}, le portugais\footnote{\url{https://spacy.io/models/pt}, \texttt{pt\_core\_news\_lg}} et l'anglais\footnote{\url{https://spacy.io/models/en}, \texttt{en\_core\_web\_lg}}. Nous avons favorisé l'usage du modèle \textit{large} (\texttt{spaCy\_lg}) plutôt que du modèle \textit{small} (\texttt{spaCy\_sm}) car la différence principale entre les deux modèles pour les trois langues tient à l'ajout de la vectorisation et des plongements de mots (angl. \textit{embeddings}) dans l'entraînement du modèle \textit{large}\footnote{Modèle anglais : Explosion Vectors (OSCAR 2109 + Wikipedia + OpenSubtitles + WMT News Crawl) (Explosion). Modèles français et portugais :
 Explosion fastText Vectors (CBOW, OSCAR Common Crawl + Wikipedia) (Explosion).}}.
 
+
 \subsection{Typologie des contaminations et problèmes d'alignement}
-\label{subsec:TYPO_CONTAMINATIONS_ALIGNEMENT}
 
-%\textbf{D'autre part, \texttt{Stanza} se présente comme la suite d'outils état de l'art pour le TAL, s'appuyant sur des réseaux neuronaux et des modules construits avec la bibliothèque PyTorch. pour la tâche de REN \texttt{Stanza}\footnote{\url{https://stanfordnlp.github.io/stanza/ner_models.html}} propose un modèle de langue français\footnote{Modèle entraîné sur les données de WikiNER.} et un pour l'anglais\footnote{Modèle entraîné sur les données de \textsc{CoNLL03}}, il n'existe pas de modèle pour le portugais. 
-%% TODO : enrichier la description de stanza ?
-%Les performances pour le portugais sont évaluées sur les configurations comprenant \texttt{spaCy\_lg} uniquement. Enfin, il est intéressant de constater que \texttt{spaCy} et \texttt{stanza} utilisent des jeux d'étiquettes différents pour l'annotation des lieux selon les langues : le français et le portugais utilisent l'étiquette \texttt{LOC} et l'anglais utilise les étiquettes \texttt{LOC} et \texttt{GPE} ou \og{}entité géopolitique\fg{}.}
 
- 
 
-% -------------------- déplacé dans la sous-section 6.1 le 21/02/2024
-
-%Nous avons donc procédé aux évaluations des différentes configurations présentées dans le tableau \ref{tab:config}.
-%
-%\begin{table}[h!]
-%    \centering
-%   \input{TAB/configurations}
-%    \caption{Ensemble des configurations que nous évaluons dans cette étude. \texttt{spaCy\_lg}: sp.}
-%    \label{tab:config}
-%\end{table}
-% % \item [Jspll :]  -- modèle pré-entraîné de JamSpell pour une langue donnée, 
-
-Dans un premier temps, nous proposons une évaluation de l'outil de REN \texttt{spaCy}, dans laquelle nous comparons les résultats obtenus sur les sous-corpus ELTeC français, anglais et portugais et la TGB, et, leurs transcriptions de ROC\footnote{Dépôt github avec nos données : \url{anonymous}} sans nous appuyer sur un \textit{gold standard}.
+Dans un premier temps, nous proposons une évaluation de l'outil de REN \texttt{spaCy} sur données bruitées, dans laquelle nous comparons les résultats obtenus sur les sous-corpus ELTeC français, anglais et portugais et la TGB, et, leurs transcriptions de ROC\footnote{Dépôt github avec nos données : \url{anonymous}} sans nous appuyer sur un \textit{gold standard}.
 
 Nous observons que les fautes d'orthographes provoquées par la ROC ne sont pas systématiquement un frein à la bonne extraction des noms de lieux, comme en témoigne le tableau \ref{tab:typo_erreurs_ocr}. En revanche, la concaténation des tokens d'une EN semble être une contamination plus préjudiciable à sa bonne détection. Par ailleurs, l'étude de \cite{DBLP:conf/gis/Koudoro-Parfait21} laisse entendre que (i) le contexte contaminé autour d'une EN pourrait être un facteur de non détection et (ii) un contexte parfaitement propre ne serait pas la garantie que l'EN soit reconnue par le système. Il semble que ces faits soient vérifiables pour les trois langues sur lesquelles nos expériences ont porté. Par ailleurs, certaines entités même très contaminées sont identifiées, comme p.\ ex.\  \textit{``ancehester''} (pour \og{}Manchester\fg{}). 
 
@@ -46,8 +34,8 @@ Nous observons que les fautes d'orthographes provoquées par la ROC ne sont pas 
 
 %%%________ Plus d'EN sur texte bruité
 
-Le tableau \ref{tab:ELTeC_bon_mauvais} qui répertorie le nombre des types des EN reconnues par \texttt{spaCy} selon la qualité des versions de ROC, illustre le fait que sur les versions de ROC les systèmes de REN récupèrent plus d'EN. La qualité des versions ROC a été évaluée en appliquant les métriques \textit{Character Error Rate} (CER) et \textit{Word Error Rate} (WER) sur les textes de référence et les versions de ROC.
-Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapport à la référence, figurent des Faux Positifs (FP) (du bruit) mais aussi des formes contaminées des entités, qui sont des hapax, et qui comptent chacune pour un type différent d'EN en plus du type initial de l'EN. Ces phénomènes sont illustrés dans le tableau \ref{tab:FP_VP} qui recense une annotation manuelle des Vrais Positifs (VP) et des FP des EN par type d'EN récupérées par \texttt{spaCy\_lg} et \texttt{stanza} sur l'ensemble des EN de référence et celui des versions pour Kraken et Tesseract français. On retrouve bien (i) plus de FP et (ii) plus de VP qui sont des hapax sur les transcriptions OCR que sur la référence. Il y a donc plus de types différents d'entités sur la sortie de la ROC que sur la sortie de la Réf., car, comme l'illustre le tableau \ref{tab:EN_contamines_Variantes}, les variantes d'une entités peuvent être nombreuses. 
+Le tableau \ref{tab:ELTeC_bon_mauvais} qui répertorie le nombre des types des EN reconnues par \texttt{spaCy} selon la qualité des versions de ROC, illustre le fait que sur les versions de ROC les systèmes de REN récupèrent plus de type d'EN différents, donc que la qualité du texte en entrée influe sur la quantité du type d'EN récupérées en sortie. La qualité des versions ROC a été évaluée en appliquant les métriques \textit{Character Error Rate} (CER) et \textit{Word Error Rate} (WER) sur les textes de référence et les versions de ROC. On note que plus le WER est élevé, donc plus la qualité de la transcription baisse, plus le nombre de type d'EN en sortie est élevé. On peut en conclure que le nombre des hapax augmente selon que la qualité de la transcription diminue. 
+Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapport à la référence, figurent des Faux Positifs (FP) (du bruit) mais aussi des formes contaminées des entités, qui sont des hapax, et qui comptent chacune pour un type différent d'EN en plus du type initial de l'EN. Ces phénomènes sont illustrés dans le tableau \ref{tab:FP_VP} qui recense une annotation manuelle des Vrais Positifs (VP) et des FP par type d'EN récupérées par \texttt{spaCy\_lg} sur l'ensemble des EN de référence et celui des versions pour Kraken et Tesseract français. On retrouve bien (i) plus de FP et (ii) plus de VP qui sont des hapax sur les transcriptions OCR que sur la référence. Il y a donc plus de types différents d'entités sur la sortie de la ROC que sur la sortie de la Réf., car, comme l'illustre le tableau \ref{tab:EN_contamines_Variantes}, les variantes d'une entités peuvent être nombreuses. 
 
 %%%______________ Plus d'EN mais est-ce que c'est du bruit ?
 \begin{table}[h!]
@@ -77,7 +65,40 @@ Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapp
     \label{tab:EN_contamines_Variantes}
 \end{table}
 
-
+\begin{figure}[h!]
+    \begin{minipage}{7cm}
+  \begin{subfigure}{1\textwidth}
+  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_spacy-lg-concat_intersection.png} 
+  \caption{Kraken --\texttt{spaCy-lg}}
+  \label{fig:ELTeCFRA_Kraken_spacy-lg-concat_intersection}
+  \end{subfigure}
+  \end{minipage}
+  \begin{minipage}{7cm}
+  \begin{subfigure}{1\textwidth}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_stanza-concat_intersection.png} %%%% ancienne figure 07/02/2024
+  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png}
+  \caption{Tess. fr. -- \texttt{spaCy\_lg}}
+ % \label{fig:ELTeCFRA_Kraken_stanza-concat_intersection}
+  \end{subfigure}
+    \end{minipage}
+%\begin{minipage}{7cm}
+%  \begin{subfigure}{1\textwidth}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection.png} 
+%  \caption{Kraken corrigé ELTeC-fr -- \texttt{spaCy-lg}}
+%  \label{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}
+%  \end{subfigure}
+%  \end{minipage}
+%  \begin{minipage}{7cm}
+%  \begin{subfigure}{1\textwidth}
+%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken -- jspl-ELTeCfr_stanza-concat_intersection.png}
+%  \caption{Kraken corrigé ELTeC-fr -- \texttt{stanza}}
+%  \label{fig:ELTeCFRA_Kraken -- jspl-ELTeCFR_stanza-concat_intersection}
+%  \end{subfigure}
+%    \end{minipage}
+\caption{Intersections pour les configurations Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg}, pour le sous-corpus ELTeC français.}
+%\label{fig:intersection_globale-kraken}
+\label{fig:intersection_globale-kraken-tess}
+\end{figure}
 
 %%%%%%%%%%%% ancienne sous-figure 07/02/2024
 %\begin{figure}[h!]
@@ -130,42 +151,7 @@ Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapp
 
 Lors du calcul de l'intersection entre les ensembles des EN de référence et des EN issues de ROC, nous rencontrons des problèmes d'alignement. L'alignement strict de l'EN de réf. \textit{Ormeaux} avec l'EN contaminée \textit{Ormaeuux} par la machine n'est pas possible et ce dernier est compté comme FP et ajouté à la liste des hapax, ce qui vient gonfler artificiellement le nombre des FP dans l'ensemble des EN de la ROC. Il s'agit en fait de Faux FP. Enfin, dans l'ensemble des EN reconnues sur les versions de ROC nous remarquons que la majorité des EN présentes dans les résultats obtenus sur la ROC sont effectivement présentes dans les résultats obtenus sur les versions de référence, comme le présente le tableau \ref{tab:FP_VP}. Il n'y a donc pas de véritable déperdition des VP. Enfin, il peut arriver plus rarement que des entités ne soient pas détectées sur la version de Réf. mais le soient sur la version de ROC. Il ne s'agit pas véritablement de FP, mais d'une erreur du système même en contexte non bruité.
 
-Les graphiques des intersections sur la figure \ref{fig:intersection_globale-kraken-tess} représentent le rapport entre les EN issues des textes de référence et celles provenant des versions de ROC (Kraken ou Tesseract) non corrigées.
 
-\begin{figure}[h!]
-    \begin{minipage}{7cm}
-  \begin{subfigure}{1\textwidth}
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_spacy-lg-concat_intersection.png} 
-  \caption{Kraken --\texttt{spaCy\_lg}}
-  \label{fig:ELTeCFRA_Kraken_spacy-lg-concat_intersection}
-  \end{subfigure}
-  \end{minipage}
-  \begin{minipage}{7cm}
-  \begin{subfigure}{1\textwidth}
-%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_stanza-concat_intersection.png} %%%% ancienne figure 07/02/2024
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png}
-  \caption{Tess. fr. -- \texttt{spaCy\_lg}}
- % \label{fig:ELTeCFRA_Kraken_stanza-concat_intersection}
-  \end{subfigure}
-    \end{minipage}
-%\begin{minipage}{7cm}
-%  \begin{subfigure}{1\textwidth}
-%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection.png} 
-%  \caption{Kraken corrigé ELTeC-fr -- \texttt{spaCy-lg}}
-%  \label{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}
-%  \end{subfigure}
-%  \end{minipage}
-%  \begin{minipage}{7cm}
-%  \begin{subfigure}{1\textwidth}
-%  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken -- jspl-ELTeCfr_stanza-concat_intersection.png}
-%  \caption{Kraken corrigé ELTeC-fr -- \texttt{stanza}}
-%  \label{fig:ELTeCFRA_Kraken -- jspl-ELTeCFR_stanza-concat_intersection}
-%  \end{subfigure}
-%    \end{minipage}
-\caption{Intersections pour les configurations Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg}, pour le sous-corpus ELTeC français.}
-%\label{fig:intersection_globale-kraken}
-\label{fig:intersection_globale-kraken-tess}
-\end{figure}
 
 En regard des différentes observations que nous venons d'apporter et parce que nous souhaitons rendre compte de la complexité de ces cas réels, nous proposons d'établir une typologie pour l'évaluation des contaminations de ROC sur la REN, élargissant la classification standard des vrais/faux positifs/négatifs. Si les FP sont qualifiés de bruit et les FN de silence, nous avons repéré qu'il existe différents types de bruit et de silence. %Cette typologie permet d'établir quels sont les vrais bruits autrement dit les Vrai FP et les vrais silences (Vrai VN). 
 
@@ -312,7 +298,6 @@ Référence	&	21.62	&	69.57	&	32.98	&	41.18	&	45.16	&	43.08	\\
 \end{tabular}}
 \caption{Evaluation de \texttt{spaCy\_lg} sur un échantillon annoté de 10~000 tokens dans trois versions textuelles différentes\label{tab:eval-supervise} en configuration souple et en configuration stricte (GLOBAL: tous les types d'entités), LIEUX: seulement les lieux)}
  \end{table}
-
 
 
 

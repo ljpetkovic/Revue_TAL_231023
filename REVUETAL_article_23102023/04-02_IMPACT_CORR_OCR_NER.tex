@@ -1,3 +1,5 @@
+%--------------------Correction automatique
+
 \section{Analyse de l'impact des corrections de ROC sur la REN}
 \label{subsec:COR-OCR-IMPACT-NER}
 
@@ -7,8 +9,8 @@
 % \footnote{Malgré de nombreuses tentatives d'installation sur nos machines en local, nous avons dû nous résoudre à le faire tourner dans un environnement Google Colab.}
 De plus, si les modèles de langues pour le français et l'anglais, utilisés dans le cadre de cette étude, sont accessibles gratuitement, le modèle portugais est disponible uniquement dans la version payante de JamSpell (cette option n'a pas été testée).
 Nous avons entraîné un modèle de langue pour JamSpell pour chacune des trois langues analysées dans notre étude. Nous avons sélectionné 40\% de chacun des corpus mis à disposition par ELTeC\footnote{soit 4 millions de tokens pour chaque modèle.} et nous en avons exclu les textes utilisés pour notre étude.}
-\subsection{Typologie des contaminations de corrections de ROC issues de l'analyse manuelle}
-%--------------------Correction automatique
+
+Dans cette partie nous évaluons manuellement l'impact de deux types de modèles de langues pour la correction automatique utilisés avec l'outil JamSpell\footnote{Abbr.\ Jspll.}. Les premiers modèles sont ceux proposés par les créateurs de Jspll. et qui sont pré-entraînés pour l'anglais et le français. Le modèle pour le portugais n'est pas disponible dans la version gratuite du système. Les seconds types de modèles sont des modèles que nous avons entraînés nous même sur 40\% des textes de chacun des corpus ELTeC pour les trois langues (français, anglais et portugais) et nous évaluons ensuite ces modèles sur les jeux de test constitués tels que présentés en section \ref{sec:data}.
 
 \textbf{Nous avons donc procédé aux évaluations des différentes configurations présentées dans le tableau \ref{tab:config}}.
 
@@ -19,9 +21,18 @@ Nous avons entraîné un modèle de langue pour JamSpell pour chacune des trois 
     \label{tab:config}
 \end{table}
 
-Pour ce qui est de l'impact de deux correcteurs de ROC (JamSpell\footnote{Abbr.\ Jspll.} pré-entraîné sur une langue spécifique et JamSpell-ELTeC  sur les EN uniques (types), évalué sur un jeu de test), nous observons dans le tableau \ref{tab:ELTeC} que le nombre d'EN augmente lors de la correction avec JamSpell-ELTeC pour le sous-corpus français océrisé avec Kraken. 
-% En revanche, cette tendance paraît moins systématique pour les mêmes corpus océrisés avec Tesseract, où un plus grand nombre d'EN a été récupéré uniquement à partir du corpus anglais.
-Enfin, dans le cas du sous-corpus ELTeC portugais, comme nous l'avons souligné dans la section \ref{subsec:OUTILS-OCR-REN}, nous avons extrait uniquement les EN corrigées avec notre modèle JamSpell-ELTeC et l'on note que la quantité d'EN reconnues est moindre que celle trouvée sur la sortie brute de ROC.
+\subsection{Typologie des contaminations de corrections de ROC issues de l'analyse manuelle}
+
+La colonne \textit{Brut} du tableau \ref{tab:ELTeC} montre qu'il y a globalement plus de types d'entités récupérées par spaCy sur Kraken (CER moyen :) que sur Tesseract (CER moyen :), ce qui vient étayer l'hypothèse que plus la qualité de la transcription est mauvaise plus les variations orthographiques sur les EN peuvent être nombreuses et plus il y a d'hapax dans les résultats de la REN. Nous venons à penser que si la correction automatique fonctionne bien le nombre des hapax sera réduit dans les sorties de REN.
+
+En partant de ce postulat, nous observons que globalement les modèles Jspll pré-entraînés et entraînés sur ELTeC pour chaque langue permettent d'avoir des transcriptions d'une meilleure qualité que le texte brut car le nombre des types d'EN, donc des hapax, diminue. 
+
+On note aussi que les modèles pré-entrainés de Jspll seraient globalement plus efficaces sur kraken que sur Tesseract.
+
+Néanmoins, il apparaît que la correction automatique avec le modèle pré-entraîné de Jspll serait un peu moins efficace que celle du modèle entraîné sur le corpus ELTeC pour l'anglais. À l'inverse le modèle pré-entraîné de Jspll pour le français serait plus efficace que le modèle entraîné sur ELTeC pour le français, étant donné que le nombre d'EN augmente lors de la correction avec JamSpell-ELTeC pour le sous-corpus français océrisé avec Tesseract et kraken.
+
+
+Enfin, dans le cas du sous-corpus ELTeC portugais, comme nous l'avons souligné dans la section \ref{sec:Meth} nous avons extrait uniquement les EN corrigées avec notre modèle JamSpell-ELTeC et on note que la quantités d'EN reconnues et moindre que celle trouvé sur la sortie brute de ROC.
 \begin{table}[h!]
     \centering
     \small
@@ -289,6 +300,7 @@ La figure \ref{fig:distances_ref_roc} laisse apercevoir que les résultats pour 
 
 Enfin, il apparaît en comparant les figures \ref{fig:distances_ref_roc} et \ref{fig:Cosinus-spacy-lg} que la configuration Tesseract--\texttt{spaCy\_lg}, en utilisant pour chacun des outils le modèle de langue adapté à la langue du sous-corpus étudié, soit la plus convaincante en considération du temps de calcul et des résultats. Pour 5 604 472 tokens\footnote{soit le texte brut pour le sous-corpus français de la version de référence et les versions Kraken et Tess. fr.} \texttt{stanza} prend 10 heures à fournir des résultats, alors que \texttt{spaCy} met 1 heure (Mémoire: 16Gio, CPU: Core™i5-1135G7). La lecture des tableaux \ref{tab:EN_contamines_Variantes} et \ref{tab:FP_VP} reportant les analyses manuelles met en évidence des résultats équivalents. 
 
+\subsection{\textsc{NERVAL} : Précision, rappel, f-score.}
 
 \textbf{Dans le but de calculer la précision, le rappel et d'obtenir un f-score nous avons utilisé l'outil \textsc{Nerval}\footnote{\url{https://gitlab.com/teklia/nerval}}, évalué par \cite{koudoro2022reconnaissance}. Si cette évaluation présente quelques biais de l'outil, \textsc{Nerval} apparaît tout de même comme un très bon moyen de dépasser les problèmes d'alignements entre les résultats des différentes configurations à comparer pour calculer le f-score. \textsc{Nerval} est développé en Python, et est conçu pour l'évaluation de sorties de REN sur du texte bruité avec la distance de Levenshtein. Les fichiers des textes de références et des textes versions ROC et ROC corrigées sont annotés au format IOB avec \texttt{spaCy\_lg}\footnote{Le choix de cet outil est déterminé par la multitude des modèles, leurs performances très solides et leur facilité de la prise en main par les chercheur?euses en HN et TAL \cite{DBLP:conf/gis/Koudoro-Parfait21}.}. Les fichiers des textes de références ainsi annotés font office de vérité de terrain.
 Les premières observations des résultats semblent confirmer que la correction automatique n'est pas forcément un gain pour la REN, en effet le f-score pour les configurations de Tesseract dans les tableaux \ref{tab:NERVAL_DAUDET} et \ref{tab:NERVAL_THACKERAY} perd en moyenne 0.06 points. À l'inverse, le f-score sur les configurations de Kraken semble légèrement augmenter, ce constat venant illustrer le phénomène de creux que nous évoquions dans la partie \ref{sec:distances_creux}.}
