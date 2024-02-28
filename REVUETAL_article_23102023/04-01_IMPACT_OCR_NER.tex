@@ -262,21 +262,22 @@ Le cas de la version Kraken de Reynolds mets en exergue cette observation. Nous 
 
 \subsection{\'Evaluation semi-supervisée des contaminations de ROC sur un corpus annoté}
 
-Afin d'évaluer de manière plus supervisée l'influence du bruit ROC sur la REN nous avons annoté un échantillon du sous-corpus ELTeC français.
- Nous avons choisi de nous limiter aux quatre catégories présentes dans Spacy (Lieux, Personnes, Organisations et Divers).
+Afin d'évaluer de manière plus supervisée l'influence du bruit ROC sur la REN, nous avons annoté un échantillon du sous-corpus ELTeC français.
+ Nous avons choisi de nous limiter aux quatre catégories présentes dans \texttt{spaCy} (Lieux, Personnes, Organisations et Divers).
   Nous avons tout d'abord annoté un échantillon de 3~000 tokens d'une œuvre  puis réalisé une adjudication pour régler les désaccords. 
   Nous avons ensuite annoté 5 000 tokens de 3 versions (Référence, Tesseract et Kraken) de deux œuvres (Daudet et Maupassant)
 
 L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était de $0.877$, significativement plus élevé sur la version de référence ($0.905$) que sur les versions ROC. Nous avons pu observer que les désaccords étaient plus nombreux sur l'annotation des versions océrisées du fait des problèmes de tokenisation.
 
 Grâce à un système de vote majoritaire, nous avons fusionné les annotations pour obtenir un \textit{gold standard} sur chaque version de chaque œuvre.
- Nous avons évalué \texttt{spaCy\_lg} sur cet échantillon, les résultats sont présentés dans le tableau \ref{tab:eval-supervise}.
- En commençant par l'évaluation dite ``GLOBALE'' (tous les types d'entités) nous pouvons remarquer d'une part que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken. Mais aussi, et ce qui est plus étonnant, que pour ce qui est de l'évaluation souple (où une partie de l'entité suffit à considérer la réponse bonne), que ces résultats sont même meilleurs que ceux obtenus sur la version de référence.
-  D'autre part, nous remarquons que là aussi la faiblesse apparente des résultats de REN obtenus sur des versions OCR est principalement due à des problèmes d'alignement entre les tokens contaminés et les tokens de référence. 
+ Nous avons évalué \texttt{spaCy\_lg} sur cet échantillon, dont les résultats sont présentés dans le tableau \ref{tab:eval-supervise}.
+ En commençant par l'évaluation dite ``GLOBALE'' (tous les types d'entités), nous pouvons remarquer d'une part que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken. En outre, ce qui est plus étonnant, dans le cas de l'évaluation souple (où une partie de l'entité suffit à considérer la réponse bonne), ces résultats sont même meilleurs que ceux obtenus sur la version de référence.
+  D'autre part, nous remarquons que là aussi la faiblesse apparente des résultats de REN obtenus sur des versions ROC est principalement due à des problèmes d'alignement entre les tokens contaminés et les tokens de référence. 
 \begin{table}[h!]
+\centering
 \scriptsize{\begin{tabular}{l|ccc|ccc}
  %Versions
- &		&	GLOBAL	&		&		&	LIEUX	&		\\
+ &		&	GLOBALE	&		&		&	LIEUX	&		\\
 \hline
  \hline
 \textbf{Souple}	&	Rappel		&Précision	&	F-Mes.	&	Rappel&		Précision		&F-Mes.	\\
@@ -296,7 +297,7 @@ Référence	&	21.62	&	69.57	&	32.98	&	41.18	&	45.16	&	43.08	\\
 \hline
 \hline
 \end{tabular}}
-\caption{Evaluation de \texttt{spaCy\_lg} sur un échantillon annoté de 10~000 tokens dans trois versions textuelles différentes\label{tab:eval-supervise} en configuration souple et en configuration stricte (GLOBAL: tous les types d'entités), LIEUX: seulement les lieux)}
+\caption{Evaluation de \texttt{spaCy\_lg} sur un échantillon annoté de 10~000 tokens dans trois versions textuelles différentes\label{tab:eval-supervise} en configuration souple et en configuration stricte (GLOBALE : tous les types d'entités, LIEUX: seulement les lieux)}
  \end{table}
 
 
