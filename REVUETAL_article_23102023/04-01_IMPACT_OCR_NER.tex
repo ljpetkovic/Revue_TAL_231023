@@ -1,9 +1,11 @@
 %(où, sous le terme, \og{}configuration\fg{} on désigne l’association de la version de ROC et
 %de la REN, p. ex. les résultats de la configuration Kraken-\texttt{spaCy\_lg})
 \section{Évaluation de l'impact des contaminations de ROC sur la REN : problèmes d'alignement} 
-\label{subsec:OCR-IMPACT-NER}
+\label{sec:OCR-IMPACT-NER}
 \textbf{La présente section décrit les outils de ROC et de REN utilisés dans le cadre de notre étude. Ensuite, nous proposons une évaluation manuelle de la REN, en introduisant la problématique des évaluations (trop) strictes, suivie d'une typologie des contaminations de ROC pour une interprétation fine de l'évaluation stricte. Enfin, nous évaluons de manière supervisée l'influence du bruit ROC sur la REN.}
+
 \subsection{Outils de ROC et REN utilisés dans le cadre de cette étude}
+\label{subsec:outils_OCR-IMPACT-NER}
 \textbf{Afin de produire différentes transcriptions de ROC, nous avons utilisé deux systèmes disponibles gratuitement : Kraken \cite{kiessling2019kraken} et Tesseract \cite{smith2007overview}. Kraken est un outil pour lequel il existe différents modèles neuronaux,
 dont un modèle pour le français du XVII\ieme{}siècle \cite{gabay:hal-02577236}\footnote{\url{https://github.com/Heresta/OCR17plus/tree/main/Model}} 
 %ainsi qu'un modèle HTR\footnote{Abbr. angl. \textit{Handwritten Text Recognition} ou la reconnaissance d'écriture manuscrite, basée sur l'extraction du texte à partir des blocs textuels (lignes), contrairement à la méthode de ROC qui traite les caractères individuelles \cite{gabayscicos}.}
@@ -11,15 +13,14 @@ ainsi que le modèle Gallicorpora \cite{pinche_2022_7410529}. Concernant Tessera
 %\footnote{Le modèle par défaut de Tesseract est l'anglais. Nous précisons la langue Tess. eng, Tess. fr et Tess. suivant les bonnes pratiques de \#RègledeBender \cite{bender-friedman-2018-data}.} et (iii) 
 les trois modèles Tesseract pour l'anglais, le français et le portugais contemporain\footnote{\url{https://doc.ubuntu-fr.org/tesseract-ocr}}.
 
-\textbf{Pour effectuer la tâche de REN nous avons utilisé les chaînes de traitements de la boîte à outils pour le TAL  \texttt{spaCy}\footnote{version 3.5.1}.
-% \texttt{spaCy}\footnote{version 3.5.1} et \texttt{stanza}\footnote{1.5.0}. 
+\textbf{Pour effectuer la tâche de REN nous avons utilisé les chaînes de traitements de la boîte à outils pour le TAL  \texttt{spaCy}\footnote{version 3.5.1}.Le choix de cet outil est déterminé par la multitude des modèles, leurs performances très solides et leur facilité de la prise en main par les chercheur?euses en HN et TAL \cite{DBLP:conf/gis/Koudoro-Parfait21}.%  et \texttt{stanza}\footnote{1.5.0}. 
 Le système \texttt{spaCy} contient une stratégie d'intégration de mots utilisant des fonctionnalités de sous-mots et les plongements ``Bloom'' (angl. \textit{Bloom embeddings})\footnote{Il s'agit de la structure de données probabiliste qui permet de réduire la dimension des vecteurs (\textit{cf.} \url{https://explosion.ai/blog/bloom-embeddings}).}, ainsi qu'un réseau neuronal convolutif avec des connexions résiduelles, ce qui peut expliquer sa robustesse lors de l'extraction des EN contaminées. \texttt{spaCy} propose des modèles de langue du type \textit{large} pour le français\footnote{\url{https://spacy.io/models/fr}, \texttt{fr\_core\_news\_lg}}, le portugais\footnote{\url{https://spacy.io/models/pt}, \texttt{pt\_core\_news\_lg}} et l'anglais\footnote{\url{https://spacy.io/models/en}, \texttt{en\_core\_web\_lg}}. Nous avons favorisé l'usage du modèle \textit{large} (\texttt{spaCy\_lg}) plutôt que du modèle \textit{small} (\texttt{spaCy\_sm}) car la différence principale entre les deux modèles pour les trois langues tient à l'ajout de la vectorisation et des plongements de mots (angl. \textit{embeddings}) dans l'entraînement du modèle \textit{large}\footnote{Modèle anglais : Explosion Vectors (OSCAR 2109 + Wikipedia + OpenSubtitles + WMT News Crawl) (Explosion). Modèles français et portugais :
 Explosion fastText Vectors (CBOW, OSCAR Common Crawl + Wikipedia) (Explosion).}}.
 
 
 
 \subsection{Évaluation manuelle}
-
+\label{subsec:eval_manu_OCR-IMPACT-NER}
 Dans un premier temps, nous proposons une évaluation de l'outil de REN \texttt{spaCy} sur données bruitées, dans laquelle nous comparons les résultats obtenus sur les sous-corpus ELTeC français, anglais et portugais et la TGB, et, leurs transcriptions de ROC\footnote{Dépôt github avec nos données : \url{anonymous}} sans nous appuyer sur un \textit{gold standard}.
 
 Nous observons que les fautes d'orthographes provoquées par la ROC ne sont pas systématiquement un frein à la bonne extraction des noms de lieux, comme en témoigne le tableau \ref{tab:typo_erreurs_ocr}. En revanche, la concaténation des tokens d'une EN semble être une contamination plus préjudiciable à sa bonne détection. Par ailleurs, l'étude de \cite{DBLP:conf/gis/Koudoro-Parfait21} laisse entendre que (i) le contexte contaminé autour d'une EN pourrait être un facteur de non détection et (ii) un contexte parfaitement propre ne serait pas la garantie que l'EN soit reconnue par le système. Il semble que ces faits soient vérifiables pour les trois langues sur lesquelles nos expériences ont porté. Par ailleurs, certaines entités même très contaminées sont identifiées, comme p.\ ex.\  \textit{``ancehester''} pour \og{}Manchester\fg{}. 
@@ -40,7 +41,7 @@ Enfin, il peut arriver, plus rarement, que des entités ne soient pas détectée
 
 %%%________ Plus d'EN sur texte bruité
 \subsection{Usage des intersections : une évaluation trop stricte ?}
-
+\label{subsec:inter_OCR-IMPACT-NER}
 Pour automatiser nos analyse et pouvoir les conduire à plus grande échelle nous avons décidé de calculer et représenter les intersections entre les ensembles des EN reconnues sur la version de Réf. et celles obtenues sur les versions de ROC. La figure \ref{fig:intersection_globale-kraken-tess} rend compte de cette évaluation stricte dans laquelle chaque token de l'ensemble de Réf. est comparé avec chaque token de l'ensemble de ROC. Pour être considéré comme un VP une EN de l'ensemble de ROC doit être orthographiée de manière identique à une EN de l'ensemble de Réf. Dans ce graphique, le cercle de gauche qui comprend les EN de la Réf. et l'intersection entre les deux cercles sont considérés comme représentant les VP. Le cercle de droite qui représente les EN récupérées uniquement sur la version de ROC est considéré comme comportant les FP de la sortie de REN. Cependant, lorsque nous avons observé les résultats il s'est avéré que les EN issues de la ROC portant des contaminations et n'étant pas strictement orthographiées comme leur pendant de référence étaient considérées par la machine des FP. Cet état de fait créer donc un biais dans nos évaluations. Entre autre exemple l'EN \textit{Ormeaux} n'est pas strictement identique à sa version contaminée \textit{Ormaeuux} et est compté comme FP et ajouté à la liste des hapax, ce qui vient gonfler artificiellement le nombre des FP dans l'ensemble des EN de la ROC. Il s'agit en fait de Faux Faux Positif autrement dit de Vrai Positif masqués par la rectitude de l'alignement inhérent au mode d'évaluation adopté. Enfin, dans l'ensemble des EN reconnues sur les versions de ROC nous remarquons que la majorité des EN présentes dans les résultats obtenus sur la ROC sont effectivement présentes dans les résultats obtenus sur les versions de référence, comme le présente le tableau \ref{tab:FP_VP}. Il n'y a donc pas de véritable déperdition des VP. 
 
 %%%______________ Plus d'EN mais est-ce que c'est du bruit ?
@@ -158,7 +159,7 @@ Pour automatiser nos analyse et pouvoir les conduire à plus grande échelle nou
 
 
 \subsection{Typologie des contaminations de ROC pour une interprétation fine de l'évaluation stricte }
-
+\label{subsec:Typologie_OCR-IMPACT-NER}
 En regard des différentes observations que nous venons d'apporter et parce que nous souhaitons rendre compte de la complexité de ces cas réels, nous proposons d'établir une typologie pour l'évaluation des contaminations de ROC sur la REN, élargissant la classification standard des vrais/faux positifs/négatifs. Si les FP sont qualifiés de bruit et les FN de silence, nous avons repéré qu'il existe différents types de bruit et de silence. D'autre part cette typologie permettrait d'établir quels sont les vrais bruits autrement dit les vrais FP et les vrais silences les vrais VN. 
 
 
@@ -266,7 +267,7 @@ Le cas de la version Kraken de Reynolds mets en exergue cette observation. Nous 
 %\end{table}
 
 \subsection{\'Evaluation supervisée des contaminations de ROC sur un corpus annoté}
-
+\label{subsec:eval_supervis_OCR-IMPACT-NER}
 Afin d'évaluer de manière plus supervisée l'influence du bruit ROC sur la REN, nous avons annoté un échantillon du sous-corpus ELTeC français.
  Nous avons choisi de nous limiter aux quatre catégories présentes dans \texttt{spaCy} (Lieux, Personnes, Organisations et Divers).
   Nous avons tout d'abord annoté un échantillon de 3~000 tokens d'une œuvre  puis réalisé une adjudication pour régler les désaccords. 
