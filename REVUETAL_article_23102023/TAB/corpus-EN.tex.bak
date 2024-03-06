@@ -55,7 +55,7 @@
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-
+\resizebox{\textwidth}{!}{
 \begin{tabular}{|c|rrrrr|rrrrr|}
 \hline
 \multicolumn{1}{|l|}{\multirow{2}{*}{}} &
@@ -98,4 +98,4 @@ Portugais &
   \multicolumn{2}{r|}{N/A} &
   \multicolumn{2}{r|}{3 594} \\ \hline
 \end{tabular}
-
+}

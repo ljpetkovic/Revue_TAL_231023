@@ -276,8 +276,11 @@ L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était
 
 Grâce à un système de vote majoritaire, nous avons fusionné les annotations pour obtenir un \textit{gold standard} sur chaque version de chaque œuvre.
  Nous avons évalué \texttt{spaCy\_lg} sur cet échantillon, dont les résultats sont présentés dans le tableau \ref{tab:eval-supervise}.
- En commençant par l'évaluation dite ``GLOBALE'' (tous les types d'entités), nous pouvons remarquer d'une part que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken. En outre, ce qui est plus étonnant, dans le cas de l'évaluation souple (où une partie de l'entité suffit à considérer la réponse bonne), ces résultats sont même meilleurs que ceux obtenus sur la version de référence.
+ En commençant par l'évaluation dite ``GLOBALE'' (tous les types d'entités), nous pouvons remarquer d'une part que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken. 
+  \textbf{Dans la configuration \og{}souple\fg{}, une EN est considérée correcte, quelle que soit sa taille (soit une partie, soit l'intégralité de l'EN). Un exemple de ce type de configuration est le mot \textit{Acques}, considéré comme une EN même si elle est orthographiquement erronée, étant donné qu'elle faisait référence à l'EN \textit{Jacques}. En revanche, la configuration \og{}stricte\fg{} ne prend en compte que les correspondances exactes des EN}.
+  En outre, ce qui est plus étonnant, dans le cas de l'évaluation souple, ces résultats sont même meilleurs que ceux obtenus sur la version de référence.
   D'autre part, nous remarquons que là aussi la faiblesse apparente des résultats de REN obtenus sur des versions ROC est principalement due à des problèmes d'alignement entre les tokens contaminés et les tokens de référence. 
+  \textbf{Enfin, il convient à noter également que les noms de lieux du corpus comptent le plus souvent un token, au contraire des noms de personnes notamment. Nous supposons qu'un plus grand nombre d'EN \og{}globales\fg{} (contrairement aux EN des lieux) est dû à leur distribution sur plusieurs lignes plus fréquente (p. ex. \textit{Daniel Ey-sset-te}, où l'EN \textit{Ey-sset-te} est constituée de trois éléments annotés comme EN), ce qui a posé problème à la REN et diminué les scores de la F-mesure. Dès lors, le rappel sur les noms de personnes descend beaucoup plus (nous obtenons plus de VP), mais les FP sont strictement inférieurs. Ces remarques pourrait éventuellement expliquer la meilleure performance sur les entités de lieux dans la configuration stricte en termes de F-mesure.}
 \begin{table}[h!]
 \centering
 \scriptsize{\begin{tabular}{l|ccc|ccc}
@@ -285,7 +288,7 @@ Grâce à un système de vote majoritaire, nous avons fusionné les annotations 
  &		&	GLOBALE	&		&		&	LIEUX	&		\\
 \hline
  \hline
-\textbf{Souple}	&	Rappel		&Précision	&	F-Mes.	&	Rappel&		Précision		&F-Mes.	\\
+\textbf{Souple}	&	Rappel		&Précision	&	F-mes.	&	Rappel&		Précision		&F-mes.	\\
  \hline
 Kraken	&	49.57	&	73.72 	&	59.28	&	48.84	&	52.50	&	50.60	\\
 													
@@ -294,7 +297,7 @@ Tesseract	&	51.53	&	77.63	&	61.94	&	56.41	&	57.89	&	57.14	\\
 Référence	&	49.78	&	77.55	&	60.64	&	53.49	&	53.49	&	53.49	\\
 \hline
 \hline
-\textbf{Stricte}	&	Rappel		&Précision	&	F-Mes.	&	Rappel&		Précision		&F-Mes.	 \\
+\textbf{Stricte}	&	Rappel		&Précision	&	F-mes.	&	Rappel&		Précision		&F-mes.	 \\
 \hline
 Kraken	&	18.26	&	58.82	&	27.87	&	43.24	&	45.71	&	44.44	\\
 Tesseract	&	21.00	&	68.66	&	32.16	&	43.33	&	44.83	&	44.07	\\

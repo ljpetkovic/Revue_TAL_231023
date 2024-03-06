@@ -33,7 +33,7 @@
 % P: première page de l'article ; D: dernière page de l'article
 
 %NB: le short title (entre crochets) doit faire moins de 55mm
-\title[Contamination des OCR sur la REN]{Analyse multilingue de l'impact de la correction automatique de l'OCR sur la reconnaissance d’entités nommées spatiales dans des corpus littéraires}
+\title[Contamination des OCR sur la REN]{Analyse multilingue de l'impact de la correction automatique de la ROC sur la reconnaissance d’entités nommées spatiales dans des corpus littéraires}
 % {L'impact de la correction automatique des contaminations d'OCR sur la reconnaissance d’entités nommées spatiales dans les corpus littéraires de langues inégalement dotées : réel gain ou perte de l’information ? }
 %GL : proposotion
 %\title[Contamination de l'OCR sur la REN]{Analyse multilingue de l'impact de la correction automatique de l'OCR sur la reconnaissance d’entités nommées spatiales dans des corpus littéraires.}
@@ -121,10 +121,6 @@ Automatic OCR Correction$_3$.
 \section{Stratégies d'évaluations de la tâche de correction de la ROC pour effectuer la REN en aval}
 \label{sec:expe}
 \input{04_Result-Analyses}
-
-
-
-
 
 \section{Conclusion}
 \input{05_Conclusion}
