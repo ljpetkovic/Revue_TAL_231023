@@ -121,21 +121,14 @@ Enfin, concernant le corpus ELTeC portugais, comme nous l'avons souligné préc�
 \end{table}
 
 \subsubsection{Calculs des intersections, toujours plus de problèmes d'alignements. }
-Notre démarche évaluative est fondée sur l'intérêt de la correction automatique qui vise à diminuer le nombre de FP, ainsi qu'à augmenter l'intersection entre les EN de ROC et de référence (le dernier point étant élaboré dans la sous-sous-section \ref{intersections}). 
+Notre démarche évaluative est fondée sur l'intérêt de la correction automatique qui vise à diminuer le nombre de FP, ainsi qu'à augmenter l'intersection entre les EN de ROC et de référence. 
+
+Les graphiques de la figure \ref{fig:intersection_globale-kraken} représentent les intersections entre les EN issues des textes de référence et celles provenant des versions de ROC (Kraken ou Tesseract) corrigées avec le modèle pré-entraîné de JamSpell (\ref{fig:ELTeCFRA_Kraken -- jspl-fr_spacy-lg-concat_intersection.png}-\ref{fig:ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection.png}), et le modèle entraîné sur le sous-corpus ELTeC français (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection})
+Comme dans la section \ref{subsec:inter_OCR-IMPACT-NER}, nous utilisons le modèle spaCy\_lg pour l'annotation automatique de la Réf. dont nous nous servons comme Vérité Terrain et les transcriptions de ROC corrigées automatiquement.
 
 
-Les graphiques des intersections sur la figure \ref{fig:intersection_globale-kraken} représentent le rapport entre les EN issues des textes de référence et celles provenant des versions de ROC (Kraken ou Tesseract) corrigées avec le modèle pré-entraîné de JamSpell (\ref{fig:ELTeCFRA_Kraken -- jspl-fr_spacy-lg-concat_intersection.png}-\ref{fig:ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection.png}), et le modèle entraîné sur le sous-corpus ELTeC français (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection})
-%\footnote{cf. tableau \ref{tab:config}.}. 
-Les textes de référence ont été annotés automatiquement avec \texttt{spaCy\_lg} 
-%et \texttt{stanza} 
-et nous nous en servons comme vérité terrain \textbf{(jeu de données de REN constitué pour l'évaluation)}. Les versions ROC ont aussi été annotées avec ce moteur de REN.
-%ces deux moteurs de REN. 
-Nous avons calculé les intersections pour chacun des sous-corpus (ELTeC français, anglais et portugais, et TGB) de manière globale. Pour ce faire nous avons fait correspondre les entités de chacun des textes de référence avec celles de leurs versions ROC. Ainsi, dans le cas du sous-corpus ELTeC français l'EN ``Paris'' repérée dans le texte de référence pour Daudet, n'est pas la même que l'EN ``Paris'' récupérée dans le texte de référence de Noailles. Il en va de même pour les différentes autres configurations (\textit{cf.} le tableau \ref{tab:config}).
-Les cercles ``EN Réf'' comprennent les EN issues des textes de référence -- autrement dit les VVP. Les cercles ``EN\_nom-de-ROC'' comportent les EN considérées comme des VFP, néanmoins ces ensembles comprennent aussi des EN contaminées -- autrement dit des FFP avec problème de liage (p.\ ex.\ ``Dconshire'' pour ``Devonshire''). Ces différents cas sont décrits en détail dans la sous-section \ref{subsec:TYPO_CONTAMINATIONS_ALIGNEMENT}.
-%et la matrice de confusion (tableau \ref{tab:typo_eval}).
-L'intersection des deux cercles figure les VVP de l'ensemble des EN récupérées sur la version de ROC.
 La figure \ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection} montre que le plus grand nombre d'EN en commun a été récupéré par \texttt{spaCy\_lg} quand le texte a été océrisé avec Tesseract et corrigé par le modèle entraîné sur le sous-corpus français.
-% adapté à la langue du sous-corpus. 
+
  Il est notable que la correction automatique avec le modèle pré-entraîné de JamSpell ou le modèle entraîné sur une partie du sous-corpus ELTeC adapté à la langue du sous-corpus ne sont pas un gain pour l'intersection. 
 %%% INTERSECTIONS GLOBALES
 \begin{figure}[h!]
