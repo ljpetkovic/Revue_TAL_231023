@@ -1064,7 +1064,7 @@ HAL_VERSION = {v1},
   doi = {10.5281/zenodo.4662444},
   }
   
-@software{spacy,
+  @software{spacy,
   author = {Honnibal, Matthew and Montani, Ines and Van Landeghem, Sofie and Boyd, Adriane},
   title = {{spaCy: Industrial-strength Natural Language Processing in Python}},
   year = 2020,
@@ -3053,4 +3053,7 @@ pages="234--241",
   year={2017}
 }
 
-
+@misc{nerval2021, 
+	title = {Nerval: a python library for named-entity recognition evaluation on noisy texts}, 
+	author = {Miret, Blanche and Kermorvant},
+	url = {http://gitlab.com/teklia/ner/nerval}
