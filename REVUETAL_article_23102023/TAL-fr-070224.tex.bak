@@ -116,9 +116,11 @@ Automatic OCR Correction$_3$.
 %\label{sec:Meth}
 %%TODO: trouver un titre plus explicite
 
-\label{sec:expe}
+
 \input{04-01_IMPACT_OCR_NER.tex}
+
 \input{04-02_IMPACT_CORR_OCR_NER.tex}
+
 % On enlève stanza mais on indique que sur le github il y aura les résultats pour stanza
 %
 \section{Conclusion}
