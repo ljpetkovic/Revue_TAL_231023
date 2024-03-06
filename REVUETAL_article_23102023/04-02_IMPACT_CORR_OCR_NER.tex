@@ -120,7 +120,7 @@ Enfin, concernant le corpus ELTeC portugais, comme nous l'avons souligné préc�
     \label{tab:ELTeC}
 \end{table}
 
-\subsubsection{Calculs des intersections, toujours plus de problèmes d'alignements }
+\subsubsection{Calculs des intersections, toujours plus de problèmes d'alignements. }
 Notre démarche évaluative est fondée sur l'intérêt de la correction automatique qui vise à diminuer le nombre de FP, ainsi qu'à augmenter l'intersection entre les EN de ROC et de référence (le dernier point étant élaboré dans la sous-sous-section \ref{intersections}). 
 
 
@@ -225,9 +225,10 @@ des observations présentée dans le tableau \ref{tab:typologie_erreurs-corr_ELT
 %\caption{Intersections pour la configuration Tess-\texttt{spaCy\_lg} corrigées avec le modèle pré-entrainer de JamSpell et le modèle ELTeC, pour le sous-corpus ELTeC français.}
 %\label{fig:intersection-globale-tess}
 %\end{figure}
-
-\subsection{Mesures de distance textuelle}
+\subsection{Comment dépasser les problèmes d'alignements ? }
 \label{subsec:ditances_creux_COR-OCR-IMPACT-NER}
+\subsubsection{Mesures de distance textuelle}
+
 Dans le but de mener une évaluation plus souple des résultats de REN sur les sorties de ROC bruitées et leurs corrections automatiques, nous avons employé des mesures de distance. Nous avons privilégié les métriques de Jaccard et cosinus car elles sont considérées comme des mesures de référence quand il est question de (dis)similarité textuelle \cite{buscaldi2020calcul}. Les sous-figures \ref{fig:ELTeC-Por_REF_jaccard}-\ref{fig:ELTeC-Por_REF_cosinus} illustrent les résultats obtenus pour les textes de référence et les différentes versions de ROC pour le sous-corpus ELTeC portugais avec les mesures de jaccard et cosinus, et les résultats pour les autres sous-corpus de notre études sont similaires.
 
 \begin{figure}[h!]
@@ -303,7 +304,7 @@ La figure \ref{fig:distances_ref_roc} laisse apercevoir que les résultats pour 
 
 Enfin, il apparaît en comparant les figures \ref{fig:distances_ref_roc} et \ref{fig:Cosinus-spacy-lg} que la configuration Tesseract--\texttt{spaCy\_lg}, en utilisant pour chacun des outils le modèle de langue adapté à la langue du sous-corpus étudié, soit la plus convaincante en considération du temps de calcul et des résultats. Pour 5 604 472 tokens\footnote{soit le texte brut pour le sous-corpus français de la version de référence et les versions Kraken et Tess. fr.} \texttt{stanza} prend 10 heures à fournir des résultats, alors que \texttt{spaCy} met 1 heure (Mémoire: 16Gio, CPU: Core™i5-1135G7). La lecture des tableaux \ref{tab:EN_contamines_Variantes} et \ref{tab:FP_VP} reportant les analyses manuelles met en évidence des résultats équivalents. 
 
-\subsection{\textsc{NERVAL} : Précision, rappel, f-score.}
+\subsubsection{\textsc{NERVAL} : Précision, rappel, f-score.}
 \label{subsec:NERVAL_COR-OCR-IMPACT-NER}
 \textbf{Dans le but de calculer la précision, le rappel et d'obtenir un f-score nous avons utilisé l'outil \textsc{Nerval}\footnote{\url{https://gitlab.com/teklia/nerval}}, évalué par \cite{koudoro2022reconnaissance}. Si cette évaluation présente quelques biais de l'outil, \textsc{Nerval} apparaît tout de même comme un très bon moyen de dépasser les problèmes d'alignements entre les résultats des différentes configurations à comparer pour calculer le f-score. \textsc{Nerval} est développé en Python, et est conçu pour l'évaluation de sorties de REN sur du texte bruité avec la distance de Levenshtein. Les fichiers des textes de références et des textes versions ROC et ROC corrigées sont annotés au format IOB avec \texttt{spaCy\_lg}. Les fichiers des textes de références ainsi annotés font office de vérité de terrain.
 Les premières observations des résultats semblent confirmer que la correction automatique n'est pas forcément un gain pour la REN, en effet le f-score pour les configurations de Tesseract dans les tableaux \ref{tab:NERVAL_DAUDET} et \ref{tab:NERVAL_THACKERAY} perd en moyenne 0.06 points. À l'inverse, le f-score sur les configurations de Kraken semble légèrement augmenter, ce constat venant illustrer le phénomène de creux que nous évoquions dans la partie \ref{sec:distances_creux}.}
@@ -322,23 +323,3 @@ Les premières observations des résultats semblent confirmer que la correction 
      \label{tab:NERVAL_THACKERAY}
  \end{table}
 
-%------------------ déplacé dans la sous-section 6.1 le 21/02/24
-
-%\subsection{\textsc{NERVAL} : Précision, rappel, f-score.}
-%
-%Dans le but de calculer la précision, le rappel et d'obtenir un f-score nous avons utilisé l'outil \textsc{Nerval}\footnote{\url{https://gitlab.com/teklia/nerval}}, évalué par \cite{koudoro2022reconnaissance}. Si cette évaluation présente quelques biais de l'outil, \textsc{Nerval} apparaît tout de même comme un très bon moyen de dépasser les problèmes d'alignements entre les résultats des différentes configurations à comparer pour calculer le f-score. \textsc{Nerval} est développé en Python, et est conçu pour l'évaluation de sorties de REN sur du texte bruité avec la distance de Levenshtein. Les fichiers des textes de références et des textes versions ROC et ROC corrigées sont annotés au format IOB avec \texttt{spaCy\_lg}\footnote{Le choix de cet outil est déterminé par la multitude des modèles, leurs performances très solides et leur facilité de la prise en main par les chercheur?euses en HN et TAL \cite{DBLP:conf/gis/Koudoro-Parfait21}.}. Les fichiers des textes de références ainsi annotés font office de vérité de terrain.
-%Les premières observations des résultats semblent confirmer que la correction automatique n'est pas forcément un gain pour la REN, en effet le f-score pour les configurations de Tesseract dans les tableaux \ref{tab:NERVAL_DAUDET} et \ref{tab:NERVAL_THACKERAY} perd en moyenne 0.06 points. À l'inverse, le f-score sur les configurations de Kraken semble légèrement augmenter, ce constat venant illustrer le phénomène de creux que nous évoquions dans la partie \ref{sec:distances_creux}.
-%
-%\begin{table}[h!]
-%     \centering
-%\input{TAB/NERVAL_DAUDET}
-%     \caption{Résultat de \textsc{NERVAL} sur {\normalfont Le petit chose}, Daudet.}
-%     \label{tab:NERVAL_DAUDET}
-% \end{table}
-%
-%   \begin{table}[h!]
-%     \centering
-%\input{TAB/NERVAL_THACKERAY}
-%     \caption{Résultat de \textsc{NERVAL} sur {\normalfont Vanity Fair}, Thackeray.}
-%     \label{tab:NERVAL_THACKERAY}
-% \end{table}
