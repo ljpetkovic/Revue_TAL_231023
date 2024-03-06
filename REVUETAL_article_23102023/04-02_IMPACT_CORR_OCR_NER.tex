@@ -24,7 +24,7 @@ Dans cette partie nous évaluons manuellement l'impact de deux types de modèles
 
 \subsection{Typologie des contaminations de corrections de ROC issues de l'analyse manuelle}
 
-La colonne \textit{Brut} du tableau \ref{tab:ELTeC} montre qu'il y a globalement plus de types d'entités récupérées par spaCy sur Kraken (CER moyen :) que sur Tesseract (CER moyen :), ce qui vient étayer l'hypothèse que plus la qualité de la transcription est mauvaise plus les variations orthographiques sur les EN peuvent être nombreuses et plus il y a d'hapax dans les résultats de la REN. Nous venons à penser que si la correction automatique fonctionne bien le nombre des hapax sera réduit dans les sorties de REN.
+La colonne \textit{Brut} du tableau \ref{tab:ELTeC} montre qu'il y a globalement plus de types d'entités récupérées par \texttt{spaCy} sur Kraken (CER moyen :) que sur Tesseract (CER moyen :), ce qui vient étayer l'hypothèse que plus la qualité de la transcription est mauvaise plus les variations orthographiques sur les EN peuvent être nombreuses et plus il y a d'hapax dans les résultats de la REN. Nous venons à penser que si la correction automatique fonctionne bien le nombre des hapax sera réduit dans les sorties de REN.
 
 En partant de ce postulat, nous observons que globalement les modèles Jspll pré-entraînés et entraînés sur ELTeC pour chaque langue permettent d'avoir des transcriptions d'une meilleure qualité que le texte brut car le nombre des types d'EN, donc des hapax, diminue. 
 
@@ -38,7 +38,7 @@ Enfin, dans le cas du sous-corpus ELTeC portugais, comme nous l'avons souligné 
     \centering
     \small
     \input{TAB/corpus-EN}
-    \caption{Nombre d'EN (types) repérées par \texttt{spaCy\_lg} pour les sous-corpus ELTeC anglais, français et portugais. N/A -- modèle JamSpell pré-entrainé pour le portugais non disponible.}
+    \caption{Nombre d'EN (types) avec les pourcentages d'EN issues des EN brutes et repérées par \texttt{spaCy\_lg} pour les sous-corpus ELTeC anglais, français et portugais. N/A -- modèle JamSpell pré-entrainé pour le portugais non disponible.}
     \label{tab:ELTeC}
 \end{table}
 
