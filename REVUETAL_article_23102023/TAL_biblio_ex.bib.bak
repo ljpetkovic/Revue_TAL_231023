@@ -591,7 +591,7 @@ HAL_VERSION = {v1},
   author       = {Montani, Ines and
                     
                   O'Leary McCann, Paul  and
-                  geovedi, Jim  and
+                  Govedi, Jim  and
                   O'Regan, Jim  and
                   Samsonov, Maxim  and
                   Orosz, György  and
@@ -3055,5 +3055,6 @@ pages="234--241",
 
 @misc{nerval2021, 
 	title = {Nerval: a python library for named-entity recognition evaluation on noisy texts}, 
-	author = {Miret, Blanche and Kermorvant},
+	author = {Miret, Blanche and Kermorvant, Christopher},
+	year= {2021},
 	url = {http://gitlab.com/teklia/ner/nerval}
