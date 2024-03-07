@@ -1,5 +1,3 @@
-%(où, sous le terme, \og{}configuration\fg{} on désigne l’association de la version de ROC et
-%de la REN, p. ex. les résultats de la configuration Kraken-\texttt{spaCy\_lg})
 \section{Évaluation de l'impact des contaminations de ROC sur la REN : problèmes d'alignement} 
 \label{sec:OCR-IMPACT-NER}
 \textbf{La présente section décrit les outils de ROC et de REN utilisés dans le cadre de notre étude. Ensuite, nous proposons une évaluation manuelle de la REN, en introduisant la problématique des évaluations (trop) strictes, suivie d'une typologie des contaminations de ROC pour une interprétation fine de l'évaluation stricte. Enfin, nous évaluons de manière supervisée l'influence du bruit ROC sur la REN.}
@@ -45,18 +43,11 @@ Enfin, il peut arriver, plus rarement, que des entités ne soient pas détectée
 %%%________ Plus d'EN sur texte bruité
 \subsection{Usage des intersections : une évaluation trop stricte ?}
 \label{subsec:inter_OCR-IMPACT-NER}
-%%__________________à intégrer_________________________
-Les textes de référence ont été annotés automatiquement avec \texttt{spaCy\_lg} 
-%et \texttt{stanza} 
-et nous nous en servons comme vérité terrain \textbf{(jeu de données de REN constitué pour l'évaluation)}. Les versions ROC ont aussi été annotées avec ce moteur de REN.
-Nous avons calculé les intersections pour chacun des sous-corpus (ELTeC français, anglais et portugais, et TGB) de manière globale. 
-Pour ce faire nous avons fait correspondre les entités de chacun des textes de référence avec celles de leurs versions ROC. Ainsi, dans le cas du sous-corpus ELTeC français l'EN ``Paris'' repérée dans le texte de référence pour Daudet, n'est pas la même que l'EN ``Paris'' récupérée dans le texte de référence de Noailles. Il en va de même pour les différentes autres configurations (\textit{cf.} le tableau \ref{tab:config}).
-Les cercles ``EN Réf'' comprennent les EN issues des textes de référence -- autrement dit les VVP. Les cercles ``EN\_nom-de-ROC'' comportent les EN considérées comme des VFP, néanmoins ces ensembles comprennent aussi des EN contaminées -- autrement dit des FFP avec problème de liage (p.\ ex.\ ``Dconshire'' pour ``Devonshire''). Ces différents cas sont décrits en détail dans la sous-section \ref{subsec:TYPO_CONTAMINATIONS_ALIGNEMENT}.
-%et la matrice de confusion (tableau \ref{tab:typo_eval}).
+Pour automatiser nos analyses et pouvoir les conduire à plus grande échelle nous avons décidé de calculer et représenter les intersections entre les ensembles des EN reconnues sur la version de Réf. et celles obtenues sur les versions de ROC. Les versions de ROC et les textes de référence ont été annotés automatiquement avec \texttt{spaCy\_lg}. Nous nous servons de ces derniers comme vérité terrain \footnote{Jeu de données de REN constitué pour l'évaluation}. Nous avons calculé les intersections pour chacun des corpus (ELTeC français, anglais et portugais, et TGB) de manière globale. 
+Pour ce faire nous avons fait correspondre les entités de chacun des textes de référence avec celles de leurs versions ROC. Ainsi, dans le cas du sous-corpus ELTeC français l'EN ``Paris'' repérée dans le texte de référence pour Daudet, n'est pas la même que l'EN ``Paris'' récupérée dans le texte de référence de Noailles. Il en va de même pour les différentes autres configurations (où, sous le terme, \og{}configuration\fg{} on désigne l’association de la version de ROC et de la REN, p. ex. les résultats de la configuration Kraken-\texttt{spaCy\_lg}). \textit{cf.} le tableau \ref{tab:config}).
 
-%%__________________à intégrer_________________________
-
-Pour automatiser nos analyses et pouvoir les conduire à plus grande échelle nous avons décidé de calculer et représenter les intersections entre les ensembles des EN reconnues sur la version de Réf. et celles obtenues sur les versions de ROC. La figure \ref{fig:intersection_globale-kraken-tess} rend compte de cette évaluation stricte dans laquelle chaque token de l'ensemble de Réf. est comparé avec chaque token de l'ensemble de ROC. Pour être considéré comme un VP une EN de l'ensemble de ROC doit être orthographiée de manière identique à une EN de l'ensemble de Réf. Dans ce graphique, le cercle de gauche qui comprend les EN de la Réf. et l'intersection entre les deux cercles sont considérés comme représentant les VP. Le cercle de droite qui représente les EN récupérées uniquement sur la version de ROC est considéré comme comportant les FP de la sortie de REN. Cependant, lorsque nous avons observé les résultats il s'est avéré que (i) les EN issues de la ROC portant des contaminations et n'étant pas strictement orthographiées comme leur pendant de référence et (ii) les EN qui sont bien récupérées sur la version ROC et pas sur la Réf. même rares sont considérées par la machine comme des FP. Cet état de fait créer donc un biais dans nos évaluations. Entre autre exemple l'EN \textit{Ormeaux} n'est pas strictement identique à sa version contaminée \textit{Ormaeuux} et est compté comme FP et ajouté à la liste des hapax, ce qui vient gonfler artificiellement le nombre des FP dans l'ensemble des EN de la ROC. Il s'agit en fait de Faux Faux Positif autrement dit de Vrai Positif masqués par la rectitude de l'alignement inhérent au mode d'évaluation adopté. Enfin, dans l'ensemble des EN reconnues sur les versions de ROC nous remarquons que la majorité des EN présentes dans les résultats obtenus sur la ROC sont effectivement présentes dans les résultats obtenus sur les versions de référence, comme le présente le tableau \ref{tab:FP_VP}. Il n'y a donc pas de véritable déperdition des VP.
+La figure \ref{fig:intersection_globale-kraken-tess} rend compte de cette évaluation stricte dans laquelle chaque token de l'ensemble de Réf. est comparé avec chaque token de l'ensemble de ROC. Pour être considéré comme un VP une EN de l'ensemble de ROC doit être orthographiée de manière identique à une EN de l'ensemble de Réf. Dans ce graphique, le cercle de gauche - ``EN Réf'' - qui comprend les EN de la Réf. et l'intersection entre les deux cercles sont considérés comme représentant les VP. Le cercle de droite - ``EN\_nom-de-ROC'' - qui représente les EN récupérées uniquement sur la version de ROC est considéré comme comportant les FP de la sortie de REN. Cependant, lorsque nous avons observé les résultats il s'est avéré que (i) les EN issues de la ROC portant des contaminations et n'étant pas strictement orthographiées comme leur pendant de référence et (ii) les EN qui sont bien récupérées sur la version ROC et pas sur la Réf. même rares sont considérées par la machine comme des FP. Cet état de fait créer donc un biais dans nos évaluations. Entre autres exemples l'EN \textit{Ormeaux} n'est pas strictement identique à sa version contaminée \textit{Ormaeuux} ou ``\textit{Dconshire}'' pour ``\textit{Devonshire}''. Ces EN contaminées sont comptées comme des FP et ajoutées à la liste des hapax, ce qui vient gonfler artificiellement le nombre des FP dans l'ensemble des EN de la ROC. Il s'agit en fait de Faux Faux Positif (FFP) autrement dit de VP masqués par la rectitude de l'alignement inhérent au mode d'évaluation adopté. Ces différents cas sont décrits en détail dans la sous-section \ref{subsec:Typologie_OCR-IMPACT-NER}.
+ Enfin, dans l'ensemble des EN reconnues sur les versions de ROC nous remarquons que la majorité des EN présentes dans les résultats obtenus sur la ROC sont effectivement présentes dans les résultats obtenus sur les versions de référence, comme le présente le tableau \ref{tab:FP_VP}. Il n'y a donc pas de véritable déperdition des VP.
 
 %%%______________ Plus d'EN mais est-ce que c'est du bruit ?
 \begin{table}[h!]
@@ -174,7 +165,7 @@ Pour automatiser nos analyses et pouvoir les conduire à plus grande échelle no
 
 \subsection{Typologie des contaminations de ROC pour une interprétation fine de l'évaluation stricte }
 \label{subsec:Typologie_OCR-IMPACT-NER}
-En regard des différentes observations que nous venons d'apporter et parce que nous souhaitons rendre compte de la complexité de ces cas réels, nous proposons d'établir une typologie pour l'évaluation des contaminations de ROC sur la REN, élargissant la classification standard des vrais/faux positifs/négatifs. Si les FP sont qualifiés de bruit et les FN de silence, nous avons repéré qu'il existe différents types de bruit et de silence. D'autre part cette typologie permettrait d'établir quels sont les vrais bruits autrement dit les vrais FP et les vrais silences les vrais VN. 
+En regard des différentes observations que nous venons d'apporter et parce que nous souhaitons rendre compte de la complexité de ces cas réels, nous proposons d'établir une typologie pour l'évaluation des contaminations de ROC sur la REN, élargissant la classification standard des vrais/faux positifs/négatifs. Si les FP sont qualifiés de bruit et les FN de silence, nous avons repéré que l'évaluation par calcul des intersection cache des phénomènes de surestimation ou sous-estimation du bruit et du silence dans les données. Cette typologie permettrait d'établir quels sont les vrais bruits autrement dit les vrais FP et les vrais silences les vrais VN. 
 
 
 \begin{itemize}
@@ -213,33 +204,6 @@ En regard des différentes observations que nous venons d'apporter et parce que 
 	\end{description}
 
 \end{itemize}
-
-%\begin{description}
-%
-%  \item[Vrais vrais positifs VP (VVP)]: EN correctement détectées dans les deux versions.
-%  
-%  %\item[Vrais vrais négatifs VN (VVN)]: Aucune EN n'est détectée par le système dans aucune version du texte, car il n'y en a pas.
-%
-%  \item[Vrais faux positifs FP (VFP)]: VRAI BRUIT EN détectées  à tort dans la version de ROC
-%
-%  \item[Vrais faux négatifs FN (VFN)]:  SILENCE EN détectées dans le texte de référence mais non détecté à tort dans la version de ROC.
-
-%__________________________
-
-
-%  \item[Faux vrais positifs (FVP)]:  BRUIT EN incorrectement détectées dans les deux versions.
-
-%  \item[Faux vrais négatifs (FVN)] :  Silence total EN manquantes à tort dans les deux versions du texte.
-%  
-
-%  
-%  \item[Faux faux négatifs (FFN)]: FAUX SILENCE EN  détectées à tort dans le texte de référence mais pas dans les versions de ROC.
-%  
-
-%    \item[Faux faux positifs (FFP)]: FAUX BRUIT EN détectées à raison dans les versions de ROC mais non détectées dans le texte de référence (silence dans la référence ou EN contaminées détectées dans la version de ROC).
-%
-%    
-%\end{description}
 
 Il existe un dernier cas des EN qui n'ont pas été transcrites par l'outil de ROC mais qui sont dans la Réf. Cette dernière catégorie est problématique car il ne s'agit pas véritable d'un FN de l'outil de REN, mais d'un FN de l'outil de ROC. 
 Le cas de la version Kraken de Reynolds mets en exergue cette observation. Nous avons constaté que seuls 111 types d'EN ont été récupérés dans la configuration Kraken-\texttt{spaCy\_lg}, et pour cause plus de 90\% des pages du PDF n'ont pas été OCRisées très probablement à cause du flou très visible sur les pages concernées. D'autres PDF ont connu le même sort dans de très moindre proportions. De ce fait, une partie des entités manquantes dans les différentes configurations étudiées peuvent être dues non pas à la REN à proprement parler, mais à des transcriptions incomplètes. Nous n'avons pas mesuré l'impact de cette non transcription car il nous est apparu qu'elle était en faible proportion sur tout le corpus et le texte Reynolds était le seul cas très problématique. 
