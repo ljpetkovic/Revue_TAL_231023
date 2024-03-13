@@ -2,8 +2,7 @@
 
 \section{Analyse de l'impact des corrections de ROC sur la REN}
 \label{sec:COR-OCR-IMPACT-NER}
-
-\textbf{Dans cette section, nous présentons l'outil Jamspell (Jspll) et les modèles de langue que nous utilisons pour la correction automatique des transcriptions de ROC bruitées. Nous proposons plusieurs manières d'évaluer des résultats de REN sur des  corrections automatiques de ROC bruitées. D'abord nous exposons une typologie des contaminations de corrections de ROC issues de l'analyse manuelle résultats. Bien que nous ayons déterminé qu'il s'agit d'une manière trop stricte d'évaluer la REN en contexte bruité nous réemployons les intersections. Nous utilisons  des mesures de distance textuelle pour mener une évaluation plus souple. Enfin, nous calculons la précision, le rappel et le F-score à l'aide de l'outil \textsc{Nerval}.}
+\textbf{Cette section présente l'outil JamSpell (Jspll) et les modèles de langue utilisés pour la correction automatique de ROC et la performance de cet outil. Nous réutilisons le même procédé d'évaluation des contaminations de corrections de ROC issues de l'analyse manuelle. Bien que nous ayons déterminé qu'il s'agit d'une manière trop stricte d'évaluer la REN en contexte bruité nous réemployons les intersections. Nous utilisons  des mesures de distance textuelle pour mener une évaluation plus souple. Enfin, nous calculons la précision, le rappel et le F-score à l'aide de l'outil \textsc{Nerval}.}
 
 \subsection{Outils de la correction des sorties ROC utilisés dans le cadre de cette étude}
 \label{subsec:outils_COR-OCR-IMPACT-NER}
