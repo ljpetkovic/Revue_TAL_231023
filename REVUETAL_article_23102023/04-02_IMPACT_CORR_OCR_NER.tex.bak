@@ -25,14 +25,14 @@ Nous avons entraîné un modèle de langue pour Jspll pour chacune des trois lan
 \label{subsec:Typologie_COR-OCR-IMPACT-NER}
 
 \textbf{En observant les exemples de correction de ROC présentés dans cette sous-section, nous constatons certaines fluctuations au niveau de la performance du correcteur automatique.}
-Notons le cas particulier de l'EN ``Meunet-sur-Vatan'' dont les déclinaisons différentes en fonction du type de correcteur automatique sont indiquées dans le tableau \ref{tab:erreurs_corr_ELTeCFra}. Nous nous apercevons que les différentes versions de cette EN, contaminée par les différentes OCRisations et sur-corrections, n'ont pas du tout été extraites par \texttt{spaCy\_lg} \textbf{sous leurs formes correctes}.
+Notons le cas particulier de l'EN ``Meunet-sur-Vatan'' dont les déclinaisons différentes en fonction du type de correcteur automatique sont indiquées dans le tableau \ref{tab:erreurs_corr_ELTeCFra}. Nous nous apercevons que les différentes versions de cette EN, contaminée par les différentes OCRisations et sur-corrections, n'ont pas du tout été extraites par \texttt{spaCy\_lg}.
 %¨
 
 \begin{table}[h!]
     \small
     \centering
    \input{TAB/erreurs_corr_ELTeCFra}
-     \caption{Exemples illustrant l'impact de la correction de la ROC sur la REN avec \texttt{spaCy\_lg}. {\normalfont La petite Jeanne}, Carraud.}
+     \caption{Exemples illustrant l'impact de la correction de ROC sur la REN avec \texttt{spaCy\_lg}. {\normalfont La petite Jeanne}, Carraud.}
     \label{tab:erreurs_corr_ELTeCFra}
 \end{table}
 
@@ -64,7 +64,7 @@ De façon similaire, nous observons dans le tableau \ref{tab:erreurs_corr_ELTeCE
     \label{tab:res-analyses}
 \end{table}
 
-Quelques exemples sont visibles dans le tableau \ref{tab:typologie_erreurs-corr_ELTeCEng}, 
+\textbf{Pour illustrer ce propos, q}uelques exemples sont \textbf{indiqués} dans le tableau \ref{tab:typologie_erreurs-corr_ELTeCEng}, 
 % et \ref{tab:typologie_erreurs_corr_ELTeCFra}
 parmi lesquels se distinguent les sur-corrections ``Conspire'' 
 % et ``Earlier'' 
@@ -76,7 +76,7 @@ dans ELTeC anglais), ainsi que ``Martincourt'' (au lieu de ``Morlincourt'' dans 
 \small
     \centering
    \input{TAB/typologie_erreurs-corr_ELTeCEng}
-    \caption{Exemples illustrant la typologie de l'impact de la correction de ROC sur la REN avec \texttt{spaCy\_lg}. Configuration : Jspll -- correction avec le modèle pré-entraîné de JamSpell, ELTeC -- correction avec le modèle entraîné sur une partie de chaque sous-corpus ELTeC. Formes de références des entités : London, Devonshire, Morlincourt. {\normalfont Home influence}, Aguillar et {\normalfont Mon village}, Adam.}
+    \caption{Exemples illustrant la typologie de l'impact de la correction de ROC sur la REN avec \texttt{spaCy\_lg}. Configuration : Jspll -- correction avec le modèle pré-entraîné de JamSpell, ELTeC -- correction avec le modèle entraîné sur une partie de chaque corpus ELTeC. Formes de références des entités : London, Devonshire, Morlincourt. {\normalfont Home influence}, Aguillar et {\normalfont Mon village}, Adam.}
     \label{tab:typologie_erreurs-corr_ELTeCEng}
 \end{table}
 
@@ -102,7 +102,7 @@ dans ELTeC anglais), ainsi que ``Martincourt'' (au lieu de ``Morlincourt'' dans 
 \subsection{Analyses quantitatives des contaminations de ROC et de leurs corrections}
 \label{subsec:quantitative_COR-OCR-IMPACT-NER}
 \subsubsection{La diminution des hapax comme indicateur de la performance de la correction automatique}
-La colonne \textit{Brut} du tableau \ref{tab:ELTeC} montre qu'il y a globalement plus de types d'entités récupérées par \texttt{spaCy} sur Kraken (CER moyen :) que sur Tesseract (CER moyen :), ce qui vient étayer l'hypothèse que plus la qualité de la transcription est mauvaise plus les variations orthographiques des EN peuvent être nombreuses et plus il y a d'hapax dans les résultats de la REN. Nous venons à penser que si la correction automatique fonctionne bien le nombre des hapax sera réduit dans les sorties de REN, puisque la variabilité du vocabulaire sera réduite.
+La colonne \textit{Brut} du tableau \ref{tab:ELTeC} montre qu'il y a globalement plus de types d'entités récupérées par \texttt{spaCy} sur Kraken (CER médian pour ELTeC-fra: 0,10) que sur Tesseract (CER médian :0,05), ce qui vient étayer l'hypothèse que plus la qualité de la transcription est mauvaise plus les variations orthographiques des EN peuvent être nombreuses et plus il y a d'hapax dans les résultats de la REN. Nous venons à penser que si la correction automatique fonctionne bien le nombre des hapax sera réduit dans les sorties de REN, puisque la variabilité du vocabulaire sera réduite.
 
 En partant de ce postulat, nous observons que :
 \begin{itemize}

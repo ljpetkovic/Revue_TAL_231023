@@ -56,19 +56,67 @@
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 \resizebox{\textwidth}{!}{
-\begin{tabular}{|c|rrrrr|rrrrr|}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+%\begin{tabular}{|c|rrrrr|rrrrr|}
+%\hline
+%\multicolumn{1}{|l|}{\multirow{2}{*}{}} &
+%  \multicolumn{5}{c|}{Kraken} &
+%  \multicolumn{5}{c|}{Tesseract} \\ \cline{2-11} 
+%\multicolumn{1}{|l|}{} &
+%  \multicolumn{1}{c|}{Brut} &
+%  \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}JamSpell \\ pré-entraîné\end{tabular}} &
+%  \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}JamSpell-\\ ELTeC\end{tabular}} &
+%  \multicolumn{1}{c|}{Brut} &
+%  \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}JamSpell\\ pré-entraîné\end{tabular}} &
+%  \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}JamSpell\\ ELTeC\end{tabular}} \\ \hline
+%Anglais &
+%  \multicolumn{1}{r|}{3 121} &
+%  \multicolumn{1}{r|}{1 691} &
+%  \multicolumn{1}{r|}{-46\%} &
+%  \multicolumn{1}{r|}{1 446} &
+%  -54\% &
+%  \multicolumn{1}{r|}{2 789} &
+%  \multicolumn{1}{r|}{2 160} &
+%  \multicolumn{1}{r|}{-23\%} &
+%  \multicolumn{1}{r|}{1 882} &
+%  -35\% \\ \hline
+%Français &
+%  \multicolumn{1}{r|}{7 059} &
+%  \multicolumn{1}{r|}{5 317} &
+%  \multicolumn{1}{r|}{-25\%} &
+%  \multicolumn{1}{r|}{\textbf{6 755}} &
+%  \textbf{-5\%} &
+%  \multicolumn{1}{r|}{4 884} &
+%  \multicolumn{1}{r|}{4 634} &
+%  \multicolumn{1}{r|}{-5\%} &
+%  \multicolumn{1}{r|}{\textbf{4 917}} &
+%  \textbf{+0,7\%} \\ \hline
+%Portugais &
+%  \multicolumn{1}{r|}{10 108} &
+%  \multicolumn{1}{r|}{N/A} &
+%  \multicolumn{1}{r|}{N/A} &
+%  \multicolumn{1}{r|}{6 147} &
+%   &
+%  \multicolumn{1}{r|}{4 006} &
+%  \multicolumn{1}{r|}{N/A} &
+%  \multicolumn{1}{r|}{N/A} &
+%  \multicolumn{1}{r|}{3 594} &
+%   \\ \hline
+%\end{tabular}
+\begin{tabular}{|l|llrlr||llrlr|}
 \hline
-\multicolumn{1}{|l|}{\multirow{2}{*}{}} &
-  \multicolumn{5}{c|}{Kraken} &
+ &
+  \multicolumn{5}{c||}{Kraken} &
   \multicolumn{5}{c|}{Tesseract} \\ \cline{2-11} 
-\multicolumn{1}{|l|}{} &
+\multirow{-2}{*}{} &
   \multicolumn{1}{c|}{Brut} &
   \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}JamSpell \\ pré-entraîné\end{tabular}} &
-  \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}JamSpell-\\ ELTeC\end{tabular}} &
+  \multicolumn{2}{c||}{\begin{tabular}[c]{@{}c@{}}JamSpell-\\ ELTeC\end{tabular}} &
   \multicolumn{1}{c|}{Brut} &
   \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}JamSpell\\ pré-entraîné\end{tabular}} &
-  \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}JamSpell\\ ELTeC\end{tabular}} \\ \hline
-Anglais &
+  \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}JamSpell\\ ELTeC\end{tabular}} \\ \hline\hline
+\multicolumn{1}{|c|}{Anglais} &
   \multicolumn{1}{r|}{3 121} &
   \multicolumn{1}{r|}{1 691} &
   \multicolumn{1}{r|}{54\%} &
@@ -79,7 +127,14 @@ Anglais &
   \multicolumn{1}{r|}{77\%} &
   \multicolumn{1}{r|}{1 882} &
   65\% \\ \hline
-Français &
+CER médian &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{2}{l|}{} &
+  \multicolumn{2}{l||}{} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{2}{l|}{} &
+  \multicolumn{2}{l|}{} \\ \hline\hline
+\multicolumn{1}{|c|}{Français} &
   \multicolumn{1}{r|}{7 059} &
   \multicolumn{1}{r|}{5 317} &
   \multicolumn{1}{r|}{75\%} &
@@ -90,12 +145,30 @@ Français &
   \multicolumn{1}{r|}{95\%} &
   \multicolumn{1}{r|}{\textbf{4 917}} &
   \textbf{100,7\%} \\ \hline
-Portugais &
+CER médian &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{2}{l|}{} &
+  \multicolumn{2}{l||}{} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{2}{l|}{} &
+  \multicolumn{2}{l|}{} \\ \hline\hline
+\multicolumn{1}{|c|}{Portugais} &
   \multicolumn{1}{r|}{10 108} &
-  \multicolumn{2}{r|}{N/A} &
-  \multicolumn{2}{r|}{6 147} &
+  \multicolumn{1}{r|}{N/A} &
+  \multicolumn{1}{r|}{N/A} &
+  \multicolumn{1}{r|}{6 147} &
+   &
   \multicolumn{1}{r|}{4 006} &
-  \multicolumn{2}{r|}{N/A} &
-  \multicolumn{2}{r|}{3 594} \\ \hline
+  \multicolumn{1}{r|}{N/A} &
+  \multicolumn{1}{r|}{N/A} &
+  \multicolumn{1}{r|}{3 594} &
+   \\ \hline
+CER médian &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{2}{l|}{} &
+  \multicolumn{2}{l||}{} &
+  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
+  \multicolumn{2}{l|}{} &
+  \multicolumn{2}{l|}{} \\ \hline
 \end{tabular}
 }
