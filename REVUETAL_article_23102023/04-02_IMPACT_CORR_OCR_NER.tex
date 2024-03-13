@@ -225,33 +225,30 @@ Dans le but d'approfondir nos évaluation et de dépasser les verrous de l'éval
 
 \begin{figure}[h!]
    \centering
-      \begin{subfigure}{0.45\textwidth}
-  \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/ELTeC-Por_REF_jaccard.png} 
-        \caption{ELTeC-Por Jaccard}
-        \label{fig:ELTeC-Por_REF_jaccard}
-   \end{subfigure}
-    \begin{subfigure}{0.5\textwidth}
-  \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/ELTeC-Por_REF_cosinus.png} 
-        \caption{ELTeC-Por cosinus}
-        \label{fig:ELTeC-Por_REF_cosinus}
-   \end{subfigure}   
-%    \caption{Distances calculées entre les textes de référence et les versions de ROC.}
-\label{fig:distance_texte}
-%\end{figure}
-
 %%% TODO GL: Alignement des figures boites à moustache
-%\begin{figure}
-%   \centering
          \begin{subfigure}{0.45\textwidth}
-  \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/TGB_REF_jaccard.png} 
-        \caption{TGB Jaccard}
+  \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/ELTeC-Fra_REF_cosinus.png} 
+        \caption{ELTeC-Fra cosinus}
    \end{subfigure}
     \begin{subfigure}{0.5\textwidth}
   \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/TGB_REF_cosinus.png} 
         \caption{TGB cosinus}
    \end{subfigure}
    
-    \caption{Distances calculées entre les textes de référence et les versions de ROC.}
+    
+        \begin{subfigure}{0.45\textwidth}
+  \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/ELTeC-Eng_REF_cosinus.png} 
+        \caption{ELTeC-Eng cosinus}
+        \label{fig:ELTeC-_REF_jaccard}
+   \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+  \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/ELTeC-Por_REF_cosinus.png} 
+        \caption{ELTeC-Por cosinus}
+        \label{fig:ELTeC-Por_REF_cosinus}
+   \end{subfigure}   
+
+\label{fig:distance_texte}
+ \caption{Distances calculées entre les textes de référence et les versions de ROC.}
     \label{fig:distances_ref_roc}
 \end{figure}
 
@@ -264,7 +261,12 @@ Après une observation des différentes mesures de distance présentées pour ch
   \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/ELTeC-Fra_spacy3.5.1_cosinus.png} 
         \caption{ELTeC-Fra \texttt{spaCy} cosinus}
    \end{subfigure}
- \begin{subfigure}{0.45\textwidth}
+     \begin{subfigure}{0.5\textwidth}
+  \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/TGB_spaCy3.5.1_cosinus.png} 
+        \caption{TGB \texttt{spaCy} cosinus}
+   \end{subfigure}
+   
+    \begin{subfigure}{0.45\textwidth}
   \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/ELTeC-Eng_spacy3.5.1_cosinus.png}
         \caption{ELTeC-Eng \texttt{spaCy} cosinus}
    \end{subfigure}
@@ -273,10 +275,7 @@ Après une observation des différentes mesures de distance présentées pour ch
         \caption{ELTeC-Por \texttt{spaCy} cosinus} 
          \label{fig:ELTeC-Por-spaCy-cosinus}
    \end{subfigure}
-     \begin{subfigure}{0.5\textwidth}
-  \includegraphics[height=.65\textwidth]{IMAGES/Boite-moustache/TGB_spaCy3.5.1_cosinus.png} 
-        \caption{TGB \texttt{spaCy} cosinus}
-   \end{subfigure}
+   
     \caption{Distance Cosinus pour \texttt{spaCy\_lg} sur chaque sous-corpus globalement.}
 %    \label{fig:Cosinus-spacy-lg-stanza}
 \label{fig:Cosinus-spacy-lg}
