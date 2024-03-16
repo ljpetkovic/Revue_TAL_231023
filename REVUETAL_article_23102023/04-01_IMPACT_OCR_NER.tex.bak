@@ -1,26 +1,24 @@
 \section{Évaluation de l'impact des contaminations de ROC sur la REN : problèmes d'alignement} 
 \label{sec:OCR-IMPACT-NER}
-\textbf{Cette section décrit les outils de ROC et de REN, dont nous proposons des évaluations manuelle et automatique. Nous exposons des problématiques liées aux types d'évaluations stricte ou souple utilisés, ainsi qu'une typologie des contaminations de ROC pour une interprétation fine de l'évaluation stricte.}
+Cette section décrit les outils de ROC et de REN, dont nous proposons des évaluations manuelle et automatique. Nous exposons des problématiques liées aux types d'évaluations stricte ou souple utilisés, ainsi qu'une typologie des contaminations de ROC pour une interprétation fine de l'évaluation stricte.
 
 \subsection{Outils de ROC et REN utilisés dans le cadre de cette étude}
 \label{subsec:outils_OCR-IMPACT-NER}
 
 \subsubsection{Les outils de ROC}
-\textbf{Afin de produire différentes transcriptions de ROC, nous avons utilisé deux systèmes disponibles gratuitement : Kraken \cite{kiessling2019kraken} et Tesseract \cite{smith2007overview}. Kraken est un outil pour lequel il existe différents modèles neuronaux,
-dont un modèle pour le français du XVII\ieme{}siècle \cite{gabay:hal-02577236}\footnote{\url{https://github.com/Heresta/OCR17plus/tree/main/Model}} 
+Les transcriptions de ROC ont été produites avec deux systèmes disponibles gratuitement : Kraken \cite{kiessling2019kraken} et Tesseract \cite{smith2007overview}. Bien qu'il existe un modèle pour le français du XVII\ieme{}siècle \cite{gabay:hal-02577236}\footnote{\url{https://github.com/Heresta/OCR17plus/tree/main/Model}}, ainsi que le modèle Gallicorpora \cite{pinche_2022_7410529}, nous ne les avons pas jugés adaptés à notre corpus, et donc nous utilisons le modèle de base. Ce modèle permet d'opérer la segmentation\footnote{Le modèle de segmentation est constitué d'un réseau d'étiquetage en graines (angl. \textit{seed-labeling network}), qui est un \textit{U-net} (\og{}réseau entièrement convolutionnel\fg{}) modifié \cite{ronneberger2015} sur la base d'un réseau neuronal résiduel (ResNet) à 34 couches \cite{he2016}, pré-entraîné sur ImageNet.} et la transcription\footnote{Le modèle de transcription fonctionne comme un classificateur de séquences sans segmentation qui utilise un réseau neuronal artificiel pour mapper une image d'une ligne de texte (séquence d'entrée), en une séquence de caractères (séquence de sortie). Le réseau de neurones convolutif et récurrent a été entraîné avec la fonction de perte CTC (angl. \textit{Connexionist Temporal Classification} \cite{graves2006connectionist}).}.
 %ainsi qu'un modèle HTR\footnote{Abbr. angl. \textit{Handwritten Text Recognition} ou la reconnaissance d'écriture manuscrite, basée sur l'extraction du texte à partir des blocs textuels (lignes), contrairement à la méthode de ROC qui traite les caractères individuelles \cite{gabayscicos}.}
-ainsi que le modèle Gallicorpora \cite{pinche_2022_7410529}. Concernant Tesseract nous avons utilisé le modèle LSTM \texttt{tessdata\_best}, entraîné sur des données Google. Tesseract propose une analyse de la mise en page intégrée à travers la segmentation des cadres (angl. \textit{box segmentation}), ce qui rend le traitement des mises en page complexes plus difficile \cite{reul2017case}.}. C'est un outil qui présente toujours de bonnes performances dans sa configuration par défaut \cite{clausner2020efficient}, qui est semble-t-il en fait un modèle entrainé pour l'anglais. Quatre modèles de langue neuronaux pour la ROC ont été utilisés dans le cadre des expériences : le modèle de base de Kraken qui permet d'opérer la segmentation\footnote{Le modèle de segmentation est constitué d'un réseau d'étiquetage en graines (angl. \textit{seed-labeling network}), qui est un \textit{U-net} (\og{}réseau entièrement convolutionnel\fg{}) modifié \cite{ronneberger2015} sur la base d'un réseau neuronal résiduel (ResNet) à 34 couches \cite{he2016}, pré-entraîné sur ImageNet.} et la transcription\footnote{Le modèle de transcription fonctionne comme un classificateur de séquences sans segmentation qui utilise un réseau neuronal artificiel pour mapper une image d'une ligne de texte (séquence d'entrée), en une séquence de caractères (séquence de sortie). Le réseau de neurones convolutif et récurrent a été entraîné avec la fonction de perte CTC (angl. \textit{Connexionist Temporal Classification} \cite{graves2006connectionist}).} d'un PDF, et
+ Concernant Tesseract, nous avons utilisé le modèle LSTM \texttt{tessdata\_best}, entraîné sur des données Google. Tesseract propose une analyse de la mise en page intégrée à travers la segmentation des cadres (angl. \textit{box segmentation}), ce qui rend le traitement des mises en page complexes plus difficile \cite{reul2017case}. Le modèle de base de Tesseract est un modèle conçu pour l'anglais, et il existe un modèle français et un modèle portugais. Quatre modèles de langue neuronaux pour la ROC ont été utilisés dans le cadre de ces expériences : Kraken de base, Tesseract anglais, français et portugais contemporain\footnote{\url{https://doc.ubuntu-fr.org/tesseract-ocr}}.
 %\footnote{Le modèle par défaut de Tesseract est l'anglais. Nous précisons la langue Tess. eng, Tess. fr et Tess. suivant les bonnes pratiques de \#RègledeBender \cite{bender-friedman-2018-data}.} et (iii) 
-les trois modèles Tesseract pour l'anglais, le français et le portugais contemporain\footnote{\url{https://doc.ubuntu-fr.org/tesseract-ocr}}.
 
 \subsubsection{Les outils de REN}
-\textbf{Pour effectuer la tâche de REN nous avons utilisé les chaînes de traitements de la boîte à outils pour le TAL  \texttt{spaCy}\footnote{version 3.5.1}.Le choix de cet outil est déterminé par la multitude des modèles, leurs performances très solides et leur facilité de la prise en main \cite{DBLP:conf/gis/Koudoro-Parfait21}.%  et \texttt{stanza}\footnote{1.5.0}. 
+Pour effectuer la tâche de REN nous avons utilisé la chaîne de traitements de la boîte à outils pour le TAL  \texttt{spaCy}\footnote{version 3.5.1}. Le choix de cet outil est déterminé par la multitude des modèles, leurs performances et leur facilité de la prise en main \cite{DBLP:conf/gis/Koudoro-Parfait21}. %  et \texttt{stanza}\footnote{1.5.0}. 
 Le système \texttt{spaCy} contient une stratégie d'intégration de mots utilisant des fonctionnalités de sous-mots et les plongements ``Bloom'' (angl. \textit{Bloom embeddings})\footnote{Il s'agit de la structure de données probabiliste qui permet de réduire la dimension des vecteurs (\textit{cf.} \url{https://explosion.ai/blog/bloom-embeddings}).}, ainsi qu'un réseau neuronal convolutif avec des connexions résiduelles, ce qui peut expliquer sa robustesse lors de l'extraction des EN contaminées. \texttt{spaCy} propose des modèles de langue du type \textit{large} pour le français\footnote{\url{https://spacy.io/models/fr}, \texttt{fr\_core\_news\_lg}}, le portugais\footnote{\url{https://spacy.io/models/pt}, \texttt{pt\_core\_news\_lg}} et l'anglais\footnote{\url{https://spacy.io/models/en}, \texttt{en\_core\_web\_lg}}. Nous avons favorisé l'usage du modèle \textit{large} (\texttt{spaCy\_lg}) plutôt que du modèle \textit{small} (\texttt{spaCy\_sm}) car la différence principale entre les deux modèles pour les trois langues tient à l'ajout de la vectorisation et des plongements de mots (angl. \textit{embeddings}) dans l'entraînement du modèle \textit{large}\footnote{Modèle anglais : Explosion Vectors (OSCAR 2109 + Wikipedia + OpenSubtitles + WMT News Crawl) (Explosion). Modèles français et portugais :
-Explosion fastText Vectors (CBOW, OSCAR Common Crawl + Wikipedia) (Explosion).}}.
+Explosion fastText Vectors (CBOW, OSCAR Common Crawl + Wikipedia) (Explosion).}.
 
 
 
-\subsection{Évaluation manuelle}
+\subsection{La diminution des hapax comme indicateur de la performance de la REN sur données bruitées ?}
 \label{subsec:eval_manu_OCR-IMPACT-NER}
 Dans un premier temps, nous proposons une évaluation de l'outil de REN \texttt{spaCy} sur données bruitées, dans laquelle nous comparons les résultats obtenus sur les sous-corpus ELTeC français, anglais et portugais et la TGB, et, leurs transcriptions de ROC\footnote{Dépôt github avec nos données : \url{anonymous}} sans nous appuyer sur un \textit{gold standard}.
 
@@ -169,7 +167,7 @@ En regard des différentes observations que nous venons d'apporter et parce que 
 
 
 \begin{itemize}
-
+\footnotesize
 
 	\item[] \textsc{Cas attendus}
 	
@@ -252,17 +250,17 @@ Afin d'évaluer de manière plus supervisée l'influence du bruit ROC sur la REN
   Nous avons ensuite annoté 5 000 tokens de 3 versions (Référence, Tesseract et Kraken) de deux œuvres (Daudet et Maupassant).
 
 %L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était de $0.877$, significativement plus élevé sur la version de référence ($0.905$) que sur les versions ROC.
-\textbf{L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était de $0.905$ sur la version de référence, ce qui est, significativement plus élevé que le score obtenu sur les versions ROC ($0.877$).}
+L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était de $0.905$ sur la version de référence, ce qui est, significativement plus élevé que le score obtenu sur les versions ROC : $0.877$.
  Nous avons pu observer que les désaccords étaient plus nombreux sur l'annotation des versions océrisées du fait des problèmes de tokenisation.
 
 Grâce à un système de vote majoritaire, nous avons fusionné les annotations pour obtenir un \textit{gold standard} sur chaque version de chaque œuvre.
- Nous avons évalué \texttt{spaCy\_lg} sur cet échantillon, dont les résultats sont présentés dans le tableau \ref{tab:eval-supervise}. \textbf{À cet effet, nous proposons deux types d'évaluation que nous appelons ici \og{}stricte\fg{} et \og{}souple\fg{}. La première configuration ne prend en compte que les correspondances exactes des EN (p. ex. le mot contaminé \textit{Acques} ne sera pas considérée comme une EN, même si elle renvoie à une vraie EN \textit{Jacques}). En revanche, la configuration \og{}souple\fg{} considère une EN comme correcte, quelle que soit sa taille (une partie ou l'intégralité de l'EN, auquel cas le mot \textit{Acques} sera considéré comme une EN, bien qu'il s'agisse d'une forme contaminée de l'EN \textit{Jacques}).}
+ Nous avons évalué \texttt{spaCy\_lg} sur cet échantillon, dont les résultats sont présentés dans le tableau \ref{tab:eval-supervise}. À cet effet, nous proposons deux types d'évaluation que nous appelons ici \og{}stricte\fg{} et \og{}souple\fg{}. La première configuration ne prend en compte que les correspondances exactes des EN (p. ex. le mot contaminé \textit{Acques} sera considéré comme un FP, même s'il renvoie au VP \textit{Jacques}). En revanche, la configuration \og{}souple\fg{} considère une EN comme correcte, quelle que soit sa taille (une partie ou l'intégralité de l'EN, auquel cas la forme contaminée \textit{Acques} sera considéré comme un VP.
  
-\textbf{Par rapport à} l'évaluation dite \textbf{\og{}globale\fg{} (qui concerne} tous les types d'\textbf{EN}), nous pouvons remarquer d'une part que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken \textbf{dans les configurations stricte et souple}.
+Par rapport à l'évaluation dite \og{}globale\fg{} (qui concerne tous les types d'EN), nous pouvons remarquer d'une part que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken dans les configurations stricte et souple.
   En outre, ce qui est plus étonnant, dans le cas de l'évaluation souple, ces résultats sont même meilleurs que ceux obtenus sur la version de référence.
   D'autre part, nous remarquons que là aussi la faiblesse apparente des résultats de REN obtenus sur des versions ROC est principalement due à des problèmes d'alignement entre les tokens contaminés et les tokens de référence. 
 %  comment expliquez-vous la meilleure performance sur les entités de lieux dans la configuration stricte ? [càd. pourquoi la F-mesure est meilleure sur les lieux que sur les autres EN avec l'évaluation stricte dans le tableau 8 ?]
-  \textbf{Enfin, la meilleure performance sur les EN de lieux en termes de F-mesure dans la configuration stricte peut s'expliquer par le fait que ce type d'EN compte le plus souvent un token dans nos corpus (p. ex. \textit{Paris}), au contraire des noms de personnes notamment (p. ex. \textit{Daniel Eyssette}). À savoir, nous constatons une apparition très fréquente des EN \og{}globales\fg{} qui sont étalées sur plusieurs lignes, contrairement aux EN de lieux ; dans l'exemple \textit{Daniel Ey-sset-te}, la deuxième partie de l'EN est divisée en trois éléments\footnote{\textbf{séparés par des nouvelles lignes dans les fichiers d'origine, ici indiqués avec des tirets pour raison de lisibilité.}} qui représentent tous des parties d'une EN, mais qui ont très probablement posé problème à la REN et diminué les scores de la F-mesure. Dès lors, le rappel sur les noms de personnes descend beaucoup plus (nous obtenons plus de VP), mais les FP sont strictement inférieurs.}
+  Enfin, le fait que le F-score soit meilleur sur les EN de lieux que sur le globale dans la configuration stricte peut s'expliquer par le fait que les EN de lieux comptent le plus souvent un token dans nos corpus (p. ex. \textit{Paris}), au contraire des EN de personnes. Par exemple, \textit{Daniel Eyssette}, qui est écrit \textit{Daniel Ey-sset-te}\footnote{séparés par des retours à la ligne dans les fichiers d'origine, ici indiqués avec des tirets pour raison de lisibilité.}. Ainsi, la deuxième partie de l'EN est divisée en trois éléments distincts, ce qui a vraisemblablement posé problème à l'évaluation globale et diminué les F-scores. Dès lors, le rappel sur les noms de personnes descend beaucoup plus ; nous obtenons moins de VP, et les FP augmentent moins sur les lieux.
 \begin{table}[h!]
 \centering
 \scriptsize{\begin{tabular}{l|ccc|ccc}
@@ -270,7 +268,7 @@ Grâce à un système de vote majoritaire, nous avons fusionné les annotations 
  &		&	GLOBALE	&		&		&	LIEUX	&		\\
 \hline
  \hline
-\textbf{Souple}	&	Rappel		&Précision	&	F-mes.	&	Rappel&		Précision		&F-mes.	\\
+\textbf{Souple}	&	Rappel		&Précision	&	F-sc.	&	Rappel&		Précision		&F-sc.	\\
  \hline
 Kraken	&	49.57	&	73.72 	&	59.28	&	48.84	&	52.50	&	50.60	\\
 													
@@ -279,7 +277,7 @@ Tesseract	&	51.53	&	77.63	&	61.94	&	56.41	&	57.89	&	57.14	\\
 Référence	&	49.78	&	77.55	&	60.64	&	53.49	&	53.49	&	53.49	\\
 \hline
 \hline
-\textbf{Stricte}	&	Rappel		&Précision	&	F-mes.	&	Rappel&		Précision		&F-mes.	 \\
+\textbf{Stricte}	&	Rappel		&Précision	&	F-sc.	&	Rappel&		Précision		&F-sc.	 \\
 \hline
 Kraken	&	18.26	&	58.82	&	27.87	&	43.24	&	45.71	&	44.44	\\
 Tesseract	&	21.00	&	68.66	&	32.16	&	43.33	&	44.83	&	44.07	\\
@@ -291,6 +289,6 @@ Référence	&	21.62	&	69.57	&	32.98	&	41.18	&	45.16	&	43.08	\\
  \end{table}
 
 Nous concluons de ces travaux préliminaires d'évaluation de l'impact du bruit de la ROC sur la tâche de REN que les erreurs de la ROC ne sont pas toujours un frein à la bonne conduite de la tâche de REN, et que la présence de nombreux hapax dans une sortie de REN peut être le signe qu'il existe des formes contaminées d'EN. Néanmoins, nous constatons qu'il est difficile d'évaluer de manière stricte le silence et le bruit réel dans les sorties de REN sur données bruitées par la ROC, puisque l'alignement entre les versions de référence et de ROC du fait des formes contaminées des EN est une tâche ardue. Jusque là nous n'avons pas pu trouver de manière convaincante de calculer un F-score et nous commençons à entrevoir les limites de l'usage des intersections.
-\textbf{Dans la suite de cet article nous traitons de l'impact des corrections des transcription ROC sur la REN et nous envisageons l'usage de l'indice de Jaccard, ou d'une similarité cosinus, mais aussi de NERVAL, outil qui calcule le F-score sur des sorties de REN à partir des données bruités. }
+%\textbf{Dans la suite de cet article nous traitons de l'impact des corrections des transcription ROC sur la REN et nous envisageons l'usage de l'indice de Jaccard, ou d'une similarité cosinus, mais aussi de NERVAL, outil qui calcule le F-score sur des sorties de REN à partir des données bruités. }
 
 

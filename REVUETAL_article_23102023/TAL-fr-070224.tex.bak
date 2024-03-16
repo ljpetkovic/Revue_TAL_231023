@@ -49,21 +49,20 @@
 }
 
 \resume{
-L’extraction d'informations de textes issus de la reconnaissance optique de caractères (ROC) interroge quant à la possibilité de fouiller et d'exploiter ces données souvent bruitées. Les chercheur?euses ont pour contrainte d'appliquer des outils de reconnaissance d'entités nommées (REN) entraînés sur des textes propres. Un des remèdes consiste à corriger les erreurs de ROC automatiquement. Notre contribution s’attachera à déterminer si la correction de ROC permet d’améliorer significativement les résultats de la tâche de REN sur des corpus de langue française, anglaise et portugaise.}
+L’extraction d'informations de textes issus de reconnaissance optique de caractères (ROC) interroge sur la possibilité d'exploiter des données bruitées. Notre contribution est double, nous nous attacherons : d'une part, à déterminer si la correction de ROC permet d’améliorer significativement les résultats de la tâche de reconnaissance d'entités nommées (REN) sur des corpus de langue française, anglaise et portugaise, d'autre part, à montrer les limites des évaluations strictes (F-score ou intersections), tout en proposant des stratégies d'évaluation plus souple. Nous présentons plusieurs typologies et protocoles d'évaluation pour la REN sur des données bruitées et sur des données bruitées corrigées automatiquement.}
 
-\abstract{Multilingual analysis of the impact of automatic OCR correction on spatial named entity recognition in literary corpora}{The extraction of information from texts resulting from optical character recognition (OCR) questions the possibility of mining and exploiting these often noisy data. Researchers have to apply named entity recognition (NER) tools trained on clean text. One remedy is to automatically correct OCR errors. 
-% If for English language such tools seem easily exploitable, what about those applied on French but also Portuguese, a much lower-resource languages?
-Our contribution will focus on determining whether OCR correction results in significant improvements in the NER task on French, English and Portuguese corpora.}
+\abstract{Multilingual analysis of the impact of automatic OCR correction on spatial recognition of spatial named entities
+in literary corpora}{The extraction of information from texts produced by optical character recognition (OCR) raises questions about the possibility of exploiting noisy data. Our contribution is twofold: firstly, to determine whether OCR correction can significantly improve the results of the Named Entity Recognition (NER) task on French, English and Portuguese language corpora, and secondly, to show the limitations of strict evaluations (F-score or intersections), while proposing more flexible evaluation strategies. We present several typologies and evaluation protocols for REN on noisy data and on automatically corrected noisy data.}
 
 \motscles{
-Reconnaissance optique de caractères$_1$,
-Reconnaissance d'entités nommées$_2$,
+ROC$_1$,
+REN$_2$,
 Correction automatique de ROC$_3$.
 }
 
 \keywords{
-Optical Character Recognition$_1$,
-Named Entity Recognition$_2$,
+OCR$_1$,
+NER$_2$,
 Automatic OCR Correction$_3$.
 }
 

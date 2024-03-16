@@ -128,12 +128,12 @@
   \multicolumn{1}{r|}{1 882} &
   65\% \\ \hline
 CER médian &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
-  \multicolumn{2}{l|}{} &
-  \multicolumn{2}{l||}{} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
-  \multicolumn{2}{l|}{} &
-  \multicolumn{2}{l|}{} \\ \hline\hline
+  \multicolumn{1}{c|}{0.364} &
+  \multicolumn{2}{c|}{0.362} &
+  \multicolumn{2}{c||}{0.364} &
+  \multicolumn{1}{c|}{0.205} &
+  \multicolumn{2}{c|}{0.261} &
+  \multicolumn{2}{c|}{0.243} \\ \hline\hline
 \multicolumn{1}{|c|}{Français} &
   \multicolumn{1}{r|}{7 059} &
   \multicolumn{1}{r|}{5 317} &
@@ -145,30 +145,30 @@ CER médian &
   \multicolumn{1}{r|}{95\%} &
   \multicolumn{1}{r|}{\textbf{4 917}} &
   \textbf{100,7\%} \\ \hline
-CER médian &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
-  \multicolumn{2}{l|}{} &
-  \multicolumn{2}{l||}{} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
-  \multicolumn{2}{l|}{} &
-  \multicolumn{2}{l|}{} \\ \hline\hline
+CER médian & 
+  \multicolumn{1}{c|}{0.098} &
+  \multicolumn{2}{c|}{0.102} &
+  \multicolumn{2}{c||}{0.104} &
+  \multicolumn{1}{c|}{0.050} &
+  \multicolumn{2}{c|}{0.053} &
+  \multicolumn{2}{c|}{0.055} \\ \hline\hline
 \multicolumn{1}{|c|}{Portugais} &
   \multicolumn{1}{r|}{10 108} &
   \multicolumn{1}{r|}{N/A} &
   \multicolumn{1}{r|}{N/A} &
   \multicolumn{1}{r|}{6 147} &
-   &
+  61\% & 
   \multicolumn{1}{r|}{4 006} &
   \multicolumn{1}{r|}{N/A} &
   \multicolumn{1}{r|}{N/A} &
   \multicolumn{1}{r|}{3 594} &
-   \\ \hline
+  90\% \\ \hline
 CER médian &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
-  \multicolumn{2}{l|}{} &
-  \multicolumn{2}{l||}{} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} &
-  \multicolumn{2}{l|}{} &
-  \multicolumn{2}{l|}{} \\ \hline
+  \multicolumn{1}{c|}{0.159} &
+  \multicolumn{2}{c|}{N/A} &
+  \multicolumn{2}{c||}{0.155} &
+  \multicolumn{1}{c|}{0.093} &
+  \multicolumn{2}{c|}{N/A} &
+  \multicolumn{2}{c|}{0.096} \\ \hline
 \end{tabular}
 }
