@@ -1,19 +1,19 @@
 %--------------------Correction automatique
 
-\section{Analyse de l'impact des corrections de ROC sur la REN}
+\section{Analyse de l'impact des corrections de la ROC sur la REN}
 \label{sec:COR-OCR-IMPACT-NER}
-Cette section présente l'outil JamSpell (Jspll) et les modèles de langue utilisés pour la correction automatique et la performance de cet outil. Nous réutilisons le protocole d'évaluation des contaminations de ROC. Bien que nous ayons déterminé qu'il s'agit d'une manière trop stricte d'évaluer la REN en contexte bruité, nous réemployons les intersections. Nous utilisons  des mesures de distance textuelle pour mener une évaluation plus souple. Enfin, nous calculons le F-score à l'aide de l'outil \textsc{Nerval}.
+%Cette section présente l'outil JamSpell (Jspll) et les modèles de langue utilisés pour la correction automatique et la performance de cet outil. Nous réutilisons le protocole d'évaluation des contaminations de ROC. Bien que nous ayons déterminé qu'il s'agit d'une manière trop stricte d'évaluer la REN en contexte bruité, nous réemployons les intersections. Nous utilisons  des mesures de distance textuelle pour mener une évaluation plus souple. Enfin, nous calculons le F-score à l'aide de l'outil \textsc{Nerval}.
 
-\subsection{Outils de la correction des sorties ROC utilisés dans le cadre de cette étude}
+\subsection{Outils de la correction des sorties ROC utilisées dans le cadre de cette étude}
 \label{subsec:outils_COR-OCR-IMPACT-NER}
-Nous avons utilisé Jspll pour la correction automatique des transcriptions ROC. Jspll est un outil développé en Python qui exploite un modèle de langue trigramme statistique\footnote{Pour plus de détails sur ce modèle \textit{cf}. \url{https://habr.com/en/articles/346618/}.} (grain mot), dont une partie des fonctionnalités est mise à disposition gratuitement sur le web.
+Nous avons utilisé la version 0.0.12 de JamSpell\footnote{\textit{Cf.} doc. : \url{https://habr.com/en/articles/346618/}} (Jspll) pour la correction automatique des transcriptions de la ROC. Jspll est un outil développé en Python qui exploite un modèle de langue trigramme statistique
+%\footnote{Pour plus de détails sur ce modèle : \url{https://habr.com/en/articles/346618/}}
+ (grain mot), dont une partie des fonctionnalités est mise à disposition gratuitement sur le web.
 % \footnote{Malgré de nombreuses tentatives d'installation sur nos machines en local, nous avons dû nous résoudre à le faire tourner dans un environnement Google Colab.}
 Si les modèles de langues pour le français et l'anglais sont accessibles gratuitement, le modèle portugais est disponible uniquement dans la version payante de Jspll, de fait cette option n'a pas été testée.
 Nous avons entraîné un modèle de langue pour Jspll pour chacune des trois langues. Pour ce faire, nous avons sélectionné 40\% de chacun des corpus mis à disposition par ELTeC
 %\footnote{\textbf{soit 4 millions de tokens pour chaque modèle. A VERIFIER}}
- et nous en avons exclu les textes utilisés pour notre étude.
-
-Nous avons procédé aux évaluations des différentes configurations présentées dans le tableau \ref{tab:config}.
+ et nous en avons exclu les textes utilisés pour notre étude. Nous avons procédé aux évaluations des différentes configurations présentées dans le tableau \ref{tab:config}.
 
 \begin{table}[h!]
     \centering
@@ -22,30 +22,29 @@ Nous avons procédé aux évaluations des différentes configurations présenté
     \label{tab:config}
 \end{table}
 
-\subsection{Typologie des contaminations de corrections de ROC issues de l'analyse manuelle}
+\subsection{Typologie des contaminations de corrections de la ROC issues de l'analyse manuelle}
 \label{subsec:Typologie_COR-OCR-IMPACT-NER}
 
-En observant les exemples de correction de ROC présentés dans les tableaux \ref{tab:erreurs_corr_ELTeCFra} et \ref{tab:erreurs_corr_ELTeCEng}, nous constatons certaines fluctuations au niveau de la performance du correcteur automatique.
+En observant les exemples de correction de la ROC présentés dans les tableaux \ref{tab:erreurs_corr_ELTeCFra} et \ref{tab:erreurs_corr_ELTeCEng}, nous constatons des fluctuations au niveau de la performance du correcteur automatique.
 Notons le cas particulier de l'EN ``Meunet-sur-Vatan'' dont on constate différentes déclinaisons en fonction du type de correcteur automatique (tableau \ref{tab:erreurs_corr_ELTeCFra}). Nous nous apercevons que les différentes versions de cette EN, contaminée par les différentes OCRisations et sur-corrections, n'ont pas du tout été extraites par \texttt{spaCy\_lg}.
 %¨
 
 \begin{table}[h!]
-    \small
+    \footnotesize
     \centering
    \input{TAB/erreurs_corr_ELTeCFra}
-     \caption{Exemples illustrant l'impact de la correction de ROC sur la REN avec \texttt{spaCy\_lg}. {\normalfont La petite Jeanne}, Carraud.}
+     \caption{Exemples illustrant l'impact de la correction de la ROC sur la REN avec \texttt{spaCy\_lg}. {\normalfont La petite Jeanne}, Carraud.}
     \label{tab:erreurs_corr_ELTeCFra}
 \end{table}
 
-De façon similaire, nous observons dans le tableau \ref{tab:erreurs_corr_ELTeCEng} et \ref{tab:erreurs_corr_ELTeCEng} que le modèle de la correction automatique de ROC par Jspll, entraîné sur le corpus ELTeC, n'a pas eu d'impact sur l'extraction de l'EN ``Iudia'', puisqu'elle n'avait pas été corrigée en l'EN de référence ``India''. Par contre, le modèle Jspll pré-entraîné a bien corrigé la même EN, ce qui a permis son extraction sous forme correcte.
+De façon similaire, nous observons dans le tableau \ref{tab:erreurs_corr_ELTeCEng} que le modèle de la correction automatique de la ROC par Jspll, entraîné sur le corpus ELTeC, n'a pas eu d'impact sur l'extraction de l'EN ``Iudia'', puisqu'elle n'avait pas été corrigée en l'EN de référence ``India''. Par contre, le modèle Jspll pré-entraîné a bien corrigé la même EN, ce qui a permis son extraction sous forme correcte.
 \begin{table}[h!]
-\small
+\footnotesize
     \centering
    \input{TAB/erreurs_corr_ELTeCEng}
-    \caption{Exemples illustrant l'impact de la correction de ROC sur la REN avec \texttt{spaCy\_lg}. {\normalfont Vanity Fair}, Thackeray.}
+    \caption{Exemples illustrant l'impact de la correction de la ROC sur la REN avec \texttt{spaCy\_lg}. {\normalfont Vanity Fair}, Thackeray.}
     \label{tab:erreurs_corr_ELTeCEng}
 \end{table}
-
 %\begin{table}
 %\small
  %   \centering
@@ -54,14 +53,13 @@ De façon similaire, nous observons dans le tableau \ref{tab:erreurs_corr_ELTeCE
     %\label{tab:erreurs_corr_ELTeCPor}
 %\end{table}
 
-À partir des exemples présentés dans les tableaux \ref{tab:erreurs_corr_ELTeCFra} et \ref{tab:erreurs_corr_ELTeCEng}, nous déduisons une typologie des corrections automatiques de ROC, résumée dans le tableau \ref{tab:res-analyses}. Cela permet de distinguer les différents cas de figure où les corrections en question ont soit amélioré les sorties de ROC (MOBC), soit les ont incorrectement modifiées (MOMC, BOIC) ou même ignorées (MOI).
+À partir des exemples présentés dans les tableaux \ref{tab:erreurs_corr_ELTeCFra} et \ref{tab:erreurs_corr_ELTeCEng}, nous déduisons une typologie des corrections automatiques de la ROC, résumée dans le tableau \ref{tab:res-analyses}. Cela permet de distinguer les différents cas de figure où les corrections en question ont soit amélioré les sorties de ROC (MOBC), soit les ont incorrectement modifiées (MOMC, BOIC) ou même ignorées (MOI).
 %Nous nous appuyons également sur une typologie des corrections automatiques de ROC, résumée dans le tableau \ref{tab:res-analyses}, qui permet de distinguer les différents cas de figure où les corrections en question ont soit amélioré les sorties de ROC (MOBC), soit les ont incorrectement modifiées (MOMC, MOI, BOIC). 
-
 \begin{table}[h!]
-\small
+\footnotesize
     \centering
     \input{TAB/typologie-erreurs-correction}
-    \caption{Typologie de l'impact de la correction de ROC sur la REN.  }
+    \caption{Typologie de l'impact de la correction de la ROC sur la REN.  }
     \label{tab:res-analyses}
 \end{table}
 
@@ -74,10 +72,10 @@ parmi lesquels se distinguent les sur-corrections ``Conspire''
 dans ELTeC anglais), ainsi que ``Martincourt'' (au lieu de ``Morlincourt'' dans ELTeC français).
 
 \begin{table}[h!]
-\small
     \centering
+    \footnotesize
    \input{TAB/typologie_erreurs-corr_ELTeCEng}
-    \caption{Exemples illustrant la typologie de l'impact de la correction de ROC sur la REN avec \texttt{spaCy\_lg}. Configuration : Jspll -- correction avec le modèle pré-entraîné de JamSpell, ELTeC -- correction avec le modèle entraîné sur une partie de chaque corpus ELTeC. Formes de références des entités : London, Devonshire, Morlincourt. {\normalfont Home influence}, Aguillar et {\normalfont Mon village}, Adam.}
+    \caption{Exemples illustrant la typologie de l'impact de la correction de la ROC sur la REN pour les configurations avec \texttt{spaCy\_lg}. Formes de références des entités : London, Devonshire, Morlincourt. {\normalfont Home influence}, Aguillar et {\normalfont Mon village}, Adam.}
     \label{tab:typologie_erreurs-corr_ELTeCEng}
 \end{table}
 
@@ -100,35 +98,36 @@ dans ELTeC anglais), ainsi que ``Martincourt'' (au lieu de ``Morlincourt'' dans 
 % \end{table}
 
 
-\subsection{Analyses quantitatives des contaminations de ROC et de leurs corrections}
+\subsection{Analyses quantitatives des contaminations de la ROC et de leurs corrections}
 \label{subsec:quantitative_COR-OCR-IMPACT-NER}
-\subsubsection{Le CER médian comme indicateur de la performance de la correction automatique ?}
+\subsubsection{Le CER médian : indice de la performance de la correction automatique ?}
 \label{subsubsec:seuil}
-La colonne \textit{Brut} du tableau \ref{tab:ELTeC} montre qu'il y a globalement plus de types d'entités récupérées par \texttt{spaCy} sur Kraken (CER médian pour ELTeC-fra : 0,10) que sur Tesseract (CER médian : 0,05), ce qui vient étayer l'hypothèse que plus la qualité de la transcription est mauvaise plus les variations orthographiques des EN peuvent être nombreuses et plus il y a d'hapax dans les résultats de la REN. Nous venons à penser que si la correction automatique fonctionne bien, le nombre des hapax sera réduit dans les sorties de REN, puisque la variabilité du vocabulaire sera réduite.
+La colonne \textit{Brut} du tableau \ref{tab:ELTeC} montre qu'il y a globalement plus de types d'entités récupérées par \texttt{spaCy} sur Kraken (CER médian pour ELTeC-fra : 0,10) que sur Tesseract (CER médian : 0,05), ce qui vient étayer l'hypothèse que plus la qualité de la transcription est mauvaise plus les variations orthographiques des EN peuvent être nombreuses et plus il y a d'hapax dans les résultats de la REN.
+\begin{table}[h!]
+    \centering
+    \scriptsize
+    \input{TAB/corpus-EN}
+    \caption{Nombre d'EN (types) avec les pourcentages d'EN issues des EN brutes et repérées par \texttt{spaCy\_lg} pour les corpus ELTeC anglais, français et portugais. N/A -- modèle Jspll pré-entrainé pour le portugais non disponible.}
+    \label{tab:ELTeC}
+\end{table} 
 
-Pour affiner notre analyse, nous avons décider d'utiliser le CER médian plutôt que le CER moyen, car la moyenne est assujettie aux aberrations plus que la médiane. En partant de ce postulat, nous observons que :
+Nous venons à penser que si la correction automatique fonctionne bien, le nombre des hapax sera réduit dans les sorties de REN, puisque la variabilité du vocabulaire sera réduite. Pour affiner notre analyse, nous avons décider d'utiliser le CER médian plutôt que le CER moyen, car la moyenne est assujettie aux aberrations plus que la médiane. En partant de ce postulat, nous observons que :
 \begin{itemize}
 %\item au vu des scores CER médians, il semble que globalement la correction automatique se soit mieux passée pour le corpus ELTeC-eng que pour ELTeC-fra pour Tesseract, et inversement pour Kraken.
 %\item les modèles pré-entraînés  et entraînés sur ELTeC seraient globalement plus efficaces sur Kraken que sur Tesseract. Il y aurait un effet de seuil concernant la qualité des OCR au-delà duquel la correction automatique serait moins efficace, autrement dit plus un OCR serait de bonne qualité moins la correction serait pertinente. 
-\item l'observation des CER médians des Tesseract corrigés par rapport au Tesseract brut montre que la qualité baisse, alors que celle des CER médians pour les Kraken corrigés par rapport au Kraken brut montre une stagnation. Les résultats sont plus explicites pour l'anglais et le portugais. Il y aurait un effet de seuil concernant la qualité des ROC au-delà de laquelle la correction automatique serait moins efficace. Autrement dit, plus une transcription serait de bonne qualité, moins la correction serait pertinente.
+\item l'observation des CER médians des Tesseract corrigés par rapport au Tesseract brut montre que la qualité baisse, alors que celle des CER médians pour les Kraken corrigés par rapport au Kraken brut montre une stagnation. Les résultats sont plus explicites pour l'anglais et le portugais. Il y aurait un effet de seuil concernant la qualité des versions de ROC au-delà de laquelle la correction automatique serait moins efficace. Autrement dit, plus une transcription serait de bonne qualité, moins la correction serait pertinente.
 \item même si la correction automatique permet de diminuer le vocabulaire et le nombre des hapax (-48\% du vocabulaire pour l'anglais sur Kraken Jspll-pré-entraîné et -54\% pour l'anglais Jspll-ELTeC), il semble, au vu des CER médians, que la qualité des transcriptions ne soit pas grandement améliorée par les modèles de correction automatique (0.362\% et 0.364\%). 
 \item en effet, les CER médians ne montrent pas de performance significative des modèles de correction automatique, et même il semble qu'ils soient dégradés dans certains cas. La correction automatique avec Jspll ELTeC sur Tesseract pour le français voit le nombre des hapax augmenter, 100,7\% des EN récupérées, ce qui semble indiquer qu'il y a de nouvelles EN (hapax) récupérées, ce qui peut être dû au phénomène de sur-correction (BOIC, tableau \ref{tab:typologie_erreurs-corr_ELTeCEng}).
 %\item les modèles Jspll pré-entraînés et entraînés sur ELTeC permettent d'avoir des transcriptions d'une qualité équivalente au texte brut car le nombre des types d'EN, donc des hapax, diminue. 
 \end{itemize}
  
 Enfin, concernant le corpus ELTeC portugais, comme nous l'avons souligné précédemment, nous avons extrait uniquement les EN corrigées avec notre modèle Jspll-ELTeC pour le portugais, et la quantité d'EN reconnues est moindre que celle trouvée sur la sortie brute de ROC, donc la correction semble avoir été pertinente.
-\begin{table}[h!]
-    \centering
-    \small
-    \input{TAB/corpus-EN}
-    \caption{Nombre d'EN (types) avec les pourcentages d'EN issues des EN brutes et repérées par \texttt{spaCy\_lg} pour les sous-corpus ELTeC anglais, français et portugais. N/A -- modèle JamSpell pré-entrainé pour le portugais non disponible.}
-    \label{tab:ELTeC}
-\end{table}
+
 \subsubsection{Calculs des intersections, toujours plus de problèmes d'alignements. }
 
-Nous reprennons ici la stratégie d'évaluation stricte par calcul des intersections comme décrite dans la section \ref{subsec:inter_OCR-IMPACT-NER}.
+Nous reprenons ici la stratégie d'évaluation stricte par calcul des intersections comme décrite dans la section \ref{subsec:inter_OCR-IMPACT-NER}.
 %Notre démarche évaluative est fondée sur l'intérêt de la correction automatique qui vise à diminuer le nombre de FP, ainsi qu'à augmenter l'intersection entre les EN de ROC et de référence. 
-Les graphiques de la figure \ref{fig:intersection_globale-kraken} représentent les intersections entre les EN issues des textes de référence et celles provenant des versions de ROC (Kraken ou Tesseract) corrigées avec le modèle pré-entraîné de JamSpell (\ref{fig:ELTeCFRA_Kraken -- jspl-fr_spacy-lg-concat_intersection.png}-\ref{fig:ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection.png}), et le modèle entraîné avec le sous-corpus ELTeC français (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection}). La figure \ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection} montre que la configuration Tesseract Jspll-ELTeC-fr \texttt{spaCy\_lg} a permis de récupérer le plus grand nombre d'EN en commun. Il est notable que la correction automatique avec le modèle pré-entraîné de Jspll ou le modèle entraîné sur une partie du corpus ELTeC adapté à la langue du corpus testé ne sont pas un gain pour l'intersection. 
+Les graphiques de la figure \ref{fig:intersection_globale-kraken} représentent les intersections entre les EN issues des textes de référence et celles provenant des versions de ROC (Kraken ou Tesseract) corrigées avec le modèle pré-entraîné de JamSpell (\ref{fig:ELTeCFRA_Kraken -- jspl-fr_spacy-lg-concat_intersection.png}-\ref{fig:ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection.png}), et le modèle entraîné avec le corpus ELTeC français (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection}). La figure \ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection} montre que la configuration Tesseract Jspll-ELTeC-fr \texttt{spaCy\_lg} a permis de récupérer le plus grand nombre d'EN en commun. Il est notable que la correction automatique avec le modèle pré-entraîné de Jspll ou le modèle entraîné sur une partie du corpus ELTeC adapté à la langue du corpus testé ne sont pas un gain pour l'intersection. 
 %%% INTERSECTIONS GLOBALES
 \begin{figure}[h!]
     \begin{minipage}{7cm}
@@ -160,14 +159,14 @@ Les graphiques de la figure \ref{fig:intersection_globale-kraken} représentent 
   \end{subfigure}
     \end{minipage}
 %\caption{Intersections pour les configurations (\ref{fig:ELTeCFRA_Kraken -- jspl-fr_spacy-lg-concat_intersection.png
-%}-\ref{fig:ELTeCFRA_Tess -- spacy-lg-concat_intersection}) Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg} non corrigées, et (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection}) les configurations équivalentes corrigées avec JamSpell (modèle ELTeC), pour le sous-corpus ELTeC français.}
-\caption{Intersections pour les configurations Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg} corrigées avec JamSpell pré-entraîné (\ref{fig:ELTeCFRA_Kraken -- jspl-fr_spacy-lg-concat_intersection.png}-\ref{fig:ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection.png}), et les configurations équivalentes corrigées avec JamSpell (modèle ELTeC), pour le sous-corpus ELTeC français (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection}).}
+%}-\ref{fig:ELTeCFRA_Tess -- spacy-lg-concat_intersection}) Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg} non corrigées, et (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection}) les configurations équivalentes corrigées avec JamSpell (modèle ELTeC), pour le corpus ELTeC français.}
+\caption{Intersections pour les configurations Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg} corrigées par JamSpell pré-entraîné (\ref{fig:ELTeCFRA_Kraken -- jspl-fr_spacy-lg-concat_intersection.png}-\ref{fig:ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection.png}), et les configurations équivalentes corrigées avec JamSpell (modèle ELTeC), pour le corpus ELTeC français (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection}).}
 \label{fig:intersection_globale-kraken}
 \end{figure}
 
-Ce fait peut être lu à l'aune des observations présentées dans le tableau \ref{tab:typologie_erreurs-corr_ELTeCEng} rapportant la typologie des erreurs de corrections. Autrement dit, la correction automatique ne transforme pas toutes les EN contaminées par la ROC en EN corrigées strictement associables avec les EN du groupe de référence. Ainsi les BOIC (``Morlincourt'' qui devient ``Martincourt''), se cumulant aux EN contaminées non corrigées MOI (``Morlincourtl'' qui reste ``Morlincourtl''), n'améliorent pas les résultats obtenus par calcul des intersections. Il semble que pour les corpus ELTeC français, anglais et portugais et celui de la TGB la correction automatique avec le modèle entraîné sur une partie de chaque sous-corpus ELTeC fasse perdre 5\% des EN dans l'intersection avec Kraken et 10\% avec Tesseract, alors que concernant les modèles pré-entraînés on perd 3\% avec Kraken et 9\% avec Tesseract. Cette expérience est l'occasion de démontrer les limites d'une évaluation stricte de la REN sur des textes bruités et leurs versions corrigées. Nos observations manuelles montrent que les contaminations de ROC d'une part et de la correction automatique d'autre part ne sont pas véritablement un frein à la REN, mais l'évaluation automatique des résultats n'est pas triviale.
+Ce fait peut être lu à l'aune des observations présentées dans le tableau \ref{tab:typologie_erreurs-corr_ELTeCEng} rapportant la typologie des erreurs de corrections. Autrement dit, la correction automatique ne transforme pas toutes les EN contaminées par la ROC en EN corrigées strictement associables avec les EN du groupe de référence. Ainsi les BOIC (``Morlincourt'' qui devient ``Martincourt''), se cumulant aux EN contaminées non corrigées MOI (``Morlincourtl'' qui reste ``Morlincourtl''), n'améliorent pas les résultats obtenus par calcul des intersections. Il semble que pour les corpus ELTeC français, anglais et portugais et celui de la TGB la correction automatique avec le modèle entraîné sur une partie de chaque corpus ELTeC fasse perdre 5\% des EN dans l'intersection avec Kraken et 10\% avec Tesseract, alors que concernant les modèles pré-entraînés on perd 3\% avec Kraken et 9\% avec Tesseract. Cette expérience est l'occasion de démontrer les limites d'une évaluation stricte de la REN sur des textes bruités et leurs versions corrigées. Nos observations manuelles montrent que les contaminations de la ROC d'une part et de la correction automatique d'autre part ne sont pas véritablement un frein à la REN, mais l'évaluation automatique des résultats n'est pas triviale.
 
-%%%%%%%%%%%%%%%% Ancienne figure avec les intersections pour la config Tess-spaCy_lg corrigées avec le modèle pré-entraîné de JamSpell et le modèle ELTeC, pour le sous-corpus ELTeC fr %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% Ancienne figure avec les intersections pour la config Tess-spaCy_lg corrigées avec le modèle pré-entraîné de JamSpell et le modèle ELTeC, pour le corpus ELTeC fr %%%%%%%%%%%%%%%%%%
 
 %\begin{figure}[h!]
 %%    \begin{minipage}{7cm}
@@ -212,14 +211,14 @@ Ce fait peut être lu à l'aune des observations présentées dans le tableau \r
 %  \label{fig:ELTeCFRA_Tess. fr -- jspl-fr_stanza-concat_intersection}
 %  \end{subfigure}
 %    \end{minipage}
-%\caption{Intersections pour la configuration Tess-\texttt{spaCy\_lg} corrigées avec le modèle pré-entrainer de JamSpell et le modèle ELTeC, pour le sous-corpus ELTeC français.}
+%\caption{Intersections pour la configuration Tess-\texttt{spaCy\_lg} corrigées avec le modèle pré-entrainer de JamSpell et le modèle ELTeC, pour le corpus ELTeC français.}
 %\label{fig:intersection-globale-tess}
 %\end{figure}
 \subsection{Comment dépasser les problèmes d'alignements ? }
 \label{subsec:ditances_creux_COR-OCR-IMPACT-NER}
 \subsubsection{Mesures de distance textuelle}
 
-Dans le but d'approfondir nos évaluations et de dépasser les verrous de l'évaluation stricte, nous employons des mesures de distance textuelle afin de rendre plus souple nos critères d'évaluation des résultats de REN sur les sorties de ROC bruitées et leurs corrections automatiques. Nous avons privilégié les métriques de Jaccard\footnote{Nous présentons uniquement des résultats cosinus ; pour les résultats Jaccard, \textit{cf.} le dépôt GitHub : \url{anonymous}.} et cosinus car elles sont considérées comme des mesures de référence quand il est question de (dis)similarité textuelle \cite{buscaldi2020calcul}. 
+Dans le but d'approfondir nos évaluations et de dépasser les verrous de l'évaluation stricte, nous employons des mesures de distance textuelle afin de rendre plus souple nos critères d'évaluation des résultats de la REN sur les sorties de ROC bruitées et leurs corrections automatiques. Nous avons privilégié les métriques de Jaccard\footnote{Nous présentons uniquement des résultats pour cosinus ; pour les résultats Jaccard, \textit{cf.} le dépôt GitHub : \url{https://github.com/anonymous}} et cosinus, calculées sur les bigrammes et trigrammes de caractères\footnote{Nous avons vectorisé le texte avec la librairie \texttt{CountVectorizer} pour les deux distances, \url{https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html}}, car elles sont considérées comme des mesures de référence quand il est question de (dis)similarité textuelle \cite{buscaldi2020calcul}. 
 
 \begin{figure}[h!]
    \centering
@@ -246,8 +245,8 @@ Dans le but d'approfondir nos évaluations et de dépasser les verrous de l'éva
     \label{fig:distances_ref_roc}
 \end{figure}
 
-Pour lire les figures \ref{fig:distances_ref_roc} et \ref{fig:Cosinus-spacy-lg}, il faut noter que plus la boîte est proche de zéro, plus les sorties comparées sont similaires. La figure \ref{fig:distances_ref_roc} illustre les résultats obtenus pour les textes de référence et les différentes versions de ROC pour tous les corpus avec une distance cosinus, calculée sur des bigrammes et des trigrammes de caractères. La figure \ref{fig:Cosinus-spacy-lg} montre les résultats en comparant les sorties de REN obtenues sur les textes de référence et celles des différentes configurations évaluées (tableau \ref{tab:config}). 
-Après une observation des différentes mesures de distance présentées pour chaque sous-corpus évalué, on note l'écart constant et considérable entre les résultats de Jaccard et cosinus. Les résutats pour Jaccard sont souvent proches de 1, tandis que ceux de cosinus sont proches de 0 pour les comparaisons des mêmes configurations. Il semble que les métriques cosinus et Jaccard ne mesurent pas la même chose. 
+Pour lire les figures \ref{fig:distances_ref_roc} et \ref{fig:Cosinus-spacy-lg}, il faut noter que plus la boîte est proche de zéro, plus les sorties comparées sont similaires. La figure \ref{fig:distances_ref_roc} illustre les résultats obtenus pour les textes de réf. et les différentes versions de ROC pour tous les corpus avec une distance cosinus. La figure \ref{fig:Cosinus-spacy-lg} montre les résultats en comparant les sorties de REN obtenues sur les textes de réf. et celles des différentes configurations évaluées (tableau \ref{tab:config}). 
+Après une observation des différentes mesures de distance présentées pour chaque corpus évalué, on note l'écart constant et considérable entre les résultats de Jaccard et cosinus. Les résutats pour Jaccard sont souvent proches de 1, tandis que ceux de cosinus sont proches de 0 pour les mêmes configurations. Il semble que les métriques cosinus et Jaccard ne mesurent pas la même chose. 
 
 \begin{figure}[h!]
 
@@ -270,14 +269,14 @@ Après une observation des différentes mesures de distance présentées pour ch
         \caption{ELTeC-Eng \texttt{spaCy} cosinus}
    \end{subfigure}
 
-    \caption{Distance Cosinus pour \texttt{spaCy\_lg} sur chaque sous-corpus globalement.}
+    \caption{Distance Cosinus pour \texttt{spaCy\_lg} sur chaque corpus globalement.}
 %    \label{fig:Cosinus-spacy-lg-stanza}
 \label{fig:Cosinus-spacy-lg}
 \end{figure}
 
 
-Après la consultation manuelle des résultats effectifs de REN, cette différence entre les résultats de Jaccard et cosinus pourrait s'expliquer par le fait que la première mesure prend en compte le vocabulaire, alors que la seconde s'intéresse au nombre d'occurrences d'une EN. Concrètement, cela signifie pour la distance de Jaccard que si le vocabulaire entre les sorties de deux ensemble pour les configurations comparées est très différent, le résultat est proche de 1. 
-En revanche, les résultats pour la mesure cosinus dépendraient du nombre d'occurrences de chaque EN dans les groupes comparés. Autrement dit, s'il y a beaucoup d'occurrences d'une EN dans une des configurations comparée mais qu'elle n'apparaît pas en même quantité dans les résultats de la seconde configuration, les résultats pour cosinus grimpent en flèche. L'observation des résultats roman par roman pour la mesure cosinus nous permet d'étayer cette hypothèse, en effet on dénombre, p.\ ex.\, 290 occurrences du terme ``INGLEZA'' pour la configuration Tesseract-pt--\texttt{spaCy\_lg}, alors qu'il apparaît 3 fois seulement dans les résultats de la configuration de référence\footnote{\textit{Uma familia ingleza}, Diniz.} -- dans ce dernier cas la valeur de cosinus est très élevée et dépasse celle de Jaccard (cos. : 0.69, Jaccard : 0.67). Il s'agit d'un comportement que nous avons pu observer régulièrement dans les résultats pour chacun des corpus analysés.
+La consultation manuelle des résultats de la REN montre que la différence entre les résultats de Jaccard et cosinus peut s'expliquer par le fait que la première mesure prend en compte le vocabulaire, alors que la seconde s'intéresse au nombre d'occurrences d'une EN. Concrètement, cela signifie pour la distance de Jaccard que si le vocabulaire entre les sorties de deux ensembles comparés est différent même en moindre proportion, le résultat est proche de 1. Pour Jaccard, s'il manque un mot du vocabulaire, cela impactera beaucoup le résultat, alors que pour cosinus ce n'est pas le cas.
+En effet, les résultats pour la mesure cosinus dépendent du nombre d'occurrences de chaque EN dans les groupes comparés. Autrement dit, s'il y a beaucoup d'occurrences d'une EN dans la configuration de réf. mais qu'elle n'apparaît pas en même quantité dans la configuration ROC, les résultats pour cosinus grimpent en flèche. L'observation des résultats roman par roman pour la mesure cosinus nous permet d'étayer cette hypothèse, en effet on dénombre, p.\ ex.\, 290 occurrences du terme ``INGLEZA'' pour la configuration Tesseract-pt--\texttt{spaCy\_lg}, alors qu'il apparaît 3 fois seulement dans les résultats de la configuration de réf.\footnote{\textit{Uma familia ingleza}, Diniz.} -- dans ce dernier cas la valeur de cosinus est très élevée et dépasse celle de Jaccard (cos. : 0.69, Jaccard : 0.67). Nous observons un comportement analogue pour chacun des corpus analysés, nous en concluons que la distance de Jaccard a tendance à sur-estimer la distance entre deux ensembles.
 
 La figure \ref{fig:Cosinus-spacy-lg} laisse apercevoir que les résultats de la REN sur les versions Kraken des textes sont moins bons de manière générale que pour les versions produites avec Tesseract. Toutefois, il semblerait que la correction automatique soit un peu plus efficace sur les versions de Kraken avec le modèle JamSpell-ELTeC que sur les versions Tesseract, car l'écart entre les boîtes est plus grand. Cependant, les résultats des distances obtenus pour ces versions corrigées de Kraken restent inférieurs à ceux observés pour les versions Tesseract avec et sans corrections. Ces différents constats laissent à penser que plus une version de ROC est bruitée, plus le correcteur automatique intervient et produit de bonnes corrections (figure \ref{fig:ELTeC-Por-spaCy-cosinus}). À l'inverse, si une version de ROC est peu bruitée, alors le correcteur automatique aura tendance à moins bien corriger, voire à sur-corriger. On peut observer ce phénomène concernant les résultats de la REN sur Tesseract qui sont moins bons sur les versions Tesseract corrigées, en le mettant en regard avec nos observations sur le tableau \ref{tab:ELTeC} -- c'est une deuxième manière d'analyser le phénomène de sur-correction. 
 
@@ -285,11 +284,11 @@ La figure \ref{fig:Cosinus-spacy-lg} laisse apercevoir que les résultats de la 
 
 %Nous avons identifié une tendance des métriques à illustrer un grand écart entre les valeurs des versions non corrigées et corrigées, notamment dans les figures a.\ et b. Ce \og{}phénomène de creux\fg{} se caractérise par (i) le fait que les mesure de distance de cosinus des versions non corrigées soient bien supérieures à celles de versions corrigées et (ii) que l'écart entre les mesures de distance de soit plus prononcé.
 
-%Enfin, il apparaît en comparant les figures \ref{fig:distances_ref_roc} et \ref{fig:Cosinus-spacy-lg} que la configuration Tesseract--\texttt{spaCy\_lg}, en utilisant pour chacun des outils le modèle de langue adapté à la langue du sous-corpus étudié, soit la plus convaincante en considération du temps de calcul et des résultats. Pour 5 604 472 tokens\footnote{soit le texte brut pour le sous-corpus français de la version de référence et les versions Kraken et Tess. fr.} \texttt{stanza} prend 10 heures à fournir des résultats, alors que \texttt{spaCy} met 1 heure (Mémoire: 16Gio, CPU: Core™i5-1135G7). La lecture des tableaux \ref{tab:EN_contamines_Variantes} et \ref{tab:FP_VP} reportant les analyses manuelles met en évidence des résultats équivalents. 
+%Enfin, il apparaît en comparant les figures \ref{fig:distances_ref_roc} et \ref{fig:Cosinus-spacy-lg} que la configuration Tesseract--\texttt{spaCy\_lg}, en utilisant pour chacun des outils le modèle de langue adapté à la langue du corpus étudié, soit la plus convaincante en considération du temps de calcul et des résultats. Pour 5 604 472 tokens\footnote{soit le texte brut pour le corpus français de la version de référence et les versions Kraken et Tess. fr.} \texttt{stanza} prend 10 heures à fournir des résultats, alors que \texttt{spaCy} met 1 heure (Mémoire: 16Gio, CPU: Core™i5-1135G7). La lecture des tableaux \ref{tab:EN_contamines_Variantes} et \ref{tab:FP_VP} reportant les analyses manuelles met en évidence des résultats équivalents. 
 
 \subsubsection{\textsc{NERVAL} : Précision, rappel, f-score et effet de seuil}
 \label{subsec:NERVAL_COR-OCR-IMPACT-NER}
-Dans le but de calculer la précision, le rappel et d'obtenir un f-score nous avons utilisé l'outil \textsc{Nerval}\footnote{\url{https://gitlab.com/teklia/nerval} \cite{nerval2021}}, évalué par \cite{koudoro2022reconnaissance}. Si cette évaluation présente quelques biais de l'outil, \textsc{Nerval} apparaît tout de même comme un très bon moyen de dépasser les problèmes d'alignements entre les résultats des différentes configurations à comparer pour calculer le f-score. \textsc{Nerval} est développé en Python, et est conçu pour l'évaluation de sorties de REN sur du texte bruité avec la distance de Levenshtein. Les fichiers des textes de références et des textes versions ROC et ROC corrigées sont annotés au format IOB avec \texttt{spaCy\_lg}. Les fichiers des textes de références ainsi annotés font office de vérité de terrain.
+Dans le but de calculer la précision, le rappel et d'obtenir un f-score nous avons utilisé l'outil \textsc{Nerval}\footnote{\cite{nerval2021}, \url{https://gitlab.com/teklia/nerval}}, évalué par \cite{koudoro2022reconnaissance}. Si cette évaluation présente quelques biais de l'outil, \textsc{Nerval} apparaît tout de même comme un très bon moyen de dépasser les problèmes d'alignements entre les résultats des différentes configurations à comparer pour calculer le f-score. \textsc{Nerval} est développé en Python, et est conçu pour l'évaluation de sorties de REN sur du texte bruité avec la distance de Levenshtein. Les fichiers des textes de référence et des versions de ROC et de ROC corrigées sont annotés au format IOB avec \texttt{spaCy\_lg}. Les fichiers des textes de références ainsi annotés font office de vérité de terrain.
 Les premières observations des résultats semblent confirmer que la correction automatique n'est pas forcément un gain pour la REN, en effet le f-score pour les configurations de Tesseract dans les tableaux \ref{tab:NERVAL_DAUDET} et \ref{tab:NERVAL_THACKERAY} perd en moyenne 0.06 points. À l'inverse, le f-score sur les configurations de Kraken semble légèrement augmenter, ce constat venant illustrer le phénomène de creux que nous évoquions dans la partie \ref{subsubsec:seuil}.
 
 \begin{table}[h!]
@@ -302,7 +301,7 @@ Les premières observations des résultats semblent confirmer que la correction 
    \begin{table}[h!]
      \centering
 \input{TAB/NERVAL_THACKERAY}
-     \caption{Résultat de \textsc{NERVAL} sur {\normalfont Vanity Fair}, Thackeray.}
+    \caption{Résultat de \textsc{NERVAL} sur {\normalfont Vanity Fair}, Thackeray.}
      \label{tab:NERVAL_THACKERAY}
  \end{table}
 

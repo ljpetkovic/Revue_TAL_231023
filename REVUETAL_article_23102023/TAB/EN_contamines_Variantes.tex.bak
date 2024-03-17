@@ -66,18 +66,12 @@
   Nouvelle-Frnce: 1,
   Nouvelle-lFrance: 2&2\\
   %&  &  &  \\ \cline{2-4}
-&\texttt{stanza} &  Ormeuux : 1, 18Ormaeuux : 1    &1 &Nouvelle-Fance: 4,
-  Nouvelle-France: 8,
-  Nouvelle-Frnce: 1,
-  Nouvelle-lFrance: 1&3\\
 
 \hline
 {Tess fr} &\texttt{spaCy\_lg}&  Ormeaux : 3,
   Ormenux : 1  &1&Nouvelle-France: 5,
   Nouvelle—France: 8& 3 \\
   %&  &  &  \\ \cline{2-4}
-&\texttt{stanza} & dosOrmeaux:1    "Ormeaux" : 3 & 0&Nouvelle-France: 5,
-  Nouvelle—France: 8& 3\\
 \hline
 \end{tabular}
 }

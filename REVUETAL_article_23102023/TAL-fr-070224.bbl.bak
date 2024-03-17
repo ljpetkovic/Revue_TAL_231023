@@ -1,0 +1,283 @@
+\begin{thebibliography}{xx}
+
+\harvarditem[Alex {\em et~al.}]{Alex, Grover, Klein \harvardand\
+  Tobin}{2012}{DBLP:conf/konvens/AlexGKT12}
+Alex B., Grover C., Klein E., Tobin R., {\og Digitised historical text: Does it
+  have to be mediOCRe?\fg}, {\em in} J.~Jancsary (ed.), {\em 11th Conference on
+  Natural Language Processing, {KONVENS} 2012, Empirical Methods in Natural
+  Language Processing, Vienna, Austria, September 19-21, 2012}, vol.~5 of {\em
+  Scientific series of the {\"{O}}GAI}, {\"{O}}GAI, Wien, {\"{O}}sterreich,
+  p.~401-409, 2012.
+
+\harvarditem[Azmi {\em et~al.}]{Azmi, Almutery \harvardand\
+  Aboalsamh}{2019}{azmi}
+Azmi A., Almutery M., Aboalsamh H., {\og Real-Word Errors in Arabic Texts: A
+  Better Algorithm for Detection and Correction\fg}, {\em IEEE/ACM Transactions
+  on Audio, Speech, and Language Processing}, vol. PP, p.~1-1, 05, 2019.
+
+\harvarditem[Bassil \harvardand\ Alwani]{Bassil \harvardand\
+  Alwani}{2012}{DBLP:journals/corr/abs-1203-5255}
+Bassil Y., Alwani M., {\og Post-Editing Error Correction Algorithm for Speech
+  Recognition using Bing Spelling Suggestion\fg}, {\em CoRR}, 2012.
+
+\harvarditem[Buscaldi {\em et~al.}]{Buscaldi, Felhi, Ghoul, Le~Roux, Lejeune
+  \harvardand\ Zhang}{2020}{buscaldi2020calcul}
+Buscaldi D., Felhi G., Ghoul D., Le~Roux J., Lejeune G., Zhang X., {\og Calcul
+  de similarit{\'e} entre phrases: quelles mesures et quels
+  descripteurs?(Sentence Similarity: a study on similarity metrics with words
+  and character strings)\fg}, {\em Actes de la 6e conf{\'e}rence conjointe
+  Journ{\'e}es d'{\'E}tudes sur la Parole (JEP, 33e {\'e}dition), Traitement
+  Automatique des Langues Naturelles (TALN, 27e {\'e}dition), Rencontre des
+  {\'E}tudiants Chercheurs en Informatique pour le Traitement Automatique des
+  Langues (R{\'E}CITAL, 22e {\'e}dition). Atelier D{\'E}fi Fouille de Textes},
+  p.~14-25, 2020.
+
+\harvarditem[Chiron {\em et~al.}]{Chiron, Doucet, Coustaty, Visani \harvardand\
+  Moreux}{2017}{chiron:hal-03025508}
+Chiron G., Doucet A., Coustaty M., Visani M., Moreux J.-P., {\og {Impact of OCR
+  errors on the use of digital libraries Towards a better access to
+  information}\fg}, {\em {2017 ACM IEEE Joint Conference on Digital Libraries
+  (JCDL)}}, 2017 ACM/IEEE Joint Conference on Digital Libraries (JCDL), {IEEE},
+  Toronto, Canada, June, 2017.
+
+\harvarditem[Clausner {\em et~al.}]{Clausner, Antonacopoulos \harvardand\
+  Pletschacher}{2020}{clausner2020efficient}
+Clausner C., Antonacopoulos A., Pletschacher S., {\og Efficient and effective
+  OCR engine training\fg}, {\em International Journal on Document Analysis and
+  Recognition (IJDAR)}, vol. 23, \no1, p.~73-88, 2020.
+
+\harvarditem[Damerau]{Damerau}{1964}{damerau}
+Damerau F.~J., {\og A Technique for Computer Detection and Correction of
+  Spelling Errors\fg}, {\em Commun. ACM}, vol. 7, \no3, p.~171–176, mar,
+  1964.
+
+\harvarditem[Dumas Milne~Edwards]{Dumas
+  Milne~Edwards}{2016}{dumasmilneedwards:tel-01562039}
+Dumas Milne~Edwards L., {Conception de formes de relecture dans les cha{\^i}nes
+  {\'e}ditoriales num{\'e}riques}, Theses, {Universit{\'e} de Technologie de
+  Compi{\`e}gne}, January, 2016.
+
+\harvarditem[Eshel {\em et~al.}]{Eshel, Cohen, Radinsky, Markovitch, Yamada
+  \harvardand\ Levy}{2017}{DBLP:journals/corr/EshelCRMYL17}
+Eshel Y., Cohen N., Radinsky K., Markovitch S., Yamada I., Levy O., {\og Named
+  Entity Disambiguation for Noisy Text\fg}, {\em CoRR}, 2017.
+
+\harvarditem[Evershed \harvardand\ Fitch]{Evershed \harvardand\
+  Fitch}{2014}{evershed2014correcting}
+Evershed J., Fitch K., {\og Correcting noisy OCR: Context beats confusion\fg},
+  {\em Proceedings of the First International Conference on Digital Access to
+  Textual Cultural Heritage}, p.~45-51, 2014.
+
+\harvarditem[Fleiss {\em et~al.}]{Fleiss, Levin \harvardand\
+  Paik}{2013}{fleiss2013statistical}
+Fleiss J.~L., Levin B., Paik M.~C., {\em Statistical Methods for Rates and
+  Proportions}, John Wiley \& Sons, 2013.
+
+\harvarditem[Gabay {\em et~al.}]{Gabay, Cl{\'e}rice \harvardand\
+  Reul}{2020}{gabay:hal-02577236}
+Gabay S., Cl{\'e}rice T., Reul C., {\og {OCR17: Ground Truth and Models for
+  17th c. French Prints (and hopefully more)}\fg}, May, 2020, working paper or
+  preprint.
+
+\harvarditem[Graves {\em et~al.}]{Graves, Fern{\'a}ndez, Gomez \harvardand\
+  Schmidhuber}{2006}{graves2006connectionist}
+Graves A., Fern{\'a}ndez S., Gomez F., Schmidhuber J., {\og Connectionist
+  temporal classification: labelling unsegmented sequence data with recurrent
+  neural networks\fg}, {\em Proceedings of the 23rd international conference on
+  Machine learning}, p.~369-376, 2006.
+
+\harvarditem[Hamdi {\em et~al.}]{Hamdi, Jean-Caurant, Sid{\`e}re, Coustaty
+  \harvardand\ Doucet}{2020}{hamdi:hal-03026931}
+Hamdi A., Jean-Caurant A., Sid{\`e}re N., Coustaty M., Doucet A., {\og
+  {Assessing and Minimizing the Impact of OCR Quality on Named Entity
+  Recognition}\fg}, {\em {24\textsuperscript{th} International Conference on
+  Theory and Practice of Digital Libraries 2020, Lyon, France}}, p.~87-101,
+  August, 2020.
+
+\harvarditem[Hamdi {\em et~al.}]{Hamdi, Linhares~Pontes, Sid{\`e}re, Coustaty
+  \harvardand\ Doucet}{2022}{hamdi:hal-03615997}
+Hamdi A., Linhares~Pontes E., Sid{\`e}re N., Coustaty M., Doucet A., {\og
+  {In-Depth Analysis of the Impact of OCR Errors on Named Entity Recognition
+  and Linking}\fg}, {\em {Natural Language Engineering}}, March, 2022.
+
+\harvarditem[He {\em et~al.}]{He, Zhang, Ren \harvardand\ Sun}{2016}{he2016}
+He K., Zhang X., Ren S., Sun J., {\og Deep Residual Learning for Image
+  Recognition\fg}, {\em 2016 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, p.~770-778, 2016.
+
+\harvarditem[Huynh {\em et~al.}]{Huynh, Hamdi \harvardand\
+  Doucet}{2020a}{huynh:hal-03034484}
+Huynh V.-N., Hamdi A., Doucet A., {\og {When to Use OCR Post-correction for
+  Named Entity Recognition?}\fg}, {\em {22nd International Conference on
+  Asia-Pacific Digital Libraries, ICADL 2020}}, p.~33-42, November, 2020a.
+
+\harvarditem[Huynh {\em et~al.}]{Huynh, Hamdi \harvardand\
+  Doucet}{2020b}{huynh}
+Huynh V.-N., Hamdi A., Doucet A., {\og When to Use OCR Post-correction for
+  Named Entity Recognition?\fg}, {\em in} E.~Ishita, N.~L.~S. Pang, L.~Zhou
+  (eds), {\em Digital Libraries at Times of Massive Societal Transition},
+  Springer International Publishing, Cham, p.~33-42, 2020b.
+
+\harvarditem[Kiessling]{Kiessling}{2019}{kiessling2019kraken}
+Kiessling B., {\og Kraken-an universal text recognizer for the humanities\fg},
+  {\em ADHO, {\'E}d., Actes de Digital Humanities Conference}, 2019.
+
+\harvarditem[Kiessling {\em et~al.}]{Kiessling, Tissot, Stokes \harvardand\
+  Ezra}{2019}{kiessling2019escriptorium}
+Kiessling B., Tissot R., Stokes P., Ezra D. S.~B., {\og eScriptorium: An open
+  source platform for historical document analysis\fg}, {\em 2019 International
+  Conference on Document Analysis and Recognition Workshops (ICDARW)}, vol.~2,
+  IEEE, p.~19-19, 2019.
+
+\harvarditem[Koudoro-Parfait {\em et~al.}]{Koudoro-Parfait, Lejeune
+  \harvardand\ Buth}{2022}{koudoro2022reconnaissance}
+Koudoro-Parfait C., Lejeune G., Buth R., {\og Reconnaissance d’entit{\'e}s
+  nomm{\'e}es sur des sorties OCR bruit{\'e}es: des pistes pour la
+  d{\'e}sambigu{\"\i}sation morphologique automatique (Resolution of entity
+  linking issues on noisy OCR output: automatic disambiguation tracks)\fg},
+  {\em Actes de la 29e Conf{\'e}rence sur le Traitement Automatique des Langues
+  Naturelles. Atelier TAL et Humanit{\'e}s Num{\'e}riques (TAL-HN)}, p.~45-55,
+  2022.
+
+\harvarditem[Koudoro{-}Parfait {\em et~al.}]{Koudoro{-}Parfait, Lejeune
+  \harvardand\ Roe}{2021}{DBLP:conf/gis/Koudoro-Parfait21}
+Koudoro{-}Parfait C., Lejeune G., Roe G., {\og Spatial Named Entity Recognition
+  in Literary Texts: What is the Influence of {OCR} Noise?\fg}, {\em in}
+  L.~Moncla, C.~Brando, K.~McDonough (eds), {\em GeoHumanities@SIGSPATIAL 2021:
+  Proceedings of the 5th {ACM} {SIGSPATIAL} International Workshop on
+  Geospatial Humanities, Beijing, China, November 2 - 5, 2021}, {ACM},
+  p.~13-21, 2021.
+
+\harvarditem[Lejeune {\em et~al.}]{Lejeune, Brixtel, Doucet \harvardand\
+  Lucas}{2015}{lejeune:hal-01294127}
+Lejeune G., Brixtel R., Doucet A., Lucas N., {\og {Multilingual Event
+  Extraction for Epidemic Detection}\fg}, {\em {Artificial Intelligence in
+  Medicine}}, vol. 65, \no2, p.~131-143, October, 2015.
+
+\harvarditem[Miret \harvardand\ Kermorvant]{Miret \harvardand\
+  Kermorvant}{2021}{nerval2021}
+Miret B., Kermorvant C., {\og Nerval: a python library for named-entity
+  recognition evaluation on noisy texts\fg}, 2021.
+
+\harvarditem[Montani {\em et~al.}]{Montani, O'Leary~McCann, Geovedi, O'Regan,
+  Samsonov, Orosz, de~Kok, Blättermann, Altinok, Kristiansen, Kannan, Mitsch,
+  Bournhonesque, Edward, Miranda, Baumgartner, Hudson, Bot, Roman, Fiedler,
+  Daniels, Phatthiyaphaibun, Howard \harvardand\
+  Tamura}{2023}{ines_montani_2023_7715077}
+Montani I., O'Leary~McCann P., Geovedi J., O'Regan J., Samsonov M., Orosz G.,
+  de~Kok D., Blättermann M., Altinok D., Kristiansen S.~L., Kannan M., Mitsch
+  R., Bournhonesque R., Edward, Miranda L., Baumgartner P., Hudson R., Bot E.,
+  Roman, Fiedler L., Daniels R., Phatthiyaphaibun W., Howard G., Tamura Y.,
+  {\og {explosion/spaCy: v3.5.1: spancat for multi-class labeling, fixes for
+  textcat+transformers and more}\fg}, March, 2023.
+
+\harvarditem[Nguyen {\em et~al.}]{Nguyen, Boros, Lejeune \harvardand\
+  Doucet}{2020}{Nguyen-2020}
+Nguyen N.~K., Boros E., Lejeune G., Doucet A., {\og Impact Analysis of Document
+  Digitization on Event Extraction\fg}, {\em Proceedings of the 4th Workshop on
+  Natural Language for Artificial Intelligence (NL4AI), 19th International
+  Conference of the Italian Association for Artificial Intelligence}, -, Roma,
+  Italy, p.~to appear, 2020.
+
+\harvarditem[Nguyen {\em et~al.}]{Nguyen, Jatowt, Coustaty \harvardand\
+  Doucet}{2021}{nguyen2021}
+Nguyen T. T.~H., Jatowt A., Coustaty M., Doucet A., {\og Survey of Post-OCR
+  Processing Approaches\fg}, {\em ACM Comput. Surv.}, jul, 2021.
+
+\harvarditem[Oger {\em et~al.}]{Oger, Rouvier, Camelin, Kesler, Lefevre
+  \harvardand\ Torres-Moreno}{2012}{oger}
+Oger S., Rouvier M., Camelin N., Kesler R., Lefevre F., Torres-Moreno J.-M.,
+  {\em Système du LIA pour la campagne DEFT2010}, Lavoisier, 01, 2012.
+
+\harvarditem[Petkovic]{Petkovic}{2022}{petkovic2022impact}
+Petkovic L., {\og Impact de la correction automatique de l’OCR/HTR sur la
+  t{\^a}che de reconnaissance d’entit{\'e}s nomm{\'e}es dans un corpus
+  bruit{\'e}\fg}, {\em Actes de la journ{\'e}e d’{\'e}tude sur la robustesse
+  des systemes de TAL}, vol. 1, p.~22, 2022.
+
+\harvarditem[Petkovic {\em et~al.}]{Petkovic, Alrahabi \harvardand\
+  Roe}{2022}{petkovic:hal-04063970}
+Petkovic L., Alrahabi M., Roe G., {\og {Impact de la correction automatique de
+  l'OCR/HTR sur la reconnaissance d'entit{\'e}s nomm{\'e}es dans un corpus
+  bruit{\'e}}\fg}, {\em {JIS - Journal of Information Sciences}}, vol. 21,
+  \no2, p.~42-57, December, 2022.
+
+\harvarditem[Qi {\em et~al.}]{Qi, Zhang, Zhang, Bolton \harvardand\
+  Manning}{2020}{qi2020stanza}
+Qi P., Zhang Y., Zhang Y., Bolton J., Manning C.~D., {\og Stanza: A {Python}
+  Natural Language Processing Toolkit for Many Human Languages\fg}, {\em
+  Proceedings of the 58th Annual Meeting of the Association for Computational
+  Linguistics: System Demonstrations}, 2020.
+
+\harvarditem[Rahimi {\em et~al.}]{Rahimi, Li \harvardand\
+  Cohn}{2019}{rahimi-etal-2019-massively}
+Rahimi A., Li Y., Cohn T., {\og Massively Multilingual Transfer for {NER}\fg},
+  {\em Proceedings of the 57th Annual Meeting of the Association for
+  Computational Linguistics}, Association for Computational Linguistics,
+  Florence, Italy, p.~151-164, July, 2019.
+
+\harvarditem[Reul {\em et~al.}]{Reul, Dittrich \harvardand\
+  Gruner}{2017}{reul2017case}
+Reul C., Dittrich M., Gruner M., {\og Case Study of a highly automated Layout
+  Analysis and OCR of an incunabulum: 'Der Heiligen Leben'(1488)\fg}, {\em
+  Proceedings of the 2nd international conference on digital access to textual
+  cultural heritage}, p.~155-160, 2017.
+
+\harvarditem[Ronneberger {\em et~al.}]{Ronneberger, Fischer \harvardand\
+  Brox}{2015}{ronneberger2015}
+Ronneberger O., Fischer P., Brox T., {\og U-Net: Convolutional Networks for
+  Biomedical Image Segmentation\fg}, {\em in} N.~Navab, J.~Hornegger, W.~M.
+  Wells, A.~F. Frangi (eds), {\em Medical Image Computing and Computer-Assisted
+  Intervention -- MICCAI 2015}, Springer International Publishing, p.~234-241,
+  2015.
+
+\harvarditem[Sagot \harvardand\ G{\'{a}}bor]{Sagot \harvardand\
+  G{\'{a}}bor}{2014}{DBLP:conf/taln/SagotG14}
+Sagot B., G{\'{a}}bor K., {\og Named Entity Recognition and Correction in
+  OCRized Corpora (D{\'{e}}tection et correction automatique d'entit{\'{e}}s
+  nomm{\'{e}}es dans des corpus OCRis{\'{e}}s) [in French]\fg}, {\em Traitement
+  Automatique des Langues Naturelles, {TALN} 2014, Marseille, France, 1-4
+  Juillet 2014, articles courts}, The Association for Computer Linguistics,
+  p.~437-442, 2014.
+
+\harvarditem[Sagot {\em et~al.}]{Sagot, Romary, Bawden, Su{\'a}rez,
+  Christensen, Gabay, Pinche \harvardand\ Camps}{2022}{pinche_2022_7410529}
+Sagot B., Romary L., Bawden R., Su{\'a}rez P. J.~O., Christensen K., Gabay S.,
+  Pinche A., Camps J.-B., {\og Gallic(orpor)a: Extraction, annotation et
+  diffusion de l’information textuelle et visuelle en diachronie longue\fg},
+  {\em DataLab de la BnF: Restitution des travaux 2022}, 2022.
+
+\harvarditem[Smith]{Smith}{2007}{smith2007overview}
+Smith R., {\og An overview of the Tesseract OCR engine\fg}, {\em Ninth
+  international conference on document analysis and recognition (ICDAR 2007)},
+  vol.~2, IEEE, p.~629-633, 2007.
+
+\harvarditem[Stanislawek {\em et~al.}]{Stanislawek, Wr{\'o}blewska,
+  W{\'o}jcicka, Ziembicki \harvardand\ Biecek}{2019}{stanislawek-2019}
+Stanislawek T., Wr{\'o}blewska A., W{\'o}jcicka A., Ziembicki D., Biecek P.,
+  {\og Named Entity Recognition - Is There a Glass Ceiling?\fg}, {\em
+  Proceedings of the 23rd Conference on Computational Natural Language Learning
+  (CoNLL)}, p.~624-633, November, 2019.
+
+\harvarditem[Tual {\em et~al.}]{Tual, Abadie, Chazalon, Dum{\'{e}}nieu
+  \harvardand\ Carlinet}{2023}{DBLP:journals/corr/abs-2302-10204}
+Tual S., Abadie N., Chazalon J., Dum{\'{e}}nieu B., Carlinet E., {\og A
+  Benchmark of Nested Named Entity Recognition Approaches in Historical
+  Structured Documents\fg}, {\em CoRR}, 2023.
+
+\harvarditem[van Strien {\em et~al.}]{van Strien, Beelen, Ardanuy, Hosseini,
+  McGillivray \harvardand\ Colavizza}{2020}{vanStrien-2020}
+van Strien D., Beelen K., Ardanuy M., Hosseini K., McGillivray B., Colavizza
+  G., {\og {Assessing the Impact of OCR Quality on Downstream NLP Tasks.}\fg},
+  {\em In Proceedings of the 12th International Conference on Agents and
+  Artificial Intelligence - Volume 1: ARTIDIGH}, p.~484 - 496, 2020.
+
+\harvarditem[Wisniewski {\em et~al.}]{Wisniewski, Max \harvardand\
+  Yvon}{2010}{wisniewski}
+Wisniewski G., Max A., Yvon F., {\og Recueil et analyse d{'}un corpus
+  {\'e}cologique de corrections orthographiques extrait des r{\'e}visions de
+  Wikip{\'e}dia\fg}, {\em Actes de la 17e conf{\'e}rence sur le Traitement
+  Automatique des Langues Naturelles. Articles longs}, ATALA, Montr{\'e}al,
+  Canada, p.~121-130, July, 2010.
+
+\end{thebibliography}

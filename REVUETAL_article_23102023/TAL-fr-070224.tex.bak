@@ -33,7 +33,7 @@
 % P: première page de l'article ; D: dernière page de l'article
 
 %NB: le short title (entre crochets) doit faire moins de 55mm
-\title[Contamination des OCR sur la REN]{Analyse multilingue de l'impact de la correction automatique de l'OCR sur la reconnaissance d’entités nommées spatiales dans des corpus littéraires}
+\title[Correction des contaminations de la ROC]{Analyse multilingue de l'impact de la correction automatique de la ROC sur la reconnaissance d’entités nommées spatiales dans des corpus littéraires}
 % {L'impact de la correction automatique des contaminations d'OCR sur la reconnaissance d’entités nommées spatiales dans les corpus littéraires de langues inégalement dotées : réel gain ou perte de l’information ? }
 %GL : proposotion
 %\title[Contamination de l'OCR sur la REN]{Analyse multilingue de l'impact de la correction automatique de l'OCR sur la reconnaissance d’entités nommées spatiales dans des corpus littéraires.}
@@ -49,10 +49,10 @@
 }
 
 \resume{
-L’extraction d'informations de textes issus de reconnaissance optique de caractères (ROC) interroge sur la possibilité d'exploiter des données bruitées. Notre contribution est double, nous nous attacherons : d'une part, à déterminer si la correction de ROC permet d’améliorer significativement les résultats de la tâche de reconnaissance d'entités nommées (REN) sur des corpus de langue française, anglaise et portugaise, d'autre part, à montrer les limites des évaluations strictes (F-score ou intersections), tout en proposant des stratégies d'évaluation plus souple. Nous présentons plusieurs typologies et protocoles d'évaluation pour la REN sur des données bruitées et sur des données bruitées corrigées automatiquement.}
+L’extraction d'informations de textes issus de reconnaissance optique de caractères (ROC) interroge sur la possibilité d'exploiter des données bruitées. Notre contribution est double, nous nous attacherons : d'une part, à déterminer si la correction de la ROC permet d’améliorer significativement les résultats de la tâche de reconnaissance d'entités nommées (REN) sur des corpus de langue française, anglaise et portugaise, d'autre part, à montrer les limites des évaluations strictes (F-score ou intersections), tout en proposant des stratégies d'évaluation plus souple. Nous présentons plusieurs typologies et protocoles d'évaluation pour la REN sur des données bruitées et sur des données bruitées corrigées automatiquement.}
 
 \abstract{Multilingual analysis of the impact of automatic OCR correction on spatial recognition of spatial named entities
-in literary corpora}{The extraction of information from texts produced by optical character recognition (OCR) raises questions about the possibility of exploiting noisy data. Our contribution is twofold: firstly, to determine whether OCR correction can significantly improve the results of the Named Entity Recognition (NER) task on French, English and Portuguese language corpora, and secondly, to show the limitations of strict evaluations (F-score or intersections), while proposing more flexible evaluation strategies. We present several typologies and evaluation protocols for REN on noisy data and on automatically corrected noisy data.}
+in literary corpora}{The extraction of information from texts produced by optical character recognition (OCR) raises questions about the possibility of exploiting noisy data. Our contribution is twofold: firstly, to determine whether OCR correction can significantly improve the results of the Named Entity Recognition (NER) task on French, English and Portuguese language corpora, and secondly, to show the limitations of strict evaluations (F-score or intersections), while proposing more flexible evaluation strategies. We present several typologies and evaluation protocols for NER on noisy data and on automatically corrected noisy data.}
 
 \motscles{
 ROC$_1$,
