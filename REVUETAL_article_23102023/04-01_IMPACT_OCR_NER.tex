@@ -16,7 +16,7 @@ Les transcriptions issues de la ROC ont été produites avec deux systèmes disp
 %\footnote{Le modèle par défaut de Tesseract est l'anglais. Nous précisons la langue Tess. eng, Tess. fr et Tess. suivant les bonnes pratiques de \#RègledeBender \cite{bender-friedman-2018-data}.} et (iii) 
 
 \subsubsection{Les outils de REN}
-Pour effectuer la tâche de REN nous avons utilisé la chaîne de traitements de la boîte à outils pour le TAL \texttt{spaCy} dans sa version 3.5.1. Le choix de cet outil est déterminé par la multitude des modèles, leurs performances et leur facilité de la prise en main \cite{DBLP:conf/gis/Koudoro-Parfait21}. %  et \texttt{stanza}\footnote{1.5.0}. 
+Pour effectuer la tâche de REN\footnote{Nous avons également effectué les évaluations pour \texttt{stanza} \cite{qi2020stanza}, v. 1.5.0, dont les résultats sont disponibles sur le dépôt GitHub : \url{anonymous}} nous avons utilisé la chaîne de traitements de la boîte à outils pour le TAL \texttt{spaCy} dans sa version 3.5.1. Le choix de cet outil est déterminé par la multitude des modèles, leurs performances et leur facilité de la prise en main \cite{DBLP:conf/gis/Koudoro-Parfait21}. %  et \texttt{stanza}\footnote{1.5.0}. 
 Le système \texttt{spaCy} contient une stratégie d'intégration de mots utilisant des fonctionnalités de sous-mots et les plongements ``Bloom'' (angl. \textit{Bloom embeddings})\footnote{Il s'agit de la structure de données probabiliste qui permet de réduire la dimension des vecteurs (\textit{cf.} \url{https://explosion.ai/blog/bloom-embeddings}).}, ainsi qu'un réseau neuronal convolutif avec des connexions résiduelles, ce qui peut expliquer sa robustesse lors de l'extraction des EN contaminées. \texttt{spaCy} propose des modèles de langue du type \textit{large} pour le français\footnote{\texttt{fr\_core\_news\_lg}, \url{https://spacy.io/models/fr}}, le portugais\footnote{\texttt{pt\_core\_news\_lg}, \url{https://spacy.io/models/pt}} et l'anglais\footnote{\texttt{en\_core\_web\_lg}, \url{https://spacy.io/models/en}}. Nous avons favorisé l'usage du modèle \textit{large} (\texttt{spaCy\_lg}) plutôt que du modèle \textit{small} (\texttt{spaCy\_sm}) car la différence principale entre les deux modèles pour les trois langues tient à l'ajout de la vectorisation et des plongements de mots (angl. \textit{embeddings}) dans l'entraînement du modèle \textit{large}\footnote{Modèle anglais : Explosion Vectors (OSCAR 2109 + Wikipedia + OpenSubtitles + WMT News Crawl) (Explosion). Modèles français et portugais :
 Explosion fastText Vectors (CBOW, OSCAR Common Crawl + Wikipedia) (Explosion).}.
 
@@ -46,14 +46,15 @@ En revanche, la concaténation des tokens d'une EN semble être une contaminatio
 \end{table}
 
 Le tableau \ref{tab:ELTeC_bon_mauvais} qui répertorie le nombre des types des EN reconnues par \texttt{spaCy} selon la qualité des versions de ROC, illustre le fait que sur les versions de ROC les systèmes de REN récupèrent plus de types d'EN différents, donc que la qualité du texte en entrée influe sur la quantité des types d'EN récupérés en sortie. La qualité des versions de ROC a été évaluée en appliquant les métriques \textit{Character Error Rate} (CER) et \textit{Word Error Rate} (WER) sur les textes de référence et les versions de ROC. On note que plus le WER est élevé, plus la qualité de la transcription baisse, plus le nombre de type d'EN en sortie est élevé. On peut en conclure que (i) le système de REN ramène plus de bruit ou Faux Positif (FP) en sortie quand la ROC est moins bonne et (ii) le nombre des hapax augmente selon que la qualité de la transcription diminue. 
-Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapport à la référence, figurent des FP mais aussi des formes contaminées des entités, qui sont des hapax, et qui comptent chacune pour un type différent d'EN en plus du type initial de l'EN. Ces phénomènes sont illustrés dans le tableau \ref{tab:FP_VP} qui recense une annotation manuelle des Vrais Positifs (VP) et des FP par type d'EN récupérées par \texttt{spaCy\_lg} sur l'ensemble des EN de référence et celui des versions pour Kraken et Tesseract français. 
+Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapport à la référence, figurent des FP mais aussi des formes contaminées des entités, qui sont des hapax, et qui comptent chacune pour un type différent d'EN en plus du type initial de l'EN. Ces phénomènes sont illustrés dans le tableau \ref{tab:FP_VP} qui recense une annotation manuelle\footnote{Nous n'avons pas annoté tous les corpus en raison du temps limité.} des Vrais Positifs (VP) et des FP par type d'EN récupérées par \texttt{spaCy\_lg} sur l'ensemble des EN de référence et celui des versions pour Kraken et Tesseract français. 
 \begin{table}[h!]
 \small
     \centering
     \input{TAB/DAUDET_FP_VP_2}
-    \caption{Annotation manuelle des VP et FP sur les types d'EN reconnus par \texttt{spaCy} pour Daudet\footnote{Compte tenu du temps que prend une annotation manuelle, nous n'avons pas annoté tous les corpus et nous ne disposons pas d'un \textit{gold standard} global.}.}
+    \caption{Annotation manuelle des VP et FP sur les types d'EN reconnus par \texttt{spaCy} pour Daudet.}
     \label{tab:FP_VP}
 \end{table}
+
 On retrouve bien (i) plus de FP et (ii) plus de VP qui sont des hapax sur les transcriptions OCR que sur la référence. Il y a donc plus de types différents d'entités sur la sortie de la ROC que sur la sortie de la Réf., car, comme l'illustre le tableau \ref{tab:EN_contamines_Variantes}, les variantes d'une entités peuvent être nombreuses. 
 
 
@@ -93,14 +94,14 @@ La figure \ref{fig:intersection_globale-kraken-tess} rend compte de cette évalu
 
 
 \begin{figure}[h!]
-    \begin{minipage}{7cm}
+    \begin{minipage}{6.5cm}
   \begin{subfigure}{1\textwidth}
   \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_spacy-lg-concat_intersection.png} 
   \caption{Kraken --\texttt{spaCy-lg}}
   \label{fig:ELTeCFRA_Kraken_spacy-lg-concat_intersection}
   \end{subfigure}
   \end{minipage}
-  \begin{minipage}{7cm}
+  \begin{minipage}{6.5cm}
   \begin{subfigure}{1\textwidth}
 %  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_stanza-concat_intersection.png} %%%% ancienne figure 07/02/2024
   \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png}
@@ -265,9 +266,9 @@ L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était
  Nous avons pu observer que les désaccords étaient plus nombreux sur l'annotation des versions de ROC du fait des problèmes de tokenisation.
 
 Grâce à un système de vote majoritaire, nous avons fusionné les annotations pour obtenir un \textit{gold standard} sur chaque version de chaque œuvre.
- Nous avons évalué \texttt{spaCy\_lg} sur cet échantillon, dont les résultats sont présentés dans le tableau \ref{tab:eval-supervise}. À cet effet, nous proposons deux types d'évaluation que nous appelons ici \og{}stricte\fg{} et \og{}souple\fg{}. La première configuration ne prend en compte que les correspondances exactes des EN (p. ex. le mot contaminé \textit{Acques} sera considéré comme un FP, même s'il renvoie au VP \textit{Jacques}). En revanche, la configuration \og{}souple\fg{} considère une EN comme correcte, quelle que soit sa taille (une partie ou l'intégralité de l'EN, auquel cas la forme contaminée \textit{Acques} sera considéré comme un VP. Par rapport à l'évaluation dite \og{}globale\fg{} (qui concerne tous les types d'EN), nous pouvons remarquer d'une part que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken dans les configurations stricte et souple.
-  En outre, ce qui est plus étonnant, dans le cas de l'évaluation souple, ces résultats sont même meilleurs que ceux obtenus sur la version de réf..
-  D'autre part, nous remarquons que là aussi la faiblesse apparente des résultats de la REN obtenus sur des versions de ROC est principalement due à des problèmes d'alignement entre les tokens contaminés et les tokens de référence. 
+ Nous avons évalué \texttt{spaCy\_lg} sur cet échantillon, dont les résultats sont présentés dans le tableau \ref{tab:eval-supervise}. À cet effet, nous proposons deux types d'évaluation que nous appelons ici \og{}stricte\fg{} et \og{}souple\fg{}. La première configuration ne prend en compte que les correspondances exactes des EN (p. ex. le mot contaminé \textit{Acques} sera considéré comme un FP, même s'il renvoie au VP \textit{Jacques}). En revanche, la configuration \og{}souple\fg{} considère une EN comme correcte, quelle que soit sa taille (une partie ou l'intégralité de l'EN, auquel cas la forme contaminée \textit{Acques} sera considéré comme un VP. Par rapport à l'évaluation dite \og{}globale\fg{} (qui concerne tous les types d'EN), nous pouvons remarquer que les résultats obtenus sur les versions Tesseract sont meilleurs que ceux obtenus sur les versions Kraken dans les configurations stricte et souple.
+  Plus étonnamment, les résultats de Tesseract sont meilleurs par rapport à ceux de la référence dans le cadre de l'évaluation souple.
+ Nous remarquons que là aussi la faiblesse apparente des résultats de la REN obtenus sur des versions de ROC est principalement due à des problèmes d'alignement entre les tokens contaminés et les tokens de référence. 
 %  comment expliquez-vous la meilleure performance sur les entités de lieux dans la configuration stricte ? [càd. pourquoi la F-mesure est meilleure sur les lieux que sur les autres EN avec l'évaluation stricte dans le tableau 8 ?]
   Enfin, le fait que le F-score soit meilleur sur les EN de lieux que sur le globale dans la configuration stricte peut s'expliquer par le fait que les EN de lieux comptent le plus souvent un token dans nos corpus (p. ex. \textit{Paris}), au contraire des EN de personnes. Par exemple, \textit{Daniel Eyssette}, qui est écrit \textit{Daniel Ey-sset-te}\footnote{Les tirets représentent des retours à la ligne.}. Ainsi, la deuxième partie de l'EN est divisée en trois éléments distincts, ce qui a vraisemblablement posé problème à l'évaluation globale et diminué les F-scores. Dès lors, le rappel sur les noms de personnes descend beaucoup plus ; nous obtenons moins de VP, et les FP augmentent moins sur les lieux.
 \begin{table}[h!]
