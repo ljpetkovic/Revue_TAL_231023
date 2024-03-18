@@ -6,18 +6,19 @@
   \multicolumn{3}{c|}{Anglais} &
   \multicolumn{3}{c|}{Français} &
   \multicolumn{3}{c|}{Portugais} \\ \cline{2-10} 
+  
 %\multirow{}{}{} &
  
 &
   
-  \cellcolor[HTML]{FFFFFF}Reynolds &
+  \multicolumn{1}{c|}{Reynolds} &
   \multicolumn{1}{c|}{Troll.} &
   \multicolumn{1}{c|}{Brontë} &  
   \multicolumn{1}{c|}{Daudet} &
-  Adam &
+  \multicolumn{1}{c|}{Adam} &
   \multicolumn{1}{c|}{Maup.} &
   \multicolumn{1}{c|}{Diniz} &
- Queiroz&
+ \multicolumn{1}{c|}{Queiroz} &
   \multicolumn{1}{c|}{Osorio}
    \\ \hline
 \hline
