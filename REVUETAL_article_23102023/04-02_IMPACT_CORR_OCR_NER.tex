@@ -228,7 +228,7 @@ Ce fait peut être lu à l'aune des observations présentées dans le tableau \r
 
 Afin de dépasser les verrous de l'évaluation stricte tels que décrits précédemment, nous employons des mesures de distance textuelle pour rendre plus souples nos critères d'évaluation des résultats de la REN sur les sorties de ROC bruitées et leurs corrections automatiques. Nous avons privilégié la distance
 %\footnote{Nous présentons uniquement des résultats pour cosinus ; pour les résultats Jaccard, \textit{cf.} le dépôt GitHub : \url{https://github.com/anonymous}}
-cosinus\footnote{\textit{Cf.} le dépôt GitHub : \url{https://github.com/These-SCAI2023/EXPE38_BOITE_A_MOUSTACHE_26072023}.}, calculée entre la REN sur tous les textes de référence et leurs versions ROC, car elle est considérée comme une mesure de référence quand il est question de (dis)similarité textuelle \cite{buscaldi2020calcul}. La distance cosinus est calculée sur les bigrammes et trigrammes de caractères\footnote{Nous avons vectorisé le texte avec la librairie \texttt{CountVectorizer}.}. 
+cosinus, calculée entre la REN sur tous les textes de référence et leurs versions ROC, car elle est considérée comme une mesure de référence quand il est question de (dis)similarité textuelle \cite{buscaldi2020calcul}. La distance cosinus est calculée sur les bigrammes et trigrammes de caractères\footnote{Nous avons vectorisé le texte avec la librairie \texttt{CountVectorizer}.}. 
 \begin{figure}[h!]
    \centering
       \begin{subfigure}{0.45\textwidth}
