@@ -1,4 +1,4 @@
-%%%%%%%%%% Ancien tableau avec stanza %%%%%%%%%%%%%%
+%%%%%%%%%% Ancien tableau avec spacy 2.3.5 et stanza en 2021%%%%%%%%%%%%%%
 
 %\definecolor{orangeperso}{HTML}{FFCE93}
 %
@@ -21,24 +21,38 @@
 %
 %\end{tabular}
 
-%%%%%%%%%%%%%% Nouveau tableau sans stanza %%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Nouveau tableau spacy lg 3.5.1 14/07/2024 %%%%%%%%%%%%%%
+
+
+
 \definecolor{orangeperso}{HTML}{FFCE93}
 
-\scriptsize\begin{tabular}{|l|r|r|r|r|r|r|}
+\scriptsize\begin{tabular}{|l|r|r|r|}
  \hline
- &\multicolumn{1}{c|}{REF}&\multicolumn{1}{c|}{Kraken} &\multicolumn{1}{c|}{Tess. fr}\\
+    \multicolumn{4}{|c|}{\texttt{spaCy\_lg}}     \\
+    \hline
+ & \multicolumn{1}{c|}{Réf.} &\multicolumn{1}{c|}{Kraken} & \multicolumn{1}{c|}{Tess. fr}\\
 \hline
 
-  &\bf {\texttt{spaCy\_lg }}  &\bf {\texttt{spaCy\_lg }} &\bf {\texttt{spaCy\_lg }}\\
+Nb. types & 209 & 455 & 295\\
+VP & 106 & \textbf{71} &100 \\
+FP &103& 283& 105\\
+FFP \ding{221} VP &\multicolumn{1}{r|}{ \ding{53} }&50& 17 \\
+\hline
+% \hline
+% & Réf. vs Gold & Réf. vs. Kraken & Réf. vs. Tess. fr.\\
+% \hline
+% FVP  & 57 & 70 & 51 & 73 &\\
+% \hline
 
-\hline
-Nb. types & 203 & 467 & 237\\
-VP & 96 & \textbf{107} & 96\\
-FP & 107 & 360 & 141\\
+% FFN & 45 &33& \ding{53} &  \ding{53}\\
 
-\hline
-\hline
-VP hapax & 60 & 70 & 57\\
-\hline
+
+% \hline
+% \hline
+% VP hapax &&&  &  \\
+% \hline
 
 \end{tabular}
+
+

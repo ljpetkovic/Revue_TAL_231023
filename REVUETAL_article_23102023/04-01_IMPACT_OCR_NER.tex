@@ -6,26 +6,29 @@
 \label{subsec:outils_OCR-IMPACT-NER}
 
 \subsubsection{Les outils de ROC}
-Les transcriptions issues de la ROC ont été produites avec deux systèmes disponibles gratuitement : Kraken \cite{kiessling2019kraken} et Tesseract \cite{smith2007overview}. Bien qu'il existe un modèle pour le français du XVII\ieme{}siècle \cite{gabay:hal-02577236}\footnote{\url{https://github.com/Heresta/OCR17plus/tree/main/Model}}, ainsi que le modèle Gallicorpora \cite{pinche_2022_7410529}, nous ne les avons pas jugés adaptés à notre corpus, et donc nous utilisons le modèle de base de Kraken, version 3.0. Ce modèle permet d'opérer la segmentation\footnote{Le modèle de segmentation est constitué d'un réseau d'étiquetage par classification des phrases (angl. \textit{seed-labeling network}).
+Les transcriptions issues de la ROC ont été produites avec deux systèmes disponibles gratuitement : Kraken \cite{kiessling2019kraken} et Tesseract \cite{smith2007overview}. Bien qu'il existe un modèle pour le français du XVII\ieme{}siècle \cite{gabay:hal-02577236}\footnote{\url{https://github.com/Heresta/OCR17plus/tree/main/Model}}, ainsi que le modèle Gallicorpora \cite{pinche_2022_7410529}, nous ne les avons pas jugés adaptés à notre corpus, et donc nous utilisons le modèle de base de Kraken, version 3.0. Ce modèle permet d'opérer la segmentation\footnote{Le modèle de segmentation est constitué d'un réseau neuronal d'étiquetage par classification des phrases (angl. \textit{seed-labeling network}).
 %qui est un \textit{U-net} (\og{}réseau entièrement convolutionnel\fg{}) modifié \cite{ronneberger2015} sur la base d'un réseau neuronal résiduel (ResNet) à 34 couches \cite{he2016}, pré-entraîné sur ImageNet.
-} et la transcription\footnote{Le modèle de transcription fonctionne comme un classifieur de séquences sans segmentation qui utilise un réseau neuronal artificiel pour mapper une image d'une ligne de texte (séquence d'entrée), en une séquence de caractères (séquence de sortie). 
+} et la transcription\footnote{Le modèle de transcription fonctionne comme un classifieur de séquences sans segmentation qui utilise un réseau neuronal pour mapper une image d'une ligne de texte (séquence d'entrée), en une séquence de caractères (séquence de sortie). 
 %Le réseau de neurones convolutif et récurrent a été entraîné avec la fonction de perte CTC (angl. \textit{Connexionist Temporal Classification} \cite{graves2006connectionist}).
 }.
 %ainsi qu'un modèle HTR\footnote{Abbr. angl. \textit{Handwritten Text Recognition} ou la reconnaissance d'écriture manuscrite, basée sur l'extraction du texte à partir des blocs textuels (lignes), contrairement à la méthode de ROC qui traite les caractères individuelles \cite{gabayscicos}.}
- Concernant Tesseract, nous avons utilisé le modèle LSTM \texttt{tessdata\_best}, sur la version 4.1.2 du système, entraîné sur des données Google. Tesseract propose une analyse de la mise en page intégrée à travers la segmentation des cadres (angl. \textit{box segmentation}), ce qui rend le traitement des mises en page complexes plus difficile \cite{reul2017case}. Le modèle de base de Tesseract est un modèle conçu pour l'anglais, et il existe un modèle français et un modèle portugais. Quatre modèles de langue neuronaux pour la ROC ont été utilisés dans le cadre de ces expériences : Kraken de base, Tess. en, fr et pt contemporain.
+Concernant Tesseract, nous avons utilisé le modèle neuronal LSTM \texttt{tessdata\_best}, sur la version 4.1.2 du système, entraîné sur des données Google. Tesseract propose une analyse de la mise en page intégrée à travers le réseau neuronal pour la segmentation des cadres (angl. \textit{box segmentation}), ce qui rend le traitement des mises en page complexes plus difficile \cite{reul2017case}. Le modèle de base de Tesseract est un modèle conçu pour l'anglais, et il existe un modèle français et un modèle portugais. Quatre modèles de langue neuronaux pour la ROC ont été utilisés dans le cadre de ces expériences : Kraken de base, Tess. en, fr et pt contemporain.
 %\footnote{Le modèle par défaut de Tesseract est l'anglais. Nous précisons la langue Tess. eng, Tess. fr et Tess. suivant les bonnes pratiques de \#RègledeBender \cite{bender-friedman-2018-data}.} et (iii) 
 
 \subsubsection{L'outil de REN}
-Pour effectuer la tâche de REN\footnote{Nous avons également effectué les évaluations pour \texttt{stanza} \cite{qi2020stanza}, v. 1.5.0, dont les résultats sont disponibles sur le dépôt GitHub : \url{anonymous}} nous avons utilisé la chaîne de traitements de la boîte à outils pour le TAL \texttt{spaCy} dans sa version 3.5.1. %  et \texttt{stanza}\footnote{1.5.0}. 
+\label{subsubsec:spacy_REN}
+Pour effectuer la tâche de REN
+%\footnote{Nous avons également effectué les évaluations pour \texttt{stanza} \cite{qi2020stanza}, v. 1.5.0, dont les résultats sont disponibles sur le dépôt GitHub : \url{anonymous}}
+nous avons utilisé la chaîne de traitements de la boîte à outils pour le TAL \texttt{spaCy} dans sa version 3.5.1. %  et \texttt{stanza}\footnote{1.5.0}. 
 Le système \texttt{spaCy} contient une stratégie d'intégration de mots utilisant des fonctionnalités de sous-mots et les plongements ``Bloom'' (angl. \textit{Bloom embeddings})\footnote{Il s'agit de la structure de données probabiliste qui permet de réduire la dimension des vecteurs (\textit{cf.} \url{https://explosion.ai/blog/bloom-embeddings}).}, ainsi qu'un réseau neuronal convolutif avec des connexions résiduelles, ce qui peut expliquer sa robustesse lors de l'extraction des EN contaminées. \texttt{spaCy} propose des modèles de langue du type \textit{large} pour le français\footnote{\texttt{fr\_core\_news\_lg}, \url{https://spacy.io/models/fr}}, le portugais\footnote{\texttt{pt\_core\_news\_lg}, \url{https://spacy.io/models/pt}} et l'anglais\footnote{\texttt{en\_core\_web\_lg}, \url{https://spacy.io/models/en}}. 
 
-Les modèles français et portugais sont chacun entraînés sur UD adaptés à leur propre langue (UD French Sequoia v2.8 et UD Portuguese Bosque v2.8 respectivement), ainsi que sur WikiNER et Explosion fastText Vectors (cbow, OSCAR Common Crawl + Wikipedia) ; le modèle français s'appuie aussi sur \texttt{spaCy} lookups data. Le modèle anglais, quant à lui, est entraîné sur Explosion Vectors (OSCAR 2109 + Wikipedia + OpenSubtitles + WMT News Crawl), WordNet 3.0, OntoNotes 5 et ClearNLP Constituent-to-Dependency Conversion\footnote{Tailles modèles : fr -- 545 Mo, en -- 560 Mo, pt -- 541 Mo.}. Nous avons favorisé l'usage du modèle \textit{large} (\texttt{spaCy\_lg}) plutôt que du modèle \textit{small} (\texttt{spaCy\_sm}) car la différence principale entre les deux modèles pour les trois langues tient à l'ajout de la vectorisation et des plongements de mots (angl. \textit{embeddings}) dans l'entraînement du modèle \textit{large}.
+Les modèles français et portugais sont chacun entraînés sur UD adaptés à leur propre langue (UD French Sequoia v2.8 et UD Portuguese Bosque v2.8 respectivement), ainsi que sur WikiNER et Explosion fastText Vectors (cbow, OSCAR Common Crawl + Wikipedia) ; le modèle français s'appuie aussi sur \texttt{spaCy} \textit{lookups data}, soit les ressources supplémentaires mises à disposition pour chaque langue comme point d’entrée\footnote{Cela évite le téléchargement des ressources volumineuses pour toutes les langues par défaut, \textit{cf.} \url{https://github.com/explosion/spacy-lookups-data}}. Le modèle anglais, quant à lui, est entraîné sur Explosion Vectors (OSCAR 2109 + Wikipedia + OpenSubtitles + WMT News Crawl), WordNet 3.0, OntoNotes 5 et ClearNLP Constituent-to-Dependency Conversion\footnote{Tailles modèles : fr -- 545 Mo, en -- 560 Mo, pt -- 541 Mo.}. Nous avons favorisé l'usage du modèle \textit{large} (\texttt{spaCy\_lg}) plutôt que du modèle \textit{small} (\texttt{spaCy\_sm}) car la différence principale entre les deux modèles pour les trois langues tient à l'ajout de la vectorisation et des plongements de mots (angl. \textit{embeddings}) dans l'entraînement du modèle \textit{large}.
 
 
 
 \subsection{Moins d'hapax : indice de la performance de la REN sur données bruitées ?}
 \label{subsec:eval_manu_OCR-IMPACT-NER}
-Dans un premier temps, nous proposons une évaluation de l'outil de REN \texttt{spaCy} sur données bruitées. Nous comparons les résultats obtenus automatiquement sur les corpus ELTeC français, anglais et portugais et la TGB (annotations automatiques de référence), et ceux obtenus sur leurs transcriptions de ROC\footnote{Dépôt GitHub avec nos données : \url{https://github.com/anonymous}}, sans nous appuyer sur un \textit{gold standard}. Nous observons que les fautes d'orthographes provoquées par la ROC ne sont pas systématiquement un frein à la bonne extraction des noms de lieux, comme en témoigne le tableau \ref{tab:typo_erreurs_ocr}.
+Dans un premier temps, nous proposons une évaluation de l'outil de REN \texttt{spaCy} sur données bruitées\footnote{Tous les résultats des expériences sont disponibles sur le dépôt GitHub : \url{https://github.com/These-SCAI2023/EXPE43_REVUE_TAL_10072024.git}}. Nous comparons les résultats obtenus automatiquement sur les corpus small-ELTeC-\{fr, en, pt\} et small-TGB-fr (annotations automatiques de référence), et ceux obtenus sur leurs transcriptions de ROC, sans nous appuyer sur un \textit{gold standard}. Nous observons que les fautes d'orthographes provoquées par la ROC ne sont pas systématiquement un frein à la bonne extraction des noms de lieux, comme en témoigne le tableau \ref{tab:typo_erreurs_ocr}.
 \begin{table}[h!]
 \small
     \centering
@@ -34,37 +37,37 @@ Dans un premier temps, nous proposons une évaluation de l'outil de REN \texttt{
     \label{tab:typo_erreurs_ocr}
 \end{table}
 
-En revanche, la concaténation des tokens d'une EN semble être une contamination plus préjudiciable à sa bonne détection. Par ailleurs, l'étude de \cite{DBLP:conf/gis/Koudoro-Parfait21} laisse entendre que (i) le contexte contaminé autour d'une EN pourrait être un facteur de non détection et (ii) un contexte parfaitement propre ne serait pas la garantie que l'EN soit reconnue par le système. Il semble que ces faits soient vérifiables pour les trois langues sur lesquelles nos expériences ont porté. Par ailleurs, certaines entités même très contaminées sont identifiées, comme p.\ ex.\  \textit{``ancehester''} pour \og{}Manchester\fg{}. 
+En revanche, la concaténation des tokens d'une EN semble être une contamination plus préjudiciable à sa bonne détection. Par ailleurs, l'étude de \citeasnoun{DBLP:conf/gis/Koudoro-Parfait21} laisse entendre que (i) le contexte contaminé autour d'une EN pourrait être un facteur de non détection et (ii) un contexte parfaitement propre ne serait pas la garantie que l'EN soit reconnue par le système. Il semble que ces faits soient vérifiables pour les trois langues sur lesquelles nos expériences ont porté. Par ailleurs, certaines entités même très contaminées sont identifiées, comme p.\ ex.\  \textit{``ancehester''} pour \og{}Manchester\fg{}. 
 
 
 \begin{table}[h!]
     \centering
     \small
     \input{TAB/corpus_bon_moyen_mauvais_OCR}
-    \caption{Nombre de types d'EN identifiées par \texttt{spaCy\_lg} dans les corpus ELTeC  en fonction de différentes qualités de la ROC déterminées par le CER calculé sur le modèle Tess. adapté à la langue du corpus. 
+    \caption{Nombre de types d'EN identifiées par \texttt{spaCy\_lg} dans les corpus \textit{small}-ELTeC-\{fr, en, pt\}  en fonction de différentes qualités de la ROC déterminées par le CER calculé sur le modèle Tess. adapté à la langue du corpus. 
     }
     \label{tab:ELTeC_bon_mauvais}
 \end{table}
 
-Le tableau \ref{tab:ELTeC_bon_mauvais} qui répertorie le nombre de types d'EN reconnues par \texttt{spaCy} selon la qualité des versions de ROC, illustre le fait que sur les versions de ROC les systèmes de REN récupèrent plus de types d'EN différents, donc que la qualité du texte en entrée influe sur la quantité des types d'EN récupérés en sortie. La qualité des versions de ROC a été évaluée en appliquant les métriques \textit{Character Error Rate} (CER) et \textit{Word Error Rate} (WER) sur les textes de référence et les versions de ROC. On note que plus le WER est élevé, plus la qualité de la transcription baisse, plus le nombre de type d'EN en sortie est élevé. On peut en conclure que (i) le système de REN ramène plus de bruit ou Faux Positif (FP) en sortie quand la ROC est moins bonne et (ii) le nombre des hapax augmente selon que la qualité de la transcription diminue. 
-Dans la quantité d'EN surnuméraire détectée sur les versions de ROC par rapport à la référence, figurent des FP mais aussi des formes contaminées des entités, qui sont des hapax, et qui comptent chacune pour un type différent d'EN en plus du type initial de l'EN. Ces phénomènes sont illustrés dans le tableau \ref{tab:FP_VP} qui recense une annotation manuelle\footnote{Nous n'avons pas annoté tous les corpus en raison du temps limité.} des Vrais Positifs (VP) et des FP par type d'EN récupérées par \texttt{spaCy\_lg} sur l'ensemble des EN de référence et celui des versions pour Kraken et Tess. fr. 
+Le tableau \ref{tab:ELTeC_bon_mauvais} qui répertorie le nombre de types d'EN reconnues par \texttt{spaCy} selon la qualité des transcriptions de la ROC produites par Tesseract, illustre le fait que les systèmes de REN récupèrent plus de types d'EN différents sur les transcriptions de la ROC, et que donc la qualité du texte en entrée influe sur la quantité des types d'EN récupérés en sortie. La qualité des transcriptions de la ROC a été évaluée en appliquant les métriques \textit{Character Error Rate} (CER) et \textit{Word Error Rate} (WER) sur les textes de référence et les transcriptions. On note que plus le WER est élevé, plus la qualité de la transcription baisse, plus le nombre de types d'EN en sortie est élevé. On peut en conclure que (i) le système de REN ramène plus de bruit ou Faux Positifs (FP) en sortie quand la ROC est moins bonne et (ii) le nombre des hapax augmente selon que la qualité de la transcription diminue. 
+Dans la quantité d'EN surnuméraire détectée sur les transcriptions de la ROC par rapport à la référence, figurent des FP mais aussi des formes contaminées des entités, qui sont des hapax, et qui comptent chacune pour un type différent d'EN en plus du type initial de l'EN. Ces phénomènes sont illustrés dans le tableau \ref{tab:FP_VP} qui recense une annotation manuelle d'un échantillon du corpus
+%\footnote{Nous n'avons pas annoté tous les corpus en raison du temps limité.}
+des Vrais Positifs (VP) et des FP par type d'EN récupérées par \texttt{spaCy\_lg} sur l'ensemble des EN de référence et celui des versions pour Kraken et Tess. fr. 
 \begin{table}[h!]
 \small
     \centering
     \input{TAB/DAUDET_FP_VP_2}
-    \caption{Annotation manuelle des VP et FP sur les EN types reconnues par \texttt{spaCy} pour Daudet.}
+    \caption{Annotation manuelle des VP et FP sur les EN types reconnues par \texttt{spaCy} pour Daudet, \textit{small}-ELTec-fr.}
     \label{tab:FP_VP}
 \end{table}
 
-On retrouve bien (i) plus de FP et (ii) plus de VP qui sont des hapax sur les transcriptions OCR que sur la référence. Il y a donc plus de types différents d'entités sur la sortie de la ROC que sur la sortie de la réf., car, comme l'illustre le tableau \ref{tab:EN_contamines_Variantes}, les variantes d'une entités peuvent être nombreuses. 
-
-
+On retrouve bien (i) plus de FP sur Kraken que sur Tess. fr. et (ii) pour Tess. fr. presque le même nombre de VP que sur la référence et 71 VP pour Kraken. Il est aussi vrai que pour Kraken nous répertorions 50 entités qui sont des formes contaminées des entités de la référence. Dans une évaluation automatique elles sont annotées comme des FP. Néanmoins, lors de l'annotation manuelle nous les avons annotés comme des Faux Faux Positifs (FFP) (nous explicitons ce nommage dans la partie \ref{subsec:Typologie_OCR-IMPACT-NER}), autrement dit des VP, comme par exemple "Batignolleslo" pour "Les Batignolles". Enfin, on relève qu'il y a plus de types différents d'entités sur la sortie de la ROC que sur la sortie de la réf., car, comme l'illustre le tableau \ref{tab:EN_contamines_Variantes}, les variantes d'une entité peuvent être nombreuses. 
 
 \begin{table}[h!]
 \small
     \centering
     \input{TAB/EN_contamines_Variantes}
-    \caption{REN sur des formes contaminées de l'EN ``Ferme des Ormeaux'', {\normalfont La petite Jeanne}, Carraud.}
+    \caption{REN sur des formes contaminées de l'EN ``Ferme des Ormeaux'', {\normalfont La petite Jeanne}, Carraud, \textit{small}-ELTec-fr.}
     \label{tab:EN_contamines_Variantes}
 \end{table}
 
@@ -72,21 +75,22 @@ L'analyse du tableau \ref{tab:ELTeC_bon_mauvais} montre qu'il existe des problè
 
 %Enfin, il peut arriver, plus rarement, que des entités ne soient pas détectées sur la version de Réf. mais le soient sur la version de ROC. Il ne s'agit pas véritablement de FP, mais d'une erreur du système même en contexte non bruité. 
 
-Enfin, il peut arriver, plus rarement, que des entités ne soient pas détectées sur la version de référence (réf.). mais le soient sur la version de ROC. Il peut s'agir d'une part du fait que la version de ROC contient du texte en plus de la version de réf., par exemple les notes de bas de pages transcrites par la ROC mais non prises en compte par les auteurs de la référence, ou, d'autre part  d’une erreur du système même en contexte non bruité. Dans ces deux cas, il ne s’agit pas véritablement de FP, et ces cas particuliers viennent poser les limites de l'évaluation de la tâche de REN sur données bruitées.
+Enfin, il peut arriver, plus rarement, que des entités ne soient pas détectées sur la version de référence (réf.). mais le soient sur la transcription de la ROC. Il peut s'agir d'une part du fait que la version de ROC contient du texte en plus de la version de réf., par exemple les notes de bas de pages transcrites par la ROC mais non prises en compte par les auteurs de la référence, ou, d'autre part  d’une erreur du système même en contexte non bruité. Dans ces deux cas, il ne s’agit pas véritablement de FP, et ces cas particuliers viennent poser les limites de l'évaluation de la tâche de REN sur données bruitées.
 
 
 %%%________ Plus d'EN sur texte bruité
 \subsection{Usage des intersections : une évaluation trop stricte ?}
 \label{subsec:inter_OCR-IMPACT-NER}
-Pour automatiser nos analyses et pouvoir les conduire à plus grande échelle nous avons décidé de calculer et représenter les intersections entre les ensembles des EN reconnues sur la version de réf. et celles obtenues sur les versions de ROC. Les versions de ROC et les textes de référence ont été annotés automatiquement avec \texttt{spaCy\_lg}. Nous nous servons de ces derniers comme vérité terrain \footnote{Jeu de données de REN constitué pour l'évaluation.}. Nous avons calculé les intersections pour chacun des corpus (ELTeC français, anglais et portugais, et TGB) de manière globale. 
-Pour ce faire nous avons fait correspondre les entités de chacun des textes de référence avec celles de leurs versions de ROC. Ainsi, dans le cas du corpus ELTeC français l'EN ``Paris'' repérée dans le texte de référence pour Daudet, n'est pas la même que l'EN ``Paris'' récupérée dans le texte de référence de Noailles. Il en va de même pour les différentes autres configurations (où, sous le terme, \og{}configuration\fg{} on désigne la combinaison d'un modèle de ROC et d'un modèle de REN, p. ex. les résultats de la configuration Kraken-\texttt{spaCy\_lg}). \textit{cf.} le tableau \ref{tab:config}).
+Pour automatiser nos analyses et pouvoir les conduire à plus grande échelle nous avons décidé de calculer et représenter les intersections entre les ensembles des EN reconnues sur la version de réf. et celles obtenues sur les versions de ROC en s'appuyant sur les diagrammes \textit{UpSetplot}\footnote{\url{https://upsetplot.readthedocs.io/en/stable/}}. Les versions de ROC et les textes de référence ont été annotés automatiquement avec \texttt{spaCy\_lg}. Nous nous servons de ces derniers comme vérité terrain\footnote{Jeu de données de REN constitué pour l'évaluation.}. Nous avons calculé les intersections pour chacun des corpus (ELTeC français, anglais et portugais, et TGB) de manière globale. 
+Pour ce faire nous avons fait correspondre les entités de chacun des textes de référence avec celles de leurs versions de ROC. Ainsi, dans le cas du corpus \textit{small}-ELTec-fr l'EN ``Paris'' repérée dans le texte de référence pour Daudet, n'est pas la même que l'EN ``Paris'' récupérée dans le texte de référence de Noailles. Il en va de même pour les différentes autres configurations (où, sous le terme, \og{}configuration\fg{} on désigne la combinaison d'un modèle de ROC et d'un modèle de REN, p. ex. les résultats de la configuration Kraken-\texttt{spaCy\_lg}, \textit{cf.} le tableau \ref{tab:config}).
 
-La figure \ref{fig:intersection_globale-kraken-tess} rend compte de cette évaluation stricte dans laquelle chaque token de l'ensemble de réf. est comparé avec chaque token de l'ensemble de ROC. Pour être considéré comme un VP une EN de l'ensemble de ROC doit être orthographiée de manière identique à une EN de l'ensemble de réf. Dans ce graphique, le cercle de gauche - ``EN Réf'' - qui comprend les EN de la réf. et l'intersection entre les deux cercles sont considérés comme représentant les VP. Le cercle de droite - ``EN\_Kraken/Tess.'' - qui représente les EN récupérées uniquement sur la version de ROC est considéré comme comportant les FP de la sortie de REN. 
+La figure \ref{fig:intersection_globale-kraken-tess} rend compte de cette évaluation stricte dans laquelle chaque token de l'ensemble de réf. est comparé avec chaque token de l'ensemble de ROC. Pour être considéré comme un VP, une EN de l'ensemble de ROC doit être orthographiée de manière identique à une EN de l'ensemble de réf. Chacune des sous-figures \ref{fig:ELTeCFRA_Kraken_spacy-lg-concat_intersection} et \ref{fig:ELTeCFRA_Tess_spaCy3.5.1-concat_intersection} comprend deux sous-graphiques. Dans le sous-graphique situé à droite, la première série de pois représente les EN de la réf. et la seconde comprend les EN de la version de ROC. La troisième colonne représente l'intersection entre la réf. et la ROC, et donc les deux pois liés avec une ligne représentent les VP. Le pois noir associé à un outil de ROC marque les EN récupérées uniquement sur la version de ROC, qui sont considérées comme les FP de la sortie de REN, alors que le pois noir associé à la Réf. désigne les EN récupérées uniquement sur la réf., soit les VP. Le sous-graphique situé à gauche permet de calculer le nombre de VP d'une autre manière. Par exemple pour la figure (\ref{fig:ELTeCFRA_Kraken_spacy-lg-concat_intersection}), l'addition de 89\%+22.5\% = 111,5\%, et donc 111.5\% -100\% = 11.5\% de VP. Nous constatons plus de VP et moins de FP pour la configuration Tess. fr -- \texttt{spaCy\_lg} en comparaison avec son pendant de Kraken.
+%Dans ce graphique, le cercle de gauche - ``EN Réf'' - qui comprend les EN de la réf. et l'intersection entre les deux cercles sont considérés comme représentant les VP. Le cercle de droite - ``EN\_Kraken/Tess.'' - qui représente les EN récupérées uniquement sur la version de ROC est considéré comme comportant les FP de la sortie de REN. 
 
 \begin{figure}[h!]
     \begin{minipage}{6.5cm}
   \begin{subfigure}{1\textwidth}
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_spacy-lg-concat_intersection.png} 
+  \includegraphics[width=0.8\textwidth]{REVUETAL_article_23102023/IMAGES/ELTeC_INTERSECTIONS_spaCy3.5.1_12072024/DATA_ELTeC-fra_spaCy3.5.1_Kraken_upsetplot.png} 
   \caption{Kraken --\texttt{spaCy-lg}}
   \label{fig:ELTeCFRA_Kraken_spacy-lg-concat_intersection}
   \end{subfigure}
@@ -94,9 +98,9 @@ La figure \ref{fig:intersection_globale-kraken-tess} rend compte de cette évalu
   \begin{minipage}{6.5cm}
   \begin{subfigure}{1\textwidth}
 %  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Kraken_stanza-concat_intersection.png} %%%% ancienne figure 07/02/2024
-  \includegraphics[width=1\textwidth]{IMAGES/INTERSECTIONS_GLOBALES/ELTeCFRA_Tess. fr_spacy-lg-concat_intersection.png}
+  \includegraphics[width=0.8\textwidth]{REVUETAL_article_23102023/IMAGES/ELTeC_INTERSECTIONS_spaCy3.5.1_12072024/DATA_ELTeC-fra_spaCy3.5.1_Tess. fr_upsetplot.png}
   \caption{Tess. fr. -- \texttt{spaCy\_lg}}
- % \label{fig:ELTeCFRA_Kraken_stanza-concat_intersection}
+ \label{fig:ELTeCFRA_Tess_spaCy3.5.1-concat_intersection}
   \end{subfigure}
     \end{minipage}
 %\begin{minipage}{7cm}
@@ -113,12 +117,12 @@ La figure \ref{fig:intersection_globale-kraken-tess} rend compte de cette évalu
 %  \label{fig:ELTeCFRA_Kraken -- jspl-ELTeCFR_stanza-concat_intersection}
 %  \end{subfigure}
 %    \end{minipage}
-\caption{Intersections pour les configurations Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg}, pour le corpus ELTeC français.}
+\caption{Intersections pour les configurations Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg}, pour le corpus \textit{small}-ELTec-fr.}
 %\label{fig:intersection_globale-kraken}
 \label{fig:intersection_globale-kraken-tess}
 \end{figure}
 
-Cependant, lorsque nous avons observé les résultats il s'est avéré que (i) les EN issues de la ROC portant des contaminations et n'étant pas strictement orthographiées comme leur pendant de référence et (ii) les EN qui sont bien récupérées sur la ROC et pas sur la réf. même rares sont considérées par la machine comme des FP. Entre autres exemples l'EN ``\textit{Ormeaux}'' n'est pas strictement identique à sa version contaminée ``\textit{Ormaeuux}'' ou ``\textit{Dconshire}'' pour ``\textit{Devonshire}''. Ces EN contaminées sont comptées comme des FP et ajoutées à la liste des hapax, ce qui vient gonfler artificiellement le nombre des FP dans l'ensemble des EN de la ROC. Il s'agit en fait de Faux Faux Positif (FFP), autrement dit de VP masqués par la rectitude de l'alignement inhérent au mode d'évaluation adopté. Ces différents cas sont décrits en détail dans la sous-section \ref{subsec:Typologie_OCR-IMPACT-NER}. Cet état de fait crée donc un biais dans nos évaluations, et cela pour les trois langues évaluées.
+Cependant, lorsque nous avons observé les résultats il s'est avéré que (i) les EN issues de la ROC portant des contaminations et n'étant pas strictement orthographiées comme leur pendant de référence et (ii) les EN qui sont bien récupérées sur la ROC et pas sur la réf. même rares sont considérées comme des FP. Entre autres exemples l'EN ``\textit{Ormeaux}'' n'est pas strictement identique à sa version contaminée ``\textit{Ormaeuux}'' ou ``\textit{Dconshire}'' pour ``\textit{Devonshire}''. Ces EN contaminées sont comptées comme des FP et ajoutées à la liste des hapax, ce qui vient gonfler artificiellement le nombre des FP dans l'ensemble des EN de la ROC. Il s'agit en fait de Faux Faux Positifs (FFP), autrement dit de VP masqués par la rectitude de l'alignement inhérent au mode d'évaluation adopté. Ces différents cas sont décrits en détail dans la sous-section \ref{subsec:Typologie_OCR-IMPACT-NER}. Cet état de fait crée donc un biais dans nos évaluations, et cela pour les trois langues évaluées.
  Enfin, dans l'ensemble des EN reconnues sur les versions de ROC nous remarquons que la majorité des EN présentes dans les résultats obtenus sur la ROC sont effectivement présentes dans les résultats obtenus sur les versions de référence, comme le présente le tableau \ref{tab:FP_VP}. Il n'y a donc pas de véritable déperdition des VP. 
 
 %%%______________ Plus d'EN mais est-ce que c'est du bruit ?
@@ -233,6 +237,16 @@ En regard des différentes observations que nous venons d'apporter et parce que 
     \label{tab:typo_eval}
 \end{table}
 
+% \begin{table}[h!]
+%     \centering
+%     \input{REVUETAL_article_23102023/TAB/DAUDET_FFN_FVP}
+
+%     \caption{Annotation manuelle des Faux Vrais Positifs et des Faux faux négatifs sur la REN avec spaCy\_lg.}
+%     \label{tab:comptageFFN}
+% \end{table}
+
+L'analyse des annotations des sorties de REN avec \texttt{spaCy\_lg} pour le texte de Daudet, révèle 50 syntagmes pour Kraken et 70 pour Tess. fr. qui sont des FVP, c'est-à-dire reconnus comme des EN sur la Réf. et sur les transcriptions de la ROC alors qu'ils n'en sont pas. Il s'agit donc de bruit dans la sortie de REN pour les transcriptions de la ROC mais aussi pour la Réf. Ces FVP sont par exemple des verbes ("Allons" ou "Parlons"). Nous avons aussi relevé 45 FFN sur la sortie de Réf. comparée à Kraken. Ces FFN sont des syntagmes reconnus à tort comme des EN par \texttt{spaCy\_lg} sur la Réf. mais pas sur les transcriptions de la ROC, comme par exemple le syntagme \textit{"sanglotaient là-bas"}. Ces évaluations apportent la confirmation que les outils de REN sont susceptibles de faire des erreurs même sur des textes dits \og{}propres\fg{}. Ainsi les contaminations de la ROC sur la REN ne sont pas les seules causes des erreurs de la REN. 
+
 %%%% Matrice mise de côté pour le moment
 %En regard des différentes sorties de REN obtenues avec \texttt{spaCy} et \texttt{stanza}, nous proposons une typologie des contaminations de ROC, en élargissant la classification standard des vrais/faux positifs/négatifs. Les définitions correspondant à chaque catégorie (indiquées dans la matrice de confusion, tableau \ref{tab:Matrice_erreur_OCR_V2}) sont les suivantes :
 %\begin{table}[H]
@@ -262,11 +276,11 @@ En regard des différentes observations que nous venons d'apporter et parce que 
 
 \subsection{\'Evaluation supervisée des contaminations de la ROC sur un corpus annoté}
 \label{subsec:eval_supervis_OCR-IMPACT-NER}
-Afin d'évaluer de manière supervisée l'influence du bruit de la ROC sur la REN, nous avons annoté un échantillon du corpus ELTeC français.
+Afin d'évaluer de manière supervisée l'influence du bruit de la ROC sur la REN, nous avons annoté un échantillon du corpus \textit{small}-ELTec-fr \footnote{\url{https://github.com/ljpetkovic/ELTeC_GOLD_REVUE_TAL}}.
  Nous avons choisi de nous limiter aux quatre catégories présentes dans \texttt{spaCy} (Lieux, Personnes, Organisations et Divers).
   Nous avons tout d'abord annoté un échantillon de 3~000 tokens d'une œuvre  puis réalisé une adjudication pour régler les désaccords. 
   Nous avons ensuite annoté 5 000 tokens de 3 versions (Réf., Tess. et Kraken) de deux œuvres (Daudet et Maupassant). %L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était de $0.877$, significativement plus élevé sur la version de référence ($0.905$) que sur les versions ROC.
-L'accord inter-annotateur (Kappa de  Fleiss \cite{fleiss2013statistical}) était de $0.905$ sur la version de réf., ce qui est, significativement plus élevé que le score obtenu sur les versions de ROC : $0.877$.
+L'accord inter-annotateur, calculé à partir du coefficient Kappa de Fleiss \cite{fleiss2013statistical} était de $0.905$ sur la version de réf., ce qui est significativement plus élevé que le score obtenu sur les versions de ROC : $0.877$.
  Nous avons pu observer que les désaccords étaient plus nombreux sur l'annotation des versions de ROC du fait des problèmes de tokenisation.
 
 Grâce à un système de vote majoritaire, nous avons fusionné les annotations pour obtenir un \textit{gold standard} sur chaque version de chaque œuvre.
@@ -276,7 +290,7 @@ Grâce à un système de vote majoritaire, nous avons fusionné les annotations 
 \centering
 \scriptsize{\begin{tabular}{l|ccc|ccc}
  %Versions
- &		&	GLOBALE	&		&		&	LIEUX	&		\\
+ &		&	GLOBALE	: tous types d'EN &		&		&	LIEUX &		\\
 \hline
  \hline
 \textbf{Souple}	&	Rappel		&Précision	&	F-sc.	&	Rappel&		Précision		&F-sc.	\\
@@ -296,17 +310,20 @@ Référence	&	21.62	&	69.57	&	32.98	&	41.18	&	45.16	&	43.08	\\
 \hline
 \hline
 \end{tabular}}
-\caption{Evaluation de \texttt{spaCy\_lg} sur un échantillon annoté de 10~000 tokens dans trois versions textuelles différentes\label{tab:eval-supervise} en configuration souple et en configuration stricte (GLOBALE : tous les types d'entités, LIEUX: seulement les lieux).}
+\caption{Evaluation de \texttt{spaCy\_lg} sur un échantillon annoté de \textit{small}-ELTec-fr de 10~000 tokens dans trois versions textuelles différentes\label{tab:eval-supervise} en configurations souple et stricte. 
+%(GLOBALE : tous les types d'entités, LIEUX: seulement les lieux).
+}
  \end{table}
 
 À cet effet, nous proposons deux types d'évaluation que nous appelons ici \og{}stricte\fg{} et \og{}souple\fg{}. La première configuration ne prend en compte que les correspondances exactes des EN (p. ex. le mot contaminé \textit{Acques} sera considéré comme un FP, même s'il renvoie au VP \textit{Jacques}). En revanche, la configuration \og{}souple\fg{} considère une EN comme correcte, quelle que soit sa taille (une partie ou l'intégralité de l'EN, auquel cas la forme contaminée \textit{Acques} sera considéré comme un VP. Par rapport à l'évaluation dite \og{}globale\fg{} (qui concerne tous les types d'EN), nous pouvons remarquer que les résultats obtenus sur les versions Tess. fr sont meilleurs que ceux obtenus sur les versions Kraken dans les configurations stricte et souple.
   Plus étonnamment, les résultats de Tess. fr sont meilleurs par rapport à ceux de la référence dans le cadre de l'évaluation souple.
  Nous remarquons que là aussi la faiblesse apparente des résultats de la REN obtenus sur des versions de ROC est principalement due à des problèmes d'alignement entre les tokens contaminés et les tokens de référence. 
 %  comment expliquez-vous la meilleure performance sur les entités de lieux dans la configuration stricte ? [càd. pourquoi la F-mesure est meilleure sur les lieux que sur les autres EN avec l'évaluation stricte dans le tableau 8 ?]
-  Enfin, le fait que le F-score soit meilleur sur les EN de lieux que sur le globale dans la configuration stricte peut s'expliquer par le fait que les EN de lieux comptent le plus souvent un token dans nos corpus (p. ex. \textit{Paris}), au contraire des EN de personnes. Par exemple, \textit{Daniel Eyssette}, qui est écrit \textit{Daniel Ey-sset-te}\footnote{Les tirets représentent des retours à la ligne.}. Ainsi, la deuxième partie de l'EN est divisée en trois éléments distincts, ce qui a vraisemblablement posé problème à l'évaluation globale et diminué les F-scores. Dès lors, le rappel sur les noms de personnes descend beaucoup plus ; nous obtenons moins de VP, et les FP augmentent moins sur les lieux.
+  Enfin, le fait que le F-score soit meilleur sur les EN de lieux que sur tous les types d'entités dans la configuration stricte peut s'expliquer par le fait que les EN de lieux comptent le plus souvent un token dans nos corpus (p. ex. \textit{Paris}), au contraire des EN de personnes. Par exemple, \textit{Daniel Eyssette}, qui est écrit \textit{Daniel Ey-sset-te}\footnote{Les tirets représentent des retours à la ligne.}. Ainsi, la deuxième partie de l'EN est divisée en trois éléments distincts, ce qui a vraisemblablement posé problème à l'évaluation globale et diminué les F-scores. Dès lors, le rappel sur les noms de personnes descend beaucoup plus ; nous obtenons moins de VP, et les FP augmentent moins sur les lieux.
 
 
-Nous concluons de ces travaux préliminaires d'évaluation de l'impact du bruit de la ROC sur la tâche de REN que les erreurs de la ROC ne sont pas toujours un frein à la bonne conduite de la tâche de REN, et que la présence de nombreux hapax dans une sortie de REN peut être le signe qu'il existe des formes contaminées d'EN. Néanmoins, nous constatons qu'il est difficile d'évaluer de manière stricte le silence et le bruit réel dans les sorties de REN sur données bruitées par la ROC, puisque l'alignement entre les versions de référence et de ROC du fait des formes contaminées des EN est une tâche ardue. Jusque là nous n'avons pas pu trouver de manière convaincante de calculer un F-score et nous commençons à entrevoir les limites de l'usage des intersections.
+Nous concluons de ces travaux préliminaires d'évaluation de l'impact du bruit de la ROC sur la tâche de REN que les erreurs de la ROC ne sont pas toujours un frein à la bonne conduite de la tâche de REN, et que la présence de nombreux hapax dans une sortie de REN peut être le signe qu'il existe des formes contaminées d'EN. Néanmoins, nous constatons qu'il est difficile d'évaluer de manière stricte le silence et le bruit réel dans les sorties de REN sur données bruitées par la ROC, puisque l'alignement entre les versions de référence et de ROC du fait des formes contaminées des EN est une tâche ardue. Les résultats présentés dans cette partie montrent les limites des évaluations strictes qui s'appuyent sur le F-score ou les intersections, ce qui nous incite à proposer des stratégies d’évaluation plus souples.
+%Jusque là nous n'avons pas pu trouver de manière convaincante de calculer un F-score et nous commençons à entrevoir les limites de l'usage des intersections.
 %\textbf{Dans la suite de cet article nous traitons de l'impact des corrections des transcription ROC sur la REN et nous envisageons l'usage de l'indice de Jaccard, ou d'une similarité cosinus, mais aussi de NERVAL, outil qui calcule le F-score sur des sorties de REN à partir des données bruités. }
 
 
