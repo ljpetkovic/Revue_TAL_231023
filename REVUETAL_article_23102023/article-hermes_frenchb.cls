@@ -582,10 +582,13 @@ documentclass[fleqn,english,cropmarks,empty,nofirstpagebreak]{article-hermes}}}
       \ifthenelse{\equal{#3}{1}}{1\iere~}{#3\ieme~}}%
    \renewcommand{\VAR@SignatureArticle}{%
      \FonteSignature\raggedright
-        \VAR@NumeroSoumission soumission \`a \textit{\VAR@NomRevue}, le #1
+        %\VAR@NumeroSoumission soumission \`a \textit{\VAR@NomRevue}, le #1
+        TAL. Volume 64 -- n°2/2024, pages XX à XX
    }
-   \renewcommand{\VAR@EnTeteG}{\FonteEnTete\VAR@NumeroSoumission soumission \`a
-                               \textit{\VAR@NomRevue}}
+   \renewcommand{\VAR@EnTeteG}{\FonteEnTete
+   %\VAR@NumeroSoumission soumission \`a
+                               %\textit{\VAR@NomRevue}
+                               TAL. Volume 64 -- n°2/2024}
    \renewcommand{\VAR@EnTeteD}{\FonteEnTete\VAR@TitreAbrege}
 }
 

@@ -1,0 +1,175 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2758
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww30040\viewh16600\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0  8.8/10  Relecteur 1 (-)  17/04/2024\
+\'9b Grille de notation\
+\
+    Pertinence :  4 - Bien\
+    Clart\'e9 :  3 - Moyen\
+    Correction :  4 - Bien\
+    Originalit\'e9 :  3 - Moyen\
+\
+\
+\'9b Commentaire d\'e9posant\
+\
+\
+    L'article traite de la reconnaissance d'entit\'e9s nomm\'e9es (REN) dans le contexte d'oeuvres litt\'e9raires dont le texte est issu de reconnaissance optique de caract\'e8res (OCR). Il vise \'e0 \'e9tudier l'effet de la correction (orthographique) automatique des oeuvres ocris\'e9es sur la qualit\'e9 de la REN effectu\'e9e dessus. L'article d\'e9crit un ensemble d'exp\'e9riences sur 3 langues (fran\'e7ais, portugais, anglais) avec plusieurs syst\'e8mes OCR (kraken, tesseract) et un syst\'e8me de REN off-the-shelf (spacy), combin\'e9s ou non avec un correcteur orthographique (Jamspell). Il r\'e9alise une \'e9tude qualitative et quantitative des diff\'e9rences entre les combinaisons de syst\'e8mes (comparaisons des EN trouv\'e9es sur texte de ref/texte ocris\'e9/texte ocris\'e9 avec correction). Le r\'e9sultat principal de l'\'e9tude est que la correction automatique de l'OCR n'am\'e9liore pas la REN (car introduit souvent des surcorrections) \'e0 l'exception de certains cas (output OCR tr\'e8s bruit\'e9)\
+\
+    Points positifs / points n\'e9gatifs: cf review du 2eme round.\
+\
+    Points additionnels:\
+\
+    L'article s'est beaucoup am\'e9lior\'e9 sur la description des syst\'e8mes utilis\'e9s. Par ailleurs, il parvient \'e0 mieux synth\'e9tiser ses r\'e9sultats, ce qui donne un article plus lisible. L'article est donc \'e0 mon sens publiable dans TAL.\
+\
+    - sur la typologie des 8 cat\'e9gories: la pr\'e9sentation est maintenant bien meilleure sans \'eatre compl\'e8tement satisfaisante, il est par ailleurs dommage de pr\'e9senter cette typologie sans l'utiliser pour quantifier les erreurs dans chaque cat\'e9gorie\
+\
+    - il n'est pas clair si le corpus annot\'e9 de la section 4.5 va \'eatre publi\'e9 (il me semblait que oui d'apr\'e8s la 2eme version de l'article, mais ce n'est plus mentionn\'e9me semble-t-il), ce serait une contribution int\'e9ressante de l'article\
+\
+    - Tableau 3: les colonnes de pourcentages seraient plus lisibles en les exprimant sous forme  de variation (-5%  au lieu de 95%, +0.7% au lieu de 100.7 %)\
+\
+    - Il faudrait clarifier ce qui est compar\'e9 avec cosinus & jaccard dans la section 5.4.1:  le texte complet de r\'e9f\'e9rence vs la version ROC? (expliciter   cela \'e9galement dans la l\'e9gende des graphiques). Par ailleurs, je sugg\'e8re de mettre les comparaisons entre jaccard et cosinus directement sur le git comme les graphiques ne sont pas pr\'e9sent\'e9s pour jaccard.\
+\
+\
+    R\'e9ponses \'e0 la lettre aux relecteurices:\
+\
+    - Sur le filtrage des EN-types, mon point \'e9tait qu'il s'agissait d'une baseline qui aurait eu tout \'e0 fait sa place dans l'article\
+\
+    - \'c9criture inclusive: la remarque s'est perdue \'e0 cause d'un probl\'e8me d'encodage du point m\'e9dian (j'imagine \'e0 cause de sciences-conf), ma suggestion \'e9tait simplement d'en utiliser un seul au lieu de 2, c'est-\'e0-dire 'chercheur-euses'/'chercheur?euses' \'e0 la place de 'chercheur-se-s'/'chercheur?se?s' (je mets la version avec tiret pour \'e9viter que le probl\'e8me d'encodage se reproduise, mais en effet je n'ai jamais rencontr\'e9 d'\'e9criture inclusive avec '?' non plus).\
+\
+    - apr\'e8s lecture de la feuille de style, il faut juste utiliser \\citeasnoun\{\} ou \\cite\{\} selon le contexte pour r\'e9soudre la plupart des probl\'e8mes, par ailleurs, utiliser \\cite[cf  page 4]\{author\} pour \'e9viter de juxtaposer des parenth\'e8ses. Enfin, \\cite\{ref1, ref2\} pour citer plusieurs articles dans la m\'eame paire de parenth\'e8se.\
+    -> \'e0 v\'e9rifier  sur l'ensemble de l'article ("harmoniser l'utilisation des citations (auteurice, ann\'e9e) vs auteurice (ann\'e9e) -> les phrases doivent rester grammaticales quand le mat\'e9riel entre parenth\'e8ses est supprim\'e9 (cf les instructions dans le template de la revue TAL).")\
+\
+    - Diagrammes par intersection: si matplotlib ne permet pas d'ajuster les \'e9chelles des graphiques, je sugg\'e8re d'utiliser des rectangles au lieu de cercles pour repr\'e9senter les intersections, il est beaucoup plus facile de comparer des aires \'e0 l'oeil nu sur des rectangles que sur des cercles.\
+\
+    typos:\
+\
+    - 4.3: "Kraken-spaCy_lg). cf. le tableau 9)." parenth\'e8ses en trop\
+    - fin section 4: "Jusque l\'e0 nous n\'92avons pas pu trouver de mani\'e8re convain-\
+    cante de calculer un F-score et nous commen\'e7ons \'e0 entrevoir les limites de l\'92usage des\
+    intersections." -> phrase \'e0 reformuler\
+\
+\
+\
+\
+=====================================\
+\
+\
+\
+\
+\
+\
+3.8/10  Relecteur 2 (-)  14/05/2024\
+\'9b Grille de notation\
+\
+    Pertinence :  4 - Bien\
+    Clart\'e9 :  3 - Moyen\
+    Correction :  3 - Moyen\
+    Originalit\'e9 :  3 - Moyen\
+\
+\
+\'9b Commentaire d\'e9posant\
+\
+    Les am\'e9liorations apport\'e9es \'e0 l'article ont permis de clarifier divers points et d'en fluidifier la lecture, gr\'e2ce \'e0 des transitions plus claires permettant de mieux articuler les apports de chaque analyse. On comprend d\'e9sormais mieux l'organisation des diverses exp\'e9riences et la mani\'e8re dont elles se compl\'e8tent. Il reste toutefois encore des points \'e0 clarifier (cf. commentaires d\'e9taill\'e9s)\
+\
+    La conclusion gagnerait \'e9galement \'e0 \'eatre \'e9toff\'e9e afin de faire \'e9merger les contributions principales de l'article. En particulier, l'utilisation de JamSpell montre un effet peu probant, mais la conclusion est difficile \'e0 g\'e9n\'e9raliser. En effet, elle peut \'eatre li\'e9e \'e0 l'outil particulier utilis\'e9, dont on sait finalement peu de choses et dont le fonctionnement est peu explicit\'e9.\
+\
+    Commentaires d\'e9taill\'e9s :\
+    - Le d\'e9but de la Section 3 reste peu clair, notamment en raison de l'indication "version orthographiquement correcte des textes" qui donne l'impression que les textes de r\'e9f\'e9rence ont \'e9t\'e9 corrig\'e9s manuellement. Il faufrait explicitement dire que ce n'est pas le cas. Par ailleurs, l'introduction de la section 3 indique "Pour chaque texte nous poss\'e9dons deux transcriptions diff\'e9rentes", ce qui semblerait indiquer que ces transcriptions automatiques ont \'e9t\'e9 faites en dehors du travail d\'e9crit dans l'article. Or, des informations plus d\'e9taill\'e9es sont donn\'e9es plus tard, dans la section 4.1.1. Il faudrait clarifier le lien entre ce qui est d\'e9crit au d\'e9but de la section 3 et ce qui est pr\'e9sent\'e9 dans la section 4.1.1. Si l'on comprend bien, la ROC a \'e9t\'e9 effectu\'e9e par vous \'e0 partir des PDFs des oeuvres ?\
+    - L'outil spaCy est utilis\'e9 et cit\'e9 d\'e8s la section 3.1 sans avoir \'e9t\'e9 expliqu\'e9 : il faudrait a minima faire un renvoi vers la section 4.1.2 pour indiquer que l'outil et les configurations utilis\'e9es seront d\'e9taill\'e9s par la suite.\
+    - La description de spaCy n'est pas toujours claire. Que sont les "lookups data", les "Explosion vectors" ?\
+    - A quoi sert la ligne spaCy_lg dans la Table 5, dans la mesure o\'f9 cette indication se retrouve dans chaque colonne ? Par ailleurs, la Table 4 indique 295 EN identifi\'e9es sur Daudet pour spaCy_lg, mais il n'y en a que 237 dans la table 5. On note la m\'eame diff\'e9rence pour les entit\'e9s nomm\'e9es dans la r\'e9f\'e9rence (209 dans la table 4, 203 dans la table 5). Enfin, les donn\'e9es de la table 5 ne sont pas coh\'e9rentes avec la conclusion qui est tir\'e9e de ces donn\'e9es : il y a 60 VP hapax identifi\'e9es dans la r\'e9f\'e9rence mais seulement 57 pour la version ROC Tess. + fr\
+    - p. 14 vous dites que JamSpell est d\'e9velopp\'e9 en Python, or ce n'est pas ce qui est indiqu\'e9 sur https://github.com/bakwc/JamSpell : "multi-language - it's written in C++ and available for many languages with swig bindings"\
+    - Dans le Tableau 13, est-ce que les lignes MOMC et MOI ELTeC montrent des erreurs dans les textes de r\'e9f\'e9rences ELTeC ou alors s'agit-il de JamSpell entra\'een\'e9 sur ce corpus ? Ce n'est pas clair.\
+    - p. 19 : on ne comprend pas la remarque "Apr\'e8s une observation des diff\'e9rentes mesures de distance pr\'e9sent\'e9es pour chaque ... cosinus et Jaccard ne mesurent pas la m\'eame chose." car les figures 3 et 4 ne pr\'e9sentent que le cosinus et on ne peut donc pas faire de comparaison avec Jaccard. Certes, l'article indique que les r\'e9sultats sont sur un github, mais ces donn\'e9es ne sont pas disponibles (anonymisation) et on ne peux donc pas s'y r\'e9f\'e9rer pour la relecture. On peut donc se poser la question de la pertinence de cette discussion, qui prend beaucoup de place tout en \'e9tant tr\'e8s annexe par rapport aux propos de l'article.\
+\
+    R\'e9daction et pr\'e9sentation :\
+    - R\'e9sum\'e9 : "d'\'e9valuation plus souple*s*"\
+    - Introduction : "de num\'e9risation et de publication des transcriptions (ROC) d\'92oeuvres" : supprimer (ROC), l'acronyme a d\'e9j\'e0 \'e9t\'e9 expliqu\'e9 deux lignes au-dessus\
+    - Dans l\'92insertion des r\'e9f\'e9rences, lorsque la r\'e9f\'e9rence bibliographique joue un r\'f4le syntaxique dans le texte, les noms des auteurs ne sont pas entre parenth\'e8ses :  "Dupont et Durand (2006) montrent que".\
+    - Il manque le DOI pour spaCy dans la bibliographie (10.5281/zenodo.1212303)\
+    - p. 11 : "sont consid\'e9r\'e9es par la machine comme des FP" --> je supprimerais "par la machine"\
+    - p. 14 : "que sur le globale" -> que sur tous les types d'entit\'e9s\
+    - Dans le tableau 9, pourquoi abr\'e9ger spaCy_lg par sp ? Il y a largement la place et, d'une mani\'e8re g\'e9n\'e9rale, il vaut mieux privil\'e9gier la coh\'e9rence dans les noms donn\'e9s aux ressources et outils dans un article.\
+    - p. 17 : "nous avons d\'e9cider" --> "nous avons d\'e9cid\'e9"\
+\
+\
+\
+\
+==========================================\
+\
+\
+\
+\
+\
+8.8/10  Relecteur 3 (-)  15/05/2024\
+\'9b Grille de notation\
+\
+    Pertinence :  4 - Bien\
+    Clart\'e9 :  3 - Moyen\
+    La clart\'e9 a \'e9t\'e9 tr\'e8s fortement am\'e9lior\'e9e. Il reste juste quelques points qui me semblent moins clairs que je d\'e9taille ci-dessous.\
+    Correction :  4 - Bien\
+    Originalit\'e9 :  3 - Moyen\
+\
+\'9b Commentaire interne\
+\
+    Le but de l\'92article est d\'92analyser l\'92effet des erreurs de l\'92OCR sur la reconnaissance d\'92entit\'e9s nomm\'e9es (REN) de lieu dans les corpus litt\'e9raires (avant et apr\'e8s correction automatique des erreurs d\'92OCR).  L\'92analyse a \'e9t\'e9 effectu\'e9e en fran\'e7ais, anglais et portugais sur des textes issus de la Tr\'e8s Grande Biblioth\'e8que et des textes des collections fran\'e7aise, anglaise et portugaise de la collection europ\'e9enne ELTeC. Les outils compar\'e9s sont deux outils d\'92OCR: Tesseract et Kraken et un outil de REN: spacy. L\'92outil de correction automatique utilis\'e9 est Jamspell (le mod\'e8le pr\'e9-entra\'een\'e9 et un autre entra\'een\'e9 sur une partie d\'92ELTeC).\
+\
+    Il s\'92agit d\'92un troisi\'e8me lecture de cet article, et globalement l\'92article a \'e9t\'e9 largement am\'e9lior\'e9 sur plusieurs points, y compris sur sa structure, qui est beaucoup plus logique, et sur l\'92utilisation d\'92un seul outil de REN (en enlevant stanza), ce qui permet de focaliser sur les diff\'e9rents d\'92outils d\'92OCR. Plus de d\'e9tails ont \'e9t\'e9 donn\'e9s sur les outils utilis\'e9s, et l\'92\'e9tat de l\'92art a \'e9t\'e9 l\'e9g\'e8rement \'e9tendu. \
+\
+    Il reste encore quelques probl\'e8mes \'e0 mon avis, ce que je d\'e9taille ci-dessous :\
+        Evaluation souple vs. stricte pour ref.: les r\'e9sultats diff\'e8rents pour ref. entre l\'92\'e9valuation stricte et souple, ce qui peut \'eatre expliqu\'e9 par le fait que pour la r\'e9f\'e9rence aussi \'93souple\'94 prend en compte des matches partielles. Cependant, le fait que Tesseract a de meilleurs r\'e9sultats que la r\'e9f\'e9rence selon l\'92\'e9valuation souple n\'92indique-t-il pas un probl\'e8me de sur-estimation des scores avec l\'92\'e9valuation souple ?\
+        Jaccard vs. Cosinus: Je trouve cette section \'e9trange. Les r\'e9sultats de Jaccard ne sont pas donn\'e9s, mais ils sont comment\'e9s dans le texte (un lien vers un GitHub anonymis\'e9 est donn\'e9). A mon avis il faut soit les inclure dans l\'92article, soit enlever la mention des r\'e9sultats Jaccard. Il est \'e9crit que \'93il semble que les m\'e9triques cosinus et Jaccard ne mesurent pas la m\'eame chose\'94 - si j\'92ai bien compris ce qui a \'e9t\'e9 fait, Jaccard est une mesure de similarit\'e9 et cosinus de distance, ce qui explique pourquoi les scores cosinus sont autour de 0 et les scores Jaccard autour de 1, donc ce commentaire me semble un peu \'e9trange dans ce contexte. Il serait bien d\'92expliciter les calculs faits. \
+\
+    Commentaries plus mineurs:\
+        Description des outils d\'92OCR: quand vous parlez de \'93mod\'e8le de langue neuronaux\'94, est-ce que \'e7a fait r\'e9f\'e9rence au mod\'e8le d\'92OCR ou d\'92une composante du mod\'e8le ? Ca m\'e9rite d\'92une description. \
+        Section 4.2 \'93tableau 4\'85 des versions de ROC\'94 - il me semble qu\'92on n\'92y voit que le syst\'e8me Tesseract pour les trois langues. Si c\'92est le cas \'93versions\'94 me semblent un peu inadapt\'e9, car \'e7a me fait penser \'e0 diff\'e9rents types de syst\'e8mes.\
+        Discussion sur l\'92augmentation du nombre d\'92hapax -> est-ce que le nombre d\'92hapax est donn\'e9 quelque part ou il est juste induit des autres chiffres?\
+        Typologie des erreurs: la typologie a \'e9t\'e9 simplifi\'e9e, ce que j\'92appr\'e9cie. Cependant, je ne suis toujours pas convaincue de l\'92utilit\'e9 de d\'e9finir les cat\'e9gories Faux \{VP,VN,FP,FN\}. Je comprends mieux l\'92int\'e9r\'eat maintenant d\'92\'e9voquer ce type d\'92erreurs, mais je pense que \'e7a pourrait \'eatre d\'e9crit de fa\'e7on un peu plus intuitif en \'e9voquant avec quelques d\'e9tails de plus le fait que chaque cas pourrait \'eatre \'93faux\'94 s\'92il y a une erreur dans la r\'e9f\'e9rence, ou des informations manquantes dans la r\'e9f\'e9rence, plut\'f4t que de formaliser chaque type. Par exemple, si j\'92ai bien compris, Faux vrai positif indique un vrai positif qui n\'92aurait pas d\'fb l\'92\'eatre, car il s\'92agit d\'92une erreur dans la r\'e9f\'e9rence, et qui aurait d\'fb \'eatre en fait un faux positif. \
+        Footnote 30: Je ne mettrais pas que vous avez annot\'e9 seulement une partie du corpus en raison du temps limit\'e9. Il s\'92agit de l\'92annotation d\'92un \'e9chantillon du corpus, ce qui est totalement raisonnable et justifiable en soi (sans parler du temps limit\'e9, ce qui donne l\'92impression que c\'92est pour s\'92excuser).\
+\
+    Language, formatting:\
+        Les citations sont toujours mal format\'e9es, e.g. doubles parenth\'e8ses autour de plusieurs citations. La feuille de style donne des exemples sur comment citer plusieurs travaux \\cite\{Chmielik_TAL_52,Virpioja_TAL_52\}, ainsi que de faire une citation comme sujet de la phrase \\citeasnoun\{Lavallee_TAL_52\} ont d\'e9montr\'e9 (\'85), donc il n\'92est pas n\'e9cessaire normalement d\'92utiliser d\'92autres paquets. Il y a aussi un probl\'e8me avec les italiques, qui sont maintenant soulign\'e9s dans le texte (e.g. le \'93et al\'94 des citations). Il s\'92agit peut-\'eatre d\'92un probl\'e8me d\'92ajout de paquet latex qui cr\'e9\'e9 ce probl\'e8me.\
+        Page 10: une entit\'e9s -> une entit\'e9\
+        Footnote 31: possible espace suppl\'e9mentaire avant\
+        4.4: \'93EN d\'e9tect\'e9es dans les versions de ROC\'94 -> par \'93versions\'94, est-ce que vous voulez dire entre la version produite par le syst\'e8me et la r\'e9f\'e9rence?\
+        4.5: , ce qui est, -> enlever la virgule finale\
+        Le tableau 9 ne suit pas le m\'eame formatage que les autres tableaux\
+        5.1: \'e0 mon avis il suffit d\'92une courte phrase pour d\'e9crire pourquoi la configuration portugaise n\'92est incluse, et le tableau 9 pourrait \'eatre enlev\'e9.\
+        Parfois \'93ELTeC\'94 est utilis\'e9 pour le mod\'e8le Jspll entra\'een\'e9 sur ELTeC parfois Jspll-ELTeC - il serait plus clair de les homog\'e9n\'e9iser (je pr\'e9f\'e8re le nom plus explicite).\
+        Figure 3d: .png dans la caption\
+        Figure 3: les diff\'e9rences sont peu visibles, car les chiffres sont tous pr\'e8s de 0 et l\'92\'e9chelle est tr\'e8s grande. Je suis par ailleurs d\'92accord avec l\'92un des autres reviewers, que les \'e9chelles devraient \'eatre les m\'eames pour chaque groupe de figures (peut-\'eatre avec la fonction set_ylim()?). Je vous conseille de consulter d\'92autres personnes pour demander des conseils si vous n\'92avez pas encore trouv\'e9 comment faire \'e7a dans matplotlib.\
+\
+\'9b Commentaire d\'e9posant\
+\
+    Le but de l\'92article est d\'92analyser l\'92effet des erreurs de l\'92OCR sur la reconnaissance d\'92entit\'e9s nomm\'e9es (REN) de lieu dans les corpus litt\'e9raires (avant et apr\'e8s correction automatique des erreurs d\'92OCR).  L\'92analyse a \'e9t\'e9 effectu\'e9e en fran\'e7ais, anglais et portugais sur des textes issus de la Tr\'e8s Grande Biblioth\'e8que et des textes des collections fran\'e7aise, anglaise et portugaise de la collection europ\'e9enne ELTeC. Les outils compar\'e9s sont deux outils d\'92OCR: Tesseract et Kraken et un outil de REN: spacy. L\'92outil de correction automatique utilis\'e9 est Jamspell (le mod\'e8le pr\'e9-entra\'een\'e9 et un autre entra\'een\'e9 sur une partie d\'92ELTeC).\
+\
+    Il s\'92agit d\'92un troisi\'e8me lecture de cet article, et globalement l\'92article a \'e9t\'e9 largement am\'e9lior\'e9 sur plusieurs points, y compris sur sa structure, qui est beaucoup plus logique, et sur l\'92utilisation d\'92un seul outil de REN (en enlevant stanza), ce qui permet de focaliser sur les diff\'e9rents d\'92outils d\'92OCR. Plus de d\'e9tails ont \'e9t\'e9 donn\'e9s sur les outils utilis\'e9s, et l\'92\'e9tat de l\'92art a \'e9t\'e9 l\'e9g\'e8rement \'e9tendu. \
+\
+    Il reste encore quelques probl\'e8mes \'e0 mon avis, ce que je d\'e9taille ci-dessous :\
+        Evaluation souple vs. stricte pour ref.: les r\'e9sultats diff\'e8rents pour ref. entre l\'92\'e9valuation stricte et souple, ce qui peut \'eatre expliqu\'e9 par le fait que pour la r\'e9f\'e9rence aussi \'93souple\'94 prend en compte des matches partielles. Cependant, le fait que Tesseract a de meilleurs r\'e9sultats que la r\'e9f\'e9rence selon l\'92\'e9valuation souple n\'92indique-t-il pas un probl\'e8me de sur-estimation des scores avec l\'92\'e9valuation souple ?\
+        Jaccard vs. Cosinus: Je trouve cette section \'e9trange. Les r\'e9sultats de Jaccard ne sont pas donn\'e9s, mais ils sont comment\'e9s dans le texte (un lien vers un GitHub anonymis\'e9 est donn\'e9). A mon avis il faut soit les inclure dans l\'92article, soit enlever la mention des r\'e9sultats Jaccard. Il est \'e9crit que \'93il semble que les m\'e9triques cosinus et Jaccard ne mesurent pas la m\'eame chose\'94 - si j\'92ai bien compris ce qui a \'e9t\'e9 fait, Jaccard est une mesure de similarit\'e9 et cosinus de distance, ce qui explique pourquoi les scores cosinus sont autour de 0 et les scores Jaccard autour de 1, donc ce commentaire me semble un peu \'e9trange dans ce contexte. Il serait bien d\'92expliciter les calculs faits. \
+\
+    Commentaries plus mineurs:\
+        Description des outils d\'92OCR: quand vous parlez de \'93mod\'e8le de langue neuronaux\'94, est-ce que \'e7a fait r\'e9f\'e9rence au mod\'e8le d\'92OCR ou d\'92une composante du mod\'e8le ? Ca m\'e9rite d\'92une description. \
+        Section 4.2 \'93tableau 4\'85 des versions de ROC\'94 - il me semble qu\'92on n\'92y voit que le syst\'e8me Tesseract pour les trois langues. Si c\'92est le cas \'93versions\'94 me semblent un peu inadapt\'e9, car \'e7a me fait penser \'e0 diff\'e9rents types de syst\'e8mes.\
+        Discussion sur l\'92augmentation du nombre d\'92hapax -> est-ce que le nombre d\'92hapax est donn\'e9 quelque part ou il est juste induit des autres chiffres?\
+        Typologie des erreurs: la typologie a \'e9t\'e9 simplifi\'e9e, ce que j\'92appr\'e9cie. Cependant, je ne suis toujours pas convaincue de l\'92utilit\'e9 de d\'e9finir les cat\'e9gories Faux \{VP,VN,FP,FN\}. Je comprends mieux l\'92int\'e9r\'eat maintenant d\'92\'e9voquer ce type d\'92erreurs, mais je pense que \'e7a pourrait \'eatre d\'e9crit de fa\'e7on un peu plus intuitif en \'e9voquant avec quelques d\'e9tails de plus le fait que chaque cas pourrait \'eatre \'93faux\'94 s\'92il y a une erreur dans la r\'e9f\'e9rence, ou des informations manquantes dans la r\'e9f\'e9rence, plut\'f4t que de formaliser chaque type. Par exemple, si j\'92ai bien compris, Faux vrai positif indique un vrai positif qui n\'92aurait pas d\'fb l\'92\'eatre, car il s\'92agit d\'92une erreur dans la r\'e9f\'e9rence, et qui aurait d\'fb \'eatre en fait un faux positif. \
+        Footnote 30: Je ne mettrais pas que vous avez annot\'e9 seulement une partie du corpus en raison du temps limit\'e9. Il s\'92agit de l\'92annotation d\'92un \'e9chantillon du corpus, ce qui est totalement raisonnable et justifiable en soi (sans parler du temps limit\'e9, ce qui donne l\'92impression que c\'92est pour s\'92excuser).\
+\
+    Language, formatting:\
+        Les citations sont toujours mal format\'e9es, e.g. doubles parenth\'e8ses autour de plusieurs citations. La feuille de style donne des exemples sur comment citer plusieurs travaux \\cite\{Chmielik_TAL_52,Virpioja_TAL_52\}, ainsi que de faire une citation comme sujet de la phrase \\citeasnoun\{Lavallee_TAL_52\} ont d\'e9montr\'e9 (\'85), donc il n\'92est pas n\'e9cessaire normalement d\'92utiliser d\'92autres paquets. Il y a aussi un probl\'e8me avec les italiques, qui sont maintenant soulign\'e9s dans le texte (e.g. le \'93et al\'94 des citations). Il s\'92agit peut-\'eatre d\'92un probl\'e8me d\'92ajout de paquet latex qui cr\'e9\'e9 ce probl\'e8me.\
+        Page 10: une entit\'e9s -> une entit\'e9\
+        Footnote 31: possible espace suppl\'e9mentaire avant\
+        4.4: \'93EN d\'e9tect\'e9es dans les versions de ROC\'94 -> par \'93versions\'94, est-ce que vous voulez dire entre la version produite par le syst\'e8me et la r\'e9f\'e9rence?\
+        4.5: , ce qui est, -> enlever la virgule finale\
+        Le tableau 9 ne suit pas le m\'eame formatage que les autres tableaux\
+        5.1: \'e0 mon avis il suffit d\'92une courte phrase pour d\'e9crire pourquoi la configuration portugaise n\'92est incluse, et le tableau 9 pourrait \'eatre enlev\'e9.\
+        Parfois \'93ELTeC\'94 est utilis\'e9 pour le mod\'e8le Jspll entra\'een\'e9 sur ELTeC parfois Jspll-ELTeC - il serait plus clair de les homog\'e9n\'e9iser (je pr\'e9f\'e8re le nom plus explicite).\
+        Figure 3d: .png dans la caption\
+        Figure 3: les diff\'e9rences sont peu visibles, car les chiffres sont tous pr\'e8s de 0 et l\'92\'e9chelle est tr\'e8s grande. Je suis par ailleurs d\'92accord avec l\'92un des autres reviewers, que les \'e9chelles devraient \'eatre les m\'eames pour chaque groupe de figures (peut-\'eatre avec la fonction set_ylim()?). Je vous conseille de consulter d\'92autres personnes pour demander des conseils si vous n\'92avez pas encore trouv\'e9 comment faire \'e7a dans matplotlib.\
+\
+}
