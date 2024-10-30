@@ -26,7 +26,7 @@ Nous avons entraîné un modèle de langue pour Jspll pour chacune des trois lan
 \subsection{Typologie des contaminations de corrections de la ROC}
 \label{subsec:Typologie_COR-OCR-IMPACT-NER}
 
-En observant les exemples de correction de la ROC présentés dans les tableaux \ref{tab:erreurs_corr_ELTeCFra} et \ref{tab:erreurs_corr_ELTeCEng}, nous constatons des fluctuations au niveau de la performance du correcteur automatique.
+En observant les exemples de correction de la ROC (tableaux \ref{tab:erreurs_corr_ELTeCFra} et \ref{tab:erreurs_corr_ELTeCEng}), nous constatons des fluctuations au niveau de la performance du correcteur automatique.
 Notons le cas particulier de l'EN \og{}Meunet-sur-Vatan\fg{} dont on constate différentes déclinaisons en fonction du type de correcteur automatique (tableau \ref{tab:erreurs_corr_ELTeCFra}). Nous nous apercevons que les différentes versions de cette EN, contaminée par les différentes OCRisations et surcorrections, n'ont pas du tout été extraites par \texttt{spaCy\_lg}.
 %¨
 
@@ -168,11 +168,11 @@ La figure \ref{fig:ELTeCFRA_Tess. fr -- jspl-fr_spacy-lg-concat_intersection.png
     \end{minipage}
 %\caption{Intersections pour les configurations (\ref{fig:ELTeCFRA_Kraken -- jspl-fr_spacy-lg-concat_intersection.png
 %}-\ref{fig:ELTeCFRA_Tess -- spacy-lg-concat_intersection}) Kraken-\texttt{spaCy\_lg} et Tess. fr.-\texttt{spaCy\_lg} non corrigées, et (\ref{fig:ELTeCFRA_Kraken -- jspl-ELTeCfr_spacy-lg-concat_intersection}-\ref{fig:ELTeCFRA_Tess -- jspl-ELTeCFR_spacy-lg-concat_intersection}) les configurations équivalentes corrigées avec JamSpell (modèle ELTeC), pour le corpus ELTeC français.}
-\caption{Intersections pour les configurations Kraken et Tess fr corrigées par JamSpell préentraîné et modèle ELTeCfr, \texttt{spaCy\_lg} sur le corpus \textit{small}-ELTec-fr}
+\caption{Intersections pour les configurations Kraken et Tess.fr corrigées par JamSpell préentraîné et modèle ELTeCfr, \texttt{spaCy\_lg} sur le corpus \textit{small}-ELTec-fr}
 \label{fig:intersection_globale-kraken}
 \end{figure}
 
-Ce fait peut être lu à l'aune des observations présentées dans le tableau \ref{tab:typologie_erreurs-corr_ELTeCEng} rapportant la typologie des erreurs de correction. Autrement dit, la correction automatique ne transforme pas toutes les EN contaminées par la ROC en EN corrigées strictement associables avec les EN du groupe de réf.. Ainsi, les BOIC (\og{}Morlincourt\fg{} qui devient \og{}Martincourt\fg{}), se cumulant aux EN contaminées non corrigées MOI (\og{}Morlincourtl\fg{} qui reste \og{}Morlincourtl\fg{}), n'améliorent pas les résultats obtenus par calcul des intersections. Pour les corpus \textit{small}-ELTeC-\{fr, en, pt\} et \textit{small}-TGB-fr, il semble que la correction automatique avec le modèle entraîné sur une partie de chaque corpus ELTeC fasse perdre 5 \% des EN dans l'intersection avec Kraken et 10 \% avec Tesseract, alors que concernant les modèles préentraînés, on perd 3 \% avec Kraken et 9 \% avec Tesseract. Cette expérience est l'occasion de démontrer les limites d'une évaluation stricte de la REN sur des textes bruités et sur leurs versions corrigées. Nos observations manuelles montrent que les contaminations de la ROC d'une part et de la correction automatique d'autre part ne sont pas véritablement un frein à la REN, mais l'évaluation automatique des résultats n'est pas triviale.
+Ce fait peut être lu à l'aune des observations présentées dans le tableau \ref{tab:typologie_erreurs-corr_ELTeCEng} rapportant la typologie des erreurs de correction. Autrement dit, la correction automatique ne transforme pas toutes les EN contaminées par la ROC en EN corrigées strictement associables avec les EN du groupe de réf. Ainsi, les BOIC (\og{}Morlincourt\fg{} qui devient \og{}Martincourt\fg{}), se cumulant aux EN contaminées non corrigées MOI (p. ex. \og{}Morlincourtl\fg{} qui reste \og{}Morlincourtl\fg{}), n'améliorent pas les résultats obtenus par calcul des intersections. Pour les corpus \textit{small}-ELTeC-\{fr, en, pt\} et \textit{small}-TGB-fr, il semble que la correction automatique avec le modèle entraîné sur une partie de chaque corpus ELTeC fasse perdre 5 \% des EN dans l'intersection avec Kraken et 10 \% avec Tesseract, alors que concernant les modèles préentraînés, on perd 3 \% avec Kraken et 9 \% avec Tesseract. Cette expérience est l'occasion de démontrer les limites d'une évaluation stricte de la REN sur des textes bruités et sur leurs versions corrigées. Nos observations manuelles montrent que les contaminations de la ROC d'une part et de la correction automatique d'autre part ne sont pas véritablement un frein à la REN, mais l'évaluation automatique des résultats n'est pas triviale.
 
 %%%%%%%%%%%%%%%% Ancienne figure avec les intersections pour la config Tess-spaCy_lg corrigées avec le modèle pré-entraîné de JamSpell et le modèle ELTeC, pour le corpus ELTeC fr %%%%%%%%%%%%%%%%%%
 
@@ -295,9 +295,9 @@ La figure \ref{fig:Cosinus-spacy-lg} montre les résultats en comparant les sort
 %    \label{fig:Cosinus-spacy-lg-stanza}
 \label{fig:Cosinus-spacy-lg}
 \end{figure}
-Cette figure laisse apercevoir que les résultats de la REN sur les versions des textes Kraken sont moins bons 
+Cette figure laisse apercevoir que les résultats de la REN sur les versions Kraken sont moins bons 
 %de manière générale 
-que pour celles produites avec Tess.. Il apparaît 
+que pour celles produites avec Tess. Il apparaît 
 %globalement 
 que les corrections automatiques sur les versions Kraken apportent un gain tandis que celles effectuées sur les versions de Tess. ne semblent pas faire évoluer significativement les résultats.
 Il semblerait que la correction automatique avec le modèle Jspll-ELTeC soit légèrement plus efficace sur les versions de Kraken que sur les versions Tess., car l'écart entre les bords droits et gauches des boîtes est plus petit. Ce constat laisse à penser que le correcteur automatique produit plus de bonnes corrections dans le cas de versions de ROC bruitées

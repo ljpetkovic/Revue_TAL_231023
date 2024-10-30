@@ -46,33 +46,42 @@
 %\begin{tabular}{|p{3.7cm}|p{3cm}|p{3cm}|p{3cm}|}
 %\begin{tabular}{p{1.6cm}|l|p{2.4cm}|l}
 \resizebox{\textwidth}{!}{
-\begin{tabular}{|l|l|p{3cm}|r|p{3cm}|r|}
+%\begin{tabular}{|l|l|p{3cm}|r|p{3cm}|r|}
+%
+%%\multicolumn{5}{|c|}{Results for Named Entities Recognition} \\
+%\hline
+%
+%
+%\bf{\small{Version}} & \bf{\small{Modèle REN}} &  \bf {\small{Entité} }& \bf {\small{\# Manque } }&  \bf {\small{Entité} }& \bf {\small{\# Manque } }\\
+%\hline
+%{Réf.\ } &
+%\texttt{spaCy\_lg} &  Ormeaux: 5   & N/A &Nouvelle-France": 17&N/A\\
+%  %&  &  &  \\ \cline{2-4}
+%\hline
+%{Kraken} & \texttt{spaCy\_lg} &   Ormaeuux: 1,
+%  Ormenux: 1,
+%  Ormeuux: 2 
+%  & 1 &Nouvelle-Fance: 4
+%  Nouvelle-France: 8
+%  Nouvelle-Frnce: 1
+%  Nouvelle-lFrance: 2&2\\
+%  %&  &  &  \\ \cline{2-4}
+%
+%\hline
+%{Tess.fr} &\texttt{spaCy\_lg}&  Ormeaux : 3,
+%  Ormenux : 1  &1&Nouvelle-France: 5
+%  Nouvelle—France: 8& 3 \\
+%  %&  &  &  \\ \cline{2-4}
+%\hline
+%\end{tabular}
 
-%\multicolumn{5}{|c|}{Results for Named Entities Recognition} \\
-\hline
 
-
-\bf{\small{Version}} & \bf{\small{Modèle REN}} &  \bf {\small{Entité} }& \bf {\small{\# Manque } }&  \bf {\small{Entité} }& \bf {\small{\# Manque } }\\
+\begin{tabular}{|l|l|lr|r|lr|r|}
 \hline
-{Réf.\ } &
-\texttt{spaCy\_lg} &  Ormeaux: 5   & N/A &Nouvelle-France": 17&N/A\\
-  %&  &  &  \\ \cline{2-4}
-\hline
-{Kraken} & \texttt{spaCy\_lg} &   Ormaeuux: 1,
-  Ormenux: 1,
-  Ormeuux: 2 
-  & 1 &Nouvelle-Fance: 4
-  Nouvelle-France: 8
-  Nouvelle-Frnce: 1
-  Nouvelle-lFrance: 2&2\\
-  %&  &  &  \\ \cline{2-4}
-
-\hline
-{Tess.fr} &\texttt{spaCy\_lg}&  Ormeaux : 3,
-  Ormenux : 1  &1&Nouvelle-France: 5
-  Nouvelle—France: 8& 3 \\
-  %&  &  &  \\ \cline{2-4}
-\hline
+\textbf{Version} & \textbf{Modèle REN} & \multicolumn{2}{l|}{\textbf{Entité}}                                                                  & \textbf{\# Manque} & \multicolumn{2}{l|}{\textbf{Entité}}                                                                                                                 & \textbf{\# Manque} \\ \hline
+Réf.                                           & \texttt{spaCy\_lg}                                     & \multicolumn{1}{l}{Ormeaux}                                                              & 5                                                 & N/A                                                         & \multicolumn{1}{l}{Nouvelle-France"}                                                                                                 & 17                                                    & N/A                                                         \\ \hline
+Kraken                                         & \texttt{spaCy\_lg}                   & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Ormaeuux\\ Ormenux\\ Ormeuux\end{tabular}} & \begin{tabular}[c]{@{}r@{}}1\\ 1\\ 2\end{tabular} & 1                                                           & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Nouvelle-Fance \\ Nouvelle-France \\ Nouvelle-Frnce \\ Nouvelle-lFrance\end{tabular}} & \begin{tabular}[c]{@{}r@{}}4\\ 8\\ 1\\ 2\end{tabular} & 2                                                           \\ \hline
+Tess.fr                                        & \texttt{spaCy\_lg}                                    & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Ormeaux\\ Ormenux\end{tabular}}            & \begin{tabular}[c]{@{}r@{}}3\\ 1\end{tabular}     & 1                                                           & \multicolumn{1}{l}{\begin{tabular}[c]{@{}l@{}}Nouvelle-France \\ Nouvelle—France\end{tabular}}                                      & \begin{tabular}[c]{@{}r@{}}5\\ 8\end{tabular}         & 3                                                           \\ \hline
 \end{tabular}
-}
 
+}
