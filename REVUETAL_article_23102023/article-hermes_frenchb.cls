@@ -583,7 +583,7 @@ documentclass[fleqn,english,cropmarks,empty,nofirstpagebreak]{article-hermes}}}
    \renewcommand{\VAR@SignatureArticle}{%
      \FonteSignature\raggedright
         %\VAR@NumeroSoumission soumission \`a \textit{\VAR@NomRevue}, le #1
-        TAL. Volume 64 -- n°2/2024, pages XX à XX
+        TAL. Volume 64 -- n°2/2024, pages 39 à 63
    }
    \renewcommand{\VAR@EnTeteG}{\FonteEnTete
    %\VAR@NumeroSoumission soumission \`a
